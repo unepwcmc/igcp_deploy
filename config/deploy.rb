@@ -63,3 +63,8 @@ namespace :deploy do
   after 'check:make_linked_dirs', :create_wp_files
   after :finishing, 'deploy:cleanup'
 end
+
+
+namespace :deploy do
+  after :publishing, 'service:apache2:restart'
+end

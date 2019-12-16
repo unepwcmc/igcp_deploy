@@ -21,3 +21,5 @@ require 'capistrano/file-permissions'
 Dir.glob('lib/capistrano/tasks/*.rake').each { |r| import r }
 
 
+set :services, [:apache2]
+require 'capistrano/service'
