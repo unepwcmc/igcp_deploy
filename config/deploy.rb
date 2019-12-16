@@ -42,13 +42,13 @@ set :linked_files, %w(wp-config.php .htaccess robots.txt)
 set :linked_dirs, %w(content/uploads)
 
 
-set :file_permissions_paths, ["content"]
-set :file_permissions_users, ["www-data"]
-set :file_permissions_chmod_mode, "0755"
+#set :file_permissions_paths, ["content"]
+#set :file_permissions_users, ["www-data"]
+#set :file_permissions_chmod_mode, "0755"
+#set :file_permissions_groups, ["www-data"]
 
 
-
-before "deploy:updated", "deploy:set_permissions:acl"
+#before "deploy:updated", "deploy:set_permissions:acl"
 
 namespace :deploy do
   desc 'create WordPress files for symlinking'
