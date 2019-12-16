@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAGA,iBAAkB,CAChB,OAAO,CAAE,IAAI,CACb,SAAS,CAAE,IAAI,CACf,YAAY,CAAE,KAAa,CAC3B,aAAa,CAAE,gBAA4B,CAG7C,gBAAiB,CACf,IAAI,CAAE,oBAA4B,CAClC,YAAY,CAAE,IAAY,CAC1B,aAAa,CAAE,IAAgB,CAGjC,iBAAkB,CAChB,SAAS,CAAE,IAAI,CAGjB,cAAe,CACb,SAAS,CAAE,IAAI,CACf,WAAW,CAAE,GAAG,CAGlB,eAAgB,CACd,KAAK,CCQW,OAAO,CDPvB,SAAS,CAAE,IAAI,CACf,eAAe,CAAE,IAAI",
+"sources": ["../scss/block-text-columns.scss","../../inc/scss/utilities/_variables.scss"],
+"names": [],
+"file": "block-text-columns.css"
+}

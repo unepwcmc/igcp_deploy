@@ -1,0 +1,76 @@
+@import "../../inc/scss/utilities/variables";
+@import "../../inc/scss/utilities/mixins";
+
+
+.her-Home {
+  width: calc(100% - #{$grid-gap * 2});
+  position: relative;
+  background: $color-primary;
+  margin-left: $grid-gap;
+  margin-right: $grid-gap;
+}
+
+.her-Home_Overlay {
+  @include absolute_fill;
+  background-color: #000000;
+  z-index: 1;
+}
+
+.her-Home_Body {
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+  // width: 100%;
+}
+
+.her-Home_Columns {
+  display: flex;
+}
+
+.her-Home_Column {
+  flex: 1;
+  display: flex;
+  position: relative;
+}
+
+.her-Home_Column-large {
+  flex: 2;
+}
+
+.her-Home_Content {
+  padding: $grid-gap;
+  width: 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 2;
+}
+
+h2.her-Home_Title {
+  color: #fff;;
+  margin: 0 auto 20px;
+
+  @include break-min($sm) {
+    font-size: 32px;
+  }
+}
+
+a.her-Home_Link {
+  @include button_accent;
+  align-self: flex-start;
+}
+
+.her-Home_ImageWrap {
+  position: relative;
+  padding-bottom: 50%;
+  width: 100%;
+}
+
+.her-Home_Image {
+  @include absolute_fill;
+  object-fit: cover;
+  font-family: 'object-fit: cover;';
+  z-index: 1;
+}

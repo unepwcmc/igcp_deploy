@@ -1,0 +1,39 @@
+.editor-block-list__layout,
+.lyt-Body,
+.lyt-Body .ent-Entry_Content {
+  // Buttons
+  .wp-block-button {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .wp-block-button__link {
+    @include button_primary;
+  }
+
+  .wp-block-button.button-secondary .wp-block-button__link {
+    @include button_secondary;
+  }
+
+  // Embed
+
+  .wp-embedded-content {
+    max-width: 100%;
+  }
+
+  // Images
+
+  .wp-block-image {
+    margin-bottom: 0;
+
+    img {
+      display: block;
+    }
+
+    figcaption {
+      text-align: left;
+      font-size: 12px;
+    }
+  }
+}

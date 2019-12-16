@@ -1,0 +1,54 @@
+//-------------------------------------------------
+// GLOBAL
+//-------------------------------------------------
+
+$global-inner: 1400px;
+$grid-gap: 15px;
+$gutter: 100px;
+
+//-------------------------------------------------
+// WORDPRESS
+//-------------------------------------------------
+
+$admin-bar-mobile: 46px;
+$admin-bar: 32px;
+
+//-------------------------------------------------
+// FONTS
+//-------------------------------------------------
+
+$font-heading: 'Helvetica Neue', sans-serif;
+$font-body: 'Helvetica Neue', sans-serif;
+
+//-------------------------------------------------
+// COLOURS
+//-------------------------------------------------
+
+$color-primary: #204922;
+$color-primary-dark: #163B18;
+$color-secondary: #000000;
+
+$color-dark-grey: #383838;
+$color-light-grey: #F2F2F2;
+
+$color-border: rgba(0,0,0,0.1);
+$color-grey-text: #8D8D8D;
+$color-accent: #FAC359;
+$color-link: #4968b3;
+$color-body-font: #0e0e0e;
+$color-headings: $color-body-font;
+
+$color-header: #ffffff;
+$color-background: #ffffff;
+$color-footer: $color-primary;
+
+//-------------------------------------------------
+// BREAKPOINTS
+//-------------------------------------------------
+
+$xxs: 451px;
+$xs: 600px;
+$sm: 768px;
+$md: 900px;
+$lg: 1280px;
+$xlg: 1440px;

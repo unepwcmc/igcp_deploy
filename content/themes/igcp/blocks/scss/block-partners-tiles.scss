@@ -1,0 +1,32 @@
+@import "../../inc/scss/utilities/variables";
+@import "../../inc/scss/utilities/mixins";
+
+.til-Partners_Tiles {
+
+}
+
+.til-Partners_Items {
+  display: flex;
+  margin: 0 -#{$grid-gap} 0 0;
+  padding: 0;
+}
+
+.til-Partners_Item {
+  flex: 0 0 calc(((2 / 12) * 100%) - #{$grid-gap});
+  list-style: none;
+  background-color: #fff;
+  margin-right: $grid-gap;
+  border: 1px solid $color-border;
+}
+
+.til-Partner {
+  position: relative;
+  padding-bottom: calc((4 / 12) * 100%);
+
+  img {
+    @include absolute_fill;
+    padding: 10px;
+    object-fit: contain;
+    font-family: 'object-fit: contain;';
+  }
+}

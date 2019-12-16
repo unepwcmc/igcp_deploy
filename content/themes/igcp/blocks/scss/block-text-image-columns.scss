@@ -1,0 +1,101 @@
+@import "../../inc/scss/utilities/variables";
+@import "../../inc/scss/utilities/mixins";
+
+.blk-TextImage {
+
+}
+
+.blk-TextImage_Columns {
+  display: flex;
+  margin-bottom: $grid-gap;
+}
+
+.blk-TextImage_Column {
+  position: relative;
+  flex: 0 0 calc(50% - #{$grid-gap / 2});
+
+  &:first-child {
+    margin-right: $grid-gap;
+
+    .blk-TextImage_Columns-flipped & {
+      order: 2;
+      margin-right: 0;
+      margin-left: $grid-gap;
+    }
+  }
+
+  &:last-child {
+    align-self: end;
+    .blk-TextImage_Columns-flipped & {
+      order: 1;
+    }
+  }
+}
+
+.blk-TextImage_Content {
+
+}
+
+.blk-TextImage_LeadText {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.blk-TextImage_Text {
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+a.blk-TextImage_Link {
+  color: $color-grey-text;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.blk-TextImage_ImageWrap {
+  position: relative;
+}
+
+.blk-TextImage_ImageWrap-primary {
+  width: calc(100% + 10px);
+  margin-bottom: 5%;
+  z-index: 2;
+  border-right: 10px solid #fff;
+  border-bottom: 15px solid #fff;
+  padding-bottom: 55%;
+
+  .blk-TextImage_Columns-flipped & {
+    border-right: 0;
+    border-left: 10px solid #fff;
+    margin-left: -10px;
+  }
+}
+
+.blk-TextImage_ImageWrap-secondary {
+  width: 70%;
+  position: absolute;
+  bottom: 0;
+  right: -#{100px - $grid-gap};
+  padding-bottom: 45%;
+
+  .blk-TextImage_Columns-flipped & {
+    right: auto;
+    left: -#{100px - $grid-gap};
+  }
+}
+
+.blk-TextImage_Image {
+  @include absolute_fill;
+  object-fit: cover;
+  font-family: 'object-fit: cover;';
+}
+
+.blk-TextImage_Footer {
+  margin-top: $grid-gap;
+  border-top: 1px solid $color-border;
+  padding-top: $grid-gap;
+
+  display: flex;
+  justify-content: space-between;
+}

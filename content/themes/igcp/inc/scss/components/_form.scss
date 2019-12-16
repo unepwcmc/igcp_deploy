@@ -1,0 +1,44 @@
+.frm-Form {
+  @include break-min($md) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+    max-width: calc((10 / 12) * 100%);
+    margin: 0 auto;
+  }
+}
+
+.frm-Input {
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.frm-Input_Group {
+  position: relative;
+  display: block;
+  margin-bottom: 10px;
+
+  @include break-min($md) {
+    flex: 0 0 calc(50% - 5px);
+  }
+}
+
+.frm-Select {
+  border-radius: 0 !important;
+}
+
+.frm-Submit {
+  margin: 20px auto 0 !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  font-size: 18px;
+
+  @include break-min($md) {
+    width: 250px;
+  }
+}

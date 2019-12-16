@@ -1,0 +1,34 @@
+.article-list__items {
+  margin: 0;
+  padding: 0;
+}
+
+.article-list__item {
+  list-style: none;
+
+  .entry-title {
+    font-family: $font-body;
+  }
+
+  .post-body {
+    display: flex;
+
+      .post-thumbnail {
+        flex: 0 0 150px;
+        margin-left: 25px;
+
+        @media screen and (min-width: 768px) {
+          margin-left: 50px;
+        }
+      }
+
+      .ent-Entry_Content {
+        flex: 1 1 auto;
+      }
+
+      .post-readmore {
+        display: block;
+        margin-top: 25px;
+      }
+  }
+}

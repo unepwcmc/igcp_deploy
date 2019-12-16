@@ -1,0 +1,63 @@
+@import "../../inc/scss/utilities/variables";
+@import "../../inc/scss/utilities/mixins";
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .lyt-Body {
+    .wp-block-columns.has-2-columns {
+      .wp-block-column {
+        width: 45%;
+        flex: 0 0 45%;
+      }
+    }
+
+    .grd-Images_Items {
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: -#{$grid-gap};
+      margin-bottom: -#{$grid-gap};
+    }
+
+    .grd-Images_Item {
+      margin-right: $grid-gap;
+      margin-bottom: $grid-gap;
+      flex: 0 0 30%;
+
+      position: relative;
+      padding-bottom: 30%;
+
+      img {
+        @include absolute_fill;
+        object-fit: cover;
+        font-family: "object-fit: cover;";
+      }
+    }
+
+    .blk-Link_Items {
+      display: flex;
+      margin-right: -#{$grid-gap};
+    }
+
+    .blk-Link_Item {
+      margin-right: $grid-gap;
+      flex: 0 0 30%;
+    }
+
+    .blk-Perks_Items {
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: -#{$grid-gap};
+      margin-bottom: -#{$grid-gap};
+    }
+
+    .blk-Perks_Item {
+      margin-right: $grid-gap !important;
+      margin-bottom: $grid-gap;
+      flex: 0 0 23%;
+      width: 22% !important;
+    }
+
+    .blk-Perks_Text {
+      width: 100%;
+    }
+  }
+}

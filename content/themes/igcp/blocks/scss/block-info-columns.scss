@@ -1,0 +1,42 @@
+@import "../../inc/scss/utilities/variables";
+@import "../../inc/scss/utilities/mixins";
+
+.blk-Info_Columns {
+  display: flex;
+  margin-right: -100px;
+}
+
+.blk-Info_Column {
+  flex: 0 0 calc(((4 / 12) * 100%) - 100px);
+  margin-right: 100px;
+}
+
+.blk-Info_ImageWrap {
+  position: relative;
+  padding-bottom: calc(( 4 / 12) * 100%);
+  margin-bottom: $grid-gap;
+}
+
+.blk-Info_Image {
+  @include absolute_fill;
+  @include object_fit_contain;
+}
+
+.blk-Info_Content {
+  text-align: center;
+  color: #fff;
+  padding-right: $grid-gap;
+  padding-left: $grid-gap;
+  max-width: 250px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.blk-Info_Heading {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.blk-Info_Text {
+  font-size: 14px;
+}

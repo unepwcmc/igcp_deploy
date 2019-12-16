@@ -1,0 +1,40 @@
+.nav-Mobile {
+  .menu-primary-container .menu {
+    margin: 0;
+    padding: 0;
+
+    li.menu-item {
+      @include no_bullets;
+      font-family: $font-heading;
+      letter-spacing: 0.6px;
+      font-weight: 500;
+      margin-bottom: 30px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a {
+        text-decoration: none;
+        color: currentColor;
+        position: relative;
+        font-size: 22px;
+
+        @include break-min($md) {
+          font-size: 32px;
+        }
+      }
+
+      &.current-menu-item {
+        color: $color-primary;
+      }
+    }
+  }
+
+  .nav-Mobile_SubMenu {
+    display: none;
+    .sub-menu {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.soc-Social_Icons {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  .ft-Widget-widget_custom_html & {
+    justify-content: center;
+
+    @include break-min($sm) {
+      justify-content: flex-end;
+    }
+  }
+}
+
+.soc-Social_Icon {
+  list-style: none;
+  width: 25px;
+  margin-right: 10px;
+
+  svg {
+    fill: $color-grey-text;
+    transition: fill 0.3s ease;
+
+    &:hover {
+      // fill: $color-primary;
+      fill: darken($color-grey-text, 20%);
+    }
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

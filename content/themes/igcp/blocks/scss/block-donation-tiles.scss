@@ -1,0 +1,64 @@
+@import "../../inc/scss/utilities/variables";
+@import "../../inc/scss/utilities/mixins";
+
+.til-Donation_Tiles {
+
+}
+
+.til-Donation_Items {
+  display: flex;
+  margin-right: -#{$grid-gap};
+}
+
+.til-Donation_Item {
+  flex: 0 0 calc(((3 / 12) * 100%) - #{$grid-gap});
+  margin-right: $grid-gap;
+  display: flex;
+}
+
+.til-Donation_Tile {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.til-Donation_ImageWrap {
+  position: relative;
+  padding-bottom: 75%;
+  overflow: hidden;
+}
+
+.til-Donation_Image {
+  @include absolute_fill;
+  object-fit: cover;
+  font-family: 'object-fit: cover;';
+  transition: transform .5s ease;
+  will-change: transform;
+
+  .til-Donation_Item:hover & {
+    transform: scale(1.025);
+  }
+}
+
+.til-Donation_Content {
+  padding: $grid-gap;
+  color: $color-dark-grey;
+  background-color: $color-light-grey;
+  flex: 1;
+}
+
+h3.til-Donation_Heading {
+  font-size: 16px;
+  color: $color-dark-grey;
+  font-weight: 500;
+  margin-bottom: $grid-gap;
+}
+
+.til-Donation_Text {
+
+}
+
+a.til-Donation_FauxLink {
+  @include absolute_fill;
+  z-index: 2;
+}

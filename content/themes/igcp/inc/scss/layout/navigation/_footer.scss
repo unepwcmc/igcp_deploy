@@ -1,0 +1,59 @@
+.menu-footer-container .menu {
+  margin: 0;
+  padding: 0;
+  display: none;
+
+  @include break-min($md) {
+    display: flex;
+  }
+
+  > li {
+    &:last-child {
+      flex-basis: 150px;
+    }
+  }
+
+  li {
+    @include no_bullets;
+    font-family: $font-heading;
+    letter-spacing: 0.6px;
+    font-weight: 500;
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    a {
+      display: inline-block;
+      margin-bottom: 5px;
+      font-size: 14px;
+      text-decoration: none;
+      color: currentColor;
+      position: relative;
+      z-index: 1;
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &.current-menu-item > a {
+      text-decoration: underline;
+    }
+  }
+
+  .sub-menu {
+    padding: 0;
+    margin: 0;
+
+    li.menu-item {
+      font-weight: normal;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

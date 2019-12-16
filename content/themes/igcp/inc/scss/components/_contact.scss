@@ -1,0 +1,67 @@
+.contact-form {
+  @include break-min($md) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+    // max-width: calc((10 / 12) * 100%);
+    margin: 0 auto;
+  }
+
+  .first-name,
+  .last-name,
+  .your-email,
+  .your-phone {
+    display: block;
+    margin-bottom: 12.5px;
+
+    @include break-min($md) {
+      flex: 0 0 calc(50% - 6.25px);
+    }
+  }
+
+  span.wpcf7-not-valid-tip {
+    position: absolute;
+    top: 4px;
+    right: 6px;
+    font-size: 12px;
+  }
+
+  .your-message {
+    display: block;
+    flex: 0 0 100%;
+    margin-bottom: 12.5px;
+  }
+
+  .submit-button {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+  }
+
+  .wpcf7-submit {
+    margin: 0 !important;
+    width: 100%;
+    font-size: 18px !important;
+
+    @include break-min($md) {
+      width: 250px;
+    }
+  }
+
+  .wpcf7-response-output {
+    max-width: 100%;
+    margin: 0;
+
+    @include break-min($md) {
+      max-width: calc(100% - 150px);
+      position: absolute;
+      bottom: -30px;
+      left: 50%;
+      margin-left: 0;
+      width: 100%;
+      transform: translateX(-50%);
+    }
+  }
+}

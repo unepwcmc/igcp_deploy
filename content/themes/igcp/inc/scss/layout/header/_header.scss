@@ -1,0 +1,73 @@
+.hd-Header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  background-color: $color-header;
+  transition: padding 0.3s ease;
+  color: $color-secondary;
+
+  // @include break-min($sm) {
+  //   padding-top: 25px;
+  //   padding-bottom: 25px;
+  // }
+
+  .logged-in.admin-bar & {
+    top: 32px;
+  }
+}
+
+.hd-Header_Inner {
+  @include inner;
+}
+
+.hd-Header_Body {
+}
+
+.hd-Header_Items {
+  display: flex;
+}
+
+.hd-Header_Item {
+  flex: 1;
+}
+
+.hd-Header_Item-logo {
+  flex: 0 0 100px;
+  margin-right: $grid-gap;
+  transition: flex-basis .3s ease;
+
+  .utl-HeaderScrolled & {
+    flex-basis: 60px;
+  }
+}
+
+.hd-Header_Item-nav {
+  display: flex;
+  align-items: center;
+
+  @include break-min($md) {
+    flex-wrap: wrap;
+  }
+}
+
+.hd-Header_Item-tools {
+  display: flex;
+  justify-content: flex-end;
+  flex: 0 0 auto;
+}
+
+.hd-Header_Title {
+  @include screen_reader_only;
+}
+
+.hd-Header_Logo {
+  display: block;
+
+  img {
+    max-width: 150px;
+  }
+}

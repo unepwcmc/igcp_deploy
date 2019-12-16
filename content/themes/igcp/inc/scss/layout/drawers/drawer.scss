@@ -1,0 +1,93 @@
+.drw-Drawer {
+  width: 450px;
+  max-width: 80%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 24;
+  background-color: $color-primary;
+  color: #fff;
+  display: flex;
+  transform: translateX(-500px);
+  transition: transform 0.3s ease;
+  height: 100%;
+
+  // padding-top: $grid-gap;
+  // padding-bottom: $grid-gap;
+
+  .logged-in.admin-bar & {
+    top: 32px;
+  }
+
+  &.drw-Drawer-active {
+    transform: translateX(0);
+  }
+}
+
+.drw-Drawer_Inner {
+  @include inner;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.drw-Drawer_Close {
+  position: absolute;
+  top: $grid-gap;
+  right: $grid-gap;
+  width: 24px;
+  height: 24px;
+  display: block;
+  background: none;
+  border: 0;
+  cursor: pointer;
+
+  // @include Breakpoint('xs') {
+  //   top: 40px;
+  //   right: 40px;
+  // }
+}
+
+.drw-Drawer_CloseLine {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  outline: none;
+
+  .drw-Drawer_Close:hover & {
+    // background-color: $color-link;
+  }
+}
+
+.drw-Drawer_CloseLine-one {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.drw-Drawer_CloseLine-two {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.drw-Drawer_Social {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+
+  // @include Breakpoint('xs') {
+  //   top: 40px;
+  //   left: 40px;
+  // }
+}
+
+.drw-Drawer_Body {
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+}

@@ -1,0 +1,36 @@
+.editor-block-list__layout,
+.lyt-Body,
+.lyt-Body .ent-Entry_Content {
+  .wp-block-mkl-section-block,
+  .dm-Section {
+    @include spacer;
+
+    &.has-primary-background-color {
+      background-color: $color-primary;
+    }
+    &.has-secondary-background-color {
+      background-color: $color-secondary;
+    }
+    &.has-black-background-color {
+      background-color: #000;
+    }
+    &.has-white-background-color {
+      background-color: #FFF;
+    }
+    &.has-grey-background-color {
+      background-color: #f7f7f7;
+    }
+
+    &.restricted {
+      .wp-block-mkl-section-block-inner > p {
+        max-width: calc((6 / 12) * 100%);
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
+  }
+
+  .wp-block-mkl-section-block-inner {
+    @include inner;
+  }
+}

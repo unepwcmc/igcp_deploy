@@ -1,0 +1,30 @@
+@import "../../inc/scss/utilities/variables";
+@import "../../inc/scss/utilities/mixins";
+
+.blk-Text_Columns {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -#{$grid-gap};
+  margin-bottom: -#{$grid-gap * 3} !important;
+}
+
+.blk-Text_Column {
+  flex: 0 0 calc(50% - #{$grid-gap});
+  margin-right: #{$grid-gap};
+  margin-bottom: #{$grid-gap * 3};
+}
+
+.blk-Text_Heading {
+  font-size: 18px;
+}
+
+.blk-Text_Text {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+a.blk-Text_Link {
+  color: $color-grey-text;
+  font-size: 14px;
+  text-decoration: none;
+}

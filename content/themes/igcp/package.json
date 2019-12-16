@@ -1,0 +1,29 @@
+{
+  "name": "starter-theme",
+  "version": "1.0.0",
+  "scripts": {
+    "clean": "rm -R inc/css",
+    "clean-blocks": "rm -R blocks/css",
+    "compile": "sass inc/scss/main.scss:inc/css/main.css inc/scss/ie.scss:inc/css/ie.css inc/scss/gutenberg.scss:inc/css/gutenberg.css blocks/scss:blocks/css --style compressed",
+    "prefix": "postcss inc/css/*.css --use=autoprefixer --map=false --dir=inc/css",
+    "prefix-blocks": "postcss blocks/css/*.css --use=autoprefixer --map=false --dir=blocks/css",
+    "babel": "babel --presets es2015 inc/js/scripts.es6.js -o inc/js/scripts.js",
+    "dev": "npm run compile -- --watch",
+    "build": "npm run clean && npm run compile && npm run prefix && npm run babel"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.7.2",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1",
+    "clean-css-cli": "^4.3.0",
+    "postcss-cli": "^6.1.3",
+    "sass": "^1.23.7"
+  }
+}

@@ -1,0 +1,90 @@
+.mod-Modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 30;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  visibility: visible;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+
+  @include break-min($sm) {
+    @include spacer;
+  }
+
+  &.mod-Modal-active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+}
+
+.mod-Modal_Inner {
+  display: flex;
+  width: 100%;
+
+  @include break-min($sm) {
+    @include inner;
+  }
+}
+
+.mod-Modal_Body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mod-Modal_Close {
+  position: absolute;
+  top: $grid-gap;
+  right: $grid-gap;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+
+  @include break-min($sm) {
+    top: $grid-gap;
+    right: $grid-gap;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.mod-Modal_CloseSpan {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  transform-origin: 50% 50%;
+
+  &:first-child {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  &:last-child {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+
+.mod-Modal_Content {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: $grid-gap;
+  width: 100%;
+}
+
+.mod-Modal_Title {
+  font-size: 16px;
+
+  @include break-min($sm) {
+    font-size: 28px;
+  }
+}
