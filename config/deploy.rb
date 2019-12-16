@@ -6,20 +6,22 @@
 lock '3.11.0'
 
 # The WordPress admin user
-set :wp_user, 'yourname'
+set :wp_user, 'wcmc'
 
 # The WordPress admin email address
-set :wp_email, 'yourname@example.com'
+set :wp_email, 'helpdesk@unep-wcmc.org'
+
+set :deploy_user, 'wcmc'
 
 # The WordPress 'Site Title' for the website
-set :wp_sitename, 'WP Deploy'
+set :wp_sitename, 'IGCP_deploy'
 
 # The local environment URL.
 set :wp_localurl, 'http://wpdeploy.local'
 
 # An identifying name for the application to be used by Capistrano
-set :application, 'wp-deploy'
-set :repo_url, 'git@github.com:Mixd/wp-deploy.git'
+set :application, 'igcp_deploy'
+set :repo_url, 'git@github.com:unepwcmc/igcp_deploy.git'
 
 
 ################################################################################
