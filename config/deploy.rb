@@ -47,6 +47,9 @@ set :file_permissions_users, ["www-data"]
 set :file_permissions_chmod_mode, "0755"
 
 
+
+before "deploy:updated", "deploy:set_permissions:acl"
+
 namespace :deploy do
   desc 'create WordPress files for symlinking'
   task :create_wp_files do
