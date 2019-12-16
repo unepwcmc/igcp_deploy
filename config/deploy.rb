@@ -14,13 +14,13 @@ set :wp_email, 'helpdesk@unep-wcmc.org'
 set :deploy_user, 'wcmc'
 
 # The WordPress 'Site Title' for the website
-set :wp_sitename, 'IGCP_deploy'
+set :wp_sitename, 'igcp'
 
 # The local environment URL.
 set :wp_localurl, 'http://wpdeploy.local'
 
 # An identifying name for the application to be used by Capistrano
-set :application, 'igcp_deploy'
+set :application, 'igcp'
 set :repo_url, 'git@github.com:unepwcmc/igcp_deploy.git'
 
 
