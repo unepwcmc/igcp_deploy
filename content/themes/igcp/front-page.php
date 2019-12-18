@@ -2,7 +2,7 @@
 /**
  * The template for displaying full width page
  *
- Template Name: Full Width
+ Template Name: Front Page
  *
  */
 
