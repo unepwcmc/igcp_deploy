@@ -1,4 +1,4 @@
-.blg-Card {
+.crd-Team {
   display: flex;
   flex-direction: column;
   align-self: stretch;
@@ -6,7 +6,7 @@
   position: relative;
 }
 
-.blg-Card_Badge {
+.crd-Team_Badge {
   position: absolute;
   top: $grid-gap;
   left: $grid-gap;
@@ -21,7 +21,7 @@
   line-height: 1;
 }
 
-.blg-Card_Image {
+.crd-Team_Image {
   position: relative;
   padding-bottom: 75%;
   overflow: hidden;
@@ -33,54 +33,31 @@
     transition: transform .5s ease;
     will-change: transform;
 
-    .blg-Card:hover & {
+    .crd-Team:hover & {
       transform: scale(1.05);
     }
   }
 }
 
-.blg-Card_Label {
-  position: absolute;
-  top: $grid-gap;
-  left: $grid-gap;
-}
-
-.blg-Card_Body {
+.crd-Team_Body {
   background-color: $color-light-grey;
   flex: 1;
   display: flex;
 }
 
-.blg-Card_Content {
+.crd-Team_Content {
   position: relative;
-  padding: $grid-gap $grid-gap #{$grid-gap * 3};
+  padding: $grid-gap;
   flex: 1;
 }
 
-.blg-Card_Details {
-  font-size: 10px;
+h3.crd-Team_Title {
+  font-size: 14px;
+  font-weight: 500;
   margin-bottom: 5px;
-  color: $color-grey-text;
 }
 
-h3.blg-Card_Title {
+p.crd-Team_JobTitle {
   font-size: 14px;
-  font-weight: 500;
-  line-height: 1.5;
-  margin-bottom: $grid-gap;
-}
-
-p.blg-Card_Link {
-  position: absolute;
-  bottom: $grid-gap;
-  left: $grid-gap;
   margin-bottom: 0;
-  font-size: 14px;
-  color: $color-grey-text;
-  font-weight: 500;
-}
-
-a.blg-Card_FauxLink {
-  @include absolute_fill;
-  z-index: 2;
 }

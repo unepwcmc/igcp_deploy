@@ -84,3 +84,10 @@ a.blk-CTA_Link {
     @include button_accent;
   }
 }
+
+.blk-CTA_ImageStrip {
+  padding-bottom: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}

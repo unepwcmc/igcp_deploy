@@ -217,18 +217,6 @@
   height: 100%;
 }
 
-@mixin screen_reader_only {
-  border: 0;
-  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-
 @mixin no_bullets {
   list-style: none;
 }
@@ -241,4 +229,22 @@
 @mixin object_fit_contain {
   object-fit: contain;
   font-family: 'object-fit: contain;';
+}
+
+@mixin restrain_width {
+  max-width: $restrained-width;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@mixin screen_reader_only {
+  border: 0;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }

@@ -28,7 +28,7 @@ get_header(); ?>
 			// $background_image_url = wp_get_attachment_image_src( $background_image, 'full-size' )[0];
 			// $opacity = block_field( 'opacity', false );
 
-			get_template_part( 'template-parts/components/component', 'hero' );
+			get_template_part( 'template-parts/components/heroes/hero', 'page' );
 
 		endwhile; // End of the loop.
 	endif;

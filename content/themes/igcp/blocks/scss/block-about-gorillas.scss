@@ -1,0 +1,47 @@
+@import "../../inc/scss/utilities/variables";
+@import "../../inc/scss/utilities/mixins";
+
+.abt-Gorillas {
+
+}
+
+h3.abt-Gorillas_Title {
+  font-size: 22px;
+  @include restrain_width;
+}
+
+.abt-Gorillas_Text {
+  @include restrain_width;
+}
+
+.abt-Gorillas_Columns {
+  display: flex;
+}
+
+.abt-Gorillas_Column {
+  flex: 0 0 calc(((6 / 12) * 100%) - 2.5px);
+  &:first-child {
+    margin-right: 5px;
+  }
+}
+
+.abt-Gorillas_ImageWrap {
+  position: relative;
+  padding-bottom: calc((40 / 57) * 100%);
+}
+
+.abt-Gorillas_Image {
+  @include absolute_fill;
+  @include object-fit-cover;
+}
+
+.abt-Gorillas_Quote {
+  @include spacer;
+  @include restrain_width;
+}
+
+p.abt-Gorillas_QuoteText {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 0;
+}

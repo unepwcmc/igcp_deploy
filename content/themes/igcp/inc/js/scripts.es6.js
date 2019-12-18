@@ -7,7 +7,7 @@
   });
 
   // Debounce function - taken from https://gist.github.com/nmsdvid/8807205
-  const debounceEvent = (callback, time = 50, interval) => (...args) =>
+  const debounceEvent = (callback, time = 20, interval) => (...args) =>
     clearTimeout(interval, (interval = setTimeout(callback, time, ...args)));
 
   function Init() {

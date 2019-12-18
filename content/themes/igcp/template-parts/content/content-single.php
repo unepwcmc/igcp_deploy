@@ -10,15 +10,14 @@
  * @version 1.2
  */
 
+$category = get_the_category();
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'ent-Entry' ); ?>>
 	<header class="ent-Entry_Header">
 		<?php
-
-		/*
-		the_title( '<h1 class="ent-Entry_Title">', '</h1>' );
-		*/
+		the_title( '<h2 class="ent-Entry_Title">', '</h2>' );
 		?>
+		<p class="ent-Entry_Details"><?php echo $category[0]->name; ?> | 01/10/19</p>
 	</header><!-- .entry-header -->
 
 	<div class="ent-Entry_Body">

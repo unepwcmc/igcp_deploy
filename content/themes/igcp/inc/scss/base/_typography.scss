@@ -4,7 +4,7 @@ TYPOGRAPHY
 
 @mixin heading {
   font-family: $font-heading;
-  margin-bottom: 35px;
+  margin-bottom: $grid-gap;
   letter-spacing: 0.5px;
   color: $color-headings;
 }

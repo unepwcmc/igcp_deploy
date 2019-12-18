@@ -1,0 +1,16 @@
+.ico-Logo {
+  transition: transform .3s ease;
+
+  .utl-HeaderScrolled & {
+    transform: scale(1.4) translateY(8px);
+  }
+}
+
+.ico-Logo_Text {
+  transition: opacity .3s ease, visibility .3s ease;
+
+  .utl-HeaderScrolled & {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

@@ -3,12 +3,12 @@
 
 .blk-PictureLinks_Items {
   display: flex;
-  margin-right: -100px;
+  margin-right: -80px;
 }
 
 .blk-PictureLinks_Item {
-  flex: 0 0 calc(25% - 100px);
-  margin-right: 100px;
+  flex: 0 0 calc(25% - 80px);
+  margin-right: 80px;
 }
 
 .blk-PictureLink {
@@ -37,6 +37,7 @@
   object-fit: cover;
   font-family: 'object-fit: cover;';
   transition: transform .5s ease;
+  will-change: transform;
 
   .blk-PictureLink_FauxLink:hover + .blk-PictureLink_Body & {
     transform: scale(1.025);

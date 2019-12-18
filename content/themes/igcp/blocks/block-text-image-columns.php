@@ -15,7 +15,6 @@
   $image_alt = get_post_meta($image, '_wp_attachment_image_alt', TRUE);
 
   $show_social = block_field( 'show-social', false);
-  $socials = array('facebook', 'twitter', 'instagram', 'linkedin', 'youtube');
 
   $flipped = block_field( 'flipped', false);
 ?>
@@ -42,21 +41,7 @@
   </div>
   <?php if ($show_social): ?>
     <div class="blk-TextImage_Footer">
-      <p>Share:</p>
-      <ul class="soc-Social_Icons">
-
-        <?php foreach ($socials as $social) :
-          $social_url = get_theme_mod( $social . '_url', false );
-          if ($social_url !== '') : ?>
-            <li class="soc-Social_Icon">
-              <a href="<?php echo $social_url; ?>" target="_blank" rel="noreferrer noopener">
-                <?php get_template_part( 'template-parts/icons/icon', $social ); ?>
-              </a>
-            </li>
-          <?php endif; ?>
-        <?php endforeach; ?>
-
-      </ul>
+      <?php get_template_part( 'template-parts/social/social', 'share' ); ?>
     </div>
   <?php endif; ?>
 </div>

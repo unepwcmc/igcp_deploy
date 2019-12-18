@@ -5,24 +5,15 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  */
 
-$image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_id() ), 'single-post-thumbnail' );
-
 get_header(); ?>
 
-<div class="pge-Hero">
-	<div class="pge-Hero_Inner">
-		<div class="pge-Hero_Body">
-			<h1 class="pge-Hero_Title"><?php the_title(); ?></h1>
-			<p class="pge-Hero_Date"><?php echo get_the_date(); ?></p>
-		</div>
-	</div>
-	<div class="pge-Hero_Overlay"></div>
-	<img src="<?php echo $image[0]; ?>" alt="" class="pge-Hero_BackgroundImage">
-</div>
+<?php
+	get_template_part('template-parts/components/heroes/hero', 'post');
+?>
 
-<div class="lyt-Container lyt-Container-hasSidebar">
+<div class="lyt-Container">
 	<div class="lyt-Container_Inner">
-		<section class="lyt-Primary">
+		<section class="lyt-Primary lyt-Primary-restrained">
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
@@ -35,14 +26,18 @@ get_header(); ?>
 					comments_template();
 				endif;
 
+
+				/* Navigation Links
 				previous_post_link( '&laquo; %link', 'Previous Post', true );
 				echo ' | ';
 				next_post_link( '%link &raquo;', 'Next Post', true );
+				*/
 
 			endwhile; // End of the loop.
 			?>
+
+			<?php get_template_part( 'template-parts/components/related', 'articles' ); ?>
 		</section>
-		<?php get_sidebar(); ?>
 	</div>
 </div>
 

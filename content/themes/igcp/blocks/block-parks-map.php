@@ -1,6 +1,6 @@
 <?php
   /*
-    Map Block
+    National Parks Map Block
     Created by UNEP-WCMC
     With Block Lab for Gutenberg - https://getblocklab.com/
   */

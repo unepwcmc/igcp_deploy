@@ -1,0 +1,28 @@
+.art-Related {
+  @include spacer;
+}
+
+.art-Related_Header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.art-Related_Title {
+  margin-bottom: 0;
+}
+
+.art-Related_Body {
+
+}
+
+.art-Related_Items {
+  display: flex;
+  margin: 0 -#{$grid-gap} 0 0;
+}
+
+.art-Related_Item {
+  @include no_bullets;
+  display: flex;
+  flex: 0 0 calc(((3 / 12) * 100%) - #{$grid-gap});
+  margin-right: $grid-gap;
+}

@@ -9,7 +9,7 @@
 
   > li {
     &:last-child {
-      flex-basis: 150px;
+      flex: 0 0 150px;
     }
   }
 
@@ -18,7 +18,8 @@
     font-family: $font-heading;
     letter-spacing: 0.6px;
     font-weight: 500;
-    margin-right: 30px;
+    margin-right: $grid-gap;
+    flex: 1 1 auto;
 
     &:last-child {
       margin-right: 0;
@@ -30,17 +31,34 @@
       font-size: 14px;
       text-decoration: none;
       color: currentColor;
-      position: relative;
       z-index: 1;
       transition: color 0.3s ease-in-out;
+      position: relative;
 
-      &:hover {
-        text-decoration: underline;
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -4px;
+        height: 2px;
+        width: 100%;
+        left: 0;
+        right: 0;
+        background-color: currentColor;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .3s ease, visibility .3s ease;
+      }
+
+      &:hover::after {
+        opacity: 1;
+        visibility: visible;
       }
     }
 
-    &.current-menu-item > a {
-      text-decoration: underline;
+    &.current-menu-item > a::after {
+      opacity: 1;
+      visibility: visible;
     }
   }
 

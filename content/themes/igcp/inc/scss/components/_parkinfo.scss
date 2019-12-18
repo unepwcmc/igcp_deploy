@@ -1,0 +1,43 @@
+.sec-ParkInfo {
+
+}
+
+.sec-ParkInfo_Columns {
+  display: flex;
+}
+
+.sec-ParkInfo_Column {
+  &:first-child {
+    flex: 0 0 calc((8 / 12) * 100%);
+  }
+  &:last-child {
+    flex: 0 0 calc((4 / 12) * 100%);
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.sec-ParkInfo_ImageWrap {
+  position: relative;
+  padding-bottom: calc((5 / 8) * 100%);
+}
+
+.sec-ParkInfo_Image {
+  @include absolute_fill;
+  @include object-fit-cover;
+}
+
+.sec-ParkInfo_Content {
+  flex: 1;
+  background-color: $color-light-grey;
+  padding: $grid-gap;
+  line-height: 1.5;
+}
+
+.sec-ParkInfo_ImageStrip {
+  height: 30px;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.7
+}

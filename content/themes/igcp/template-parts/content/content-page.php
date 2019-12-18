@@ -12,18 +12,20 @@
 	<header class="ent-Entry_Header">
 		<?php the_title( '<h1 class="ent-Entry_Title utl-ScreenReaderOnly">', '</h1>' ); ?>
 	</header><!-- .ent-Entry_Header -->
-	<div class="ent-Entry_Content">
+	<div class="ent-Entry_Body">
+		<div class="ent-Entry_Content">
 
-		<?php
-			the_content();
+			<?php
+				the_content();
 
-			wp_link_pages(
-				array(
-					'before' => '<div class="page-links">' . __( 'Pages:' ),
-					'after'  => '</div>',
-				)
-			);
-		?>
+				wp_link_pages(
+					array(
+						'before' => '<div class="page-links">' . __( 'Pages:' ),
+						'after'  => '</div>',
+					)
+				);
+			?>
 
-	</div><!-- .ent-Entry_Content -->
+		</div><!-- .ent-Entry_Content -->
+	</div>
 </article><!-- #post-## -->

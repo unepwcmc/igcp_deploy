@@ -1,11 +1,5 @@
 .ent-Entry {
   position: relative;
-
-  .lyt-Primary-restrained & {
-    max-width: 555px;
-    margin-right: auto;
-    margin-left: auto;
-  }
 }
 
 .ent-Entry_Header {
@@ -13,26 +7,30 @@
 }
 
 .ent-Entry_Body {
-  .lyt-Videos & {
-    padding-right: 20px;
-    padding-left: 20px;
+  font-size: 14px;
+
+  strong {
+    font-size: 18px;
+  }
+
+  .lyt-Primary-restrained & {
+    @include restrain_width;
   }
 }
 
 h2.ent-Entry_Title {
-  font-size: 22px;
-  margin-bottom: 0;
   font-weight: 500;
-
-  .lyt-Videos & {
-    color: $color-body-font;
-    margin-bottom: 20px;
-    font-size: 20px;
-  }
+  text-align: center;
+  max-width: calc((10 / 12) * 100%);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
 }
 
-.ent-Entry_Details {
-  color: $color-grey-text;
+p.ent-Entry_Details {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .ent-Entry_ImageWrapper,
