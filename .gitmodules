@@ -1,4 +1,3 @@
-[submodule "wordpress"]
-	path = wordpress
-	url = https://github.com/WordPress/WordPress.git
-        branch = master
+[submodule "wordPress"]
+	path = wordPress
+	url = git://github.com/WordPress/WordPress.git
