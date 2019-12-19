@@ -43,5 +43,5 @@
     <div class="tlv-Intro_Footer">
       <?php get_template_part( 'template-parts/social/social', 'share' ); ?>
     </div>
-  <?php endif; ?>
+  <?php endif; ?> 
 </div>
