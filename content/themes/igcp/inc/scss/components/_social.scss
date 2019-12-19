@@ -1,3 +1,14 @@
+.soc-Social {
+  display: flex;
+  justify-content: space-between;
+}
+
+p.soc-Social_Heading {
+  margin-right: $grid-gap;
+  font-size: 14px;
+  color: $color-grey-text;
+}
+
 .soc-Social_Icons {
   display: flex;
   margin: 0;
@@ -19,11 +30,11 @@
 
   svg {
     fill: $color-grey-text;
-    transition: fill 0.3s ease;
+    transition: opacity 0.3s ease;
+    opacity: .4;
 
     &:hover {
-      // fill: $color-primary;
-      fill: darken($color-grey-text, 20%);
+      opacity: 1;
     }
   }
 

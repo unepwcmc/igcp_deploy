@@ -20,7 +20,7 @@
     .tlv-Intro_Columns-flipped & {
       order: 2;
       margin-right: 0;
-      margin-left: $grid-gap; 
+      margin-left: $grid-gap;
     }
   }
 
@@ -95,7 +95,4 @@ a.tlv-Intro_Link {
   margin-top: $grid-gap;
   border-top: 1px solid $color-border;
   padding-top: $grid-gap;
-
-  display: flex;
-  justify-content: space-between;
 }
