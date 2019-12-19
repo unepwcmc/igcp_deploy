@@ -161,6 +161,7 @@ LOAD STYLES
 function custom_styles(){
     wp_enqueue_style( 'main_css', get_stylesheet_directory_uri() . '/inc/css/main.css' );
     wp_enqueue_style( 'ie_css', get_stylesheet_directory_uri() . '/inc/css/ie.css' );
+    wp_enqueue_style( 'google_fonts', 'https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap' );
     wp_enqueue_style( 'flickity', 'https://unpkg.com/flickity@2/dist/flickity.min.css' );
 }
 
