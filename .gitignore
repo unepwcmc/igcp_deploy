@@ -12,6 +12,8 @@ content/mu-plugins/
 content/wp-cache-config.php
 content/plugins/hello.php
 xmlrpc.php
+db.php
+plugins/
 
 wp-activate.php
 wp-admin/
