@@ -3,10 +3,11 @@
 
 .blk-PictureLinks_Items {
   display: flex;
-  margin-right: -80px;
+  margin: 0 -80px 0 0;
 }
 
 .blk-PictureLinks_Item {
+  @include no_bullets;
   flex: 0 0 calc(25% - 80px);
   margin-right: 80px;
 }
