@@ -38,7 +38,7 @@
 						get_template_part( 'template-parts/content/content', 'none' );
 				endif;
 			?>
-			<?php echo do_shortcode('[content_block id=349]'); ?>
+			<?php echo do_shortcode('[content_block slug=about-gorillas]'); ?>
 			<?php get_template_part( 'template-parts/components/park', 'info' ); ?>
 			<?php get_template_part( 'template-parts/components/related', 'families' ); ?>
 		</section>

@@ -1,27 +1,23 @@
 @import "../../inc/scss/utilities/variables";
 @import "../../inc/scss/utilities/mixins";
 
-.blk-TextImage {
-  margin-bottom: 80px;
+.tlv-Intro {
 
-  &:last-child {
-    margin-bottom: 0;
-  }
 }
 
-.blk-TextImage_Columns {
+.tlv-Intro_Columns {
   display: flex;
   margin-bottom: $grid-gap;
 }
 
-.blk-TextImage_Column {
+.tlv-Intro_Column {
   position: relative;
   flex: 0 0 calc(50% - #{$grid-gap / 2});
 
   &:first-child {
     margin-right: $grid-gap;
 
-    .blk-TextImage_Columns-flipped & {
+    .tlv-Intro_Columns-flipped & {
       order: 2;
       margin-right: 0;
       margin-left: $grid-gap;
@@ -30,72 +26,72 @@
 
   &:last-child {
     align-self: end;
-    .blk-TextImage_Columns-flipped & {
+    .tlv-Intro_Columns-flipped & {
       order: 1;
     }
   }
 }
 
-.blk-TextImage_Content {
+.tlv-Intro_Content {
 
 }
 
-.blk-TextImage_LeadText {
+.tlv-Intro_LeadText {
   font-size: 16px;
   font-weight: 500;
   line-height: 1.4;
 }
 
-.blk-TextImage_Text {
+.tlv-Intro_Text {
   line-height: 1.5;
   font-size: 14px;
 }
 
-a.blk-TextImage_Link {
+a.tlv-Intro_Link {
   color: $color-grey-text;
   text-decoration: none;
   font-size: 14px;
 }
 
-.blk-TextImage_ImageWrap {
+.tlv-Intro_ImageWrap {
   position: relative;
 }
 
-.blk-TextImage_ImageWrap-primary {
+.tlv-Intro_ImageWrap-primary {
   width: calc(100% + 10px);
   margin-bottom: 5%;
   z-index: 2;
   border-right: 10px solid #fff;
   border-bottom: 15px solid #fff;
-  padding-bottom: calc((40 / 57) * 100%);
+  padding-bottom: 55%;
 
-  .blk-TextImage_Columns-flipped & {
+  .tlv-Intro_Columns-flipped & {
     border-right: 0;
     border-left: 10px solid #fff;
     margin-left: -10px;
   }
 }
 
-.blk-TextImage_ImageWrap-secondary {
+.tlv-Intro_ImageWrap-secondary {
   width: 70%;
   position: absolute;
   bottom: 0;
-  right: -7%;
+  right: -#{100px - $grid-gap};
   padding-bottom: 45%;
 
-  .blk-TextImage_Columns-flipped & {
+  .tlv-Intro_Columns-flipped & {
     right: auto;
-    left: -7%;
+    left: -#{100px - $grid-gap};
   }
 }
 
-.blk-TextImage_Image {
+.tlv-Intro_Image {
   @include absolute_fill;
   object-fit: cover;
   font-family: 'object-fit: cover;';
 }
 
-.blk-TextImage_Footer {
+.tlv-Intro_Footer {
   margin-top: $grid-gap;
   border-top: 1px solid $color-border;
   padding-top: $grid-gap;

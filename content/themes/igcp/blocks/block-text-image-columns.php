@@ -14,8 +14,6 @@
   $image_url = wp_get_attachment_image_src( $image, 'full-size' )[0];
   $image_alt = get_post_meta($image, '_wp_attachment_image_alt', TRUE);
 
-  $show_social = block_field( 'show-social', false);
-
   $flipped = block_field( 'flipped', false);
 ?>
 
@@ -39,9 +37,4 @@
       </div>
     </div>
   </div>
-  <?php if ($show_social): ?>
-    <div class="blk-TextImage_Footer">
-      <?php get_template_part( 'template-parts/social/social', 'share' ); ?>
-    </div>
-  <?php endif; ?>
 </div>
