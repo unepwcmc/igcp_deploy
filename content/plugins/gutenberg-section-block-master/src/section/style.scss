@@ -37,10 +37,4 @@
 			position: relative;
 		}
 	}
-
-	& .wp-block-mkl-section-block-inner > *:last-child,
-	body.page:not(.twentyseventeen-front-page) .entry-content & .wp-block-mkl-section-block-inner > *:last-child {
-		padding-bottom: 0;
-		margin-bottom: 0;
-	}
 }

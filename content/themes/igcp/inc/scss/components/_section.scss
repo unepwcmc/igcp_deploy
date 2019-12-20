@@ -1,8 +1,7 @@
 .editor-block-list__layout,
 .lyt-Body,
 .lyt-Body .ent-Entry_Content {
-  .wp-block-mkl-section-block,
-  .dm-Section {
+  .wp-block-mkl-section-block {
     @include spacer;
 
     &.has-primary-background-color {
@@ -27,6 +26,14 @@
         margin-right: auto;
         margin-left: auto;
       }
+    }
+  }
+
+  .wgt-Widget .wp-block-mkl-section-block {
+    margin: 0;
+
+    &.color-background {
+      @include spacer_body;
     }
   }
 
