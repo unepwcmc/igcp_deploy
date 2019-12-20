@@ -13,19 +13,19 @@
 ?>
 
 
-<div class="sec-ParkInfo">
-  <div class="sec-ParkInfo_Columns">
-    <div class="sec-ParkInfo_Column">
-      <div class="sec-ParkInfo_ImageWrap">
-        <img class="sec-ParkInfo_Image" src="<?php echo $park_map_image_url; ?>" alt="<?php echo $park_name; ?>">
+<div class="sec-Info">
+  <div class="sec-Info_Columns">
+    <div class="sec-Info_Column">
+      <div class="sec-Info_ImageWrap">
+        <img class="sec-Info_Image" src="<?php echo $park_map_image_url; ?>" alt="<?php echo $park_name; ?>">
       </div>
     </div>
-    <div class="sec-ParkInfo_Column">
-      <div class="sec-ParkInfo_Content">
+    <div class="sec-Info_Column">
+      <div class="sec-Info_Content">
         <h4><?php echo $park_name; ?></h4>
         <p><?php echo $park_description; ?></p>
       </div>
-      <div class="sec-ParkInfo_ImageStrip" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/inc/img/pattern-bar-grey.png');"></div>
+      <div class="sec-Info_ImageStrip" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/inc/img/pattern-bar-grey.png');"></div>
     </div>
   </div>
 </div>

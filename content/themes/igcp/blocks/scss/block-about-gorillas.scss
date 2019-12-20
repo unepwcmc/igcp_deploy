@@ -14,26 +14,38 @@ h3.abt-Gorillas_Title {
   @include restrain_width;
 }
 
-.abt-Gorillas_Columns {
+.abt-Gorillas_Images {
+  @include spacer;
+}
+
+.abt-Gorillas_Images-flex {
   display: flex;
 }
 
-.abt-Gorillas_Column {
-  flex: 0 0 calc(((6 / 12) * 100%) - 2.5px);
-  &:first-child {
-    margin-right: 5px;
+.abt-Gorillas_Image {
+  .abt-Gorillas_Images-flex & {
+    flex: 0 0 calc(((6 / 12) * 100%) - 2.5px);
+
+    &:first-child {
+      margin-right: 5px;
+    }
   }
 }
 
 .abt-Gorillas_ImageWrap {
   position: relative;
   padding-bottom: calc((40 / 57) * 100%);
+
+  img {
+    @include absolute_fill;
+    @include object-fit-cover;
+  }
+
+  .abt-Gorillas_Images-flex & {
+    padding-bottom: calc((10 / 14.25) * 100%);
+  }
 }
 
-.abt-Gorillas_Image {
-  @include absolute_fill;
-  @include object-fit-cover;
-}
 
 .abt-Gorillas_Quote {
   @include spacer;

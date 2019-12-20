@@ -1,28 +1,32 @@
 @import "../../inc/scss/utilities/variables";
 @import "../../inc/scss/utilities/mixins";
 
-.blk-Info_Columns {
+.blk-Stats {
+  @include spacer_body;
+}
+
+.blk-Stats_Columns {
   display: flex;
   margin-right: -100px;
 }
 
-.blk-Info_Column {
+.blk-Stats_Column {
   flex: 0 0 calc(((4 / 12) * 100%) - 100px);
   margin-right: 100px;
 }
 
-.blk-Info_ImageWrap {
+.blk-Stats_ImageWrap {
   position: relative;
   padding-bottom: calc(( 4 / 12) * 100%);
   margin-bottom: $grid-gap;
 }
 
-.blk-Info_Image {
+.blk-Stats_Image {
   @include absolute_fill;
   @include object_fit_contain;
 }
 
-.blk-Info_Content {
+.blk-Stats_Content {
   text-align: center;
   color: #fff;
   padding-right: $grid-gap;
@@ -32,11 +36,11 @@
   margin-left: auto;
 }
 
-.blk-Info_Heading {
+.blk-Stats_Heading {
   font-size: 26px;
   font-weight: 600;
 }
 
-.blk-Info_Text {
+.blk-Stats_Text {
   font-size: 14px;
 }

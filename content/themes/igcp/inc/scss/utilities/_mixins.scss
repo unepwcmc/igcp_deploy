@@ -25,6 +25,16 @@
 //-------------------------------------------------
 
 @mixin spacer {
+  margin-top: 25px;
+  margin-bottom: 25px;
+
+  @include break-min($xs) {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+}
+
+@mixin spacer_body {
   padding-top: 25px;
   padding-bottom: 25px;
 

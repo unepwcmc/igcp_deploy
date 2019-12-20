@@ -1,6 +1,6 @@
 <?php
   /*
-    Info Block
+    Stats Block
     Created by UNEP-WCMC
     With Block Lab for Gutenberg - https://getblocklab.com/
   */
@@ -22,41 +22,41 @@
   $text_3 = block_field( 'text-3', false );
 ?>
 
-<div class="blk-Info">
-  <div class="blk-Info_Columns">
+<div class="blk-Stats">
+  <div class="blk-Stats_Columns">
 
     <?php if ($heading_1 != '' || $text_1 != ''): ?>
-      <div class="blk-Info_Column">
-        <div class="blk-Info_ImageWrap">
-          <img class="blk-Info_Image" src="<?php echo $image_1_src; ?>" alt="<?php echo $heading_1; ?>">
+      <div class="blk-Stats_Column">
+        <div class="blk-Stats_ImageWrap">
+          <img class="blk-Stats_Image" src="<?php echo $image_1_src; ?>" alt="<?php echo $heading_1; ?>">
         </div>
-        <div class="blk-Info_Content">
-          <p class="blk-Info_Heading"><?php echo $heading_1; ?></p>
-          <p class="blk-Info_Text"><?php echo $text_1; ?></p>
+        <div class="blk-Stats_Content">
+          <p class="blk-Stats_Heading"><?php echo $heading_1; ?></p>
+          <p class="blk-Stats_Text"><?php echo $text_1; ?></p>
         </div>
       </div>
     <?php endif; ?>
 
     <?php if ($heading_2 != '' || $text_2 != ''): ?>
-      <div class="blk-Info_Column">
-        <div class="blk-Info_ImageWrap">
-          <img class="blk-Info_Image" src="<?php echo $image_2_src; ?>" alt="<?php echo $heading_2; ?>">
+      <div class="blk-Stats_Column">
+        <div class="blk-Stats_ImageWrap">
+          <img class="blk-Stats_Image" src="<?php echo $image_2_src; ?>" alt="<?php echo $heading_2; ?>">
         </div>
-        <div class="blk-Info_Content">
-          <p class="blk-Info_Heading"><?php echo $heading_2; ?></p>
-          <p class="blk-Info_Text"><?php echo $text_2; ?></p>
+        <div class="blk-Stats_Content">
+          <p class="blk-Stats_Heading"><?php echo $heading_2; ?></p>
+          <p class="blk-Stats_Text"><?php echo $text_2; ?></p>
         </div>
       </div>
     <?php endif; ?>
 
     <?php if ($heading_3 != '' || $text_3 != ''): ?>
-      <div class="blk-Info_Column">
-        <div class="blk-Info_ImageWrap">
-          <img class="blk-Info_Image" src="<?php echo $image_3_src; ?>" alt="<?php echo $heading_3; ?>">
+      <div class="blk-Stats_Column">
+        <div class="blk-Stats_ImageWrap">
+          <img class="blk-Stats_Image" src="<?php echo $image_3_src; ?>" alt="<?php echo $heading_3; ?>">
         </div>
-        <div class="blk-Info_Content">
-          <p class="blk-Info_Heading"><?php echo $heading_3; ?></p>
-          <p class="blk-Info_Text"><?php echo $text_3; ?></p>
+        <div class="blk-Stats_Content">
+          <p class="blk-Stats_Heading"><?php echo $heading_3; ?></p>
+          <p class="blk-Stats_Text"><?php echo $text_3; ?></p>
         </div>
       </div>
     <?php endif; ?>

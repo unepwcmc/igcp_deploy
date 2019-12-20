@@ -1,5 +1,4 @@
 .pge-Hero {
-  @include spacer;
   position: relative;
   margin-left: $grid-gap;
   margin-right: $grid-gap;
@@ -12,11 +11,7 @@
 }
 
 .pge-Hero_Body {
-  padding-top: 48px;
-
-  @include break-min($md) {
-    padding-top: 98px;
-  }
+  @include spacer_body;
 }
 
 .pge-Hero_Content {
@@ -24,6 +19,8 @@
   max-width: calc((6 / 12) * 100%);
   margin-right: auto;
   margin-left: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 h2.pge-Hero_Title {

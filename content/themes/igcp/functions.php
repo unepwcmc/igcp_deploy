@@ -67,7 +67,7 @@ add_theme_support( 'editor-color-palette', array(
 	array(
 		'name'  => __( 'Grey', 'colour-pallette' ),
 		'slug'  => 'grey',
-		'color' => '#fefefe',
+		'color' => '#f2f2f2',
 	)
 ) );
 

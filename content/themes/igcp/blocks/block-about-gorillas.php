@@ -20,15 +20,15 @@
 <div class="abt-Gorillas">
   <h3 class="abt-Gorillas_Title"><?php echo $title; ?></h3>
   <p class="abt-Gorillas_Text"><?php echo $text; ?></p>
-  <div class="abt-Gorillas_Columns">
-    <div class="abt-Gorillas_Column">
+  <div class="abt-Gorillas_Images <?php if ($image_1 != '' && $image_2 != '') echo ' abt-Gorillas_Images-flex'; ?>">
+    <div class="abt-Gorillas_Image">
       <div class="abt-Gorillas_ImageWrap">
-        <img src="<?php echo $image_1_src; ?>" alt="<?php echo $title; ?>" class="abt-Gorillas_Image">
+        <img src="<?php echo $image_1_src; ?>" alt="<?php echo $title; ?>">
       </div>
     </div>
-    <div class="abt-Gorillas_Column">
+    <div class="abt-Gorillas_Image">
       <div class="abt-Gorillas_ImageWrap">
-        <img src="<?php echo $image_2_src; ?>" alt="<?php echo $title; ?>" class="abt-Gorillas_Image">
+        <img src="<?php echo $image_2_src; ?>" alt="<?php echo $title; ?>">
       </div>
     </div>
   </div>
