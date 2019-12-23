@@ -82,9 +82,9 @@ svg {
 FORMS
 --------------------------------------------------------------*/
 
-label {
-  @include screen_reader_only;
-}
+// label {
+//   @include screen_reader_only;
+// }
 
 fieldset {
   margin-bottom: 1em;

@@ -1,0 +1,19 @@
+.searchandfilter {
+  li {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  label {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+  }
+
+  input[type="checkbox"] {
+    display: inline-block;
+    position: absolute;
+    top: -2px;
+    left: 0;
+  }
+}

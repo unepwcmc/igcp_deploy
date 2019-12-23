@@ -1,5 +1,7 @@
 .wgt-Widgets_Item {
-  @include spacer;
+  &:not(.no-margin) {
+    @include spacer;
+  }
 
   &:last-child {
     margin-bottom: 0;

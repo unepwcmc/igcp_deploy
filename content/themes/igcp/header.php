@@ -49,12 +49,19 @@
                 <div class="hd-Tools_Items">
                   <div class="hd-Tools_Item hd-Tools_Item-search">
                     <div class="hd-Search">
-                      <div class="hd-Search_Icon">
+                      <button class="hd-Search_Toggle" data-searchbar-toggle>
                         <?php get_template_part( 'template-parts/icons/icon', 'search' ); ?>
-                      </div>
-                      <div class="hd-Search_Bar">
-                        <input type="text" name="" value="" class="hd-Search_Input">
-                        <input type="submit" name="" value="Search" class="hd-Search_Button">
+                      </button>
+                      <div class="hd-Search_Bar" data-searchbar>
+                        <form class="hd-Search_Form" role="search" method="get" id="searchform" action="<?php echo get_site_url(); ?>">
+                          <label for="s" class="utl-ScreenReaderOnly">Search for:</label>
+
+                          <input type="text" name="s" id="s" value="" class="hd-Search_Input">
+
+                          <input type="hidden" value="1" name="sentence" />
+
+                          <input type="submit" name="" value="Search" class="hd-Search_Button">
+                        </form>
                       </div>
                     </div>
                   </div>

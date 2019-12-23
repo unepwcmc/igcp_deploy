@@ -1,5 +1,5 @@
 .lyt-Main {
-  padding-top: 122px; 
+  padding-top: 122px;
 
   // .admin-bar & {
   //   padding-top: 125px;
@@ -43,7 +43,7 @@ h2.lyt-Primary_Title {
   padding-top: $grid-gap;
 
   @include break-min($sm) {
-    padding-top: 0;
+    padding-top: 75px;
     flex: 0 0 calc(25% - #{$grid-gap / 2});
   }
 }
