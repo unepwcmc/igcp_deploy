@@ -1,5 +1,5 @@
 {
-  "name": "starter-theme",
+  "name": "IGCP",
   "version": "1.0.0",
   "scripts": {
     "clean": "rm -R inc/css",

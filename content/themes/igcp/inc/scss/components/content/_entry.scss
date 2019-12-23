@@ -18,6 +18,29 @@
   }
 }
 
+.ent-Entry_Columns {
+  display: flex;
+}
+
+.ent-Entry_Column {
+  &:first-child {
+    flex: 0 0 200px;
+  }
+  &:last-child {
+    flex: 1 1 auto;
+  }
+}
+
+.ent-Entry_Thumbnail {
+  position: relative;
+  padding-bottom: 100%;
+
+  img {
+    @include absolute_fill;
+    @include object-fit-cover;
+  }
+}
+
 h2.ent-Entry_Title {
   font-weight: 500;
   text-align: center;

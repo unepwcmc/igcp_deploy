@@ -1,0 +1,72 @@
+.ent-Excerpt {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.ent-Excerpt_Header {
+  // margin-bottom: 20px;
+}
+
+.ent-Excerpt_Body {
+  font-size: 14px;
+
+  strong {
+    font-size: 18px;
+  }
+
+  .lyt-Primary-restrained & {
+    @include restrain_width;
+    max-width: #{$restrained-width + $grid-gap + 200px};
+  }
+}
+
+.ent-Excerpt_Columns {
+  display: flex;
+}
+
+.ent-Excerpt_Column {
+  &:first-child {
+    flex: 0 0 200px;
+    margin-right: $grid-gap;
+  }
+  &:last-child {
+    flex: 1 1 auto;
+  }
+}
+
+.ent-Excerpt_Thumbnail {
+  position: relative;
+  padding-bottom: 100%;
+
+  img {
+    @include absolute_fill;
+    @include object-fit-cover;
+  }
+}
+
+h2.ent-Excerpt_Title {
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+p.ent-Excerpt_Details {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.ent-Excerpt_Content {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+a.ent-Excerpt_FauxLink {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
