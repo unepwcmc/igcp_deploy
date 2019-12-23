@@ -20,6 +20,8 @@ content/themes/igcp/inc/css
 *.css
 *.css.map
 
+content/themes/igcp/inc/js/scripts.js
+
 wp-activate.php
 wp-admin/
 wp-blog-header.php
@@ -58,3 +60,4 @@ node_modules
 .Trashes
 ehthumbs.db
 Thumbs.db
+scripts.js.tmp-browserify-*

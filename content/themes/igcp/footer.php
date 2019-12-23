@@ -34,8 +34,6 @@
 				</div>
 			</footer>
 
-			<script>objectFitImages();</script>
-
 		<?php wp_footer(); ?>
 
 	</body>

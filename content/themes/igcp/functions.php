@@ -174,17 +174,17 @@ LOAD JS
 function custom_load_js(){
 	// Enqueue Javascript
 	if(!is_admin()) {
-		wp_enqueue_script('custom-modernizr', get_stylesheet_directory_uri() . '/inc/js/modernizr-custom.3.6.0.js', array('jquery'));
+		// wp_enqueue_script('custom-modernizr', get_stylesheet_directory_uri() . '/inc/js/vendor/modernizr-custom.3.6.0.js', array('jquery'));
 
-		wp_enqueue_script('smoothscroll-polyfill', get_stylesheet_directory_uri() . '/inc/js/smoothscroll.js');
+		// wp_enqueue_script('smoothscroll-polyfill', get_stylesheet_directory_uri() . '/inc/js/utilities/smoothscroll-polyfill.js');
 
-		wp_enqueue_script('in-view', get_stylesheet_directory_uri() . '/inc/js/in-view.min.js');
+		// wp_enqueue_script('in-view', get_stylesheet_directory_uri() . '/inc/js/vendor/in-view.min.js');
 
-    wp_enqueue_script('objectfit-polyfill', get_stylesheet_directory_uri() . '/inc/js/ofi.js');
+    // wp_enqueue_script('objectfit-polyfill', get_stylesheet_directory_uri() . '/inc/js/utilities/objectfit-polyfill.js');
 
-    wp_enqueue_script('flickity', 'https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js');
+    // wp_enqueue_script('flickity', 'https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js');
 
-    wp_enqueue_script('custom-scripts', get_stylesheet_directory_uri() . '/inc/js/scripts.js', array('jquery', 'custom-modernizr'));
+    wp_enqueue_script('custom-scripts', get_stylesheet_directory_uri() . '/inc/js/scripts.js', array('jquery'));
 	}
 }
 

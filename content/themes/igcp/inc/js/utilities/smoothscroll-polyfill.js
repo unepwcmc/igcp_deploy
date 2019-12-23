@@ -1,7 +1,7 @@
 'use strict';
 
 // polyfill
-function smoothScrollPolyfill() {
+export default function smoothScrollPolyfill() {
   // aliases
   var w = window;
   var d = document;

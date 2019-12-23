@@ -8,8 +8,14 @@
     "prefix": "postcss inc/css/*.css --use=autoprefixer --map=false --dir=inc/css",
     "prefix-blocks": "postcss blocks/css/*.css --use=autoprefixer --map=false --dir=blocks/css",
     "babel": "babel --presets es2015 inc/js/scripts.es6.js -o inc/js/scripts.js",
+    "browserify": "browserify inc/js/scripts.es6.js -o inc/js/scripts.js -t babelify --presets es2015",
     "dev": "npm run compile -- --watch",
-    "build": "npm run clean && npm run compile && npm run prefix && npm run babel"
+    "build": "npm run clean && npm run compile && npm run prefix && npm run browserify"
+  },
+  "babel": {
+    "presets": [
+      "@babel/env"
+    ]
   },
   "browserslist": [
     "last 2 versions"
@@ -18,12 +24,18 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
     "autoprefixer": "^9.7.2",
     "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
     "babel-preset-es2015": "^6.24.1",
+    "babelify": "^10.0.0",
+    "browserify": "^16.5.0",
     "clean-css-cli": "^4.3.0",
     "postcss-cli": "^6.1.3",
     "sass": "^1.23.7"
+  },
+  "dependencies": {
+    "object-fit-images": "^3.2.4"
   }
 }
