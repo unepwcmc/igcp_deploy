@@ -82,9 +82,9 @@ svg {
 FORMS
 --------------------------------------------------------------*/
 
-// label {
-//   @include screen_reader_only;
-// }
+label {
+  font-size: 16px;
+}
 
 fieldset {
   margin-bottom: 1em;
@@ -100,11 +100,10 @@ textarea {
   background-color: #fff;
 
   border: 1px solid $color-secondary;
-  border-radius: 3px;
   outline: none;
 
   display: block;
-  padding: 1em;
+  padding: .6em;
   width: 100%;
 
   transition: color 0.3s ease;
@@ -123,22 +122,21 @@ textarea {
 }
 
 input[type="submit"] {
-  @include button;
-  color: $color-secondary;
-  border-color: $color-secondary;
-  background-color: transparent;
+  @include button_primary;
+  @include button_wider;
 }
 
 select {
   width: 100%;
+  -webkit-appearance: none;
   appearance: none;
-  border: 0;
+  border: 1px solid $color-secondary;
   max-width: 100%;
   font-family: $font-body;
   font-size: 14px;
-  padding: 1em;
+  padding: 0.6em;
   background-color: #fff;
-  background-image: url("../img/select.svg");
+  background-image: url("../img/icon-select.svg");
   background-repeat: no-repeat, repeat;
   background-position: right 0.7em top 50%, 0 0;
   background-size: 0.75em auto, 100%;

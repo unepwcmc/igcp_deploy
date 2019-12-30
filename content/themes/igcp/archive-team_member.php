@@ -36,7 +36,7 @@ get_template_part( 'template-parts/components/heroes/hero', 'page' ); ?>
 								* called content-___.php (where ___ is the Post Format name) and that will be used instead.
 								*/
 								echo '<li class="lyt-Entry_Item">';
-									get_template_part( 'template-parts/cards/card', 'team' );
+									get_template_part( 'template-parts/components/cards/card', 'team' );
 								echo '</li>';
 							endwhile;
 							?>

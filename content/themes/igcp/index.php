@@ -29,7 +29,7 @@ get_header(); ?>
 								* called content-___.php (where ___ is the Post Format name) and that will be used instead.
 								*/
 								echo '<li class="lyt-Entry_Item">';
-									get_template_part( 'template-parts/cards/card', 'blog' );
+									get_template_part( 'template-parts/components/cards/card', 'blog' );
 								echo '</li>';
 							endwhile;
 							?>

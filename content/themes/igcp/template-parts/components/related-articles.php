@@ -23,7 +23,7 @@
       <ul class="art-Related_Items">
         <?php while ( $get_items->have_posts() ) : $get_items->the_post(); ?>
           <li class="art-Related_Item">
-            <?php get_template_part( 'template-parts/cards/card', 'blog' ); ?>
+            <?php get_template_part( 'template-parts/components/cards/card', 'blog' ); ?>
           </li>
         <?php endwhile ?>
       </ul>

@@ -1,5 +1,6 @@
-.contact-form {
+.frm-Contact_Form {
   @include break-min($md) {
+    @include restrain_width;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -8,16 +9,25 @@
     margin: 0 auto;
   }
 
-  .first-name,
-  .last-name,
-  .your-email,
-  .your-phone {
+  label.frm-Contact_Label {
     display: block;
+    flex: 0 0 100%;
     margin-bottom: 12.5px;
 
-    @include break-min($md) {
-      flex: 0 0 calc(50% - 6.25px);
+    &.frm-Contact_Label-small {
+      display: block;
+      margin-bottom: 12.5px;
+
+      @include break-min($md) {
+        flex: 0 0 calc(50% - 6.25px);
+      }
     }
+  }
+
+  .frm-Contact_Input,
+  .frm-Contact_Select,
+  .frm-Contact_TextArea {
+    margin-top: 5px;
   }
 
   span.wpcf7-not-valid-tip {
@@ -27,26 +37,22 @@
     font-size: 12px;
   }
 
-  .your-message {
-    display: block;
-    flex: 0 0 100%;
-    margin-bottom: 12.5px;
-  }
-
-  .submit-button {
+  .frm-Contact_Submit {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
     width: 100%;
   }
 
   .wpcf7-submit {
     margin: 0 !important;
-    width: 100%;
-    font-size: 18px !important;
+    align-self: flex-start;
 
-    @include break-min($md) {
-      width: 250px;
+    @include break-min($xs) {
+      width: auto;
+    }
+
+    @include break-min($sm) {
+      width: calc((1 / 4) * 100%);
     }
   }
 
