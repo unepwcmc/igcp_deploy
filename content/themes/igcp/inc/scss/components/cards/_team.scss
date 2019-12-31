@@ -4,6 +4,7 @@
   align-self: stretch;
   width: 100%;
   position: relative;
+  background-color: $color-primary;
 }
 
 .crd-Team_Badge {
@@ -12,7 +13,7 @@
   left: $grid-gap;
   z-index: 1;
   font-size: 11px;
-  background-color: $color-primary;
+  background-color: $color-grey-text;
   color: #fff;
   border: 1px solid #fff;
   border-radius: 3px;
@@ -32,6 +33,7 @@
     font-family: 'object-fit: cover;';
     transition: transform .5s ease;
     will-change: transform;
+    backface-visibility: hidden;
 
     .crd-Team:hover & {
       transform: scale(1.05);
@@ -40,7 +42,6 @@
 }
 
 .crd-Team_Body {
-  background-color: $color-light-grey;
   flex: 1;
   display: flex;
 }
@@ -49,15 +50,29 @@
   position: relative;
   padding: $grid-gap;
   flex: 1;
+  color: #fff
 }
 
 h3.crd-Team_Title {
   font-size: 14px;
   font-weight: 500;
   margin-bottom: 5px;
+  color: #fff;
+  line-height: 1;
 }
 
 p.crd-Team_JobTitle {
   font-size: 14px;
   margin-bottom: 0;
+}
+
+p.crd-Team_Bio,
+p.crd-Team_Email,
+p.crd-Team_Location {
+  display: none;
+}
+
+a.crd-Team_FauxLink {
+  @include absolute_fill;
+  z-index: 2;
 }

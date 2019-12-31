@@ -14,7 +14,7 @@
   transition: opacity 0.3s ease, visibility 0.3s ease;
 
   @include break-min($sm) {
-    @include spacer;
+    @include spacer_body;
   }
 
   &.mod-Modal-active {
@@ -44,15 +44,15 @@
   position: absolute;
   top: $grid-gap;
   right: $grid-gap;
-  width: 30px;
-  height: 30px;
+  width: 15px;
+  height: 15px;
   cursor: pointer;
 
   @include break-min($sm) {
     top: $grid-gap;
     right: $grid-gap;
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 25px;
   }
 }
 
@@ -61,9 +61,9 @@
   top: 50%;
   left: 50%;
   display: block;
-  height: 3px;
+  height: 2px;
   width: 100%;
-  background-color: #fff;
+  background-color: $color-secondary;
   transform-origin: 50% 50%;
 
   &:first-child {
@@ -75,16 +75,49 @@
 }
 
 .mod-Modal_Content {
+  max-width: calc((7 / 12) * 100%);
   position: relative;
   background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid $color-secondary;
   padding: $grid-gap;
   width: 100%;
 }
 
-.mod-Modal_Title {
+h3.mod-Modal_Title {
   font-size: 16px;
+  line-height: 1;
+  margin-bottom: 5px;
 
   @include break-min($sm) {
-    font-size: 28px;
+    font-size: 36px;
+  }
+}
+
+p.mod-Modal_Subheading {
+  color: $color-grey-text;
+}
+
+.mod-Modal_Columns {
+  display: flex;
+}
+
+.mod-Modal_Column {
+  &:first-child {
+    flex: 0 0 calc((3 / 12) * 100%);
+    margin-right: $grid-gap;
+  }
+  &:last-child {
+    flex: 1 1 auto;
+  }
+}
+
+.mod-Modal_Thumbnail {
+  position: relative;
+  padding-bottom: 100%;
+  margin-bottom: $grid-gap;
+
+  img {
+    @include absolute_fill;
+    @include object-fit-cover;
   }
 }

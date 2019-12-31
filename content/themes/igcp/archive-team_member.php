@@ -18,6 +18,7 @@ set_query_var('hero-text', get_field( "hero_text", $current_post_ID ));
 set_query_var('hero-link-url', '#');
 set_query_var('hero-background-image', get_post_thumbnail_id($current_post_ID));
 
+get_template_part( 'template-parts/components/modals/modal', 'team' );
 get_template_part( 'template-parts/components/heroes/hero', 'page' ); ?>
 
 <div class="lyt-Container lyt-Container-hasSidebar">

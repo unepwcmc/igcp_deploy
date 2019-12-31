@@ -27,9 +27,31 @@ export default function modal() {
       };
 
       modalEls.modalTriggers.forEach(function(modalTrigger) {
-        modalTrigger.addEventListener("click", function() {
+        modalTrigger.addEventListener("click", function(e) {
+          e.preventDefault();
           modal.classList.add("mod-Modal-active");
           els.body.classList.add("utl-DrawerActive");
+
+          const card = this.parentElement;
+
+          if (modalName == 'team') {
+            const memberData = {
+              name: card.querySelector('[data-member-name]').textContent,
+              jobtitle: card.querySelector('[data-member-jobtitle]').textContent,
+              bio: card.querySelector('[data-member-bio]').innerHTML,
+              email: card.querySelector('[data-member-email]').textContent,
+              location: card.querySelector('[data-member-location]').textContent,
+              image: card.querySelector('[data-member-image] img').getAttribute('src')
+            }
+            console.log(memberData);
+
+            modal.querySelector('[data-modal-name]').textContent = memberData.name
+            modal.querySelector('[data-modal-jobtitle]').textContent = memberData.jobtitle
+            modal.querySelector('[data-modal-bio]').innerHTML = memberData.bio
+            modal.querySelector('[data-modal-email]').textContent = memberData.email
+            modal.querySelector('[data-modal-location]').textContent = memberData.location
+            modal.querySelector('[data-modal-image]').setAttribute('src', memberData.image)
+          }
         });
       });
 
