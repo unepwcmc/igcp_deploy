@@ -1,10 +1,6 @@
 @import "../../inc/scss/utilities/variables";
 @import "../../inc/scss/utilities/mixins";
 
-.til-Donation_Tiles {
-
-}
-
 .til-Donation_Items {
   display: flex;
   margin-right: -#{$grid-gap};
@@ -52,10 +48,6 @@ h3.til-Donation_Heading {
   color: $color-dark-grey;
   font-weight: 500;
   margin-bottom: $grid-gap;
-}
-
-.til-Donation_Text {
-
 }
 
 a.til-Donation_FauxLink {

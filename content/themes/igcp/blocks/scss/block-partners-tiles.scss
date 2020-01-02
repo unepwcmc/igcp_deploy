@@ -1,10 +1,6 @@
 @import "../../inc/scss/utilities/variables";
 @import "../../inc/scss/utilities/mixins";
 
-.til-Partners_Tiles {
-
-}
-
 .til-Partners_Items {
   @include no-margin-padding;
   display: flex;

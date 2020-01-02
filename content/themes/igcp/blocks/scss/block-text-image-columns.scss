@@ -3,7 +3,7 @@
 
 .blk-TextImage {
   margin-bottom: $grid-gap;
-  
+
   @include break-min($sm) {
     margin-bottom: 80px;
   }
@@ -48,10 +48,6 @@
       }
     }
   }
-}
-
-.blk-TextImage_Content {
-
 }
 
 .blk-TextImage_Heading,

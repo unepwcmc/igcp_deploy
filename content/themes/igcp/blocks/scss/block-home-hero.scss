@@ -16,14 +16,6 @@
   z-index: 1;
 }
 
-.her-Home_Body {
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
-  // align-items: center;
-  // width: 100%;
-}
-
 .her-Home_Columns {
   @include break-min($sm) {
     display: flex;

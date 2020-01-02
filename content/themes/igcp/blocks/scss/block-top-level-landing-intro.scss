@@ -1,10 +1,6 @@
 @import "../../inc/scss/utilities/variables";
 @import "../../inc/scss/utilities/mixins";
 
-.tlv-Intro {
-
-}
-
 .tlv-Intro_Columns {
   margin-bottom: #{$grid-gap * 5};
 
@@ -34,10 +30,6 @@
       order: 1;
     }
   }
-}
-
-.tlv-Intro_Content {
-
 }
 
 .tlv-Intro_LeadText {

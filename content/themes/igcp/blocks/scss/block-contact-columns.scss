@@ -19,10 +19,6 @@ h4.blk-Contact_Heading {
   margin-bottom: #{$grid-gap * 2};
 }
 
-.blk-Contact_Items {
-
-}
-
 .blk-Contact_Item {
   position: relative;
   padding-left: 22px;
@@ -39,16 +35,4 @@ h4.blk-Contact_Heading {
   &:last-child {
     margin-bottom: 0;
   }
-}
-
-.blk-Contact_Item-phone {
-
-}
-
-.blk-Contact_Item-fax {
-
-}
-
-.blk-Contact_Item-email {
-
 }

@@ -1,9 +1,6 @@
 @import "../../inc/scss/utilities/variables";
 @import "../../inc/scss/utilities/mixins";
 
-.blk-Map {
-}
-
 .blk-Map_Columns {
   @include break-min($sm) {
     display: flex;
@@ -28,18 +25,6 @@
   @include break-min($sm) {
     margin-bottom: 0;
   }
-}
-
-.blk-Map_Image {
-
-}
-
-.blk-Map_Column {
-
-}
-
-.blk-Map_Content {
-
 }
 
 .blk-Map_Text {
