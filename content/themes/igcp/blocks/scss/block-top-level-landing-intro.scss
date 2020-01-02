@@ -6,8 +6,12 @@
 }
 
 .tlv-Intro_Columns {
-  display: flex;
-  margin-bottom: $grid-gap;
+  margin-bottom: #{$grid-gap * 5};
+
+  @include break-min($sm) {
+    margin-bottom: $grid-gap;
+    display: flex;
+  }
 }
 
 .tlv-Intro_Column {
@@ -75,9 +79,13 @@ a.tlv-Intro_Link {
 .tlv-Intro_ImageWrap-secondary {
   width: 70%;
   position: absolute;
-  bottom: 0;
-  right: -#{100px - $grid-gap};
+  bottom: -#{$grid-gap * 4};
   padding-bottom: 45%;
+  right: -#{100px - $grid-gap};
+
+  @include break-min($sm) {
+    bottom: 0;
+  }
 
   .tlv-Intro_Columns-flipped & {
     right: auto;
