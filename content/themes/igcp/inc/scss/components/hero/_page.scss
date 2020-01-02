@@ -25,6 +25,10 @@
 
 h2.pge-Hero_Title {
   color: #fff;
+
+  &:only-child {
+    margin-bottom: 0;
+  }
 }
 
 p.pge-Hero_Text {

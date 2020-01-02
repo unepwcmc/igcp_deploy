@@ -22,12 +22,22 @@
 
   &.ft-Widgets_Item-widget_nav_menu {
     order: 2;
+
+    @include break-min($md) {
+      order: initial;
+    }
   }
 
   &.ft-Widgets_Item-widget_custom_post_widget {
-    order: 1;
     border-bottom: 1px solid rgba(255,255,255,0.1);
     padding-bottom: $grid-gap;
+    order: 1;
+
+    @include break-min($md) {
+      order: initial;
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
   }
 
   &:last-child {
