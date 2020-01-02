@@ -5,21 +5,29 @@
 }
 
 .blk-Map_Columns {
-  display: flex;
+  @include break-min($sm) {
+    display: flex;
+  }
 }
 
 .blk-Map_Column {
-  &.blk-Map_Column-image {
-    flex: 0 0 calc(((7 / 12) * 100%) - #{$grid-gap / 2});
-    margin-right: $grid-gap;
-  }
-  &.blk-Map_Column-text {
-    flex: 0 0 calc(((5 / 12) * 100%) - #{$grid-gap / 2});
+  @include break-min($sm) {
+    &.blk-Map_Column-image {
+      flex: 0 0 calc(((7 / 12) * 100%) - #{$grid-gap / 2});
+      margin-right: $grid-gap;
+    }
+    &.blk-Map_Column-text {
+      flex: 0 0 calc(((5 / 12) * 100%) - #{$grid-gap / 2});
+    }
   }
 }
 
 .blk-Map_ImageWrap {
+  margin-bottom: $grid-gap;
 
+  @include break-min($sm) {
+    margin-bottom: 0;
+  }
 }
 
 .blk-Map_Image {
