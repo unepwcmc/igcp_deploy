@@ -2,16 +2,21 @@
 @import "../../inc/scss/utilities/mixins";
 
 .blk-Text_Columns {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -#{$grid-gap};
-  margin-bottom: -#{$grid-gap * 3} !important;
+  @include break-min($xs) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -#{$grid-gap};
+    margin-bottom: -#{$grid-gap * 3};
+  }
 }
 
 .blk-Text_Column {
-  flex: 0 0 calc(50% - #{$grid-gap});
-  margin-right: #{$grid-gap};
   margin-bottom: #{$grid-gap * 3};
+
+  @include break-min($xs) {
+    margin-right: #{$grid-gap};
+    flex: 0 0 calc(50% - #{$grid-gap});
+  }
 }
 
 .blk-Text_Heading {
