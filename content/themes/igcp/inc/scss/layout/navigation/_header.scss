@@ -109,20 +109,3 @@
     pointer-events: all;
   }
 }
-
-.nav-Header_Toggle {
-  appearance: none;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  width: 24px;
-  height: 24px;
-  outline: none;
-  cursor: pointer;
-  color: $color-secondary;
-  background: transparent;
-
-  @include break-min($md) {
-    display: none;
-  }
-}

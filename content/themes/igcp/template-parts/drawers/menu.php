@@ -7,7 +7,7 @@
      </button>
    </div>
    <div class="drw-Drawer_Body">
-     <nav class="drw-Nav">
+     <nav class="drw-Drawer_Nav">
        <?php get_template_part( 'template-parts/navigation/navigation', 'mobile' ); ?>
      </nav>
    </div>

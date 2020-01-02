@@ -4,7 +4,10 @@ export default function drawers() {
     drawer: document.querySelector("[data-drawer]"),
     menuToggle: document.querySelector("[data-drawer-menu-toggle]"),
     closeButton: document.querySelector("[data-drawer-menu-close]"),
-    overlay: document.querySelector("[data-drawers-overlay]")
+    overlay: document.querySelector("[data-drawers-overlay]"),
+    hasChildren: Array.prototype.slice.call(
+        document.querySelectorAll("[data-drawer] .menu-item-has-children")
+      )
   };
 
   els.menuToggle.addEventListener("click", function() {
@@ -21,4 +24,10 @@ export default function drawers() {
     els.drawer.classList.remove("drw-Drawer-active");
     els.body.classList.remove("utl-DrawerActive");
   });
+
+  els.hasChildren.forEach(item => {
+      item.addEventListener("click", e => {
+        item.classList.toggle("open");
+      });
+    });
 }
