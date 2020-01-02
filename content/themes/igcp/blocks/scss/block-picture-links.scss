@@ -2,14 +2,35 @@
 @import "../../inc/scss/utilities/mixins";
 
 .blk-PictureLinks_Items {
+  @include no-margin-padding;
   display: flex;
-  margin: 0 -80px 0 0;
+  flex-wrap: wrap;
+  margin-right: -40px;
+  margin-bottom: -#{$grid-gap * 3};
+
+  @include break-min($xs) {
+    margin-bottom: 0;
+  }
+  @include break-min($sm) {
+    margin-right: -80px;
+  }
 }
 
 .blk-PictureLinks_Item {
   @include no_bullets;
-  flex: 0 0 calc(25% - 80px);
-  margin-right: 80px;
+  flex: 0 0 calc(50% - 40px);
+  margin-right: 40px;
+  margin-bottom: #{$grid-gap * 3};
+
+  @include break-min($xs) {
+    flex: 0 0 calc(25% - 40px);
+    margin-bottom: 0;
+  }
+
+  @include break-min($sm) {
+    flex: 0 0 calc(25% - 80px);
+    margin-right: 80px;
+  }
 }
 
 .blk-PictureLink {
