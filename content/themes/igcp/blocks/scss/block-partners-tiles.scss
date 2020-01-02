@@ -6,13 +6,23 @@
 }
 
 .til-Partners_Items {
+  @include no-margin-padding;
   display: flex;
-  margin: 0 -#{$grid-gap} 0 0;
-  padding: 0;
+  flex-wrap: wrap;
+  margin-right: -#{$grid-gap};
+  margin-bottom: -#{$grid-gap};
 }
 
 .til-Partners_Item {
-  flex: 0 0 calc(((2 / 12) * 100%) - #{$grid-gap});
+  flex: 0 0 calc(((6 / 12) * 100%) - #{$grid-gap});
+  margin-bottom: $grid-gap;
+
+  @include break-min($xs) {
+    flex: 0 0 calc(((4 / 12) * 100%) - #{$grid-gap});
+  }
+  @include break-min($md) {
+    flex: 0 0 calc(((2 / 12) * 100%) - #{$grid-gap});
+  }
   list-style: none;
   background-color: #fff;
   margin-right: $grid-gap;
