@@ -7,7 +7,12 @@
  */
 
 
-get_header(); ?>
+	get_header();
+
+	// Page Hero
+	set_query_var('hero-title', get_the_archive_title());
+	get_template_part( 'template-parts/components/heroes/hero', 'page' );
+?>
 
 <div class="lyt-Container lyt-Container-hasSidebar">
 	<div class="lyt-Container_Inner">
@@ -39,7 +44,5 @@ get_header(); ?>
 		</section>
 	</div>
 </div>
-
-<?php dynamic_sidebar( 'after-content' ); ?>
 
 <?php get_footer();

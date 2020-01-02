@@ -67,3 +67,8 @@ p.crd-Family_Members {
     margin-right: 5px;
   }
 }
+
+a.crd-Family_FauxLink {
+  @include absolute_fill;
+  z-index: 2;
+}

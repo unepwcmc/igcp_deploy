@@ -326,15 +326,15 @@ add_filter('widget_text','do_shortcode');
 /*-------------------------------------------------------------------------------
 Prevent WP from adding <p> tags on pages
 -------------------------------------------------------------------------------*/
-
-function disable_wp_auto_p( $content ) {
-  if ( is_singular( 'page' ) ) {
-    remove_filter( 'the_content', 'wpautop' );
-    remove_filter( 'the_excerpt', 'wpautop' );
-  }
-  return $content;
-}
-add_filter( 'the_content', 'disable_wp_auto_p', 0 );
+// 
+// function disable_wp_auto_p( $content ) {
+//   if ( is_singular( 'page' ) ) {
+//     remove_filter( 'the_content', 'wpautop' );
+//     remove_filter( 'the_excerpt', 'wpautop' );
+//   }
+//   return $content;
+// }
+// add_filter( 'the_content', 'disable_wp_auto_p', 0 );
 
 /*-------------------------------------------------------------------------------
 // Function to add Posts by Category Widget
@@ -402,6 +402,18 @@ function my_theme_archive_title( $title ) {
     }
 
     return $title;
+}
+
+/*-------------------------------------------------------------------------------
+	Disable gutenberg for FAQ post types
+-------------------------------------------------------------------------------*/
+
+add_filter('use_block_editor_for_post_type', 'prefix_disable_gutenberg', 10, 2);
+function prefix_disable_gutenberg($current_status, $post_type)
+{
+    // Use your post type key instead of 'product'
+    if ($post_type === 'faq') return false;
+    return $current_status;
 }
 
 /*-------------------------------------------------------------------------------

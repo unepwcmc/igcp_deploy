@@ -2,10 +2,10 @@
   /* Variables */
   $title = get_query_var('hero-title');
   $text = get_query_var('hero-text');
-  $link_url = get_query_var('hero-link-url');
-  $link_text = get_query_var('hero-link-text');
+  $link_url = get_query_var('hero-link-url') != '' ? get_query_var('hero-link-url') : '#';
+  $link_text = get_query_var('hero-link-text') != '' ? get_query_var('hero-link-text') : 'Change me';
   $background_image = get_query_var('hero-background-image');
-  $background_image_url = wp_get_attachment_image_src( $background_image, 'full-size' )[0] != '' ? wp_get_attachment_image_src( $background_image, 'full-size' )[0] : get_stylesheet_directory_uri() . '/inc/img/default-hero.png';
+  $background_image_url = $background_image != '' ? wp_get_attachment_image_src( $background_image, 'full-size' )[0] : get_stylesheet_directory_uri() . '/inc/img/default-hero.png';
   $opacity = '0.4';
 ?>
 

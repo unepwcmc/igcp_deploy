@@ -7,19 +7,14 @@
  */
 
 
-get_header();
+	get_header();
 
-// Page Hero
+	get_template_part( 'template-parts/components/modals/modal', 'team' );
 
-/* Variables */
-$current_post_ID = get_the_id();
-set_query_var('hero-title', get_the_archive_title());
-set_query_var('hero-text', get_field( "hero_text", $current_post_ID ));
-set_query_var('hero-link-url', '#');
-set_query_var('hero-background-image', get_post_thumbnail_id($current_post_ID));
-
-get_template_part( 'template-parts/components/modals/modal', 'team' );
-get_template_part( 'template-parts/components/heroes/hero', 'page' ); ?>
+	// Page Hero
+	set_query_var('hero-title', get_the_archive_title());
+	get_template_part( 'template-parts/components/heroes/hero', 'page' );
+?>
 
 <div class="lyt-Container lyt-Container-hasSidebar">
 	<div class="lyt-Container_Inner">
@@ -51,7 +46,5 @@ get_template_part( 'template-parts/components/heroes/hero', 'page' ); ?>
 		</section>
 	</div>
 </div>
-
-<?php dynamic_sidebar( 'after-content' ); ?>
 
 <?php get_footer();

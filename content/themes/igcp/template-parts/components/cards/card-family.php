@@ -20,4 +20,5 @@
       <p class="crd-Family_Members"><?php get_template_part('template-parts/icons/icon', 'gorilla'); ?><?php echo get_field( "number_of_members" ); ?> Members</p>
 		</div>
 	</div>
+  <a class="crd-Family_FauxLink" href="<?php the_permalink(); ?>"></a>
 </article><!-- #post-## -->

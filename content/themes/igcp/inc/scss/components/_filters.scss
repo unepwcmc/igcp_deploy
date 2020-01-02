@@ -10,7 +10,8 @@
     padding-left: 30px;
   }
 
-  input[type="checkbox"] {
+  input[type="checkbox"],
+  input[type="radio"] {
     display: inline-block;
     position: absolute;
     top: -2px;
