@@ -6,8 +6,8 @@ export default function drawers() {
     closeButton: document.querySelector("[data-drawer-menu-close]"),
     overlay: document.querySelector("[data-drawers-overlay]"),
     hasChildren: Array.prototype.slice.call(
-        document.querySelectorAll("[data-drawer] .menu-item-has-children")
-      )
+      document.querySelectorAll("[data-drawer] .menu-item-has-children")
+    )
   };
 
   els.menuToggle.addEventListener("click", function() {
@@ -26,8 +26,11 @@ export default function drawers() {
   });
 
   els.hasChildren.forEach(item => {
-      item.addEventListener("click", e => {
-        item.classList.toggle("open");
-      });
+    item.addEventListener("click", e => {
+      item.classList.toggle("open");
     });
+    item.querySelector('a').addEventListener('click', e => {
+      e.stopPropagation();
+    });
+  });
 }
