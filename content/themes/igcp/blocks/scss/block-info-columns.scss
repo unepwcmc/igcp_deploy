@@ -34,6 +34,10 @@
   max-width: 250px;
   margin-right: auto;
   margin-left: auto;
+
+  & *:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .blk-Stats_Heading {
