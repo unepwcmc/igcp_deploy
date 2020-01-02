@@ -1,8 +1,8 @@
 .pst-Hero {
-  @include spacer;
   position: relative;
   margin-left: $grid-gap;
   margin-right: $grid-gap;
+  padding-bottom: calc((3 / 14) * 100%);
 }
 
 .pst-Hero_BackgroundImage {

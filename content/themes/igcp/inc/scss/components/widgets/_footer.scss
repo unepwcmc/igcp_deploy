@@ -98,7 +98,7 @@ h3.ft-Widget_Title {
       margin-bottom: 0;
     }
 
-    @include break-min($sm) {
+    @include break-min($md) {
       display: block;
     }
   }
@@ -108,7 +108,7 @@ h3.ft-Widget_Title {
   margin: 0;
   text-align: center;
 
-  @include break-min($sm) {
+  @include break-min($md) {
     text-align: left;
   }
 }

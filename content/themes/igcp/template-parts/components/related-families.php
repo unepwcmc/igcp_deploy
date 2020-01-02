@@ -5,7 +5,7 @@
   $category_ID = $category[0]->cat_ID;
   /* Query */
   $get_items_query = array(
-    'post_type' => 'family',
+    'post_type' => 'families',
     'posts_per_page' => 4,
     'category__and' => $category_ID,
     'post__not_in' => array($current_ID)

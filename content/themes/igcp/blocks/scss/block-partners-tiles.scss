@@ -31,8 +31,13 @@
 
   img {
     @include absolute_fill;
-    padding: 10px;
     object-fit: contain;
     font-family: 'object-fit: contain;';
+    z-index: 1;
   }
+}
+
+a.til-Partner_FauxLink {
+  @include absolute_fill;
+  z-index: 2;
 }

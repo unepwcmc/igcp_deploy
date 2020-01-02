@@ -3,17 +3,21 @@
 }
 
 .sec-Info_Columns {
-  display: flex;
+  @include break-min($sm) {
+    display: flex;
+  }
 }
 
 .sec-Info_Column {
-  &:first-child {
-    flex: 0 0 calc((8 / 12) * 100%);
-  }
-  &:last-child {
-    flex: 0 0 calc((4 / 12) * 100%);
-    display: flex;
-    flex-direction: column;
+  @include break-min($sm) {
+    &:first-child {
+      flex: 0 0 calc((8 / 12) * 100%);
+    }
+    &:last-child {
+      flex: 0 0 calc((4 / 12) * 100%);
+      display: flex;
+      flex-direction: column;
+    }
   }
 }
 
