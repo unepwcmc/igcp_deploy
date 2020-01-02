@@ -2,7 +2,11 @@
 @import "../../inc/scss/utilities/mixins";
 
 .blk-TextImage {
-  margin-bottom: 80px;
+  margin-bottom: $grid-gap;
+  
+  @include break-min($sm) {
+    margin-bottom: 80px;
+  }
 
   &:last-child {
     margin-bottom: 0;
@@ -16,22 +20,32 @@
 
 .blk-TextImage_Column {
   position: relative;
-  flex: 0 0 calc(50% - #{$grid-gap / 2});
+
+  @include break-min($sm) {
+    flex: 0 0 calc(50% - #{$grid-gap / 2});
+  }
 
   &:first-child {
-    margin-right: $grid-gap;
+    @include break-min($sm) {
+      margin-right: $grid-gap;
 
-    .blk-TextImage_Columns-flipped & {
-      order: 2;
-      margin-right: 0;
-      margin-left: $grid-gap;
+      .blk-TextImage_Columns-flipped & {
+        order: 2;
+        margin-right: 0;
+        margin-left: $grid-gap;
+      }
     }
   }
 
   &:last-child {
-    align-self: end;
-    .blk-TextImage_Columns-flipped & {
-      order: 1;
+    display: none;
+
+    @include break-min($sm) {
+      display: block;
+      align-self: end;
+      .blk-TextImage_Columns-flipped & {
+        order: 1;
+      }
     }
   }
 }
