@@ -6,19 +6,49 @@
 }
 
 .blk-Stats_Columns {
-  display: flex;
-  margin-right: -100px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  @include break-min($xs) {
+    display: flex;
+    margin-right: -#{$grid-gap};
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  @include break-min($md) {
+    margin-right: -100px;
+  }
 }
 
 .blk-Stats_Column {
-  flex: 0 0 calc(((4 / 12) * 100%) - 100px);
-  margin-right: 100px;
+  margin-bottom: #{$grid-gap * 3};
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include break-min($xs) {
+    flex: 0 0 calc(((4 / 12) * 100%) - #{$grid-gap});
+    margin-right: $grid-gap;
+    margin-bottom: 0;
+  }
+
+  @include break-min($md) {
+    flex: 0 0 calc(((4 / 12) * 100%) - 100px);
+    margin-right: 100px;
+  }
 }
 
 .blk-Stats_ImageWrap {
   position: relative;
   padding-bottom: calc(( 4 / 12) * 100%);
   margin-bottom: $grid-gap;
+  display: none;
+
+  @include break-min($xs) {
+    display: block;
+  }
 }
 
 .blk-Stats_Image {
@@ -40,9 +70,18 @@
   }
 }
 
-.blk-Stats_Heading {
-  font-size: 26px;
+h3.blk-Stats_Heading {
+  font-size: 28px;
   font-weight: 600;
+  color: currentColor;
+  margin-bottom: 5px;
+
+  @include break-min($xs) {
+    font-size: 20px;
+  }
+  @include break-min($sm) {
+    font-size: 28px;
+  }
 }
 
 .blk-Stats_Text {

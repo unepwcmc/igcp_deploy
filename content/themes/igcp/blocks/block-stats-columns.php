@@ -31,7 +31,7 @@
           <img class="blk-Stats_Image" src="<?php echo $image_1_src; ?>" alt="<?php echo $heading_1; ?>">
         </div>
         <div class="blk-Stats_Content">
-          <p class="blk-Stats_Heading"><?php echo $heading_1; ?></p>
+          <h3 class="blk-Stats_Heading"><?php echo $heading_1; ?></h3>
           <p class="blk-Stats_Text"><?php echo $text_1; ?></p>
         </div>
       </div>
@@ -43,7 +43,7 @@
           <img class="blk-Stats_Image" src="<?php echo $image_2_src; ?>" alt="<?php echo $heading_2; ?>">
         </div>
         <div class="blk-Stats_Content">
-          <p class="blk-Stats_Heading"><?php echo $heading_2; ?></p>
+          <h3 class="blk-Stats_Heading"><?php echo $heading_2; ?></h3>
           <p class="blk-Stats_Text"><?php echo $text_2; ?></p>
         </div>
       </div>
@@ -55,7 +55,7 @@
           <img class="blk-Stats_Image" src="<?php echo $image_3_src; ?>" alt="<?php echo $heading_3; ?>">
         </div>
         <div class="blk-Stats_Content">
-          <p class="blk-Stats_Heading"><?php echo $heading_3; ?></p>
+          <h3 class="blk-Stats_Heading"><?php echo $heading_3; ?></h3>
           <p class="blk-Stats_Text"><?php echo $text_3; ?></p>
         </div>
       </div>
