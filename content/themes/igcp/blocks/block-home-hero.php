@@ -28,6 +28,11 @@
 <div class="her-Home">
   <div class="her-Home_Body">
     <div class="her-Home_Columns">
+      <div class="her-Home_Column her-Home_Column-large">
+        <div class="her-Home_ImageWrap">
+          <img src="<?php echo $image_url; ?>" alt="<?php echo $title; ?>" class="her-Home_Image">
+        </div>
+      </div>
       <div class="her-Home_Column" style="<?php if ($content_background_color != '') echo $content_background_color_style; if ($content_background_image != '') echo $content_background_image_style; ?>">
         <div class="her-Home_Content">
           <h2 class="her-Home_Title"><?php echo $title; ?></h2>
@@ -37,11 +42,6 @@
           <a href="<?php echo $link_url; ?>" class="her-Home_Link"><?php echo $link_text; ?></a>
         </div>
         <div class="her-Home_Overlay" style="opacity: <?php echo $opacity; ?>"></div>
-      </div>
-      <div class="her-Home_Column her-Home_Column-large">
-        <div class="her-Home_ImageWrap">
-          <img src="<?php echo $image_url; ?>" alt="<?php echo $title; ?>" class="her-Home_Image">
-        </div>
       </div>
     </div>
   </div>
