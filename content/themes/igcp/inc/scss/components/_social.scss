@@ -14,11 +14,11 @@ p.soc-Social_Heading {
   margin: 0;
   padding: 0;
 
-  .ft-Widget-widget_custom_html & {
+  .ft-Widgets_Item-widget_custom_post_widget & {
     justify-content: center;
 
     @include break-min($sm) {
-      justify-content: flex-end;
+      justify-content: flex-start;
     }
   }
 }
@@ -40,5 +40,17 @@ p.soc-Social_Heading {
 
   &:last-child {
     margin-right: 0;
+  }
+
+  .lyt-Footer & {
+    width: 30px;
+
+    svg {
+      opacity: 1;
+
+      &:hover {
+        opacity: .8;
+      }
+    }
   }
 }

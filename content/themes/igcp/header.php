@@ -21,9 +21,11 @@
     <?php get_template_part( 'template-parts/drawers/menu' ); ?>
   </div>
   <!-- Drawers End -->
-  <!-- Modal -->
-  <?php /* get_template_part( 'template-parts/components/modals/modal' ); */ ?>
-  <!-- Modal End -->
+  <?php
+    /* <!-- Modal -->
+      get_template_part( 'template-parts/components/modals/modal' ); 
+    <!-- Modal End --> */
+  ?>
   <!-- Header -->
   <header class="lyt-Header">
     <div class="hd-Header">

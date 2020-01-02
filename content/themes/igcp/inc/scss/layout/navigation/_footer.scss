@@ -1,15 +1,27 @@
 .menu-footer-container .menu {
   margin: 0;
   padding: 0;
-  display: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -#{$grid-gap};
 
-  @include break-min($md) {
-    display: flex;
+  @include break-min($sm) {
+    flex-wrap: nowrap;
+    margin-right: 0;
   }
 
   > li {
-    &:last-child {
-      flex: 0 0 150px;
+    flex: 0 0 calc(((6 / 12) * 100%) - #{$grid-gap});
+    margin-bottom: $grid-gap;
+
+
+    @include break-min($sm) {
+      flex: 1 1 auto;
+      margin-bottom: 0;
+
+      &:last-child {
+        flex: 0 0 100px;
+      }
     }
   }
 
@@ -19,7 +31,6 @@
     letter-spacing: 0.6px;
     font-weight: 500;
     margin-right: $grid-gap;
-    flex: 1 1 auto;
 
     &:last-child {
       margin-right: 0;
