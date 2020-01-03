@@ -17,11 +17,6 @@ plugins/
 ruby/
 xmlrpc.php
 
-content/themes/igcp/blocks/css
-content/themes/igcp/inc/css
-*.css
-*.css.map
-
 content/themes/igcp/inc/js/scripts.js
 
 wp-activate.php
