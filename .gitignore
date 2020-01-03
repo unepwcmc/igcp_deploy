@@ -1,4 +1,5 @@
 *.log
+.bundle/
 content/advanced-cache.php
 content/backup-db/
 content/backups/
@@ -13,6 +14,7 @@ content/plugins/hello.php
 db.php
 /index.php
 plugins/
+ruby/
 xmlrpc.php
 
 content/themes/igcp/blocks/css

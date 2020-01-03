@@ -1,9 +1,9 @@
 <?php
   /* Variables */
   $title = get_query_var('hero-title');
-  $text = get_query_var('hero-text');
-  $link_url = get_query_var('hero-link-url') != '' ? get_query_var('hero-link-url') : '#';
-  $link_text = get_query_var('hero-link-text') != '' ? get_query_var('hero-link-text') : 'Change me';
+  $text = get_query_var('hero-text') != '' ? get_query_var('hero-text') : get_theme_mod( 'default_hero_text' );
+  $link_url = get_query_var('hero-link-url') != '' ? get_query_var('hero-link-url') : get_page_link( get_theme_mod( 'default_hero_button_link' ) );
+  $link_text = get_query_var('hero-link-text') != '' ? get_query_var('hero-link-text') : get_theme_mod( 'default_hero_button_text' );
   $background_image = get_query_var('hero-background-image');
   $background_image_url = $background_image != '' ? wp_get_attachment_image_src( $background_image, 'full-size' )[0] : get_stylesheet_directory_uri() . '/inc/img/default-hero.png';
   $opacity = '0.4';

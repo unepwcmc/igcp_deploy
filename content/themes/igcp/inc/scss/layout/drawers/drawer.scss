@@ -24,6 +24,7 @@
 
   .logged-in.admin-bar & {
     top: 32px;
+    max-height: calc(100% - 32px);
   }
 
   &.drw-Drawer-active {
@@ -36,6 +37,7 @@
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
+  position: relative;
 
   @include break-min($md) {
     padding-right: $gutter / 2;
@@ -59,19 +61,14 @@
     left: $gutter / 4;
   }
 
-  @include break-min($xs) {
-    top: $gutter / 2;
-    right: $gutter / 2;
-
-    [data-drawer="menu"] & {
-      right: auto;
-      left: $gutter / 2;
-    }
-  }
-
-  // @include Breakpoint('xs') {
-  //   top: 40px;
-  //   right: 40px;
+  // @include break-min($xs) {
+  //   top: $gutter / 2;
+  //   right: $gutter / 2;
+  //
+  //   [data-drawer="menu"] & {
+  //     right: auto;
+  //     left: $gutter / 2;
+  //   }
   // }
 }
 
@@ -101,21 +98,18 @@
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-.drw-Drawer_Social {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-
-  // @include Breakpoint('xs') {
-  //   top: 40px;
-  //   left: 40px;
-  // }
+.drw-Drawer_Header {
+  height: 74px;
 }
 
 .drw-Drawer_Body {
-  display: flex;
-  align-items: center;
-  flex: 1 1 auto;
+  position: absolute;
+  top: 74px;
+  right: 0;
+  bottom: $gutter / 4;
+  left: 0;
+  overflow-y: auto;
+  max-height: calc(100% - 74px);
 }
 
 .drw-Drawer_Nav {

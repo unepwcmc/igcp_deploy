@@ -6,22 +6,20 @@
 lock '3.11.0'
 
 # The WordPress admin user
-set :wp_user, 'wcmc'
+set :wp_user, 'yourname'
 
 # The WordPress admin email address
-set :wp_email, 'helpdesk@unep-wcmc.org'
-
-set :deploy_user, 'wcmc'
+set :wp_email, 'yourname@example.com'
 
 # The WordPress 'Site Title' for the website
-set :wp_sitename, 'igcp'
+set :wp_sitename, 'WP Deploy'
 
 # The local environment URL.
 set :wp_localurl, 'http://wpdeploy.local'
 
 # An identifying name for the application to be used by Capistrano
-set :application, 'igcp'
-set :repo_url, 'git@github.com:unepwcmc/igcp_deploy.git'
+set :application, 'wp-deploy'
+set :repo_url, 'git@github.com:Mixd/wp-deploy.git'
 
 
 ################################################################################
@@ -39,16 +37,7 @@ set :ssh_options, forward_agent: true
 ################################################################################
 
 set :linked_files, %w(wp-config.php .htaccess robots.txt)
-set :linked_dirs, %w(content/uploads content/plugins)
-
-
-set :file_permissions_paths, ["content"]
-set :file_permissions_users, ["www-data"]
-set :file_permissions_chmod_mode, "0755"
-set :file_permissions_groups, ["www-data"]
-
-
-before "deploy:updated", "deploy:set_permissions:acl"
+set :linked_dirs, %w(content/uploads)
 
 namespace :deploy do
   desc 'create WordPress files for symlinking'
@@ -62,9 +51,4 @@ namespace :deploy do
 
   after 'check:make_linked_dirs', :create_wp_files
   after :finishing, 'deploy:cleanup'
-end
-
-
-namespace :deploy do
-  after :publishing, 'service:apache2:restart'
 end

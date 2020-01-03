@@ -326,7 +326,7 @@ add_filter('widget_text','do_shortcode');
 /*-------------------------------------------------------------------------------
 Prevent WP from adding <p> tags on pages
 -------------------------------------------------------------------------------*/
-// 
+//
 // function disable_wp_auto_p( $content ) {
 //   if ( is_singular( 'page' ) ) {
 //     remove_filter( 'the_content', 'wpautop' );
@@ -538,7 +538,7 @@ add_action('customize_register', 'social_media_customizer_settings');
 -------------------------------------------------------------------------------*/
 
 function header_button_customizer_settings($wp_customize) {
-  // Add Social Icons Section
+  // Add Header Button Section
   $wp_customize->add_section('header_button', array(
   'title' => 'Header Button',
   'description' => 'Settings for the CTA button in the header',
@@ -547,7 +547,6 @@ function header_button_customizer_settings($wp_customize) {
 
   // add a setting to enable the button
   $wp_customize->add_setting('enable_header_button');
-  // Add a control to input the Facebook URL
   $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'enable_header_button',
   array(
   'label'     => 'Enable Header Button',
@@ -558,7 +557,7 @@ function header_button_customizer_settings($wp_customize) {
 
   // add a setting for the button URL
   $wp_customize->add_setting('header_button_url');
-  // Add a control to input the Facebook URL
+  // Add a control to input the Button URL
   $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'header_button_url',
   array(
   'label' => 'Button URL',
@@ -566,9 +565,9 @@ function header_button_customizer_settings($wp_customize) {
   'settings' => 'header_button_url',
   ) ) );
 
-  // add a setting for the button URL
+  // add a setting for the button text
   $wp_customize->add_setting('header_button_text');
-  // Add a control to input the Facebook URL
+  // Add a control to input the button text
   $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'header_button_text',
   array(
   'label' => 'Button Text',
@@ -578,7 +577,6 @@ function header_button_customizer_settings($wp_customize) {
 
   // add a setting to make the button link open in a new tab
   $wp_customize->add_setting('header_button_external_link');
-  // Add a control to input the Facebook URL
   $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'header_button_external_link',
   array(
   'label'     => 'External Link',
@@ -589,3 +587,65 @@ function header_button_customizer_settings($wp_customize) {
 
 }
 add_action('customize_register', 'header_button_customizer_settings');
+
+/*-------------------------------------------------------------------------------
+  Default Hero Customiser Settings
+-------------------------------------------------------------------------------*/
+
+function default_hero_customizer_settings($wp_customize) {
+  // Add Default Hero Section
+  $wp_customize->add_section('default_hero', array(
+  'title' => 'Default Hero Settings',
+  'description' => 'Settings for the CTA button in the header',
+  'priority' => 100,
+  ));
+
+  // Default background image
+  $wp_customize->add_setting('default_hero_image');
+  $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'default_hero_image', array(
+    'label' => 'Default Background Image',
+    'section' => 'default_hero',
+    'settings' => 'default_hero_image',
+  )));
+
+
+  // Default text
+
+  // add a setting for the button text
+  $wp_customize->add_setting('default_hero_text');
+  // Add a control to input the button text
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'default_hero_text',
+  array(
+  'label' => 'Default Text',
+  'type' => 'textarea',
+  'section' => 'default_hero',
+  'settings' => 'default_hero_text',
+  ) ) );
+
+  // Default button text
+
+  // add a setting for the button link
+  $wp_customize->add_setting('default_hero_button_link');
+  // Add a control to input the button link
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'default_hero_button_link',
+  array(
+  'label' => 'Button Link',
+  'type' => 'dropdown-pages',
+  'section' => 'default_hero',
+  'settings' => 'default_hero_button_link',
+  ) ) );
+
+  // Default button url
+
+  // add a setting for the button text
+  $wp_customize->add_setting('default_hero_button_text');
+  // Add a control to input the button text
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'default_hero_button_text',
+  array(
+  'label' => 'Button Text',
+  'section' => 'default_hero',
+  'settings' => 'default_hero_button_text',
+  ) ) );
+
+}
+add_action('customize_register', 'default_hero_customizer_settings');
