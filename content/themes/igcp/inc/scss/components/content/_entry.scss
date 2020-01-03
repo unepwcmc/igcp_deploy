@@ -16,6 +16,12 @@
   .lyt-Primary-restrained & {
     @include restrain_width;
   }
+
+  .lyt-Primary-simple & {
+    @include break-min($lg) {
+      max-width: calc((6 / 9) * 100%);
+    }
+  }
 }
 
 .ent-Entry_Columns {

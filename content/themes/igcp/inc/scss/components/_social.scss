@@ -1,4 +1,7 @@
 .soc-Social {
+  margin-top: $grid-gap;
+  border-top: 1px solid $color-border;
+  padding-top: $grid-gap;
   display: flex;
   justify-content: space-between;
 }

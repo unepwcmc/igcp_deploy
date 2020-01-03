@@ -30,8 +30,12 @@
     padding-top: 0;
   }
 
+  // &.lyt-Primary-simple {
+  //
+  // }
+
   .lyt-Container-hasSidebar & {
-    flex: 0 0 calc(75% - #{$grid-gap / 2});
+    flex: 0 0 calc(((9 / 12) * 100%) - #{$grid-gap / 2});
   }
 }
 
@@ -47,7 +51,7 @@ h2.lyt-Primary_Title {
 
   @include break-min($sm) {
     padding-top: 75px;
-    flex: 0 0 calc(25% - #{$grid-gap / 2});
+    flex: 0 0 calc(((3 / 12) * 100%) - #{$grid-gap / 2});
   }
 }
 

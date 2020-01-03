@@ -36,6 +36,7 @@ get_header(); ?>
 			endwhile; // End of the loop.
 			?>
 
+			<?php get_template_part( 'template-parts/social/social', 'share' ); ?>
 			<?php get_template_part( 'template-parts/components/related', 'articles' ); ?>
 		</section>
 	</div>

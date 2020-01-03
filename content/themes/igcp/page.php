@@ -36,7 +36,8 @@ get_header(); ?>
 
 <div class="lyt-Container lyt-Container-hasSidebar">
 	<div class="lyt-Container_Inner">
-		<section class="lyt-Primary">
+		<?php get_sidebar(); ?>
+		<section class="lyt-Primary lyt-Primary-simple">
 				<?php
 					if ( have_posts() ) :
 						while ( have_posts() ) :
@@ -50,7 +51,6 @@ get_header(); ?>
 					endif;
 				?>
 		</section>
-		<?php get_sidebar(); ?>
 	</div>
 </div>
 <?php

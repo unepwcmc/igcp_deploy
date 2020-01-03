@@ -34,6 +34,16 @@
   }
 }
 
+@mixin spacer_small {
+  margin-top: 25px;
+  margin-bottom: 25px;
+
+  @include break-min($xs) {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+
 @mixin spacer_body {
   padding-top: 25px;
   padding-bottom: 25px;
@@ -41,6 +51,16 @@
   @include break-min($xs) {
     padding-top: 80px;
     padding-bottom: 80px;
+  }
+}
+
+@mixin spacer_body_small {
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  @include break-min($xs) {
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 }
 

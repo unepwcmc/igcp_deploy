@@ -33,7 +33,7 @@
     margin: 0;
 
     &.color-background {
-      @include spacer_body;
+      @include spacer_body_small;
     }
   }
 

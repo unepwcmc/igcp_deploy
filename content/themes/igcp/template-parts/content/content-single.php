@@ -17,7 +17,7 @@ $category = get_the_category();
 		<?php
 		the_title( '<h2 class="ent-Entry_Title">', '</h2>' );
 		?>
-		<p class="ent-Entry_Details"><?php echo $category[0]->name; ?> | 01/10/19</p>
+		<p class="ent-Entry_Details"><?php echo $category[0]->name . ' | ' . get_the_date( 'j/m/y' ); ?></p>
 	</header><!-- .entry-header -->
 
 	<div class="ent-Entry_Body">

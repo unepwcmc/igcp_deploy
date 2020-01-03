@@ -1,6 +1,12 @@
 @import "../../inc/scss/utilities/variables";
 @import "../../inc/scss/utilities/mixins";
 
+.abt-Gorillas_Infographic {
+  @include restrain_width;
+  margin-top: #{$grid-gap * 4};
+  margin-bottom: #{$grid-gap * 4};
+}
+
 h3.abt-Gorillas_Title {
   font-size: 22px;
   @include restrain_width;
@@ -11,7 +17,7 @@ h3.abt-Gorillas_Title {
 }
 
 .abt-Gorillas_Images {
-  @include spacer;
+  @include spacer_small;
 }
 
 .abt-Gorillas_Images-flex {

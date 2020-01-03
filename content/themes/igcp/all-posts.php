@@ -18,17 +18,15 @@ get_header(); ?>
 					<?php if ( have_posts() ) : ?>
 						<ul class="lyt-Entry_Items">
 							<?php while ( have_posts() ) : the_post();
-
 								/*
 								* Include the Post-Format-specific template for the content.
 								* If you want to override this in a child theme, then include a file
 								* called content-___.php (where ___ is the Post Format name) and that will be used instead.
-								*/
-								echo '<li class="lyt-Entry_Item">';
-									get_template_part( 'template-parts/components/cards/card', 'blog' );
-								echo '</li>';
-							endwhile;
-							?>
+								*/ ?>
+								<li class="lyt-Entry_Item">
+									<?php get_template_part( 'template-parts/components/cards/card', 'blog' ); ?>
+								</li>
+							<?php endwhile; ?>
 						</ul>
 						<?php
 						pagination_bar();

@@ -18,6 +18,11 @@
 ?>
 
 <div class="abt-Gorillas">
+  <?php if (get_field('family_infographic') != '') : ?>
+    <div class="abt-Gorillas_Infographic">
+      <?php echo '<img src="' . get_field('family_infographic') . '" alt="' . get_the_title() . ' family stats' . '">'; ?>
+    </div>
+  <?php endif; ?>
   <h3 class="abt-Gorillas_Title"><?php echo $title; ?></h3>
   <p class="abt-Gorillas_Text"><?php echo $text; ?></p>
   <div class="abt-Gorillas_Images <?php if ($image_1 != '' && $image_2 != '') echo ' abt-Gorillas_Images-flex'; ?>">

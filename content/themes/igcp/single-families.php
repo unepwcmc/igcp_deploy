@@ -6,9 +6,7 @@
 	/* Variables */
 	$current_post_ID = get_the_id();
 	set_query_var('hero-title', get_the_title($current_post_ID));
-	set_query_var('hero-text', get_field( "hero_text", $current_post_ID ));
-	set_query_var('hero-link-url', '#');
-	set_query_var('hero-background-image', get_post_thumbnail_id($current_post_ID));
+	set_query_var('hero-text', 'Gorilla Family');
 
 	// $text = block_field( 'text', false );
 	// $link_url = block_field( 'link-url', false );
@@ -30,9 +28,6 @@
 
 						get_template_part( 'template-parts/content/content', 'page' );
 
-						// Make into a template part? give own namespace?
-						echo '<div class="utl-Restrained"><img src="' . get_field('family_infographic') . '" alt="' . get_the_title() . ' family stats' . '"></div>';
-
 					endwhile; // End of the loop.
 				else :
 						get_template_part( 'template-parts/content/content', 'none' );
@@ -41,6 +36,7 @@
 			<?php echo do_shortcode('[content_block slug=about-gorillas]'); ?>
 			<?php get_template_part( 'template-parts/components/park', 'info' ); ?>
 			<?php get_template_part( 'template-parts/components/related', 'families' ); ?>
+			<?php get_template_part( 'template-parts/social/social', 'share' ); ?>
 		</section>
 	</div>
 </div>
