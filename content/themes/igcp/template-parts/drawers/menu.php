@@ -1,4 +1,4 @@
-<div class="drw-Drawer" data-drawer>
+<div class="drw-Drawer" data-drawer="menu">
  <div class="drw-Drawer_Inner">
    <div class="drw-Drawer_Header">
      <button class="drw-Drawer_Close" aria-label="Close" data-drawer-menu-close>
