@@ -12,6 +12,15 @@
 
 <aside class="lyt-Sidebar">
 	<?php if (
+    ( basename( $template ) === 'home.php' ) ||
+    ( basename( $template ) === 'taxonomy-park.php' )
+  ) : ?>
+		<ul class="lyt-Sidebar_Items">
+			<li class="lyt-Sidebar_Item">
+				<?php echo do_shortcode('[searchandfilter fields="category,post_tag" types="radio,checkbox" headings="Categories,Tags"]'); ?>
+			</li>
+		</ul>
+	<?php elseif (
     ( basename( $template ) === 'archive-families.php' ) ||
     ( basename( $template ) === 'taxonomy-park.php' )
   ) : ?>
@@ -26,7 +35,7 @@
   ) : ?>
     <ul class="lyt-Sidebar_Items">
       <li class="lyt-Sidebar_Item">
-        <?php echo do_shortcode('[searchandfilter fields="role" types="radio" headings="Roles" empty_search_url="/team/" submit_label="Filter" ]'); ?>
+        <?php echo do_shortcode('[searchandfilter fields="role,country" types="radio,checkbox" headings="Roles,Countries" operators="OR,AND" post_types="team_member" empty_search_url="/team/" submit_label="Filter" ]'); ?>
       </li>
     </ul>
   <?php elseif (
@@ -35,7 +44,7 @@
   ) : ?>
     <ul class="lyt-Sidebar_Items">
       <li class="lyt-Sidebar_Item">
-        <?php echo do_shortcode('[searchandfilter fields="filetype,post_tag,country" types="checkbox,checkbox,checkbox" headings="File Type,Tags,Country" operators="OR, AND, OR" empty_search_url="/library/" submit_label="Filter" ]'); ?>
+        <?php echo do_shortcode('[searchandfilter fields="filetype,post_tag,country" types="checkbox,checkbox,checkbox" headings="File Type,Tags,Country" operators="OR,AND,OR" empty_search_url="/library/" submit_label="Filter" ]'); ?>
       </li>
     </ul>
 	<?php else :
