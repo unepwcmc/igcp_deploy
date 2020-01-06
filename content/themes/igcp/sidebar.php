@@ -23,6 +23,12 @@
         <?php echo do_shortcode('[searchandfilter fields="role" types="radio" headings="Roles" empty_search_url="/team/"	]'); ?>
       </li>
     </ul>
+  <?php elseif ( ( basename( $template ) === 'archive-library_file.php' ) || ( basename( $template ) === 'taxonomy-filetype.php' ) ) : ?>
+    <ul class="lyt-Sidebar_Items">
+      <li class="lyt-Sidebar_Item">
+        <?php echo do_shortcode('[searchandfilter fields="filetype,post_tag,country" types="checkbox,checkbox,checkbox" headings="File Type,Tags,Country" empty_search_url="/library/"	]'); ?>
+      </li>
+    </ul>
 	<?php else :
 	  if ( is_active_sidebar( 'sidebar' ) ) : ?>
 			<ul class="lyt-Sidebar_Items">
