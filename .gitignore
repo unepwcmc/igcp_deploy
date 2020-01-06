@@ -14,10 +14,9 @@ content/plugins/hello.php
 db.php
 /index.php
 plugins/
-ruby/
 xmlrpc.php
+ruby/
 
-content/themes/igcp/inc/js/scripts.js
 
 wp-activate.php
 wp-admin/
