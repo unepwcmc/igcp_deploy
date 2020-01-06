@@ -10,7 +10,8 @@
     "babel": "babel --presets es2015 inc/js/scripts.es6.js -o inc/js/scripts.js",
     "browserify": "browserify inc/js/scripts.es6.js -o inc/js/scripts.js -t babelify --presets es2015",
     "dev": "npm run compile -- --watch",
-    "build": "npm run clean && npm run compile && npm run prefix && npm run browserify"
+    "build": "npm run clean && npm run compile && npm run prefix && npm run browserify",
+    "deploy": "bundle exec cap staging deploy"
   },
   "babel": {
     "presets": [
