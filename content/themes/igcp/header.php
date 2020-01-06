@@ -23,7 +23,7 @@
   <!-- Drawers End -->
   <?php
     /* <!-- Modal -->
-      get_template_part( 'template-parts/components/modals/modal' ); 
+      get_template_part( 'template-parts/components/modals/modal' );
     <!-- Modal End --> */
   ?>
   <!-- Header -->
@@ -55,7 +55,7 @@
                         <?php get_template_part( 'template-parts/icons/icon', 'search' ); ?>
                       </button>
                       <div class="hd-Search_Bar" data-searchbar>
-                        <form class="hd-Search_Form" role="search" method="get" id="searchform" action="<?php echo get_site_url(); ?>">
+                        <form class="hd-Search_Form" role="search" method="get" id="searchform" action="<?php echo str_replace(get_site_url(),'/wordpress',''); ?>">
                           <label for="s" class="utl-ScreenReaderOnly">Search for:</label>
 
                           <input type="text" name="s" id="s" value="" class="hd-Search_Input">
