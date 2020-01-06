@@ -11,22 +11,31 @@
 ?>
 
 <aside class="lyt-Sidebar">
-	<?php if ( ( basename( $template ) === 'archive-families.php' ) || ( basename( $template ) === 'taxonomy-park.php' ) ) : ?>
+	<?php if (
+    ( basename( $template ) === 'archive-families.php' ) ||
+    ( basename( $template ) === 'taxonomy-park.php' )
+  ) : ?>
 		<ul class="lyt-Sidebar_Items">
 			<li class="lyt-Sidebar_Item">
-				<?php echo do_shortcode('[searchandfilter fields="park" types="radio" headings="Parks" empty_search_url="/families/"	]'); ?>
+				<?php echo do_shortcode('[searchandfilter fields="park" types="radio" headings="Parks" empty_search_url="/families/" submit_label="Filter" ]'); ?>
 			</li>
 		</ul>
-  <?php elseif ( ( basename( $template ) === 'archive-team_member.php' ) || ( basename( $template ) === 'taxonomy-role.php' ) ) : ?>
+  <?php elseif (
+    ( basename( $template ) === 'archive-team_member.php' ) ||
+    ( basename( $template ) === 'taxonomy-role.php' )
+  ) : ?>
     <ul class="lyt-Sidebar_Items">
       <li class="lyt-Sidebar_Item">
-        <?php echo do_shortcode('[searchandfilter fields="role" types="radio" headings="Roles" empty_search_url="/team/"	]'); ?>
+        <?php echo do_shortcode('[searchandfilter fields="role" types="radio" headings="Roles" empty_search_url="/team/" submit_label="Filter" ]'); ?>
       </li>
     </ul>
-  <?php elseif ( ( basename( $template ) === 'archive-library_file.php' ) || ( basename( $template ) === 'taxonomy-filetype.php' ) ) : ?>
+  <?php elseif (
+    ( basename( $template ) === 'archive-library_file.php' ) ||
+    ( basename( $template ) === 'taxonomy-filetype.php' )
+  ) : ?>
     <ul class="lyt-Sidebar_Items">
       <li class="lyt-Sidebar_Item">
-        <?php echo do_shortcode('[searchandfilter fields="filetype,post_tag,country" types="checkbox,checkbox,checkbox" headings="File Type,Tags,Country" empty_search_url="/library/"	]'); ?>
+        <?php echo do_shortcode('[searchandfilter fields="filetype,post_tag,country" types="checkbox,checkbox,checkbox" headings="File Type,Tags,Country" operators="OR, AND, OR" empty_search_url="/library/" submit_label="Filter" ]'); ?>
       </li>
     </ul>
 	<?php else :
