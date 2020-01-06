@@ -47,18 +47,37 @@
 h2.ent-Excerpt_Title {
   font-weight: 500;
   font-size: 20px;
+  line-height: 26px;
   margin-bottom: 25px;
+
+  .ent-Excerpt-search & {
+    margin-bottom: $grid-gap;
+  }
+
+  a {
+    text-decoration: none;
+  }
 }
 
 p.ent-Excerpt_Details {
-  font-size: 14px;
-  text-align: center;
+  font-size: 12px;
   margin-bottom: 20px;
+  text-align: center;
+
+  .ent-Excerpt-search & {
+    text-align: left;
+    color: $color-grey-text;
+  }
 }
 
 .ent-Excerpt_Content {
   font-size: 14px;
   line-height: 1.5;
+}
+
+a.ent-Excerpt_Link {
+  display: block;
+  margin-top: $grid-gap;
 }
 
 a.ent-Excerpt_FauxLink {

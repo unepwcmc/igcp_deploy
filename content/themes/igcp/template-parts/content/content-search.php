@@ -9,33 +9,29 @@
  * @since 1.0
  * @version 1.2
  */
-
+	$thumbnail_url = get_the_post_thumbnail_url() != '' ? get_the_post_thumbnail_url() : get_stylesheet_directory_uri() . '/inc/img/search-placeholder.jpg';
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'ent-Excerpt' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'ent-Excerpt ent-Excerpt-search' ); ?>>
 	<div class="ent-Excerpt_Body">
 		<div class="ent-Excerpt_Columns">
 			<div class="ent-Excerpt_Column">
 				<div class="ent-Excerpt_Thumbnail">
-					<?php the_post_thumbnail(); ?>
+					<img src="<?php echo $thumbnail_url; ?>" alt="<?php the_title(); ?>" />
 				</div>
 			</div>
 			<div class="ent-Excerpt_Column">
 				<?php
 				the_title( sprintf( '<h2 class="ent-Excerpt_Title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
 				?>
-				<div class="ent-Excerpt_Details">
-					<?php
-					echo get_the_date( get_option('date_format') ); echo get_the_tag_list(' - ',', ','');
-					?>
-				</div>
+				<p class="ent-Excerpt_Details"><?php echo 'Posted on ' . get_the_date( get_option('date_format') ); ?></p>
 				<div class="ent-Excerpt_Content">
 					<?php
 					the_excerpt();
 					?>
-					<a class="ent-Excerpt_Link" href="<?php the_permalink(); ?>">Read more</a>
+				</div>
+				<a class="ent-Excerpt_Link" href="<?php the_permalink(); ?>">Read more</a>
 			</div>
-		</div>
 		</div><!-- .entry-content -->
 	</div>
 </article><!-- #post-## -->

@@ -1,9 +1,5 @@
 <?php
-  $park_data = get_terms(
-    array(
-      'taxonomy' => 'park'
-    )
-  );
+  $park_data = get_the_terms( get_the_id(), 'park' );
   $term_ID = 'park_' . $park_data[0]->term_id;
 
   $park_name = $park_data[0]->name;
