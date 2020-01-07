@@ -1,6 +1,11 @@
 @import "../../inc/scss/utilities/variables";
 @import "../../inc/scss/utilities/mixins";
 
+.blk-Map_Header {
+  text-align: center;
+  margin-bottom: #{$grid-gap * 2};
+}
+
 .blk-Map_Columns {
   @include break-min($sm) {
     display: flex;
