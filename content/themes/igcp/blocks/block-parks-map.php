@@ -17,10 +17,10 @@
 ?>
 
 <div class="blk-Map">
-  <div class="blk-Header">
-    <h3 class="blk-Header_Title"><?php echo $title; ?></h3>
+  <div class="blk-Map_Header">
+    <h3 class="blk-Map_Title"><?php echo $title; ?></h3>
   </div>
-  <div class="blk-Body">
+  <div class="blk-Map_Body">
     <div class="blk-Map_Columns">
       <div class="blk-Map_Column blk-Map_Column-image">
         <div class="blk-Map_ImageWrap">
