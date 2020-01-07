@@ -1,7 +1,23 @@
 @import "../../inc/scss/utilities/variables";
 @import "../../inc/scss/utilities/mixins";
 
-.til-Partners_Items {
+.blk-Partners {
+  background-color: $color-light-grey;
+}
+
+.blk-Partners_Inner {
+  @include inner;
+}
+
+.blk-Partners_Header {
+  text-align: center;
+  margin-bottom: #{$grid-gap * 2};
+}
+
+h3.blk-Partners_Title {
+}
+
+.blk-Partners_Items {
   @include no-margin-padding;
   display: flex;
   flex-wrap: wrap;
@@ -9,7 +25,7 @@
   margin-bottom: -#{$grid-gap};
 }
 
-.til-Partners_Item {
+.blk-Partners_Item {
   flex: 0 0 calc(((6 / 12) * 100%) - #{$grid-gap});
   margin-bottom: $grid-gap;
 
@@ -25,7 +41,7 @@
   border: 1px solid $color-border;
 }
 
-.til-Partner {
+.blk-Partner {
   position: relative;
   padding-bottom: calc((4 / 12) * 100%);
 
@@ -37,7 +53,7 @@
   }
 }
 
-a.til-Partner_FauxLink {
+a.blk-Partner_FauxLink {
   @include absolute_fill;
   z-index: 2;
 }

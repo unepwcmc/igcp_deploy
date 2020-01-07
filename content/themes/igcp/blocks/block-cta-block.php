@@ -13,7 +13,6 @@
   $link_text_1 = get_theme_mod( 'cta_block_button_1_text' );
   $link_url_2 = get_theme_mod( 'cta_block_button_2_link' );
   $link_text_2 = get_theme_mod( 'cta_block_button_2_text' );
-  // $background_image_url = wp_get_attachment_image_src( $background_image, 'full-size' )[0];
   $background_image_url = get_theme_mod( 'cta_block_background_image' );
   $opacity = get_theme_mod( 'cta_block_overlay_opacity' );
 ?>

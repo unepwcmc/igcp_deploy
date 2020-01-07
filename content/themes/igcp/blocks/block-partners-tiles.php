@@ -6,6 +6,7 @@
   */
 
   /* Variables */
+  $title = get_field('title', false);
 
   /* Query */
 
@@ -20,25 +21,36 @@
 
 <?php if( $get_items->have_posts() ) : ?>
 
-  <div class="til-Partners_Tiles">
-    <ul class="til-Partners_Items">
+  <div class="blk-Partners">
+    <div class="blk-Partners_Inner">
+      <?php if ($title != ''): ?>
+        <div class="blk-Partners_Header">
+          <h3 class="blk-Partners_Title"><?php echo $title; ?></h3>
+        </div>
+      <?php endif; ?>
+      <div class="blk-Partners_Body">
+        <div class="blk-Partners_Tiles">
+          <ul class="blk-Partners_Items">
 
-      <?php while( $get_items->have_posts() ) : $get_items->the_post(); ?>
+            <?php while( $get_items->have_posts() ) : $get_items->the_post(); ?>
 
-        <li class="til-Partners_Item">
-          <div class="til-Partner">
-            <?php the_post_thumbnail( 'thumnail' ); ?>
-            <a href="<?php echo get_field('url'); ?>" class="til-Partner_FauxLink" target="_blank" rel="noreferrer noopener"></a>
-          </div>
-        </li>
+              <li class="blk-Partners_Item">
+                <div class="blk-Partner">
+                  <?php the_post_thumbnail( 'thumnail' ); ?>
+                  <a href="<?php echo get_field('url'); ?>" class="blk-Partner_FauxLink" target="_blank" rel="noreferrer noopener"></a>
+                </div>
+              </li>
 
-      <?php
-        endwhile;
-        else :
-  			echo '<p class="">Nothing found.</p>';
-      ?>
+            <?php
+              endwhile;
+              else :
+        			echo '<p class="">Nothing found.</p>';
+            ?>
 
-    </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 
 <?php endif;
