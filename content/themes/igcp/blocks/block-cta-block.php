@@ -7,15 +7,15 @@
 
   // Variables
 
-  $title = block_field( 'title', false );
-  $text = block_field( 'text', false );
-  $link_url_1 = block_field( 'link-url-1', false );
-  $link_text_1 = block_field( 'link-text-1', false );
-  $link_url_2 = block_field( 'link-url-2', false );
-  $link_text_2 = block_field( 'link-text-2', false );
-  $background_image = block_field( 'background-image', false );
-  $background_image_url = wp_get_attachment_image_src( $background_image, 'full-size' )[0];
-  $opacity = block_field( 'opacity', false );
+  $title = get_theme_mod( 'cta_block_title' );
+  $text = get_theme_mod( 'cta_block_text' );
+  $link_url_1 = get_theme_mod( 'cta_block_button_1_link' );
+  $link_text_1 = get_theme_mod( 'cta_block_button_1_text' );
+  $link_url_2 = get_theme_mod( 'cta_block_button_2_link' );
+  $link_text_2 = get_theme_mod( 'cta_block_button_2_text' );
+  // $background_image_url = wp_get_attachment_image_src( $background_image, 'full-size' )[0];
+  $background_image_url = get_theme_mod( 'cta_block_background_image' );
+  $opacity = get_theme_mod( 'cta_block_overlay_opacity' );
 ?>
 
 <div class="blk-CTA">

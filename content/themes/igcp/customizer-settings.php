@@ -174,3 +174,114 @@ function default_hero_customizer_settings($wp_customize) {
 
 }
 add_action('customize_register', 'default_hero_customizer_settings');
+
+/*-------------------------------------------------------------------------------
+  CTA Block Customiser Settings
+-------------------------------------------------------------------------------*/
+
+function cta_block_customizer_settings($wp_customize) {
+  // Add Default Hero Section
+  $wp_customize->add_section('cta_block', array(
+  'title' => 'CTA Block Settings',
+  'description' => 'Settings for the CTA block',
+  'priority' => 100,
+  ));
+
+  // Default background image
+  $wp_customize->add_setting('cta_block_background_image');
+  $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'cta_block_background_image', array(
+    'label' => 'Background Image',
+    'section' => 'cta_block',
+    'settings' => 'cta_block_background_image',
+  )));
+
+
+  // Title
+
+  // add a setting for the title
+  $wp_customize->add_setting('cta_block_title');
+  // Add a control to input the title
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'cta_block_title',
+  array(
+  'label' => 'Title',
+  'section' => 'cta_block',
+  'settings' => 'cta_block_title',
+  ) ) );
+
+  // Text
+
+  // add a setting for the text
+  $wp_customize->add_setting('cta_block_text');
+  // Add a control to input the text
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'cta_block_text',
+  array(
+  'label' => 'Text',
+  'type' => 'textarea',
+  'section' => 'cta_block',
+  'settings' => 'cta_block_text',
+  ) ) );
+
+  // Button 1 link
+
+  // add a setting for the button link
+  $wp_customize->add_setting('cta_block_button_1_link');
+  // Add a control to input the button link
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'cta_block_button_1_link',
+  array(
+  'label' => 'Button 1 Link',
+  'type' => 'dropdown-pages',
+  'section' => 'cta_block',
+  'settings' => 'cta_block_button_1_link',
+  ) ) );
+
+  // Button 1 text
+
+  // add a setting for the button text
+  $wp_customize->add_setting('cta_block_button_1_text');
+  // Add a control to input the button text
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'cta_block_button_1_text',
+  array(
+  'label' => 'Button 1 Text',
+  'section' => 'cta_block',
+  'settings' => 'cta_block_button_1_text',
+  ) ) );
+
+  // Button 2 link
+
+  // add a setting for the button link
+  $wp_customize->add_setting('cta_block_button_2_link');
+  // Add a control to input the button link
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'cta_block_button_2_link',
+  array(
+  'label' => 'Button 2 Link',
+  'type' => 'dropdown-pages',
+  'section' => 'cta_block',
+  'settings' => 'cta_block_button_2_link',
+  ) ) );
+
+  // Button 2 text
+
+  // add a setting for the button text
+  $wp_customize->add_setting('cta_block_button_2_text');
+  // Add a control to input the button text
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'cta_block_button_2_text',
+  array(
+  'label' => 'Button 2 Text',
+  'section' => 'cta_block',
+  'settings' => 'cta_block_button_2_text',
+  ) ) );
+
+  // Overlay opacity
+
+  // add a setting for the overlay opacity
+  $wp_customize->add_setting('cta_block_overlay_opacity');
+  // Add a control to input the overlay opacity
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'cta_block_overlay_opacity',
+  array(
+  'label' => 'Overlay Opacity (e.g., 0.4)',
+  'section' => 'cta_block',
+  'settings' => 'cta_block_overlay_opacity',
+  ) ) );
+
+}
+add_action('customize_register', 'cta_block_customizer_settings');
