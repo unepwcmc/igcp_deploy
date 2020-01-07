@@ -19,42 +19,35 @@
   $get_items = new WP_Query($get_items_query);
 ?>
 
-<?php if( $get_items->have_posts() ) : ?>
 
   <div class="blk-Partners">
     <div class="blk-Partners_Inner">
-      <?php if ($title != ''): ?>
+      <?php if ($title != '') : ?>
         <div class="blk-Partners_Header">
           <h3 class="blk-Partners_Title"><?php echo $title; ?></h3>
         </div>
       <?php endif; ?>
       <div class="blk-Partners_Body">
-        <div class="blk-Partners_Tiles">
+        <?php if ( $get_items->have_posts() ) : ?>
           <ul class="blk-Partners_Items">
-
-            <?php while( $get_items->have_posts() ) : $get_items->the_post(); ?>
+            <?php while ( $get_items->have_posts() ) : $get_items->the_post(); ?>
 
               <li class="blk-Partners_Item">
                 <div class="blk-Partner">
-                  <?php the_post_thumbnail( 'thumnail' ); ?>
+                  <?php the_post_thumbnail( 'thumbnail' ); ?>
                   <a href="<?php echo get_field('url'); ?>" class="blk-Partner_FauxLink" target="_blank" rel="noreferrer noopener"></a>
                 </div>
               </li>
 
-            <?php
-              endwhile;
-              else :
-        			echo '<p class="">Nothing found.</p>';
-            ?>
-
+            <?php endwhile; ?>
           </ul>
-        </div>
+        <?php else :
+          echo '<p class="">Nothing found.</p>';
+        endif;
+        // Reset things, for good measure
+        $get_items = null;
+        wp_reset_postdata();
+        ?>
       </div>
     </div>
   </div>
-
-<?php endif;
-  // Reset things, for good measure
-  $get_items = null;
-  wp_reset_postdata();
-?>

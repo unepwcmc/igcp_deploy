@@ -32,12 +32,12 @@
   $page_3_img_url = get_the_post_thumbnail_url($page_3_id, 'full');
 
   // Page 4
-  $page_4 = block_field( 'page-4', false );
-  $page_4_slug = str_replace('/','',$page_4);
-  $page_4_data = get_page_by_path( 'mountain-gorillas' );
-  $page_4_id = $page_4_data->ID;
-  $page_4_title = $page_4_data->post_title;
-  $page_4_img_url = get_the_post_thumbnail_url($page_4_id, 'full');
+  // $page_4 = block_field( 'page-4', false );
+  // $page_4_slug = str_replace('/','',$page_4);
+  // $page_4_data = get_page_by_path( 'mountain-gorillas' );
+  // $page_4_id = $page_4_data->ID;
+  // $page_4_title = $page_4_data->post_title;
+  // $page_4_img_url = get_the_post_thumbnail_url($page_4_id, 'full');
 ?>
 
 <div class="blk-PictureLinks">
