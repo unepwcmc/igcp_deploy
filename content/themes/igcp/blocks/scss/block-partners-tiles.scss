@@ -2,7 +2,7 @@
 @import "../../inc/scss/utilities/mixins";
 
 .blk-Partners {
-  @include spacer_body;
+  @include spacer_body_small;
   background-color: $color-light-grey;
 }
 
@@ -13,9 +13,6 @@
 .blk-Partners_Header {
   text-align: center;
   margin-bottom: #{$grid-gap * 2};
-}
-
-h3.blk-Partners_Title {
 }
 
 .blk-Partners_Items {
