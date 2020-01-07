@@ -10,7 +10,7 @@
 	get_header();
 
 	// Page Hero
-	set_query_var('hero-title', get_the_archive_title());
+	set_query_var('hero-title', 'Families');
 	get_template_part( 'template-parts/components/heroes/hero', 'page' );
 ?>
 

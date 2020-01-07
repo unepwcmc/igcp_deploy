@@ -1,0 +1,15 @@
+.sbr-Widgets_Item-filters {
+  margin-bottom: $grid-gap;
+}
+
+h3.sbr-Widgets_Title {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+.sbr-Widgets_Button {
+  @include button_secondary;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 0;
+}

@@ -12,7 +12,7 @@
 	get_template_part( 'template-parts/components/modals/modal', 'team' );
 
 	// Page Hero
-	set_query_var('hero-title', get_the_archive_title());
+	set_query_var('hero-title', 'Library');
 	get_template_part( 'template-parts/components/heroes/hero', 'page' );
 ?>
 

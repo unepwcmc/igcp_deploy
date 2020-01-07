@@ -1,6 +1,8 @@
 <?php
   $role_data = get_the_terms(get_the_ID(), 'role');
   $role_name = $role_data[0]->name;
+  $location_data = get_the_terms(get_the_ID(), 'location');
+  $location_name = $location_data[0]->name;
   $thumbnail_url = get_the_post_thumbnail_url() != '' ? get_the_post_thumbnail_url() : get_stylesheet_directory_uri() . '/inc/img/square-placeholder.jpg';
 ?>
 
@@ -21,7 +23,7 @@
       <p class="crd-Team_JobTitle" data-member-jobtitle><?php echo get_field( "job_title" ); ?></p>
       <p class="crd-Team_Bio" data-member-bio><?php echo get_field( "bio" ); ?></p>
       <p class="crd-Team_Email" data-member-email><?php echo get_field( "email_address" ); ?></p>
-      <p class="crd-Team_Location" data-member-location><?php echo $country_data[0]->name; ?></p>
+      <p class="crd-Team_Location" data-member-location><?php echo $location_name; ?></p>
 		</div>
 	</div>
   <a href="#" class="crd-Team_FauxLink"></a>

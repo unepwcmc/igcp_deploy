@@ -197,9 +197,9 @@ function custom_register_sidebar() {
 	register_sidebar(array(
 		'name' => __('Sidebar', 'custom'),
 		'id' => 'sidebar',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => "</aside>",
-		'before_title' => '<h3 class="widget-title">',
+		'before_widget' => '<li class="sbr-Widgets_Item"><div class="sbr-Widget sbr-Widget-%1$s sbr-Widget-%2$s">',
+		'after_widget' => "</div></li>",
+		'before_title' => '<h3 class="sbr-Widget_Title">',
 		'after_title' => '</h3>'
 	));
 
