@@ -34,7 +34,7 @@
 
               <li class="blk-Partners_Item">
                 <div class="blk-Partner">
-                  <?php the_post_thumbnail( 'thumbnail' ); ?>
+                  <?php the_post_thumbnail(); ?>
                   <a href="<?php echo get_field('url'); ?>" class="blk-Partner_FauxLink" target="_blank" rel="noreferrer noopener"></a>
                 </div>
               </li>
