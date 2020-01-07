@@ -6,7 +6,7 @@
   */
 
   /* Variables */
-  $title = get_field('title', false);
+  $title = block_field('title', false);
 
   /* Query */
 

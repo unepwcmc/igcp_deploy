@@ -2,6 +2,7 @@
 @import "../../inc/scss/utilities/mixins";
 
 .blk-Partners {
+  @include spacer_body;
   background-color: $color-light-grey;
 }
 
