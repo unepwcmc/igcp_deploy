@@ -16,12 +16,24 @@
   // }
 
   .logged-in.admin-bar & {
-    top: 32px;
+    top: 46px;
+    @include break-min(783px) {
+      top: 32px;
+    }
   }
 }
 
 .hd-Header_Inner {
   @include inner;
+
+  @include break-min($xs) {
+    padding-right: $gutter / 4;
+    padding-left: $gutter / 4;
+  }
+  @include break-min($lg) {
+    padding-right: $gutter;
+    padding-left: $gutter;
+  }
 }
 
 .hd-Header_Body {

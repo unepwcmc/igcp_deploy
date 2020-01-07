@@ -1,5 +1,9 @@
 .lyt-Main {
-  padding-top: 122px;
+  padding-top: 118px;
+
+  @include break-min($sm) {
+    padding-top: 122px;
+  }
 
   // .admin-bar & {
   //   padding-top: 125px;

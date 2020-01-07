@@ -9,7 +9,7 @@
  * @since 1.0
  * @version 1.2
  */
-	$thumbnail_url = get_the_post_thumbnail_url() != '' ? get_the_post_thumbnail_url() : get_stylesheet_directory_uri() . '/inc/img/search-placeholder.jpg';
+	$thumbnail_url = get_the_post_thumbnail_url() != '' ? get_the_post_thumbnail_url() : get_stylesheet_directory_uri() . '/inc/img/square-placeholder.jpg';
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'ent-Excerpt ent-Excerpt-search' ); ?>>

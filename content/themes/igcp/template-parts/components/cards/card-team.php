@@ -1,6 +1,7 @@
 <?php
   $role_data = get_the_terms(get_the_ID(), 'role');
   $role_name = $role_data[0]->name;
+  $thumbnail_url = get_the_post_thumbnail_url() != '' ? get_the_post_thumbnail_url() : get_stylesheet_directory_uri() . '/inc/img/square-placeholder.jpg';
 ?>
 
 <article id="post-<?php echo $post_ID; ?>" class="crd-Team team-modal-trigger">
@@ -11,7 +12,7 @@
       }
     ?>
     <div class="crd-Team_Image" data-member-image>
-      <?php the_post_thumbnail(); ?>
+      <img src="<?php echo $thumbnail_url; ?>" alt="<?php the_title(); ?>" />
     </div>
 	</header>
 	<div class="crd-Team_Body">

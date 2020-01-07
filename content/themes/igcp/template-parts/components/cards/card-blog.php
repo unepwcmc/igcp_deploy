@@ -1,7 +1,7 @@
 <?php
   $post_categories = get_the_category();
 
-  // Get post thumbnail url, output as actual img element
+  $thumbnail_url = get_the_post_thumbnail_url() != '' ? get_the_post_thumbnail_url() : get_stylesheet_directory_uri() . '/inc/img/square-placeholder.jpg';
 ?>
 
 <article id="post-<?php the_ID(); ?>" class="crd-Blog">
@@ -12,7 +12,7 @@
       }
     ?>
     <div class="crd-Blog_Image">
-      <?php the_post_thumbnail(); ?>
+      <img src="<?php echo $thumbnail_url; ?>" alt="<?php the_title(); ?>" />
     </div>
 	</header>
 	<div class="crd-Blog_Body">

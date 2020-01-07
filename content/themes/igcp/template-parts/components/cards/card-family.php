@@ -1,6 +1,8 @@
 <?php
   $park_data = get_the_terms(get_the_ID(), 'park');
   $park_name = $park_data[0]->name;
+
+  $thumbnail_url = get_the_post_thumbnail_url() != '' ? get_the_post_thumbnail_url() : get_stylesheet_directory_uri() . '/inc/img/square-placeholder.jpg';
 ?>
 
 <article id="post-<?php the_ID(); ?>" class="crd-Family">
@@ -11,7 +13,7 @@
       }
     ?>
     <div class="crd-Family_Image">
-      <?php the_post_thumbnail(); ?>
+      <img src="<?php echo $thumbnail_url; ?>" alt="<?php the_title(); ?>" />
     </div>
 	</header>
 	<div class="crd-Family_Body">

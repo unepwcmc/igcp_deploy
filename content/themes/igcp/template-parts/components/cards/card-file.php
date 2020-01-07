@@ -1,6 +1,7 @@
 <?php
   $filetype_data = get_the_terms(get_the_ID(), 'filetype');
   $filetype_name = $filetype_data[0]->name;
+  $thumbnail_url = get_the_post_thumbnail_url() != '' ? get_the_post_thumbnail_url() : get_stylesheet_directory_uri() . '/inc/img/square-placeholder.jpg';
 ?>
 
 <article id="post-<?php echo $post_ID; ?>" class="crd-File">
@@ -11,7 +12,7 @@
       }
     ?>
     <div class="crd-File_Image">
-      <?php the_post_thumbnail(); ?>
+      <img src="<?php echo $thumbnail_url; ?>" alt="<?php the_title(); ?>" />
     </div>
 	</header>
 	<div class="crd-File_Body">

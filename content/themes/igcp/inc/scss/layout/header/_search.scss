@@ -11,9 +11,13 @@
   outline: none;
 
   svg {
-    width: 20px;
-    opacity: 0.5;
+    width: 32px;
     transition: opacity .3s ease;
+
+    @include break-min($sm) {
+      opacity: 0.5;
+      width: 20px;
+    }
   }
 
   &:hover {

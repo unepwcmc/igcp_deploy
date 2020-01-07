@@ -19,12 +19,12 @@
     transform: translateX(500px);
   }
 
-  // padding-top: $grid-gap;
-  // padding-bottom: $grid-gap;
-
   .logged-in.admin-bar & {
-    top: 32px;
     max-height: calc(100% - 32px);
+    top: 46px;
+    @include break-min(783px) {
+      top: 32px;
+    }
   }
 
   &.drw-Drawer-active {
