@@ -1,0 +1,42 @@
+.smp-Hero {
+  position: relative;
+  margin-left: $grid-gap;
+  margin-right: $grid-gap;
+}
+
+.smp-Hero_Inner {
+  @include inner;
+  position: relative;
+  z-index: 3;
+}
+
+.smp-Hero_Body {
+  @include spacer_body_small;
+}
+
+.smp-Hero_Content {
+  text-align: center;
+  max-width: calc((6 / 12) * 100%);
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+h2.smp-Hero_Title {
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.smp-Hero_Overlay {
+  @include absolute_fill;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+.smp-Hero_BackgroundImage {
+  @include absolute_fill;
+  object-fit: cover;
+  font-family: 'object-fit: cover;';
+  z-index: 1;
+}

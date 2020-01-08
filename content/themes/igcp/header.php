@@ -61,8 +61,6 @@
 
                           <input type="text" name="s" id="s" value="" class="hd-Search_Input">
 
-                          <input type="hidden" value="1" name="sentence" />
-
                           <input type="submit" name="" value="Search" class="hd-Search_Button">
                         </form>
                       </div>
