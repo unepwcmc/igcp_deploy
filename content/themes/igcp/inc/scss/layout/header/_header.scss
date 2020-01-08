@@ -49,7 +49,7 @@
 
 .hd-Header_Item-logo {
   flex: 0 0 100px;
-  margin-right: $grid-gap;
+  margin-right: #{$grid-gap * 2};
   transition: flex-basis .3s ease;
 
   .utl-HeaderScrolled & {
