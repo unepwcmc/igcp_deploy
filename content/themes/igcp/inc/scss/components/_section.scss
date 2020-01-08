@@ -29,6 +29,10 @@
     }
   }
 
+  .wgt-Widgets_Item:first-child & {
+    margin-top: 0;
+  }
+
   // .wgt-Widget .wp-block-mkl-section-block {
   //   margin: 0;
   //
