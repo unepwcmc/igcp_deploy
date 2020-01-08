@@ -1,6 +1,11 @@
 @import "../../inc/scss/utilities/variables";
 @import "../../inc/scss/utilities/mixins";
 
+.blk-PictureLinks_Header {
+  text-align: center;
+  margin-bottom: #{$grid-gap * 4};
+}
+
 .blk-PictureLinks_Items {
   @include no-margin-padding;
   display: flex;

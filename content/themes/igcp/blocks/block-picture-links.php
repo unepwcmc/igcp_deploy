@@ -7,101 +7,100 @@
 
   /* Variables */
 
-  // Page 1
-  $page_1 = block_field( 'page-1', false );
-  $page_1_slug = str_replace('/','',$page_1);
-  $page_1_data = get_page_by_path( 'mountain-gorillas' );
-  $page_1_id = $page_1_data->ID;
-  $page_1_title = $page_1_data->post_title;
-  $page_1_img_url = get_the_post_thumbnail_url($page_1_id, 'full');
+  $section_title = block_field( 'section-title', false );
 
-  // Page 2
-  $page_2 = block_field( 'page-2', false );
-  $page_2_slug = str_replace('/','',$page_2);
-  $page_2_data = get_page_by_path( 'mountain-gorillas' );
-  $page_2_id = $page_2_data->ID;
-  $page_2_title = $page_2_data->post_title;
-  $page_2_img_url = get_the_post_thumbnail_url($page_2_id, 'full');
+  // Link 1
+  $link_1_title = block_field( 'link-1-title', false );
+  $link_1_url = block_field( 'link-1-url', false );
+  $link_1_image = block_field( 'link-1-image', false );
+  $link_1_image_url = $link_1_image != '' ? wp_get_attachment_image_src( $link_1_image, 'full-size' )[0] : get_stylesheet_directory_uri() . '/inc/img/square-placeholder.jpg';
 
-  // Page 3
-  $page_3 = block_field( 'page-3', false );
-  $page_3_slug = str_replace('/','',$page_3);
-  $page_3_data = get_page_by_path( 'mountain-gorillas' );
-  $page_3_id = $page_3_data->ID;
-  $page_3_title = $page_3_data->post_title;
-  $page_3_img_url = get_the_post_thumbnail_url($page_3_id, 'full');
+  // Link 2
+  $link_2_title = block_field( 'link-2-title', false );
+  $link_2_url = block_field( 'link-2-url', false );
+  $link_2_image = block_field( 'link-2-image', false );
+  $link_2_image_url = $link_2_image != '' ? wp_get_attachment_image_src( $link_2_image, 'full-size' )[0] : get_stylesheet_directory_uri() . '/inc/img/square-placeholder.jpg';
 
-  // Page 4
-  // $page_4 = block_field( 'page-4', false );
-  // $page_4_slug = str_replace('/','',$page_4);
-  // $page_4_data = get_page_by_path( 'mountain-gorillas' );
-  // $page_4_id = $page_4_data->ID;
-  // $page_4_title = $page_4_data->post_title;
-  // $page_4_img_url = get_the_post_thumbnail_url($page_4_id, 'full');
+  // Link 3
+  $link_3_title = block_field( 'link-3-title', false );
+  $link_3_url = block_field( 'link-3-url', false );
+  $link_3_image = block_field( 'link-3-image', false );
+  $link_3_image_url = $link_3_image != '' ? wp_get_attachment_image_src( $link_3_image, 'full-size' )[0] : get_stylesheet_directory_uri() . '/inc/img/square-placeholder.jpg';
+
+  // Link 4
+  $link_4_title = block_field( 'link-4-title', false );
+  $link_4_url = block_field( 'link-4-url', false );
+  $link_4_image = block_field( 'link-4-image', false );
+  $link_4_image_url = $link_4_image != '' ? wp_get_attachment_image_src( $link_4_image, 'full-size' )[0] : get_stylesheet_directory_uri() . '/inc/img/square-placeholder.jpg';
 ?>
 
 <div class="blk-PictureLinks">
-  <ul class="blk-PictureLinks_Items">
+  <div class="blk-PictureLinks_Header">
+    <h3 class="blk-PictureLinks_Title"><?php echo $section_title; ?></h3>
+  </div>
+  <div class="blk-PictureLinks_Body">
+    <ul class="blk-PictureLinks_Items">
 
-    <li class="blk-PictureLinks_Item">
-      <div class="blk-PictureLink">
-        <a class="blk-PictureLink_FauxLink" href="#"></a>
-        <div class="blk-PictureLink_Body">
-          <div class="blk-PictureLink_ImageWrap">
-            <img class="blk-PictureLink_Image" src="<?php echo $page_1_img_url; ?>" alt="<?php echo $page_1_title; ?>">
+      <li class="blk-PictureLinks_Item">
+        <div class="blk-PictureLink">
+          <a class="blk-PictureLink_FauxLink" href="<?php echo $link_1_url; ?>"></a>
+          <div class="blk-PictureLink_Body">
+            <div class="blk-PictureLink_ImageWrap">
+              <img class="blk-PictureLink_Image" src="<?php echo $link_1_image_url; ?>" alt="<?php echo $link_1_title; ?>">
+            </div>
+            <img src="<?php echo get_stylesheet_directory_uri() . '/inc/img/mask-circle-1.svg'; ?>" alt="Circle Mask" class="blk-PictureLink_Mask">
           </div>
-          <img src="<?php echo get_stylesheet_directory_uri() . '/inc/img/mask-circle-1.svg'; ?>" alt="Circle Mask" class="blk-PictureLink_Mask">
-        </div>
-        <div class="blk-PictureLink_Footer">
-          <h4 class="blk-PictureLink_Title"><?php echo $page_1_title; ?></h4>
-        </div>
-      </div>
-    </li>
-
-    <li class="blk-PictureLinks_Item">
-      <div class="blk-PictureLink">
-        <a class="blk-PictureLink_FauxLink" href="#"></a>
-        <div class="blk-PictureLink_Body">
-          <div class="blk-PictureLink_ImageWrap">
-            <img class="blk-PictureLink_Image" src="<?php echo $page_1_img_url; ?>" alt="<?php echo $page_1_title; ?>">
+          <div class="blk-PictureLink_Footer">
+            <h4 class="blk-PictureLink_Title"><?php echo $link_1_title; ?></h4>
           </div>
-          <img src="<?php echo get_stylesheet_directory_uri() . '/inc/img/mask-circle-2.svg'; ?>" alt="Circle Mask" class="blk-PictureLink_Mask">
         </div>
-        <div class="blk-PictureLink_Footer">
-          <h4 class="blk-PictureLink_Title"><?php echo $page_1_title; ?></h4>
-        </div>
-      </div>
-    </li>
+      </li>
 
-    <li class="blk-PictureLinks_Item">
-      <div class="blk-PictureLink">
-        <a class="blk-PictureLink_FauxLink" href="#"></a>
-        <div class="blk-PictureLink_Body">
-          <div class="blk-PictureLink_ImageWrap">
-            <img class="blk-PictureLink_Image" src="<?php echo $page_1_img_url; ?>" alt="<?php echo $page_1_title; ?>">
+      <li class="blk-PictureLinks_Item">
+        <div class="blk-PictureLink">
+          <a class="blk-PictureLink_FauxLink" href="<?php echo $link_2_url; ?>"></a>
+          <div class="blk-PictureLink_Body">
+            <div class="blk-PictureLink_ImageWrap">
+              <img class="blk-PictureLink_Image" src="<?php echo $link_2_image_url; ?>" alt="<?php echo $link_2_title; ?>">
+            </div>
+            <img src="<?php echo get_stylesheet_directory_uri() . '/inc/img/mask-circle-2.svg'; ?>" alt="Circle Mask" class="blk-PictureLink_Mask">
           </div>
-          <img src="<?php echo get_stylesheet_directory_uri() . '/inc/img/mask-circle-3.svg'; ?>" alt="Circle Mask" class="blk-PictureLink_Mask">
-        </div>
-        <div class="blk-PictureLink_Footer">
-          <h4 class="blk-PictureLink_Title"><?php echo $page_1_title; ?></h4>
-        </div>
-      </div>
-    </li>
-
-    <li class="blk-PictureLinks_Item">
-      <div class="blk-PictureLink">
-        <a class="blk-PictureLink_FauxLink" href="#"></a>
-        <div class="blk-PictureLink_Body">
-          <div class="blk-PictureLink_ImageWrap">
-            <img class="blk-PictureLink_Image" src="<?php echo $page_1_img_url; ?>" alt="<?php echo $page_1_title; ?>">
+          <div class="blk-PictureLink_Footer">
+            <h4 class="blk-PictureLink_Title"><?php echo $link_2_title; ?></h4>
           </div>
-          <img src="<?php echo get_stylesheet_directory_uri() . '/inc/img/mask-circle-4.svg'; ?>" alt="Circle Mask" class="blk-PictureLink_Mask">
         </div>
-        <div class="blk-PictureLink_Footer">
-          <h4 class="blk-PictureLink_Title"><?php echo $page_1_title; ?></h4>
-        </div>
-      </div>
-    </li>
+      </li>
 
-  </ul>
+      <li class="blk-PictureLinks_Item">
+        <div class="blk-PictureLink">
+          <a class="blk-PictureLink_FauxLink" href="<?php echo $link_3_url; ?>"></a>
+          <div class="blk-PictureLink_Body">
+            <div class="blk-PictureLink_ImageWrap">
+              <img class="blk-PictureLink_Image" src="<?php echo $link_3_image_url; ?>" alt="<?php echo $link_3_title; ?>">
+            </div>
+            <img src="<?php echo get_stylesheet_directory_uri() . '/inc/img/mask-circle-3.svg'; ?>" alt="Circle Mask" class="blk-PictureLink_Mask">
+          </div>
+          <div class="blk-PictureLink_Footer">
+            <h4 class="blk-PictureLink_Title"><?php echo $link_3_title; ?></h4>
+          </div>
+        </div>
+      </li>
+
+      <li class="blk-PictureLinks_Item">
+        <div class="blk-PictureLink">
+          <a class="blk-PictureLink_FauxLink" href="<?php echo $link_4_url; ?>"></a>
+          <div class="blk-PictureLink_Body">
+            <div class="blk-PictureLink_ImageWrap">
+              <img class="blk-PictureLink_Image" src="<?php echo $link_4_image_url; ?>" alt="<?php echo $link_4_title; ?>">
+            </div>
+            <img src="<?php echo get_stylesheet_directory_uri() . '/inc/img/mask-circle-4.svg'; ?>" alt="Circle Mask" class="blk-PictureLink_Mask">
+          </div>
+          <div class="blk-PictureLink_Footer">
+            <h4 class="blk-PictureLink_Title"><?php echo $link_4_title; ?></h4>
+          </div>
+        </div>
+      </li>
+
+    </ul>
+  </div>
 </div>
