@@ -458,9 +458,16 @@ function pagination_bar() {
 
 			echo '<div class="pag-Pagination_Nav">';
 
+      // structure of "format" depends on whether we're using pretty permalinks
+     if( get_option('permalink_structure') ) {
+	     $format = '&paged=%#%';
+     } else {
+	     $format = 'page/%#%/';
+     }
+
 		    echo paginate_links(array(
 		      'base' => get_pagenum_link(1) . '%_%',
-		      'format' => '/page/%#%',
+		      'format' => $format,
 		      'current' => $current_page,
 		      'total' => $total_pages,
           'prev_next' => True,
