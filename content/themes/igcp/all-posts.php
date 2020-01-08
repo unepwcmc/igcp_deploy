@@ -38,6 +38,6 @@ get_header(); ?>
 	</div>
 </div>
 
-<?php dynamic_sidebar( 'after-content' ); ?>
+<?php do_shortcode('[content_block slug=archive-page]'); ?>
 
 <?php get_footer();
