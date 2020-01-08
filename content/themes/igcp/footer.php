@@ -4,7 +4,9 @@
  */
 ?>
 				<?php if ( is_active_sidebar( 'after-content' ) ) { ?>
-					<?php dynamic_sidebar( 'after-content' ); ?>
+					<div class="wgt-Widgets_Items">
+						<?php dynamic_sidebar( 'after-content' ); ?>
+					</div>
 				<?php }?>
 			</main>
 
