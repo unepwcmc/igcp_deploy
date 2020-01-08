@@ -33,6 +33,7 @@
     margin-top: 0;
   }
 
+
   // .wgt-Widget .wp-block-mkl-section-block {
   //   margin: 0;
   //
@@ -43,5 +44,10 @@
 
   .wp-block-mkl-section-block-inner {
     @include inner;
+  }
+
+  // For archive page after-content widgets
+  .content-block .wp-block-mkl-section-block:first-child {
+    margin-top: 0;
   }
 }
