@@ -30,9 +30,11 @@
 ?>
 
 <div class="blk-TextColumns">
-  <div class="blk-TextColumns_Header">
-  <h3 class="blk-TextColumns_Title"><?php echo $section_title; ?></h3>
-  </div>
+  <?php if ($section_title != ''): ?>
+    <div class="blk-TextColumns_Header">
+      <h3 class="blk-TextColumns_Title"><?php echo $section_title; ?></h3>
+    </div>
+  <?php endif; ?>
   <div class="blk-TextColumns_Body">
     <ul class="blk-TextColumns_Columns">
 
