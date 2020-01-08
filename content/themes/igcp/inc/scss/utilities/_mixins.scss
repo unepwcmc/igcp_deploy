@@ -267,6 +267,16 @@
   margin-left: auto;
 }
 
+@mixin ignore_restrained_width {
+  margin-left: calc((-100vw / 2 + 480px / 2) + 100px);
+  margin-right: calc((-100vw / 2 + 480px / 2) + 100px);
+}
+
+@mixin ignore_restrained_width_and_gutters {
+  margin-left: calc(-100vw / 2 + 480px / 2);
+  margin-right: calc(-100vw / 2 + 480px / 2);
+}
+
 @mixin screen_reader_only {
   border: 0;
   clip: rect(1px 1px 1px 1px); /* IE6, IE7 */

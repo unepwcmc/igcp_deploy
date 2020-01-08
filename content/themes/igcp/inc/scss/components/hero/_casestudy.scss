@@ -1,0 +1,58 @@
+.cst-Hero {
+  position: relative;
+  margin-left: $grid-gap;
+  margin-right: $grid-gap;
+}
+
+.cst-Hero_Inner {
+  @include inner;
+  position: relative;
+  z-index: 3;
+  padding-bottom: calc((5 / 14) * 100%);
+}
+
+.cst-Hero_Body {
+  @include absolute_fill;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cst-Hero_Content {
+  text-align: center;
+  max-width: calc((6 / 12) * 100%);
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+h2.cst-Hero_Title {
+  color: #fff;
+
+  &:only-child {
+    margin-bottom: 0;
+  }
+}
+
+p.cst-Hero_Text {
+  color: #fff;
+}
+
+.cst-Hero_Link {
+  @include button_accent;
+}
+
+.cst-Hero_Overlay {
+  @include absolute_fill;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+.cst-Hero_BackgroundImage {
+  @include absolute_fill;
+  object-fit: cover;
+  font-family: 'object-fit: cover;';
+  z-index: 1;
+}

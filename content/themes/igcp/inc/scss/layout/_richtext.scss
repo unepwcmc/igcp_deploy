@@ -1,0 +1,21 @@
+.rte-RichText {
+
+  h2,h3,h4 {
+    margin-top: #{$grid-gap * 3};
+    margin-bottom: $grid-gap;
+  }
+
+  p {
+    margin-top: #{$grid-gap * 2};
+    margin-bottom: #{$grid-gap * 2};
+  }
+
+  h2 + p,h3 + p,h4 + p {
+    margin-top: $grid-gap;
+  }
+
+  .wp-block-quote {
+    margin-top: #{$grid-gap * 3};
+    margin-bottom: $grid-gap;
+  }
+}

@@ -1,0 +1,27 @@
+@import "../../inc/scss/utilities/variables";
+@import "../../inc/scss/utilities/mixins";
+
+.blk-TwoImages_Items {
+  display: flex;
+  // Break out of restrained width
+  @include ignore_restrained_width;
+}
+
+.blk-TwoImages_Item {
+  flex: 0 0 calc(50% - #{$grid-gap / 2});
+
+  &:first-child {
+    margin-right: $grid-gap;
+  }
+}
+
+.blk-TwoImages_ImageWrap {
+  position: relative;
+  padding-bottom: calc((10 / 14.25) * 100%);
+
+}
+
+.blk-TwoImages_Image {
+  @include absolute_fill;
+  @include object-fit-cover;
+}

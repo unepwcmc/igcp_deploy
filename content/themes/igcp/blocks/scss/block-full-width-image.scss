@@ -1,0 +1,17 @@
+@import "../../inc/scss/utilities/variables";
+@import "../../inc/scss/utilities/mixins";
+
+.blk-FullWidthImage {
+  @include ignore_restrained_width_and_gutters;
+}
+
+.blk-FullWidthImage_ImageWrap {
+  position: relative;
+  padding-bottom: calc((5 / 14) * 100%);
+
+}
+
+.blk-FullWidthImage_Image {
+  @include absolute_fill;
+  @include object-fit-cover;
+}

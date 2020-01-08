@@ -1,6 +1,13 @@
 .editor-block-list__layout,
 .lyt-Body,
 .lyt-Body .ent-Entry_Content {
+  // Block Quote
+
+  .wp-block-quote p {
+    font-size: 22px;
+    font-weight: 500;
+  }
+
   // Buttons
   .wp-block-button {
     &:last-child {
@@ -27,7 +34,7 @@
   .wp-block-image {
     margin-top: 50px;
     margin-bottom: 50px;
-    
+
     img {
       display: block;
     }
