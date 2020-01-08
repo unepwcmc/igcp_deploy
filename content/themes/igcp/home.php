@@ -49,6 +49,6 @@
 	</div>
 </div>
 
-<?php do_shortcode('[content_block slug=archive-page]'); ?>
+<?php echo do_shortcode('[content_block slug=archive-page]'); ?>
 
 <?php get_footer();
