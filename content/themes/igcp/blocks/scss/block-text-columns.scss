@@ -1,7 +1,13 @@
 @import "../../inc/scss/utilities/variables";
 @import "../../inc/scss/utilities/mixins";
 
-.blk-Text_Columns {
+.blk-TextColumns_Header {
+  text-align: center;
+  margin-bottom: #{$grid-gap * 4};
+}
+
+.blk-TextColumns_Columns {
+  @include no-margin-padding;
   @include break-min($xs) {
     display: flex;
     flex-wrap: wrap;
@@ -10,7 +16,8 @@
   }
 }
 
-.blk-Text_Column {
+.blk-TextColumns_Column {
+  @include no-bullets;
   margin-bottom: #{$grid-gap * 3};
 
   @include break-min($xs) {
@@ -19,16 +26,16 @@
   }
 }
 
-.blk-Text_Heading {
+.blk-TextColumns_Heading {
   font-size: 18px;
 }
 
-.blk-Text_Text {
+.blk-TextColumns_Text {
   font-size: 14px;
   line-height: 1.5;
 }
 
-a.blk-Text_Link {
+a.blk-TextColumns_Link {
   color: $color-grey-text;
   font-size: 14px;
   text-decoration: none;

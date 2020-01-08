@@ -6,6 +6,8 @@
   */
 
   /* Variables */
+  $section_title = block_field( 'section-title', false);
+
   $heading_1 = block_field( 'heading-1', false );
   $text_1 = block_field( 'text-1', false );
   $link_text_1 = block_field( 'link-text-1', false );
@@ -27,30 +29,37 @@
   $link_url_4 = block_field( 'link-url-4', false );
 ?>
 
-<div class="blk-Text_Columns">
-
-  <div class="blk-Text_Column">
-    <h4 class="blk-Text_Heading"><?php echo $heading_1; ?></h4>
-    <p class="blk-Text_Text"><?php echo $text_1; ?></p>
-    <a href="<?php echo $link_url_1; ?>" class="blk-Text_Link"><?php echo $link_text_1; ?></a>
+<div class="blk-TextColumns">
+  <div class="blk-TextColumns_Header">
+  <h3 class="blk-TextColumns_Title"><?php echo $section_title; ?></h3>
   </div>
+  <div class="blk-TextColumns_Body">
+    <ul class="blk-TextColumns_Columns">
 
-  <div class="blk-Text_Column">
-    <h4 class="blk-Text_Heading"><?php echo $heading_2; ?></h4>
-    <p class="blk-Text_Text"><?php echo $text_2; ?></p>
-    <a href="<?php echo $link_url_2; ?>" class="blk-Text_Link"><?php echo $link_text_2; ?></a>
+      <li class="blk-TextColumns_Column">
+        <h4 class="blk-TextColumns_Heading"><?php echo $heading_1; ?></h4>
+        <p class="blk-TextColumns_Text"><?php echo $text_1; ?></p>
+        <a href="<?php echo $link_url_1; ?>" class="blk-TextColumns_Link"><?php echo $link_text_1; ?></a>
+      </li>
+
+      <li class="blk-TextColumns_Column">
+        <h4 class="blk-TextColumns_Heading"><?php echo $heading_2; ?></h4>
+        <p class="blk-TextColumns_Text"><?php echo $text_2; ?></p>
+        <a href="<?php echo $link_url_2; ?>" class="blk-TextColumns_Link"><?php echo $link_text_2; ?></a>
+      </li>
+
+      <li class="blk-TextColumns_Column">
+        <h4 class="blk-TextColumns_Heading"><?php echo $heading_3; ?></h4>
+        <p class="blk-TextColumns_Text"><?php echo $text_3; ?></p>
+        <a href="<?php echo $link_url_3; ?>" class="blk-TextColumns_Link"><?php echo $link_text_3; ?></a>
+      </li>
+
+      <li class="blk-TextColumns_Column">
+        <h4 class="blk-TextColumns_Heading"><?php echo $heading_4; ?></h4>
+        <p class="blk-TextColumns_Text"><?php echo $text_4; ?></p>
+        <a href="<?php echo $link_url_4; ?>" class="blk-TextColumns_Link"><?php echo $link_text_4; ?></a>
+      </li>
+
+    </ul>
   </div>
-
-  <div class="blk-Text_Column">
-    <h4 class="blk-Text_Heading"><?php echo $heading_3; ?></h4>
-    <p class="blk-Text_Text"><?php echo $text_3; ?></p>
-    <a href="<?php echo $link_url_3; ?>" class="blk-Text_Link"><?php echo $link_text_3; ?></a>
-  </div>
-
-  <div class="blk-Text_Column">
-    <h4 class="blk-Text_Heading"><?php echo $heading_4; ?></h4>
-    <p class="blk-Text_Text"><?php echo $text_4; ?></p>
-    <a href="<?php echo $link_url_4; ?>" class="blk-Text_Link"><?php echo $link_text_4; ?></a>
-  </div>
-
 </div>
