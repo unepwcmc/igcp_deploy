@@ -13,7 +13,7 @@ get_header(); ?>
 
 <div class="lyt-Container">
 	<div class="lyt-Container_Inner">
-		<section class="lyt-Primary lyt-Primary-restrained">
+		<section class="lyt-Primary lyt-Primary-restrained rte-RichText">
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) :

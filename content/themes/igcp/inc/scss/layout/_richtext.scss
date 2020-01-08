@@ -6,6 +6,7 @@
   }
 
   p {
+    line-height: 1.5;
     margin-top: #{$grid-gap * 2};
     margin-bottom: #{$grid-gap * 2};
   }
@@ -16,6 +17,15 @@
 
   .wp-block-quote {
     margin-top: #{$grid-gap * 3};
-    margin-bottom: $grid-gap;
+    margin-bottom: #{$grid-gap * 3};
+  }
+
+  pre {
+    white-space: inherit;
+    padding: $grid-gap;
+    background-color: $color-light-grey;
+    border: 1px solid $color-border;
+    line-height: 1.5;
+    border-radius: 3px;
   }
 }
