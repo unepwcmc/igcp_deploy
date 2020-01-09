@@ -1,6 +1,85 @@
 <?php
+/**
+ * Customeriser Settings
+ *
+ * @link https://developer.wordpress.org/themes/customize-api/
+ *
+ */
+
 /*-------------------------------------------------------------------------------
-	Social Media Links in Customiser
+	Remove Unnecessary Settings
+-------------------------------------------------------------------------------*/
+
+function remove_customizer_settings() {
+  global $wp_customize;
+
+  $wp_customize->remove_panel( 'themes' ); // Theme change settings
+  $wp_customize->remove_section( 'title_tagline' ); // Site Identity
+  $wp_customize->remove_panel( 'nav_menus' ); // Menus
+  $wp_customize->remove_section( 'widgets' ); // Widgets
+  $wp_customize->remove_section( 'static_front_page' ); // Homepage Settings
+  $wp_customize->remove_section( 'custom_css' ); // Additional CSS
+}
+
+add_action( 'customize_register', 'remove_customizer_settings', 11 );
+
+/*-------------------------------------------------------------------------------
+	Contact Details
+-------------------------------------------------------------------------------*/
+
+function contact_details_customizer_settings($wp_customize) {
+  // Add Contact Details Section
+  $wp_customize->add_section('contact_details', array(
+  'title' => 'Contact Details',
+  'description' => 'Address and Contact Details',
+  'priority' => 170,
+  ));
+
+  // Add Heading Setting & Control
+  $wp_customize->add_setting('contact_details_heading');
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'contact_details_heading',
+  array(
+  'label' => 'Heading',
+  'type' => 'text',
+  'section' => 'contact_details',
+  'settings' => 'contact_details_heading',
+  ) ) );
+
+  // Add Address Setting & Control
+  $wp_customize->add_setting('contact_details_address');
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'contact_details_address',
+  array(
+  'label' => 'Text',
+  'type' => 'textarea',
+  'section' => 'contact_details',
+  'settings' => 'contact_details_address',
+  ) ) );
+
+  // Add Phone Number Setting & Control
+  $wp_customize->add_setting('contact_details_phone');
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'contact_details_phone',
+  array(
+  'label' => 'Phone Number',
+  'type' => 'text',
+  'section' => 'contact_details',
+  'settings' => 'contact_details_phone',
+  ) ) );
+
+  // Add Email Address Setting & Control
+  $wp_customize->add_setting('contact_details_email');
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'contact_details_email',
+  array(
+  'label' => 'Email Address',
+  'type' => 'text',
+  'section' => 'contact_details',
+  'settings' => 'contact_details_email',
+  ) ) );
+
+}
+add_action('customize_register', 'contact_details_customizer_settings');
+
+/*-------------------------------------------------------------------------------
+	Social Media Links
 -------------------------------------------------------------------------------*/
 
 function social_media_customizer_settings($wp_customize) {

@@ -1,0 +1,42 @@
+@import "../../inc/scss/utilities/variables";
+@import "../../inc/scss/utilities/mixins";
+
+.blk-Contact {
+  margin-bottom: #{$grid-gap * 4};
+}
+
+.blk-Contact_Body {
+
+}
+
+.blk-Contact_Content {
+  margin-left: calc((3 / 12) * 100%);
+  max-width: calc((3 / 12) * 100%);
+}
+
+
+h4.blk-Contact_Heading {
+  margin-bottom: #{$grid-gap * 2};
+}
+
+.blk-Contact_Text {
+  margin-bottom: #{$grid-gap * 2};
+}
+
+.blk-Contact_Item {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 5px;
+
+  svg {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 16px;
+    opacity: 0.3;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
