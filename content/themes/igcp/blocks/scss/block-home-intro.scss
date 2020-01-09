@@ -1,7 +1,7 @@
 @import "../../inc/scss/utilities/variables";
 @import "../../inc/scss/utilities/mixins";
 
-.blk-Intro_Columns {
+.blk-HomeIntro_Columns {
   margin-bottom: #{$grid-gap * 5};
 
   @include break-min($sm) {
@@ -10,14 +10,14 @@
   }
 }
 
-.blk-Intro_Column {
+.blk-HomeIntro_Column {
   position: relative;
   flex: 0 0 calc(50% - #{$grid-gap / 2});
 
   &:first-child {
     margin-right: $grid-gap;
 
-    .blk-Intro_Columns-flipped & {
+    .blk-HomeIntro_Columns-flipped & {
       order: 2;
       margin-right: 0;
       margin-left: $grid-gap;
@@ -26,49 +26,49 @@
 
   &:last-child {
     align-self: end;
-    .blk-Intro_Columns-flipped & {
+    .blk-HomeIntro_Columns-flipped & {
       order: 1;
     }
   }
 }
 
-p.blk-Intro_LeadText {
-  font-size: 18px;
+.blk-HomeIntro_LeadText {
+  font-size: 20px;
   font-weight: 500;
-  line-height: 1.25;
+  line-height: 1.4;
 }
 
-p.blk-Intro_Text {
+.blk-HomeIntro_Text {
   line-height: 1.5;
   font-size: 14px;
 }
 
-a.blk-Intro_Link {
+a.blk-HomeIntro_Link {
   color: $color-grey-text;
   text-decoration: none;
   font-size: 14px;
 }
 
-.blk-Intro_ImageWrap {
+.blk-HomeIntro_ImageWrap {
   position: relative;
 }
 
-.blk-Intro_ImageWrap-primary {
+.blk-HomeIntro_ImageWrap-primary {
   width: calc(100% + 10px);
   margin-bottom: 5%;
   z-index: 2;
   border-right: 10px solid #fff;
   border-bottom: 15px solid #fff;
-  padding-bottom: 55%;
+  padding-bottom: calc((40 / 57) * 100%);
 
-  .blk-Intro_Columns-flipped & {
+  .blk-HomeIntro_Columns-flipped & {
     border-right: 0;
     border-left: 10px solid #fff;
     margin-left: -10px;
   }
 }
 
-.blk-Intro_ImageWrap-secondary {
+.blk-HomeIntro_ImageWrap-secondary {
   width: 70%;
   position: absolute;
   bottom: -#{$grid-gap * 4};
@@ -79,13 +79,13 @@ a.blk-Intro_Link {
     bottom: 0;
   }
 
-  .blk-Intro_Columns-flipped & {
+  .blk-HomeIntro_Columns-flipped & {
     right: auto;
     left: -#{100px - $grid-gap};
   }
 }
 
-.blk-Intro_Image {
+.blk-HomeIntro_Image {
   @include absolute_fill;
   object-fit: cover;
   font-family: 'object-fit: cover;';
