@@ -10,6 +10,7 @@
   transition: padding 0.3s ease;
   color: $color-secondary;
   height: $headerHeight;
+  transition: height .3s ease;
 
   .utl-HeaderScrolled & {
     height: $headerHeightScrolled;
