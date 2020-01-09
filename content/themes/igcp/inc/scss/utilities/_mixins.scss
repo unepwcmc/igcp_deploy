@@ -103,6 +103,28 @@
 // Animations
 //-------------------------------------------------
 
+@mixin underline_on_hover {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: currentColor;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease, visibility .5s ease;
+  }
+
+  &:hover::before {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
 @mixin fade_in {
   opacity: 0;
   visibility: hidden;
