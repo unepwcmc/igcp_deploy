@@ -43,7 +43,6 @@ export default function modal() {
               location: card.querySelector('[data-member-location]').textContent,
               image: card.querySelector('[data-member-image] img').getAttribute('src')
             }
-            console.log(memberData);
 
             modal.querySelector('[data-modal-name]').textContent = memberData.name
             modal.querySelector('[data-modal-jobtitle]').textContent = memberData.jobtitle

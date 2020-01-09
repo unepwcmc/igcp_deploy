@@ -5,6 +5,7 @@ import './vendor';
 import { offset, scrollTo, scrollToLink} from './utilities';
 import smoothScrollPolyfill from './utilities/smoothscroll-polyfill';
 
+import caseStudyNav from './modules/caseStudyNav';
 import drawers from './modules/drawers';
 import modal from './modules/modal';
 import searchbar from './modules/searchbar';
@@ -21,6 +22,12 @@ import searchbar from './modules/searchbar';
   function Init() {
     document.body.classList.add("loaded");
     const isHomePage = document.body.classList.contains("home");
+    const isCaseStudy = document.body.classList.contains("page-template-page-casestudy");
+
+    if (isCaseStudy) {
+      window.addEventListener("scroll", caseStudyNavScroll);
+      caseStudyNav();
+    }
 
     window.addEventListener("scroll", headerScroll);
     drawers();
@@ -47,6 +54,26 @@ import searchbar from './modules/searchbar';
       if (document.body.classList.contains("utl-HeaderScrolled")) {
         document.body.classList.remove("utl-HeaderScrolled");
       }
+    }
+  });
+
+  // For navigation under hero on Case Study pages
+  const caseStudyNavScroll = debounceEvent(function() {
+    const header = document.querySelector(".hd-Header");
+    const hero = document.querySelector(".cst-Hero");
+    const nav = document.querySelector(".cst-Nav");
+
+    let headerHeight = header.offsetHeight;
+    let heroHeight = hero.offsetHeight;
+    let heroOffsetTop = hero.offsetTop + heroHeight - headerHeight;
+
+    if (
+      document.body.scrollTop > heroOffsetTop ||
+      document.documentElement.scrollTop > heroOffsetTop
+    ) {
+      nav.classList.add("cst-Nav-fixed");
+    } else {
+      nav.classList.remove("cst-Nav-fixed");
     }
   });
 

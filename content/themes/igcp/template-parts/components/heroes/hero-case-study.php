@@ -17,3 +17,10 @@
   <img src="<?php echo $background_image_url; ?>" alt="<?php echo $title; ?>" class="cst-Hero_BackgroundImage">
   <div class="cst-Hero_Overlay" style="opacity: <?php echo $opacity; ?>"></div>
 </div>
+<nav class="cst-Nav">
+  <ul class="cst-Nav_Items">
+    <li class="cst-Nav_Item">
+      <a href="#" class="cst-Nav_Link">Top</a>
+    </li>
+  </ul>
+</nav>

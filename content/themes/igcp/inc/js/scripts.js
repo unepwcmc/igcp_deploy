@@ -4,6 +4,32 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.default = caseStudyNav;
+
+function caseStudyNav() {
+  var els = {
+    navlist: document.querySelector('.cst-Nav_Items'),
+    headings: Array.prototype.slice.call(document.querySelectorAll("h4[id]"))
+  };
+  els.headings.forEach(function (heading) {
+    var title = heading.textContent;
+    var listItem = document.createElement('li');
+    listItem.classList.add('cst-Nav_Item');
+    var listItemLink = document.createElement('a');
+    listItem.append(listItemLink);
+    listItemLink.textContent = heading.textContent;
+    listItemLink.classList.add('cst-Nav_Link');
+    listItemLink.setAttribute('href', "#".concat(heading.id));
+    els.navlist.append(listItem);
+  });
+}
+
+},{}],2:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 exports.default = drawers;
 
 function drawers() {
@@ -66,7 +92,7 @@ function drawers() {
   });
 }
 
-},{}],2:[function(require,module,exports){
+},{}],3:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -113,7 +139,6 @@ function modal() {
             location: card.querySelector('[data-member-location]').textContent,
             image: card.querySelector('[data-member-image] img').getAttribute('src')
           };
-          console.log(memberData);
           modal.querySelector('[data-modal-name]').textContent = memberData.name;
           modal.querySelector('[data-modal-jobtitle]').textContent = memberData.jobtitle;
           modal.querySelector('[data-modal-bio]').innerHTML = memberData.bio;
@@ -133,7 +158,7 @@ function modal() {
   // });
 }
 
-},{}],3:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -151,7 +176,7 @@ function searchbar() {
   });
 }
 
-},{}],4:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 "use strict";
 
 var _objectFitImages = _interopRequireDefault(require("object-fit-images"));
@@ -161,6 +186,8 @@ require("./vendor");
 var _utilities = require("./utilities");
 
 var _smoothscrollPolyfill = _interopRequireDefault(require("./utilities/smoothscroll-polyfill"));
+
+var _caseStudyNav = _interopRequireDefault(require("./modules/caseStudyNav"));
 
 var _drawers = _interopRequireDefault(require("./modules/drawers"));
 
@@ -190,6 +217,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   function Init() {
     document.body.classList.add("loaded");
     var isHomePage = document.body.classList.contains("home");
+    var isCaseStudy = document.body.classList.contains("page-template-page-casestudy");
+
+    if (isCaseStudy) {
+      window.addEventListener("scroll", caseStudyNavScroll);
+      (0, _caseStudyNav.default)();
+    }
+
     window.addEventListener("scroll", headerScroll);
     (0, _drawers.default)();
     (0, _modal.default)();
@@ -212,36 +246,38 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
         document.body.classList.remove("utl-HeaderScrolled");
       }
     }
+  }); // For navigation under hero on Case Study pages
+
+  var caseStudyNavScroll = debounceEvent(function () {
+    var header = document.querySelector(".hd-Header");
+    var hero = document.querySelector(".cst-Hero");
+    var nav = document.querySelector(".cst-Nav");
+    var headerHeight = header.offsetHeight;
+    var heroHeight = hero.offsetHeight;
+    var heroOffsetTop = hero.offsetTop + heroHeight - headerHeight;
+
+    if (document.body.scrollTop > heroOffsetTop || document.documentElement.scrollTop > heroOffsetTop) {
+      nav.classList.add("cst-Nav-fixed");
+    } else {
+      nav.classList.remove("cst-Nav-fixed");
+    }
   });
 })();
 
-},{"./modules/drawers":1,"./modules/modal":2,"./modules/searchbar":3,"./utilities":5,"./utilities/smoothscroll-polyfill":6,"./vendor":8,"object-fit-images":10}],5:[function(require,module,exports){
+},{"./modules/caseStudyNav":1,"./modules/drawers":2,"./modules/modal":3,"./modules/searchbar":4,"./utilities":6,"./utilities/smoothscroll-polyfill":7,"./vendor":9,"object-fit-images":11}],6:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.scrollToLink = scrollToLink;
-exports.scrollTo = scrollTo;
 exports.offset = offset;
+exports.scrollTo = scrollTo;
+exports.scrollToLink = scrollToLink;
 
-function scrollToLink() {
-  var els = {
-    header: document.querySelector(".header"),
-    links: [].slice.call(document.querySelectorAll('a[href^="#"]'))
-  };
-  els.links.forEach(function (link) {
-    var linkHref = link.getAttribute("href").slice(1);
-
-    if (linkHref !== "") {
-      link.addEventListener("click", function (e) {
-        var linkEl = document.getElementById(linkHref);
-        var linkElOffsetTop = offset(linkEl);
-        e.preventDefault();
-        ScrollTo(linkElOffsetTop - 115);
-      });
-    }
-  });
+function offset(el) {
+  var rect = el.getBoundingClientRect(),
+      scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  return rect.top + scrollTop;
 }
 
 function scrollTo(offsetTop) {
@@ -252,13 +288,39 @@ function scrollTo(offsetTop) {
   });
 }
 
-function offset(el) {
-  var rect = el.getBoundingClientRect(),
-      scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  return rect.top + scrollTop;
+function scrollToLink() {
+  var els = {
+    links: [].slice.call(document.querySelectorAll('a[href^="#"]'))
+  }; // If using case study page template, then need to equate for case study nav bar
+
+  var isCaseStudy = document.body.classList.contains("page-template-page-casestudy");
+  var headerHeight = document.querySelector('.hd-Header').offsetHeight;
+  els.links.forEach(function (link) {
+    var linkHref = link.getAttribute("href").slice(1);
+
+    if (linkHref !== "") {
+      link.addEventListener("click", function (e) {
+        var linkEl = document.getElementById(linkHref);
+        var linkElOffsetTop = offset(linkEl);
+        e.preventDefault();
+
+        if (isCaseStudy) {
+          var navHeight = document.querySelector('.cst-Nav').offsetHeight;
+          scrollTo(linkElOffsetTop - headerHeight - navHeight);
+        } else {
+          scrollTo(linkElOffsetTop - headerHeight);
+        }
+      });
+    } else {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        scrollTo(0);
+      });
+    }
+  });
 }
 
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 'use strict'; // polyfill
 
 Object.defineProperty(exports, "__esModule", {
@@ -601,7 +663,7 @@ function smoothScrollPolyfill() {
 
 smoothScrollPolyfill();
 
-},{}],7:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 "use strict";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -945,14 +1007,14 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
   }]);
 });
 
-},{}],8:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 "use strict";
 
 require("./in-view.min.js");
 
 require("./modernizr-custom.3.6.0.js");
 
-},{"./in-view.min.js":7,"./modernizr-custom.3.6.0.js":9}],9:[function(require,module,exports){
+},{"./in-view.min.js":8,"./modernizr-custom.3.6.0.js":10}],10:[function(require,module,exports){
 "use strict";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -1292,7 +1354,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
   e.Modernizr = Modernizr;
 }(window, document);
 
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 /*! npm.im/object-fit-images 3.2.4 */
 'use strict';
 
@@ -1525,4 +1587,4 @@ hijackAttributes();
 
 module.exports = fix;
 
-},{}]},{},[4]);
+},{}]},{},[5]);

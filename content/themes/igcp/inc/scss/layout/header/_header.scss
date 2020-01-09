@@ -9,6 +9,11 @@
   background-color: $color-header;
   transition: padding 0.3s ease;
   color: $color-secondary;
+  height: $headerHeight;
+
+  .utl-HeaderScrolled & {
+    height: $headerHeightScrolled;
+  }
 
   // @include break-min($sm) {
   //   padding-top: 25px;
