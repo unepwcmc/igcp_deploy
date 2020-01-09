@@ -5,9 +5,6 @@
     With Block Lab for Gutenberg - https://getblocklab.com/
   */
 
-  /* Variables */
-  $title = block_field('title', false);
-
   /* Query */
 
   $get_items_query = array(
@@ -22,11 +19,9 @@
 
   <div class="blk-Partners">
     <div class="blk-Partners_Inner">
-      <?php if ($title != '') : ?>
-        <div class="blk-Partners_Header">
-          <h3 class="blk-Partners_Title"><?php echo $title; ?></h3>
-        </div>
-      <?php endif; ?>
+      <div class="blk-Partners_Header">
+        <h3 class="blk-Partners_Title">Partners</h3>
+      </div>
       <div class="blk-Partners_Body">
         <?php if ( $get_items->have_posts() ) : ?>
           <ul class="blk-Partners_Items">
