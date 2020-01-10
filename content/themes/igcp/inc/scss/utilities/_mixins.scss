@@ -284,19 +284,41 @@
 }
 
 @mixin restrain_width {
-  max-width: $restrained-width;
-  margin-right: auto;
-  margin-left: auto;
+  @include break-min($md) {
+    max-width: $restrained-width;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 @mixin ignore_restrained_width {
-  margin-left: calc((-100vw / 2 + 480px / 2) + 100px);
-  margin-right: calc((-100vw / 2 + 480px / 2) + 100px);
+  margin-left: calc((-100vw / 2 + #{$restrained-width / 2}) + #{$gutter / 4});
+  margin-right: calc((-100vw / 2 + #{$restrained-width / 2}) + #{$gutter / 4});
+
+  @include break-min($xs) {
+    margin-left: calc((-100vw / 2 + #{$restrained-width / 2}) + #{$gutter / 2});
+    margin-right: calc((-100vw / 2 + #{$restrained-width / 2}) + #{$gutter / 2});
+  }
+
+  @include break-min($md) {
+    margin-left: calc((-100vw / 2 + #{$restrained-width / 2}) + #{$gutter});
+    margin-right: calc((-100vw / 2 + #{$restrained-width / 2}) + #{$gutter});
+  }
 }
 
 @mixin ignore_restrained_width_and_gutters {
-  margin-left: calc(-100vw / 2 + 480px / 2);
-  margin-right: calc(-100vw / 2 + 480px / 2);
+  margin-left: -#{$gutter / 4};
+  margin-right: -#{$gutter / 4};
+
+  @include break-min($xs) {
+    margin-left: -#{$gutter / 2};
+    margin-right: -#{$gutter / 2};
+  }
+
+  @include break-min($md) {
+    margin-left: calc(-100vw / 2 + #{$restrained-width / 2});
+    margin-right: calc(-100vw / 2 + #{$restrained-width / 2});
+  }
 }
 
 @mixin screen_reader_only {
