@@ -20,7 +20,7 @@
   		<ul class="sbr-Widgets_Items">
   			<li class="sbr-Widgets_Item sbr-Widgets_Item-filters">
           <h3 class="sbr-Widgets_Title">Filters</h3>
-          <?php echo do_shortcode('[searchandfilter fields="category,post_tag,post_country" types="checkbox,checkbox,checkbox" empty_search_url="/updates/" operators="OR,AND,OR" headings="Categories,Tags,Country"]'); ?>
+          <?php echo do_shortcode('[searchandfilter fields="category,post_tag,post_country,post_year" types="checkbox,checkbox,checkbox,checkbox" empty_search_url="/updates/" operators="OR,AND,OR,AND" headings="Categories,Tags,Country,Year"]'); ?>
           <?php if ( basename( $template ) !== 'home.php' ) : ?>
             <a class="sbr-Widgets_Button" href="/updates/">Clear Filters</a>
           <?php endif; ?>
@@ -70,7 +70,7 @@
       <ul class="sbr-Widgets_Items">
         <li class="sbr-Widgets_Item sbr-Widgets_Item-filters">
           <h3 class="sbr-Widgets_Title">Filters</h3>
-          <?php echo do_shortcode('[searchandfilter fields="filetype,file_tag,file_country" types="checkbox,checkbox,checkbox" headings="File Type,Tags,Country" operators="OR,AND,OR" empty_search_url="/library/" submit_label="Filter" ]'); ?>
+          <?php echo do_shortcode('[searchandfilter fields="filetype,file_tag,file_country,file_year" types="checkbox,checkbox,checkbox,checkbox" headings="File Type,Tags,Country,Year" operators="OR,AND,OR" empty_search_url="/library/" submit_label="Filter" ]'); ?>
           <?php if ( basename( $template ) !== 'archive-library_file.php' ) : ?>
             <a class="sbr-Widgets_Button" href="/library/">Clear Filters</a>
           <?php endif; ?>
