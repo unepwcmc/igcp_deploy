@@ -3,6 +3,10 @@
   h2,h3,h4 {
     margin-top: #{$grid-gap * 3};
     margin-bottom: $grid-gap;
+
+    &:first-child {
+      margin-top: 0;
+    }
   }
 
   p {
@@ -27,5 +31,16 @@
     border: 1px solid $color-border;
     line-height: 1.5;
     border-radius: 3px;
+  }
+
+  ol, ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+
+  li {
+    color: inherit;
+    font-size: 16px;
+    list-style: disc outside none;
   }
 }

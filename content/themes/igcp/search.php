@@ -44,7 +44,7 @@ get_header(); ?>
 					?>
 					<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.' ); ?></p>
 					<div class="lyt-Search">
-						<form class="lyt-Search_Form" role="search" method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+						<form class="lyt-Search_Form" role="search" method="get" id="searchpageform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 							<label class="utl-ScreenReaderOnly" for="s">Search for:</label>
 
 							<input type="text" value="" name="s" id="s" class="lyt-Search_Input" placeholder="Search our store..." />

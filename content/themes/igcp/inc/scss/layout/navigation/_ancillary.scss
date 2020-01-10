@@ -1,0 +1,19 @@
+.menu-ancillary-container .menu {
+  li {
+    margin-bottom: 5px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    a {
+      font-size: 14px;
+      text-decoration: none;
+      color: currentColor;
+    }
+
+    &.current-menu-item > a {
+      font-weight: 500;
+    }
+  }
+}
