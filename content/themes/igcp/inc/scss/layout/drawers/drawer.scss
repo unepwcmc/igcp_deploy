@@ -9,14 +9,14 @@
   background-color: $color-primary;
   color: #fff;
   display: flex;
-  // transform: translateX(-500px);
+  transform: translateX(-500px);
   transition: transform 0.3s ease;
   height: 100%;
 
   &[data-drawer="menu"] {
     left: auto;
     right: 0;
-    // transform: translateX(500px);
+    transform: translateX(500px);
   }
 
   .logged-in.admin-bar & {
