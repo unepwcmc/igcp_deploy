@@ -1,10 +1,13 @@
 <div class="drw-Drawer" data-drawer="menu">
  <div class="drw-Drawer_Inner">
    <div class="drw-Drawer_Header">
+     <div class="drw-Drawer_Logo">
+       <?php get_template_part( 'template-parts/global/logo', 'plain' ); ?>
+     </div>
      <button class="drw-Drawer_Close" aria-label="Close" data-drawer-menu-close>
-       <span class="drw-Drawer_CloseLine drw-Drawer_CloseLine-one"></span>
-       <span class="drw-Drawer_CloseLine drw-Drawer_CloseLine-two"></span>
+       <?php get_template_part( 'template-parts/icons/icon', 'close' ); ?>
      </button>
+     <a class="drw-Drawer_Button" href="#">Support Us</a>
    </div>
    <div class="drw-Drawer_Body">
      <nav class="drw-Drawer_Nav">

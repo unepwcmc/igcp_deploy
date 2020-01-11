@@ -34,6 +34,7 @@ $color-dark-grey: #383838;
 $color-light-grey: #F2F2F2;
 
 $color-border: rgba(0,0,0,0.1);
+$color-border-light: rgba(255,255,255,0.25);
 $color-grey-text: #8D8D8D;
 $color-accent: #FAC359;
 $color-link: #4968b3;
@@ -56,8 +57,14 @@ $lg: 1280px;
 $xlg: 1440px;
 
 //-------------------------------------------------
-// BREAKPOINTS
+// HEADER
 //-------------------------------------------------
 
 $headerHeight: 120px;
 $headerHeightScrolled: 80px;
+
+//-------------------------------------------------
+// DRAWERS
+//-------------------------------------------------
+
+$drawerHeaderHeight: calc(#{$grid-gap * 3} + 80px + 44px);
