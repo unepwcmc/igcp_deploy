@@ -1,8 +1,6 @@
 .pag-Pagination_Bar {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  text-align: center;
+  margin-top: #{$grid-gap * 2};
 }
 
 p.pag-Pagination_Count {
@@ -15,6 +13,7 @@ p.pag-Pagination_Count {
 
 span.page-numbers,
 a.page-numbers {
+  display: inline-block;
   padding: 8px 12px;
   border: 1px solid $color-secondary;
   font-size: 12px;

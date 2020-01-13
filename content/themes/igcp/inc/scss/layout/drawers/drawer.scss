@@ -3,20 +3,24 @@
   max-width: 80%;
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   bottom: 0;
   z-index: 24;
   background-color: $color-primary;
   color: #fff;
   display: flex;
-  transform: translateX(-500px);
+  transform: translateX(500px);
   transition: transform 0.3s ease;
   height: 100%;
+  padding-top: $grid-gap;
+  padding-bottom: $grid-gap;
 
-  &[data-drawer="menu"] {
-    left: auto;
-    right: 0;
-    transform: translateX(500px);
+  &[data-drawer="filter"] {
+    right: auto;
+    left: 0;
+    transform: translateX(-500px);
+    background-color: #fff;
+    color: $color-secondary;
   }
 
   .logged-in.admin-bar & {
@@ -29,6 +33,14 @@
 
   &.drw-Drawer-active {
     transform: translateX(0);
+
+    @include break-min($md) {
+      transform: translateX(500px);
+
+      &[data-drawer="filter"] {
+        transform: translateX(-500px);
+      }
+    }
   }
 }
 
@@ -44,7 +56,7 @@
 
 .drw-Drawer_Close {
   position: absolute;
-  top: $grid-gap;
+  top: 0;
   right: $grid-gap;
   width: 24px;
   height: 24px;
@@ -55,25 +67,58 @@
   outline: 0;
   cursor: pointer;
 
-  svg {
-    fill: $color-border-light;
+  [data-drawer="menu"] & {
+    svg {
+      fill: $color-border-light;
+    }
   }
 }
 
 .drw-Drawer_Header {
-  height: $drawerHeaderHeight;
-  padding-top: calc(80px + #{$grid-gap * 2});
   border-bottom: 1px solid $color-border-light;
+  // background-color: tomato; delete me
+
+  [data-drawer="menu"] & {
+    height: $menuDrawerHeaderHeight;
+    padding-top: 80px;
+  }
+  [data-drawer="filter"] & {
+    height: $filterDrawerHeaderHeight;
+  }
+}
+
+h3.drw-Drawer_Title {
+  margin-bottom: 0;
 }
 
 .drw-Drawer_Body {
   position: absolute;
-  top: $drawerHeaderHeight;
-  right: 0;
+  top: 0;
+  right: $grid-gap;
   bottom: $grid-gap;
-  left: 0;
+  left: $grid-gap;
   overflow-y: auto;
-  max-height: calc(100% - #{$drawerHeaderHeight} - #{$grid-gap * 2});
+  // background-color: cornflowerblue; delete me
+
+  [data-drawer="menu"] & {
+    max-height: calc(100% - #{$menuDrawerHeaderHeight});
+    top: $menuDrawerHeaderHeight;
+  }
+  [data-drawer="filter"] & {
+    max-height: calc(100% - #{$filterDrawerHeaderHeight} - #{$filterDrawerFooterHeight});
+    top: $filterDrawerHeaderHeight;
+  }
+}
+
+.drw-Drawer_Footer {
+  [data-drawer="filter"] & {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $color-light-grey;
+    max-width: 100%;
+  }
 }
 
 .drw-Drawer_Nav {
@@ -82,7 +127,7 @@
 
 .drw-Drawer_Logo {
   position: absolute;
-  top: $grid-gap;
+  top: 0;
   left: $grid-gap;
   width: 80px;
   height: 80px;
@@ -91,9 +136,17 @@
   }
 }
 
-.drw-Drawer_Button {
+.drw-Drawer_Button,
+.drw-Drawer_Submit {
   @include button_accent;
-  width: 100%;
+  margin-top: $grid-gap;
+  margin-bottom: 0;
   font-size: 22px;
-  margin: 0 0 $grid-gap;
+  width: 100%;
+  [data-drawer="filter"] & {
+    max-width: calc(100% - #{$grid-gap * 2});
+    margin: $grid-gap;
+    font-size: 18px;
+    border: 1px solid $color-secondary !important;
+  }
 }

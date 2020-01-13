@@ -1,13 +1,83 @@
+.flt-Filters {
+  .lyt-Sidebar & {
+    display: none;
+
+    @include break-min($sm) {
+      display: block;
+    }
+  }
+}
+
+.flt-Filters_Items {
+  margin: 0;
+}
+
+.flt-Filters_Item {
+  @include no-bullets;
+  margin-bottom: $grid-gap;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+h3.flt-Filters_Title {
+  font-size: 16px;
+  line-height: 1;
+  margin-bottom: 5px;
+
+  .drw-Drawer & {
+    display: none;
+  }
+}
+
+.flt-Filters_Button {
+  @include button_accent;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+.flt-Filters_Toggle {
+  @include button_primary;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0;
+
+  @include break-min($sm) {
+    display: none;
+  }
+
+  svg {
+    fill: currentColor;
+    width: 24px;
+    margin-left: auto;
+    transition: fill .3s ease;
+  }
+
+  &:hover {
+    svg {
+      fill: currentColor;
+    }
+  }
+}
+
 .searchandfilter {
   h4 {
     font-size: 14px;
     font-weight: 600;
     margin-top: 0;
     margin-bottom: 5px;
+
+    .drw-Drawer & {
+      font-size: 18px;
+      margin-bottom: $grid-gap;
+    }
   }
 
   ul {
-    margin-bottom: 0;
+    margin: 0;
     width: 100%;
   }
 
@@ -19,6 +89,10 @@
 
     &:last-child {
       padding-bottom: 0;
+
+      .drw-Drawer & {
+        display: none;
+      }
     }
   }
 
@@ -37,6 +111,10 @@
     position: relative;
     padding-left: 22.5px;
     font-size: 14px;
+
+    .drw-Drawer & {
+      font-size: 18px;
+    }
   }
 
   input[type="checkbox"],
@@ -44,11 +122,20 @@
     display: inline-block;
     position: absolute;
     top: -2px;
-    left: -5px;
+    left: -4px;
+
+    .drw-Drawer & {
+      top: 1px;
+    }
   }
 
   input[type="submit"] {
+    @include button_accent;
     margin-top: 10px;
     margin-bottom: 0;
+
+    .drw-Drawer & {
+      margin: 0;
+    }
   }
 }

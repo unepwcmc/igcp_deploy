@@ -27,22 +27,24 @@
 }
 
 .lyt-Primary {
-  padding-top: 75px;
-  padding-bottom: 75px;
+  @include break-min($sm) {
+    flex: 1 1 auto;
 
-  flex: 1 1 auto;
-
-  .home & {
-    padding-top: 0;
-    padding-bottom: 0;
+    .lyt-Container-hasSidebar & {
+      flex: 0 0 calc(((9 / 12) * 100%) - #{$grid-gap / 2});
+    }
   }
+}
 
-  // &.lyt-Primary-simple {
-  //
-  // }
+.lyt-Primary_Body {
+  @include break-min($sm) {
+    padding-top: 55px;
+    padding-bottom: 55px;
 
-  .lyt-Container-hasSidebar & {
-    flex: 0 0 calc(((9 / 12) * 100%) - #{$grid-gap / 2});
+    .home & {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
   }
 }
 
@@ -57,15 +59,19 @@ h2.lyt-Primary_Title {
   padding-top: $grid-gap;
 
   @include break-min($sm) {
-    padding-top: 75px;
+    padding-top: 55px;
     flex: 0 0 calc(((3 / 12) * 100%) - #{$grid-gap / 2});
   }
 }
 
 .lyt-Entry_Items {
-  margin: $grid-gap -#{$grid-gap} $grid-gap 0;
+  margin: $grid-gap -#{$grid-gap} -#{$grid-gap} 0;
   display: flex;
   flex-wrap: wrap;
+
+  @include break-min($sm) {
+    margin-top: 0;
+  }
 }
 
 .lyt-Entry_Item {

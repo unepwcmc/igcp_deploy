@@ -1,40 +1,47 @@
 export default function drawers() {
   const els = {
     body: document.querySelector("body"),
-    drawer: document.querySelector("[data-drawer]"),
-    menuToggle: document.querySelector("[data-drawer-menu-toggle]"),
-    closeButton: document.querySelector("[data-drawer-menu-close]"),
-    overlay: document.querySelector("[data-drawers-overlay]"),
+    drawers: [].slice.call(document.querySelectorAll("[data-drawer]")),
+    overlay: document.querySelector('.drw-Drawers_Overlay'),
     hasChildren: Array.prototype.slice.call(
       document.querySelectorAll("[data-drawer] .menu-item-has-children")
     )
   };
 
-  els.menuToggle.addEventListener("click", function() {
-    els.drawer.classList.add("drw-Drawer-active");
-    els.body.classList.add("utl-DrawerActive");
+  els.overlay.addEventListener('click', e => {
+    const activeDrawer = document.querySelector('.drw-Drawer-active');
+    if (activeDrawer) {
+      activeDrawer.classList.remove("drw-Drawer-active");
+      els.body.classList.remove("utl-DrawerActive");
+    }
   });
 
-  els.closeButton.addEventListener("click", function() {
-    els.drawer.classList.remove("drw-Drawer-active");
-    els.body.classList.remove("utl-DrawerActive");
+  els.drawers.forEach(function(drawer) {
+    const drawerName = drawer.dataset.drawer;
+    const drawerEls = {
+      menuToggle: document.querySelector(
+        `[data-drawer-toggle="${drawerName}"]`
+      ),
+      closeButton: drawer.querySelector("[data-drawer-menu-close]")
+    };
+
+    drawerEls.menuToggle.addEventListener("click", function() {
+      drawer.classList.add("drw-Drawer-active");
+      els.body.classList.add("utl-DrawerActive");
+    });
+
+    drawerEls.closeButton.addEventListener("click", function() {
+      drawer.classList.remove("drw-Drawer-active");
+      els.body.classList.remove("utl-DrawerActive");
+    });
+
+    if (drawerName == 'filter') {
+      drawer.querySelector('.drw-Drawer_Submit').addEventListener('click', e => {
+        e.preventDefault();
+        drawer.querySelector('form.searchandfilter').submit();
+      })
+    }
   });
-
-  els.overlay.addEventListener("click", function() {
-    els.drawer.classList.remove("drw-Drawer-active");
-    els.body.classList.remove("utl-DrawerActive");
-  });
-
-  // els.hasChildren.forEach(item => {
-  //   item.addEventListener("click", e => {
-  //     item.classList.toggle("open");
-  //   });
-  //   item.querySelector('a').addEventListener('click', e => {
-  //     e.stopPropagation();
-  //   });
-  // });
-
-
 
   els.hasChildren.forEach(function(item) {
     item.addEventListener('click', function(e){

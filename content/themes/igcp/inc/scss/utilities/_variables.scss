@@ -67,4 +67,6 @@ $headerHeightScrolled: 80px;
 // DRAWERS
 //-------------------------------------------------
 
-$drawerHeaderHeight: calc(#{$grid-gap * 3} + 80px + 44px);
+$menuDrawerHeaderHeight: calc(#{$grid-gap * 2} + 80px + 44px);
+$filterDrawerHeaderHeight: calc(#{$grid-gap} + 28px);
+$filterDrawerFooterHeight: 67px;

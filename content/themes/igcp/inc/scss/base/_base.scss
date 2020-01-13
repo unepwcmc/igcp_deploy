@@ -121,6 +121,11 @@ textarea {
   }
 }
 
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+}
+
 input[type="submit"] {
   @include button_primary;
   @include button_wider;

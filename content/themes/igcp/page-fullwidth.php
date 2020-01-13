@@ -39,18 +39,20 @@ get_header(); ?>
 <div class="lyt-Container">
 	<div class="lyt-Container_Inner">
 		<section class="lyt-Primary">
-			<?php
-				if ( have_posts() ) :
-					while ( have_posts() ) :
-						the_post();
+			<div class="lyt-Primary_Body">
+				<?php
+					if ( have_posts() ) :
+						while ( have_posts() ) :
+							the_post();
 
-						get_template_part( 'template-parts/content/content', 'page' );
+							get_template_part( 'template-parts/content/content', 'page' );
 
-					endwhile; // End of the loop.
-				else :
-						get_template_part( 'template-parts/content/content', 'none' );
-				endif;
-			?>
+						endwhile; // End of the loop.
+					else :
+							get_template_part( 'template-parts/content/content', 'none' );
+					endif;
+				?>
+			</div>
 		</section>
 	</div>
 </div>
