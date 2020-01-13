@@ -32,20 +32,20 @@
   }
 }
 
-.blk-HomeIntro_LeadText {
-  font-size: 20px;
+p.blk-HomeIntro_LeadText {
+  font-size: 22px;
   font-weight: 500;
   line-height: 1.4;
 }
 
-.blk-HomeIntro_Text {
+p.blk-HomeIntro_Text {
   line-height: 1.5;
   font-size: 14px;
 }
 
 a.blk-HomeIntro_Link {
   @include underline_on_hover;
-  
+
   color: $color-grey-text;
   text-decoration: none;
   font-size: 14px;
