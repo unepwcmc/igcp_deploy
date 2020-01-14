@@ -12,7 +12,7 @@
 
 $category = get_the_category();
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'ent-Entry' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'ent-Entry rte-RichText' ); ?>>
 	<header class="ent-Entry_Header">
 		<?php
 		the_title( '<h2 class="ent-Entry_Title">', '</h2>' );

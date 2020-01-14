@@ -7,7 +7,7 @@
 }
 
 .blk-TextColumns_Columns {
-  @include no-margin-padding;
+  @include no_margin_padding;
   @include break-min($xs) {
     display: flex;
     flex-wrap: wrap;

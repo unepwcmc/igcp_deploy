@@ -125,7 +125,8 @@ h3.drw-Drawer_Title {
   width: 100%;
 }
 
-.drw-Drawer_Logo {
+a.drw-Drawer_Logo {
+  display: block;
   position: absolute;
   top: 0;
   left: $grid-gap;

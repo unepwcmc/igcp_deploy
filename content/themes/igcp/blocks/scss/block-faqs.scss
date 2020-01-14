@@ -2,12 +2,12 @@
 @import "../../inc/scss/utilities/mixins";
 
 ul.faq-FAQ_Items {
-  @include no-margin-padding;
+  @include no_margin_padding;
   @include restrain_width;
 }
 
 .faq-FAQ_Item {
-  @include no-margin-padding;
+  @include no_margin_padding;
   list-style: none;
 }
 

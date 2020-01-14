@@ -25,7 +25,7 @@
 //-------------------------------------------------
 
 @mixin spacer {
-  margin-top: 25px;
+  margin-top: 25px; 
   margin-bottom: 25px;
 
   @include break-min($sm) {
@@ -93,6 +93,68 @@
     padding-right: $grid-gap;
     padding-left: $grid-gap;
   }
+}
+
+//-------------------------------------------------
+// Typography
+//-------------------------------------------------
+
+@mixin heading {
+  font-family: $font-heading;
+  letter-spacing: 0.5px;
+  color: $color-headings;
+  margin-bottom: $grid-gap;
+}
+
+@mixin h1 {
+  font-size: 60px;
+  line-height: 70px;
+}
+
+@mixin h2 {
+  font-size: 34px;
+  line-height: 40px;
+
+  @include break-min($sm) {
+    font-size: 40px;
+    line-height: 48px;
+  }
+}
+
+@mixin h3 {
+  font-size: 24px;
+  line-height: 28px;
+
+  @include break-min($sm) {
+    font-size: 28px;
+    line-height: 32px;
+  }
+}
+
+@mixin h4 {
+  font-size: 20px;
+  line-height: 22px;
+
+  @include break-min($sm) {
+    font-size: 22px;
+    line-height: 24px;
+  }
+}
+
+@mixin h5 {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+@mixin h6 {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+@mixin paragraph {
+  letter-spacing: 0.5px;
+  color: inherit;
+  margin-bottom: 15px;
 }
 
 //-------------------------------------------------
@@ -248,6 +310,15 @@
 }
 
 //-------------------------------------------------
+// Sections
+//-------------------------------------------------
+
+@mixin section_title {
+  @include h3;
+  margin: 0;
+}
+
+//-------------------------------------------------
 // Utilities
 //-------------------------------------------------
 
@@ -261,7 +332,7 @@
   height: 100%;
 }
 
-@mixin no-margin-padding {
+@mixin no_margin_padding {
   margin: 0;
   padding: 0;
 }

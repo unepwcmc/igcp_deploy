@@ -12,7 +12,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'ent-Entry' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'ent-Entry rte-RichText' ); ?>>
 	<header class="ent-Entry_Header">
 		<?php
 			the_title( sprintf( '<h2 class="ent-Entry_Title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );

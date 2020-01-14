@@ -16,8 +16,12 @@
 }
 
 .art-Related_Items {
-  display: flex;
-  margin: 0 -#{$grid-gap} 0 0;
+  margin: 0;
+
+  @include break-min($sm) {
+    display: flex;
+    margin-right: -#{$grid-gap};
+  }
 }
 
 .art-Related_Item {

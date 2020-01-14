@@ -25,7 +25,7 @@
 
 .cst-Stats_Items,
 .rte-RichText .cst-Stats_Items {
-  @include no-margin-padding;
+  @include no_margin_padding;
   @include break-min($xs) {
     display: flex;
     margin-right: -#{$grid-gap};

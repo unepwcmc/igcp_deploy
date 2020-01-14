@@ -37,7 +37,7 @@ get_header(); ?>
 <div class="lyt-Container lyt-Container-hasSidebar">
 	<div class="lyt-Container_Inner">
 		<?php get_sidebar(); ?>
-		<section class="lyt-Primary lyt-Primary-simple rte-RichText">
+		<section class="lyt-Primary lyt-Primary-simple">
 			<div class="lyt-Primary_Body">
 				<?php
 					if ( have_posts() ) :

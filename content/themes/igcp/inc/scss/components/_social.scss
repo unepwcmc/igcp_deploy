@@ -10,12 +10,13 @@ p.soc-Social_Heading {
   margin-right: $grid-gap;
   font-size: 14px;
   color: $color-grey-text;
+  margin-bottom: 0;
 }
 
-.soc-Social_Icons {
+.soc-Social_Icons,
+.rte-RichText .soc-Social_Icons {
+  @include no_margin_padding;
   display: flex;
-  margin: 0;
-  padding: 0;
 
   .ft-Widgets_Item-widget_custom_post_widget & {
     justify-content: center;
@@ -26,8 +27,9 @@ p.soc-Social_Heading {
   }
 }
 
-.soc-Social_Icon {
-  list-style: none;
+.soc-Social_Icon,
+.rte-RichText .soc-Social_Icon {
+  @include no_bullets;
   width: 25px;
   margin-right: 10px;
 

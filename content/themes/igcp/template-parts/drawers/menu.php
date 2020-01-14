@@ -1,9 +1,9 @@
 <div class="drw-Drawer" data-drawer="menu">
  <div class="drw-Drawer_Inner">
    <div class="drw-Drawer_Header">
-     <div class="drw-Drawer_Logo">
+     <a class="drw-Drawer_Logo" href="/">
        <?php get_template_part( 'template-parts/global/logo', 'plain' ); ?>
-     </div>
+     </a>
      <button class="drw-Drawer_Close" aria-label="Close" data-drawer-menu-close>
        <?php get_template_part( 'template-parts/icons/icon', 'close' ); ?>
      </button>

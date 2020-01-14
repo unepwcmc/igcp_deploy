@@ -24,9 +24,15 @@
     <div class="blk-Intro_Columns<?php if($flipped) echo ' blk-Intro_Columns-flipped' ?>">
       <div class="blk-Intro_Column">
         <div class="blk-Intro_Content">
-          <p class="blk-Intro_LeadText"><?php echo $lead_text; ?></p>
-          <p class="blk-Intro_Text"><?php echo $text; ?></p>
-          <a class="blk-Intro_Link" href="<?php echo $link_url; ?>"><?php echo $link_text; ?></a>
+          <?php if ($lead_text != ''): ?>
+            <p class="blk-Intro_LeadText"><?php echo $lead_text; ?></p>
+          <?php endif; ?>
+          <?php if ($text != ''): ?>
+            <p class="blk-Intro_Text"><?php echo $text; ?></p>
+          <?php endif; ?>
+          <?php if ($link_url != ''): ?>
+            <a class="blk-Intro_Link" href="<?php echo $link_url; ?>"><?php echo $link_text; ?></a>
+          <?php endif; ?>
         </div>
       </div>
       <div class="blk-Intro_Column">

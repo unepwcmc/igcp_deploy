@@ -6,8 +6,12 @@
   margin-bottom: #{$grid-gap * 4};
 }
 
+h3.blk-PictureLinks_Title {
+  @include section_title;
+}
+
 .blk-PictureLinks_Items {
-  @include no-margin-padding;
+  @include no_margin_padding;
   display: flex;
   flex-wrap: wrap;
   margin-right: -40px;

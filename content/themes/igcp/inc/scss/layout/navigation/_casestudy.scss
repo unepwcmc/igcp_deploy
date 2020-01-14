@@ -30,7 +30,7 @@
 }
 
 .cst-Nav_Items {
-  @include no-margin-padding;
+  @include no_margin_padding;
   // justify-content: center;
   padding: 10px $grid-gap;
   overflow-x: scroll;

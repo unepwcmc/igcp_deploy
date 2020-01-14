@@ -12,22 +12,33 @@
 
 .blk-Intro_Column {
   position: relative;
-  flex: 0 0 calc(50% - #{$grid-gap / 2});
+
+  @include break-min($sm) {
+    flex: 0 0 calc(50% - #{$grid-gap / 2});
+  }
 
   &:first-child {
-    margin-right: $grid-gap;
+    margin-bottom: $grid-gap;
 
-    .blk-Intro_Columns-flipped & {
-      order: 2;
-      margin-right: 0;
-      margin-left: $grid-gap;
+    @include break-min($sm) {
+      margin-right: $grid-gap;
+      margin-bottom: 0;
+
+      .blk-Intro_Columns-flipped & {
+        order: 2;
+        margin-right: 0;
+        margin-left: $grid-gap;
+      }
     }
   }
 
   &:last-child {
-    align-self: end;
-    .blk-Intro_Columns-flipped & {
-      order: 1;
+    @include break-min($sm) {
+      align-self: end;
+
+      .blk-Intro_Columns-flipped & {
+        order: 1;
+      }
     }
   }
 }
@@ -36,11 +47,15 @@ p.blk-Intro_LeadText {
   font-size: 18px;
   font-weight: 500;
   line-height: 1.25;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 p.blk-Intro_Text {
   line-height: 1.5;
   font-size: 14px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 a.blk-Intro_Link {
@@ -62,9 +77,11 @@ a.blk-Intro_Link {
   padding-bottom: 55%;
 
   .blk-Intro_Columns-flipped & {
-    border-right: 0;
-    border-left: 10px solid #fff;
-    margin-left: -10px;
+    @include break-min($sm) {
+      border-right: 0;
+      border-left: 10px solid #fff;
+      margin-left: -10px;
+    }
   }
 }
 
@@ -80,8 +97,10 @@ a.blk-Intro_Link {
   }
 
   .blk-Intro_Columns-flipped & {
-    right: auto;
-    left: -#{100px - $grid-gap};
+    @include break-min($sm) {
+      right: auto;
+      left: -#{100px - $grid-gap};
+    }
   }
 }
 
