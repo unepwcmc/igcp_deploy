@@ -13,14 +13,10 @@
   ( basename( $template ) === 'taxonomy-role.php' )
 ) : ?>
   <div class="flt-Filters">
-    <ul class="flt-Filters_Items">
-      <li class="flt-Filters_Item">
-        <h3 class="flt-Filters_Title">Filters</h3>
-        <?php echo do_shortcode('[searchandfilter fields="role" types="radio" headings="Roles" operators="OR" post_types="team_member" empty_search_url="/team/" submit_label="Filter" ]'); ?>
-        <?php if ( basename( $template ) !== 'archive-team_member.php' ) : ?>
-          <a class="flt-Filters_Button" href="/team/">Clear Filters</a>
-        <?php endif; ?>
-      </li>
-    </ul>
+    <h3 class="flt-Filters_Title">Filters</h3>
+    <?php echo do_shortcode('[searchandfilter fields="role" types="radio" headings="Roles" operators="OR" post_types="team_member" empty_search_url="/team/" submit_label="Filter" ]'); ?>
+    <?php if ( basename( $template ) !== 'archive-team_member.php' ) : ?>
+      <a class="flt-Filters_Button" href="/team/">Clear Filters</a>
+    <?php endif; ?>
   </div>
 <?php endif; ?>

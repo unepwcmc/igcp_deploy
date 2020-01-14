@@ -14,7 +14,7 @@ get_header(); ?>
 		<?php get_sidebar(); ?>
 		<!-- primary  -->
 		<section class="lyt-Primary">
-				<div class="lyt-Primary_Body">
+				<div class="lyt-Primary_Body lyt-Primary-archive">
 					<?php if ( have_posts() ) : ?>
 						<ul class="lyt-Entry_Items">
 							<?php while ( have_posts() ) : the_post();

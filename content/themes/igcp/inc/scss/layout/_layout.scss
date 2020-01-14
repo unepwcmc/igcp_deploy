@@ -37,13 +37,18 @@
 }
 
 .lyt-Primary_Body {
-  @include break-min($sm) {
-    padding-top: 55px;
-    padding-bottom: 55px;
+  @include spacer_small;
 
+  .lyt-Primary-archive & {
+    @include spacer_small;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  @include break-min($sm) {
     .home & {
-      padding-top: 0;
-      padding-bottom: 0;
+      margin-top: 0;
+      margin-bottom: 0;
     }
   }
 }
@@ -60,6 +65,7 @@ h2.lyt-Primary_Title {
 
   @include break-min($sm) {
     padding-top: 55px;
+    padding-bottom: 55px;
     flex: 0 0 calc(((3 / 12) * 100%) - #{$grid-gap / 2});
   }
 }

@@ -22,7 +22,7 @@
 	<div class="lyt-Container_Inner">
 		<?php get_sidebar(); ?>
 		<!-- primary  -->
-		<section class="lyt-Primary">
+		<section class="lyt-Primary lyt-Primary-archive">
 				<div class="lyt-Primary_Body">
 					<?php if ( have_posts() ) : ?>
 						<ul class="lyt-Entry_Items">

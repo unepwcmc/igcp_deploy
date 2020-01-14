@@ -1,4 +1,10 @@
 .flt-Filters {
+  margin-bottom: #{$grid-gap * 2};
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   .lyt-Sidebar & {
     display: none;
 

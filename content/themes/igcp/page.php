@@ -38,6 +38,7 @@ get_header(); ?>
 	<div class="lyt-Container_Inner">
 		<?php get_sidebar(); ?>
 		<section class="lyt-Primary lyt-Primary-simple rte-RichText">
+			<div class="lyt-Primary_Body">
 				<?php
 					if ( have_posts() ) :
 						while ( have_posts() ) :
@@ -50,8 +51,9 @@ get_header(); ?>
 							get_template_part( 'template-parts/content/content', 'none' );
 					endif;
 				?>
+			</div>
 		</section>
 	</div>
 </div>
-<?php
-get_footer();
+
+<?php get_footer();

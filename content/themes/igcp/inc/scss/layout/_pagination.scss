@@ -1,6 +1,7 @@
 .pag-Pagination_Bar {
   text-align: center;
   margin-top: #{$grid-gap * 2};
+  margin-bottom: #{$grid-gap * 2};
 }
 
 p.pag-Pagination_Count {

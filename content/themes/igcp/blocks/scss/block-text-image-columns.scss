@@ -2,7 +2,7 @@
 @import "../../inc/scss/utilities/mixins";
 
 .blk-TextImage {
-  margin-bottom: $grid-gap;
+  margin-bottom: #{$grid-gap * 2};
 
   @include break-min($sm) {
     margin-bottom: 80px;
@@ -15,7 +15,6 @@
 
 .blk-TextImage_Columns {
   display: flex;
-  margin-bottom: $grid-gap;
 }
 
 .blk-TextImage_Column {
@@ -65,6 +64,11 @@
   p {
     line-height: 1.5;
     font-size: 14px;
+
+    &:only-child,
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   a {

@@ -28,7 +28,7 @@
   margin-top: 25px;
   margin-bottom: 25px;
 
-  @include break-min($xs) {
+  @include break-min($sm) {
     margin-top: 80px;
     margin-bottom: 80px;
   }
@@ -38,9 +38,9 @@
   margin-top: 25px;
   margin-bottom: 25px;
 
-  @include break-min($xs) {
-    margin-top: 40px;
-    margin-bottom: 40px;
+  @include break-min($sm) {
+    margin-top: 55px;
+    margin-bottom: 55px;
   }
 }
 
@@ -48,7 +48,7 @@
   padding-top: 25px;
   padding-bottom: 25px;
 
-  @include break-min($xs) {
+  @include break-min($sm) {
     padding-top: 80px;
     padding-bottom: 80px;
   }
@@ -58,9 +58,9 @@
   padding-top: 25px;
   padding-bottom: 25px;
 
-  @include break-min($xs) {
-    padding-top: 40px;
-    padding-bottom: 40px;
+  @include break-min($sm) {
+    padding-top: 55px;
+    padding-bottom: 55px;
   }
 }
 
