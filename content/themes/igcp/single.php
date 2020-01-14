@@ -14,30 +14,32 @@ get_header(); ?>
 <div class="lyt-Container">
 	<div class="lyt-Container_Inner">
 		<section class="lyt-Primary lyt-Primary-restrained">
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+			<div class="lyt-Primary_Body">
+				<?php
+				/* Start the Loop */
+				while ( have_posts() ) :
+					the_post();
 
-				get_template_part( 'template-parts/content/content', 'single' );
+					get_template_part( 'template-parts/content/content', 'single' );
 
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
+					// If comments are open or we have at least one comment, load up the comment template.
+					if ( comments_open() || get_comments_number() ) :
+						comments_template();
+					endif;
 
 
-				/* Navigation Links
-				previous_post_link( '&laquo; %link', 'Previous Post', true );
-				echo ' | ';
-				next_post_link( '%link &raquo;', 'Next Post', true );
-				*/
+					/* Navigation Links
+					previous_post_link( '&laquo; %link', 'Previous Post', true );
+					echo ' | ';
+					next_post_link( '%link &raquo;', 'Next Post', true );
+					*/
 
-			endwhile; // End of the loop.
-			?>
+				endwhile; // End of the loop.
+				?>
 
-			<?php get_template_part( 'template-parts/social/social', 'share' ); ?>
-			<?php get_template_part( 'template-parts/components/related', 'articles' ); ?>
+				<?php get_template_part( 'template-parts/social/social', 'share' ); ?>
+				<?php get_template_part( 'template-parts/components/related', 'articles' ); ?>
+			</div>
 		</section>
 	</div>
 </div>
