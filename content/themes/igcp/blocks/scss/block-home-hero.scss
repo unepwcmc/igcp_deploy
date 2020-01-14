@@ -1,13 +1,16 @@
 @import "../../inc/scss/utilities/variables";
 @import "../../inc/scss/utilities/mixins";
 
-
 .her-Home {
-  width: calc(100% - #{$grid-gap * 2});
   position: relative;
   background: $color-primary;
-  margin-left: $grid-gap;
-  margin-right: $grid-gap;
+  margin-left: $grid-gap / 2;
+  margin-right: $grid-gap / 2;
+
+  @include break-min($sm) {
+    margin-left: $grid-gap;
+    margin-right: $grid-gap;
+  }
 }
 
 .her-Home_Overlay {
@@ -40,7 +43,7 @@
 }
 
 .her-Home_Content {
-  padding: $grid-gap;
+  padding: $grid-gap / 2;
   width: 100%;
   color: #fff;
   text-align: center;
@@ -48,6 +51,7 @@
   position: relative;
 
   @include break-min($sm) {
+    padding: $grid-gap;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;

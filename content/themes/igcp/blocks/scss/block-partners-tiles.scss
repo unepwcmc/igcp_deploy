@@ -11,8 +11,11 @@
 }
 
 .blk-Partners_Header {
-  text-align: center;
-  margin-bottom: #{$grid-gap * 2};
+  @include section_header_small;
+}
+
+.blk-Partners_Title {
+  @include section_title;
 }
 
 .blk-Partners_Items {
@@ -34,7 +37,7 @@
   @include break-min($xs) {
     flex: 0 0 calc(((4 / 12) * 100%) - #{$grid-gap});
   }
-  
+
   @include break-min($md) {
     flex: 0 0 calc(((2 / 12) * 100%) - #{$grid-gap});
   }

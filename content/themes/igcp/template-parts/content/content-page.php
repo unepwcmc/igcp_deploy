@@ -10,7 +10,7 @@
 	if (basename( $template ) !== 'front-page.php') {
 		array_push($post_classes_array, 'rte-RichText');
 	}
-	$post_classes = implode('', $post_classes_array);
+	$post_classes = implode(' ', $post_classes_array);
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( $post_classes ); ?>>

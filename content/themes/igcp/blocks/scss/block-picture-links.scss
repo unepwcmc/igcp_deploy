@@ -4,6 +4,10 @@
 .blk-PictureLinks_Header {
   text-align: center;
   margin-bottom: #{$grid-gap * 4};
+
+  @include break-min($sm) {
+    margin-bottom: #{$grid-gap * 5};
+  }
 }
 
 h3.blk-PictureLinks_Title {
@@ -14,7 +18,7 @@ h3.blk-PictureLinks_Title {
   @include no_margin_padding;
   display: flex;
   flex-wrap: wrap;
-  margin-right: -40px;
+  margin-right: -#{$grid-gap};
   margin-bottom: -#{$grid-gap * 3};
 
   @include break-min($xs) {
@@ -27,12 +31,12 @@ h3.blk-PictureLinks_Title {
 
 .blk-PictureLinks_Item {
   @include no_bullets;
-  flex: 0 0 calc(50% - 40px);
-  margin-right: 40px;
+  flex: 0 0 calc(50% - #{$grid-gap});
+  margin-right: #{$grid-gap};
   margin-bottom: #{$grid-gap * 3};
 
   @include break-min($xs) {
-    flex: 0 0 calc(25% - 40px);
+    flex: 0 0 calc(25% - #{$grid-gap});
     margin-bottom: 0;
   }
 

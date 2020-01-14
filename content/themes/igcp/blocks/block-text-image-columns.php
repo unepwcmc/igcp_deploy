@@ -21,15 +21,11 @@
           <?php if ( block_rows( 'content' ) ) : while ( block_rows( 'content' ) ) : block_row( 'content' );?>
 
             <?php if ( block_sub_value( 'heading' ) ) : ?>
-              <p class="blk-TextImage_Heading"><?php echo block_sub_value( 'heading' ); ?></p>
-            <?php endif;?>
-
-            <?php if ( block_sub_value( 'lead-text' ) ) : ?>
-              <p class="blk-TextImage_LeadText"><?php echo block_sub_value( 'lead-text' ); ?></p>
+              <h4 class="blk-TextImage_Heading"><?php echo block_sub_value( 'heading' ); ?></h4>
             <?php endif;?>
 
             <?php if ( block_sub_value( 'text' ) ) : ?>
-              <div class="blk-TextImage_Text rte-RichText"><?php echo block_sub_value( 'text' ); ?></div>
+              <div class="blk-TextImage_Text"><?php echo block_sub_value( 'text' ); ?></div>
             <?php endif;?>
 
           <?php endwhile;

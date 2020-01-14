@@ -49,21 +49,18 @@
   }
 }
 
-.blk-TextImage_Heading,
-.blk-TextImage_LeadText {
-  font-size: 16px;
-  font-weight: 500;
+h4.blk-TextImage_Heading {
+  margin-bottom: 5px;
+  font-size: 18px;
   line-height: 1.4;
-
-  .home & {
-    font-size: 22px;
-  }
 }
 
 .lyt-Body .blk-TextImage_Text {
   p {
     line-height: 1.5;
     font-size: 14px;
+    margin-top: 0;
+    margin-bottom: $grid-gap;
 
     &:only-child,
     &:last-child {

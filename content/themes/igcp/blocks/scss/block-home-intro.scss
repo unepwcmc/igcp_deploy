@@ -2,32 +2,45 @@
 @import "../../inc/scss/utilities/mixins";
 
 .blk-HomeIntro_Columns {
-  margin-bottom: #{$grid-gap * 5};
-
+  padding-bottom: #{$grid-gap * 4};
   @include break-min($sm) {
-    margin-bottom: $grid-gap;
     display: flex;
+    padding-bottom: 0;
   }
 }
 
 .blk-HomeIntro_Column {
   position: relative;
-  flex: 0 0 calc(50% - #{$grid-gap / 2});
+
+  @include break-min($sm) {
+    flex: 0 0 calc(50% - #{$grid-gap / 2});
+  }
 
   &:first-child {
-    margin-right: $grid-gap;
+    margin-bottom: #{$grid-gap * 2};
+
+    @include break-min($sm) {
+      margin-right: $grid-gap;
+      margin-bottom: 0;
+    }
 
     .blk-HomeIntro_Columns-flipped & {
       order: 2;
       margin-right: 0;
       margin-left: $grid-gap;
+      padding-left: calc(((1 / 12) * 100%) + #{$grid-gap});
     }
   }
 
   &:last-child {
-    align-self: end;
-    .blk-HomeIntro_Columns-flipped & {
-      order: 1;
+    @include break-min($sm) {
+      align-self: end;
+      padding-left: calc(((1 / 12) * 100%) + #{$grid-gap});
+
+      .blk-HomeIntro_Columns-flipped & {
+        order: 1;
+        padding-left: 0;
+      }
     }
   }
 }
@@ -57,11 +70,14 @@ a.blk-HomeIntro_Link {
 
 .blk-HomeIntro_ImageWrap-primary {
   width: calc(100% + 10px);
-  margin-bottom: 5%;
   z-index: 2;
   border-right: 10px solid #fff;
   border-bottom: 15px solid #fff;
   padding-bottom: calc((40 / 57) * 100%);
+
+  @include break-min($sm) {
+    margin-bottom: 5%;
+  }
 
   .blk-HomeIntro_Columns-flipped & {
     border-right: 0;

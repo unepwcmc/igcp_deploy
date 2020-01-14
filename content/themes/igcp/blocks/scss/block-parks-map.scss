@@ -2,8 +2,11 @@
 @import "../../inc/scss/utilities/mixins";
 
 .blk-Map_Header {
-  text-align: center;
-  margin-bottom: #{$grid-gap * 2};
+  @include section_header;
+}
+
+h3.blk-Map_Title {
+  @include section_title;
 }
 
 .blk-Map_Columns {
