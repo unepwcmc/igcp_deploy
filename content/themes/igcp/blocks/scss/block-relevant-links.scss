@@ -63,7 +63,7 @@ li.blk-RelevantLinks_Item {
   will-change: transform;
 
   .blk-RelevantLinks_Item:hover & {
-    transform: scale(1.05);
+    transform: scale(1.025);
   }
 }
 
@@ -72,12 +72,14 @@ h6.blk-RelevantLinks_Heading {
   line-height: 1;
   font-weight: 500;
   margin-bottom: 5px;
+  color: $color-dark-grey;
 }
 
 p.blk-RelevantLinks_Text {
   margin: 0;
   font-size: 12px;
   line-height: 1;
+  color: $color-dark-grey;
 }
 
 a.blk-RelevantLinks_FauxLink {

@@ -26,7 +26,20 @@
 
 .art-Related_Item {
   @include no_bullets;
-  display: flex;
-  flex: 0 0 calc(((3 / 12) * 100%) - #{$grid-gap});
-  margin-right: $grid-gap;
+  margin-bottom: $grid-gap;
+
+  &:last-child {
+    display: none;
+  }
+
+  @include break-min($sm) {
+    display: flex;
+    flex: 0 0 calc(((3 / 12) * 100%) - #{$grid-gap});
+    margin-right: $grid-gap;
+    margin-bottom: 0;
+
+    &:last-child {
+      display: block;
+    }
+  }
 }
