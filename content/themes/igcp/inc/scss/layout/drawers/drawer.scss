@@ -94,10 +94,11 @@ h3.drw-Drawer_Title {
 .drw-Drawer_Body {
   position: absolute;
   top: 0;
-  right: $grid-gap;
+  right: #{$grid-gap / 2};
   bottom: $grid-gap;
   left: $grid-gap;
   overflow-y: auto;
+  padding-right: #{$grid-gap / 2};
   // background-color: cornflowerblue; delete me
 
   [data-drawer="menu"] & {
