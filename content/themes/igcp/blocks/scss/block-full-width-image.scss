@@ -3,6 +3,7 @@
 
 .blk-FullWidthImage {
   @include ignore_restrained_width_and_gutters;
+  position: relative;
 }
 
 .blk-FullWidthImage_ImageWrap {
@@ -13,4 +14,19 @@
 .blk-FullWidthImage_Image {
   @include absolute_fill;
   @include object-fit-cover;
+}
+
+.blk-FullWidthImage_Overlay {
+  @include absolute_fill;
+  z-index: 1;
+  background-color: rgba(0,0,0,0.4);
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 75%, rgba(0,0,0,0.65) 100%);
+}
+
+.blk-FullWidthImage_Caption {
+  position: absolute;
+  bottom: $grid-gap;
+  left: $grid-gap;
+  z-index: 2;
+  color: #fff;
 }

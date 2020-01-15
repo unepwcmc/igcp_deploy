@@ -50,6 +50,14 @@ img {
   max-width: 100%;
 }
 
+figcaption,
+.wp-block-image figcaption {
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-size: 12px;
+  color: $color-grey-text;
+}
+
 ol, ul {
   margin-left: 30px;
   margin-bottom: 20px;

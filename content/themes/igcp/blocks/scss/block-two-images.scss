@@ -2,16 +2,25 @@
 @import "../../inc/scss/utilities/mixins";
 
 .blk-TwoImages_Items {
-  display: flex;
-  // Break out of restrained width
   @include ignore_restrained_width;
+
+  @include break-min($xs) {
+    display: flex;
+  }
 }
 
 .blk-TwoImages_Item {
-  flex: 0 0 calc(50% - #{$grid-gap / 2});
-
   &:first-child {
-    margin-right: $grid-gap;
+    margin-bottom: $grid-gap;
+  }
+
+  @include break-min($xs) {
+    flex: 0 0 calc(50% - #{$grid-gap / 2});
+
+    &:first-child {
+      margin-right: $grid-gap;
+      margin-bottom: 0;
+    }
   }
 }
 

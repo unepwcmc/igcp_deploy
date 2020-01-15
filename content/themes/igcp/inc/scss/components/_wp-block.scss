@@ -32,8 +32,8 @@
   // Images
 
   .wp-block-image {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: #{$grid-gap * 2};
+    margin-bottom: #{$grid-gap * 2};
 
     img {
       display: block;
