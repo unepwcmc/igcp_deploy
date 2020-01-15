@@ -7,10 +7,8 @@
 }
 
 .ent-Entry_Body {
-  font-size: 14px;
-
   strong {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .lyt-Primary-restrained & {
@@ -49,7 +47,7 @@
 
 h2.ent-Entry_Title {
   font-size: 50px;
-  font-weight: 500;
+  font-weight: 400;
   text-align: center;
   max-width: calc((10 / 12) * 100%);
   margin-left: auto;

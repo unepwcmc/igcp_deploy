@@ -1,3 +1,9 @@
+h3.frm-Contact_Title,
+.rte-RichText h3.frm-Contact_Title {
+  text-align: center;
+  margin: 0 auto #{$grid-gap * 2};
+}
+
 .frm-Contact_Form {
   @include break-min($md) {
     @include restrain_width;

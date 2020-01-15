@@ -18,7 +18,7 @@
     <div class="blk-Contact_Content">
 
       <?php if ( $heading ) : ?>
-        <h4 class="blk-Contact_Heading"><?php echo $heading; ?></h4>
+        <h3 class="blk-Contact_Heading"><?php echo $heading; ?></h3>
       <?php endif;?>
 
       <?php if ( $address ) : ?>

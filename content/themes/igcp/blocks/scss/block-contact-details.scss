@@ -2,31 +2,39 @@
 @import "../../inc/scss/utilities/mixins";
 
 .blk-Contact {
-  margin-bottom: #{$grid-gap * 4};
+  @include spacer_small;
+  @include restrain_width;
+  position: relative;
 }
 
 .blk-Contact_Content {
-  margin-left: calc((3 / 12) * 100%);
-  max-width: calc((3 / 12) * 100%);
+  text-align: center;
 }
 
 h4.blk-Contact_Heading {
   margin-bottom: #{$grid-gap * 2};
+  display: none;
 }
 
 .blk-Contact_Text {
   margin-bottom: #{$grid-gap * 2};
 }
 
+.blk-Contact_Items,
+.rte-RichText .blk-Contact_Items {
+  margin: 0;
+}
+
 .blk-Contact_Item {
   position: relative;
-  padding-left: 22px;
   margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   svg {
-    position: absolute;
-    top: 2px;
-    left: 0;
+    display: inline-block;
+    margin-right: 5px;
     width: 16px;
     opacity: 0.3;
   }

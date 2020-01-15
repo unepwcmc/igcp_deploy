@@ -1,15 +1,10 @@
 /*--------------------------------------------------------------
 BASE
 --------------------------------------------------------------*/
-html {
-  font-size: 90%;
-  @include break-min($md) {
-    font-size: 100%;
-  }
-}
 
 body {
-  font-size: 14px;
+  font-size: 16px;
+  line-height: 1.6;
   background-color: #fff;
   color: $color-body-font;
   font-family: $font-body;

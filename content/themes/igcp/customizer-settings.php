@@ -49,7 +49,7 @@ function contact_details_customizer_settings($wp_customize) {
   $wp_customize->add_setting('contact_details_address');
   $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'contact_details_address',
   array(
-  'label' => 'Text',
+  'label' => 'Address',
   'type' => 'textarea',
   'section' => 'contact_details',
   'settings' => 'contact_details_address',
