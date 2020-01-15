@@ -40,7 +40,6 @@ $category = get_the_category();
 					)
 				);
 				?>
-				<br /><br />
 			</div><!-- .entry-content -->
 
 		<?php if ( '' !== get_the_post_thumbnail() && ! is_single() ) : ?>

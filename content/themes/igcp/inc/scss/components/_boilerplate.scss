@@ -1,0 +1,12 @@
+.art-Boilerplate {
+  @include restrain_width;
+  margin-top: #{$grid-gap * 2};
+  margin-bottom: #{$grid-gap * 2};
+  padding: $grid-gap;
+
+  line-height: 1.5;
+
+  background-color: $color-light-grey;
+  border: 1px solid $color-border;
+  border-radius: 3px;
+}

@@ -36,15 +36,6 @@
     margin-bottom: #{$grid-gap * 3};
   }
 
-  pre {
-    white-space: inherit;
-    padding: $grid-gap;
-    background-color: $color-light-grey;
-    border: 1px solid $color-border;
-    line-height: 1.5;
-    border-radius: 3px;
-  }
-
   ol, ul {
     margin-left: 20px;
     margin-bottom: 20px;
