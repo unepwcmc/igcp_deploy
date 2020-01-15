@@ -1,0 +1,86 @@
+@import "../../inc/scss/utilities/variables";
+@import "../../inc/scss/utilities/mixins";
+
+.blk-RelevantLinks {
+  @include ignore-restrained-width;
+  position: relative;
+  width: calc(100vw - #{$gutter * 2});
+  margin-top: #{$grid-gap * 3};
+  margin-bottom: #{$grid-gap * 3};
+  display: none;
+
+  @include break-min(1024px) {
+    display: block;
+  }
+}
+
+.blk-RelevantLinks_Container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc((2 / 12) * 100%);
+}
+
+.blk-RelevantLinks_Header {
+  margin-bottom: 10px;
+}
+
+h5.blk-RelevantLinks_Title {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+.blk-RelevantLinks_Body {
+
+}
+
+ul.blk-RelevantLinks_Items {
+  margin: 0;
+}
+
+li.blk-RelevantLinks_Item {
+  position: relative;
+  margin-bottom: $grid-gap;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.blk-RelevantLinks_ImageWrap {
+  position: relative;
+  padding-bottom: calc((12 / 29) * 100%);
+  margin-bottom: 5px;
+  overflow: hidden;
+}
+
+.blk-RelevantLinks_Image {
+  @include absolute_fill;
+  @include object-fit-cover;
+  transition: transform .5s ease;
+  will-change: transform;
+
+  .blk-RelevantLinks_Item:hover & {
+    transform: scale(1.05);
+  }
+}
+
+h6.blk-RelevantLinks_Heading {
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+p.blk-RelevantLinks_Text {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1;
+}
+
+a.blk-RelevantLinks_FauxLink {
+  @include absolute_fill;
+  z-index: 2;
+}
