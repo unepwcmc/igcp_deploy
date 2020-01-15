@@ -76,7 +76,6 @@
 
 .drw-Drawer_Header {
   border-bottom: 1px solid $color-border-light;
-  // background-color: tomato; delete me
 
   [data-drawer="menu"] & {
     height: $menuDrawerHeaderHeight;
@@ -94,12 +93,11 @@ h3.drw-Drawer_Title {
 .drw-Drawer_Body {
   position: absolute;
   top: 0;
-  right: #{$grid-gap / 2};
+  right: 0;
   bottom: $grid-gap;
   left: $grid-gap;
   overflow-y: auto;
-  padding-right: #{$grid-gap / 2};
-  // background-color: cornflowerblue; delete me
+  padding-right: $grid-gap;
 
   [data-drawer="menu"] & {
     max-height: calc(100% - #{$menuDrawerHeaderHeight});
