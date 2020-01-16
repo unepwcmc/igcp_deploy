@@ -6,25 +6,25 @@
   $thumbnail_url = get_the_post_thumbnail_url() != '' ? get_the_post_thumbnail_url() : get_stylesheet_directory_uri() . '/inc/img/square-placeholder.jpg';
 ?>
 
-<article id="post-<?php echo $post_ID; ?>" class="crd-Team team-modal-trigger">
-	<header class="crd-Team_Header">
+<article id="post-<?php echo $post_ID; ?>" class="crd-Card crd-Card-team team-modal-trigger">
+	<header class="crd-Card_Header">
     <?php
       if ( ! empty( $role_name != '' ) ) {
-          echo '<span class="crd-Family_Badge">' . $role_name . '</span>';
+          echo '<span class="crd-Card_Badge">' . $role_name . '</span>';
       }
     ?>
-    <div class="crd-Team_Image" data-member-image>
+    <div class="crd-Card_Image" data-member-image>
       <img src="<?php echo $thumbnail_url; ?>" alt="<?php the_title(); ?>" />
     </div>
 	</header>
-	<div class="crd-Team_Body">
-		<div class="crd-Team_Content">
-      <h3 class="crd-Team_Title" data-member-name><?php the_title(); ?></h3>
-      <p class="crd-Team_JobTitle" data-member-jobtitle><?php echo get_field( "job_title" ); ?></p>
-      <p class="crd-Team_Bio" data-member-bio><?php echo get_field( "bio" ); ?></p>
-      <p class="crd-Team_Email" data-member-email><?php echo get_field( "email_address" ); ?></p>
-      <p class="crd-Team_Location" data-member-location><?php echo $location_name; ?></p>
+	<div class="crd-Card_Body">
+		<div class="crd-Card_Content">
+      <h3 class="crd-Card_Title" data-member-name><?php the_title(); ?></h3>
+      <p class="crd-Card_JobTitle" data-member-jobtitle><?php echo get_field( "job_title" ); ?></p>
+      <p class="crd-Card_Bio" data-member-bio><?php echo get_field( "bio" ); ?></p>
+      <p class="crd-Card_Email" data-member-email><?php echo get_field( "email_address" ); ?></p>
+      <p class="crd-Card_Location" data-member-location><?php echo $location_name; ?></p>
 		</div>
 	</div>
-  <a href="#" class="crd-Team_FauxLink"></a>
+  <a href="#" class="crd-Card_FauxLink"></a>
 </article><!-- #post-## -->

@@ -15,12 +15,19 @@ p.pag-Pagination_Count {
 span.page-numbers,
 a.page-numbers {
   display: inline-block;
-  padding: 8px 12px;
+  // padding: 8px 12px;
+  width: 40px;
+  height: 40px;
   border: 1px solid $color-secondary;
   font-size: 12px;
   text-decoration: none;
   margin-right: 10px;
   transition: background-color .3s ease, border-color .35s ease, color .3s ease;
+  position: relative;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 
   &:hover:not(.current) {
     background-color: $color-primary;
@@ -40,4 +47,8 @@ a.page-numbers {
   &:last-child {
     margin-right: 0;
   }
+}
+
+.pag-Pagination_Number {
+  line-height: 1;
 }

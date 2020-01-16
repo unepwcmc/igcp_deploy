@@ -118,7 +118,8 @@ textarea {
   &::placeholder {
     font-family: $font-body;
     color: inherit;
-    font-weight: inherit;
+    font-weight: 400;
+    color: $color-grey-text;
   }
 
   &:focus,

@@ -1,0 +1,138 @@
+.crd-Card {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  width: 100%;
+  position: relative;
+  background-color: $color-light-grey;
+
+  &.crd-Card-team {
+    background-color: $color-primary;
+    color: #fff;
+  }
+}
+
+.crd-Card_Badge {
+  position: absolute;
+  top: #{$grid-gap / 2};
+  left: #{$grid-gap / 2};
+  z-index: 1;
+  font-size: 11px;
+  background-color: $color-grey-text;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  padding: 2px 4px;
+  margin-right: #{$grid-gap / 2};
+  font-weight: 500;
+  line-height: 1;
+}
+
+.crd-Card_Image {
+  position: relative;
+  padding-bottom: 75%;
+  overflow: hidden;
+
+  img {
+    @include absolute_fill;
+    object-fit: cover;
+    font-family: 'object-fit: cover;';
+    transition: transform .5s ease;
+    will-change: transform;
+
+    .crd-Card:hover & {
+      transform: scale(1.025);
+    }
+  }
+}
+
+.crd-Card_Body {
+  flex: 1;
+  display: flex;
+}
+
+.crd-Card_Content {
+  position: relative;
+  padding: #{$grid-gap / 2} #{$grid-gap / 2} #{$grid-gap};
+  flex: 1;
+
+  .crd-Card-blog & {
+    padding-bottom: #{$grid-gap * 3};
+  }
+
+  .crd-Card-file & {
+    padding-bottom: #{$grid-gap * 4};
+  }
+}
+
+p.crd-Card_Details {
+  font-size: 10px;
+  line-height: 1;
+  margin-bottom: 5px;
+  color: $color-grey-text;
+}
+
+h3.crd-Card_Title {
+  color: currentColor;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+  // margin-bottom: #{$grid-gap / 2};
+  margin-bottom: 0;
+}
+
+p.crd-Card_Link {
+  position: absolute;
+  bottom: #{$grid-gap / 2};
+  left: #{$grid-gap / 2};
+  margin-bottom: 0;
+  color: $color-grey-text;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+p.crd-Card_Members {
+  color: $color-grey-text;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+  margin-top: 10px;
+  margin-bottom: 0;
+
+  svg {
+    width: 14px;
+    display: inline-block;
+    margin-right: 5px;
+  }
+}
+
+.crd-Card_Icon {
+  position: absolute;
+  bottom: #{$grid-gap / 2};
+  right: #{$grid-gap / 2};
+
+  svg {
+    margin-left: auto;
+    opacity: .5;
+    height: 30px;
+  }
+}
+
+p.crd-Card_JobTitle {
+  font-size: 14px;
+  line-height: 1.2;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+p.crd-Card_Bio,
+p.crd-Card_Email,
+p.crd-Card_Location {
+  display: none;
+}
+
+a.crd-Card_FauxLink {
+  @include absolute_fill;
+  z-index: 2;
+}

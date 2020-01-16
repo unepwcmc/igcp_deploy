@@ -2,7 +2,7 @@
   position: relative;
   margin-left: #{$grid-gap / 2};
   margin-right: #{$grid-gap / 2};
-  
+
   @include break-min($sm) {
     margin-left: $grid-gap;
     margin-right: $grid-gap;
@@ -21,11 +21,14 @@
 
 .pge-Hero_Content {
   text-align: center;
-  max-width: calc((6 / 12) * 100%);
   margin-right: auto;
   margin-left: auto;
   padding-top: 50px;
   padding-bottom: 50px;
+  
+  @include break-min($sm) {
+    max-width: calc((6 / 12) * 100%);
+  }
 }
 
 h2.pge-Hero_Title {

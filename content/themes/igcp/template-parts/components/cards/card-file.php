@@ -4,29 +4,29 @@
   $thumbnail_url = get_the_post_thumbnail_url() != '' ? get_the_post_thumbnail_url() : get_stylesheet_directory_uri() . '/inc/img/square-placeholder.jpg';
 ?>
 
-<article id="post-<?php echo $post_ID; ?>" class="crd-File">
-	<header class="crd-File_Header">
+<article id="post-<?php echo $post_ID; ?>" class="crd-Card crd-Card-file">
+	<header class="crd-Card_Header">
     <?php
       if ( ! empty( $filetype_name != '' ) ) {
-          echo '<span class="crd-Family_Badge">' . $filetype_name . '</span>';
+          echo '<span class="crd-Card_Badge">' . $filetype_name . '</span>';
       }
     ?>
-    <div class="crd-File_Image">
+    <div class="crd-Card_Image">
       <img src="<?php echo $thumbnail_url; ?>" alt="<?php the_title(); ?>" />
     </div>
 	</header>
-	<div class="crd-File_Body">
-		<div class="crd-File_Content">
-      <h3 class="crd-File_Title"><?php the_title(); ?></h3>
-      <div class="crd-File_Columns">
-        <div class="crd-File_Column">
-          <p class="crd-File_Link">View</p>
+	<div class="crd-Card_Body">
+		<div class="crd-Card_Content">
+      <h3 class="crd-Card_Title"><?php the_title(); ?></h3>
+      <div class="crd-Card_Columns">
+        <div class="crd-Card_Column">
+          <p class="crd-Card_Link">View</p>
         </div>
-        <div class="crd-File_Column">
-          <div class="crd-File_Icon"><?php get_template_part( 'template-parts/icons/icon',  $filetype_data[0]->slug ); ?></div>
+        <div class="crd-Card_Column">
+          <div class="crd-Card_Icon"><?php get_template_part( 'template-parts/icons/icon',  $filetype_data[0]->slug ); ?></div>
         </div>
       </div>
 		</div>
 	</div>
-  <a href="<?php echo get_field( 'file' ); ?>" class="crd-File_FauxLink"></a>
+  <a href="<?php echo get_field( 'file' ); ?>" class="crd-Card_FauxLink"></a>
 </article><!-- #post-## -->

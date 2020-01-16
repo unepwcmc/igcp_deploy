@@ -60,7 +60,7 @@
                         <?php /* echo str_replace(get_site_url(),'/wordpress',''); */ ?>
                           <label for="s" class="utl-ScreenReaderOnly">Search for:</label>
 
-                          <input type="text" name="s" id="s" value="" class="hd-Search_Input">
+                          <input type="text" name="s" id="s" value="" class="hd-Search_Input" placeholder="Search here">
 
                           <input type="submit" name="" value="Search" class="hd-Search_Button">
                         </form>

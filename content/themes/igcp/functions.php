@@ -471,8 +471,10 @@ function pagination_bar() {
 		      'current' => $current_page,
 		      'total' => $total_pages,
           'prev_next' => True,
-          'prev_text' => __('&laquo;'),
-          'next_text' => __('&raquo;')
+          'prev_text' => __('<div class="pag-Pagination_Number">&laquo;</div>'),
+          'next_text' => __('<div class="pag-Pagination_Number">&raquo;</div>'),
+          'before_page_number' => '<div class="pag-Pagination_Number">',
+          'after_page_number' => '</div>'
 		    ));
 
 			echo '</div>';

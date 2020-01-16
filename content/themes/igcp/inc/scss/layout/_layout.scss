@@ -40,15 +40,17 @@
   @include spacer_small;
 
   .lyt-Primary-archive & {
-    @include spacer_small;
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: #{$grid-gap * 2};
   }
 
   @include break-min($sm) {
     .home & {
       margin-top: 0;
       margin-bottom: 0;
+    }
+    .lyt-Primary-archive & {
+      @include spacer_small;
     }
   }
 }

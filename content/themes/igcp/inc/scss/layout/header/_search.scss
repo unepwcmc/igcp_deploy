@@ -14,7 +14,7 @@
     width: 32px;
     transition: opacity .3s ease;
 
-    @include break-min($sm) {
+    @include break-min($md) {
       opacity: 0.5;
       width: 20px;
     }
@@ -28,15 +28,34 @@
 }
 
 .hd-Search_Bar {
-  position: absolute;
-  top: calc(100% + 15px);
-  right: -30px;
+  position: fixed;
+  top: 90px;
+  right: #{$grid-gap / 2};
+  left: #{$grid-gap / 2};
   z-index: 10;
   max-height: 0;
+  max-width: 100%;
 
   pointer-events: none;
   overflow: hidden;
   transition: max-height 0.8s cubic-bezier(0, 1, 0, 1);
+
+  .admin-bar & {
+    top: 130px;
+  }
+
+  @include break-min($xs) {
+    width: 100%;
+    max-width: 450px;
+    left: auto;
+  }
+
+  @include break-min($sm) {
+    right: 55px;
+  }
+  @include break-min($md) {
+    right: 110px;
+  }
 
   &.hd-Search_Bar-active {
     max-height: 300px;
@@ -47,7 +66,6 @@
 
 .hd-Search_Form {
   display: flex;
-  width: 450px;
   border: 8px solid $color-light-grey;
   background: #fff;
   border-radius: 3px;
@@ -64,7 +82,11 @@
 
     position: absolute;
     top: -37px;
-    right: 15px;
+    right: 50px;
+
+    @include break-min($sm) {
+      right: 15px;
+    }
   }
 }
 
@@ -79,10 +101,16 @@
 input[type="submit"].hd-Search_Button {
   flex: 0 0 50px;
   margin: 0;
-  background-color: $color-grey-text;
+  background-color: $color-grey-text !important;
+  padding: 5px 10px !important;
   color: #fff;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
+  border-color: $color-secondary !important;
+
+  &:hover {
+    color: #fff !important;
+  }
 }
