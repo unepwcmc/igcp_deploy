@@ -1,7 +1,7 @@
 <?php
   $post_categories = get_the_category();
 
-  $thumbnail_url = get_the_post_thumbnail_url() != '' ? get_the_post_thumbnail_url() : get_stylesheet_directory_uri() . '/inc/img/square-placeholder.jpg';
+  $thumbnail_url = get_the_post_thumbnail_url() != '' ? get_the_post_thumbnail_url() : get_stylesheet_directory_uri() . '/inc/img/card-placeholder.jpg';
 ?>
 
 <article id="post-<?php the_ID(); ?>" class="crd-Card crd-Card-blog">

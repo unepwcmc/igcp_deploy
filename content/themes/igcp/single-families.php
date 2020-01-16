@@ -21,22 +21,24 @@
 <div class="lyt-Container">
 	<div class="lyt-Container_Inner">
 		<section class="lyt-Primary lyt-Primary-restrained">
-			<?php
-				if ( have_posts() ) :
-					while ( have_posts() ) :
-						the_post();
+			<div class="lyt-Primary_Body">
+				<?php
+					if ( have_posts() ) :
+						while ( have_posts() ) :
+							the_post();
 
-						get_template_part( 'template-parts/content/content', 'page' );
+							get_template_part( 'template-parts/content/content', 'page' );
 
-					endwhile; // End of the loop.
-				else :
-						get_template_part( 'template-parts/content/content', 'none' );
-				endif;
-			?>
-			<?php echo do_shortcode('[content_block slug=about-gorillas]'); ?>
-			<?php get_template_part( 'template-parts/components/park', 'info' ); ?>
-			<?php get_template_part( 'template-parts/components/related', 'families' ); ?>
-			<?php get_template_part( 'template-parts/social/social', 'share' ); ?>
+						endwhile; // End of the loop.
+					else :
+							get_template_part( 'template-parts/content/content', 'none' );
+					endif;
+				?>
+				<?php echo do_shortcode('[content_block slug=about-gorillas]'); ?>
+				<?php get_template_part( 'template-parts/components/park', 'info' ); ?>
+				<?php get_template_part( 'template-parts/components/related', 'families' ); ?>
+				<?php get_template_part( 'template-parts/social/social', 'share' ); ?>
+			</div>
 		</section>
 	</div>
 </div>

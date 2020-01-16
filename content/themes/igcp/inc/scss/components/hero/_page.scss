@@ -2,6 +2,7 @@
   position: relative;
   margin-left: #{$grid-gap / 2};
   margin-right: #{$grid-gap / 2};
+  background-image: url('../img/pattern-bg-green.png');
 
   @include break-min($sm) {
     margin-left: $grid-gap;
@@ -13,6 +14,11 @@
   @include inner;
   position: relative;
   z-index: 3;
+  background-color: rgba(0,0,0,0.3);
+
+  @include break-min($sm) {
+    background-color: transparent;
+  }
 }
 
 .pge-Hero_Body {
@@ -23,10 +29,10 @@
   text-align: center;
   margin-right: auto;
   margin-left: auto;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  
+
   @include break-min($sm) {
+    padding-top: 50px;
+    padding-bottom: 50px;
     max-width: calc((6 / 12) * 100%);
   }
 }
@@ -48,14 +54,28 @@ p.pge-Hero_Text {
 }
 
 .pge-Hero_Overlay {
+  display: none;
   @include absolute_fill;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: $color-secondary;
   z-index: 2;
+
+  @include break-min($sm) {
+    display: block;
+  }
 }
 
 .pge-Hero_BackgroundImage {
-  @include absolute_fill;
-  object-fit: cover;
-  font-family: 'object-fit: cover;';
-  z-index: 1;
+  padding-bottom: 50%;
+  position: relative;
+
+  img {
+    @include absolute_fill;
+    @include object-fit-cover;
+    z-index: 1;
+  }
+
+  @include break-min($sm) {
+    padding-bottom: 0;
+    position: static;
+  }
 }

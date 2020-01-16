@@ -56,6 +56,9 @@
   @include break-min($md) {
     right: 110px;
   }
+  @include break-min($lg) {
+    right: 182px;
+  }
 
   &.hd-Search_Bar-active {
     max-height: 300px;

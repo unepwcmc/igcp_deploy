@@ -1,7 +1,7 @@
 <?php
   $filetype_data = get_the_terms(get_the_ID(), 'file_type');
   $filetype_name = $filetype_data[0]->name;
-  $thumbnail_url = get_the_post_thumbnail_url() != '' ? get_the_post_thumbnail_url() : get_stylesheet_directory_uri() . '/inc/img/square-placeholder.jpg';
+  $thumbnail_url = get_the_post_thumbnail_url() != '' ? get_the_post_thumbnail_url() : get_stylesheet_directory_uri() . '/inc/img/card-placeholder.jpg';
 ?>
 
 <article id="post-<?php echo $post_ID; ?>" class="crd-Card crd-Card-file">
