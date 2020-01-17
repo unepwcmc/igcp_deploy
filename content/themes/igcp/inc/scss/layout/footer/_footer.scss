@@ -4,6 +4,7 @@
 
   .lyt-Footer_Footer & {
     margin-bottom: 0;
+    
     @include break-min($md) {
       text-align: right;
     }
