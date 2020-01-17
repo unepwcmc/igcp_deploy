@@ -2,7 +2,11 @@
   position: relative;
   margin-left: $grid-gap;
   margin-right: $grid-gap;
-  padding-bottom: calc((3 / 14) * 100%);
+  padding-bottom: calc((5 / 14) * 100%);
+
+  @include break-min($sm) {
+    padding-bottom: calc((3 / 14) * 100%);
+  }
 }
 
 .pst-Hero_BackgroundImage {

@@ -34,7 +34,7 @@ export function scrollToLink() {
 
         if (isCaseStudy) {
           const navHeight = document.querySelector('.cst-Nav').offsetHeight;
-          scrollTo(linkElOffsetTop - headerHeight - navHeight);
+          scrollTo(linkElOffsetTop - headerHeight - navHeight - 20);
         } else {
           scrollTo(linkElOffsetTop - headerHeight);
         }

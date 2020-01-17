@@ -61,7 +61,7 @@ import searchbar from './modules/searchbar';
   const caseStudyNavScroll = debounceEvent(function() {
     const header = document.querySelector(".hd-Header");
     const hero = document.querySelector(".cst-Hero");
-    const nav = document.querySelector(".cst-Nav");
+    const nav = document.querySelector(".cst-Navigation");
 
     let headerHeight = header.offsetHeight;
     let heroHeight = hero.offsetHeight;
@@ -71,9 +71,9 @@ import searchbar from './modules/searchbar';
       document.body.scrollTop > heroOffsetTop ||
       document.documentElement.scrollTop > heroOffsetTop
     ) {
-      nav.classList.add("cst-Nav-fixed");
+      nav.classList.add("cst-Navigation-fixed");
     } else {
-      nav.classList.remove("cst-Nav-fixed");
+      nav.classList.remove("cst-Navigation-fixed");
     }
   });
 

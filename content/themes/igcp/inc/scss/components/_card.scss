@@ -17,7 +17,7 @@
   top: #{$grid-gap / 2};
   left: #{$grid-gap / 2};
   z-index: 1;
-  font-size: 11px;
+  font-size: 16px;
   background-color: $color-grey-text;
   color: #fff;
   border: 1px solid #fff;
@@ -26,12 +26,19 @@
   margin-right: #{$grid-gap / 2};
   font-weight: 500;
   line-height: 1;
+  @include break-min($sm) {
+    font-size: 11px;
+  }
 }
 
 .crd-Card_Image {
   position: relative;
-  padding-bottom: 75%;
+  padding-bottom: calc((19 / 29) * 100%);
   overflow: hidden;
+
+  @include break-min($sm) {
+    padding-bottom: 75%;
+  }
 
   img {
     @include absolute_fill;

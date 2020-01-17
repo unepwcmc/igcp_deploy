@@ -272,15 +272,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   var caseStudyNavScroll = debounceEvent(function () {
     var header = document.querySelector(".hd-Header");
     var hero = document.querySelector(".cst-Hero");
-    var nav = document.querySelector(".cst-Nav");
+    var nav = document.querySelector(".cst-Navigation");
     var headerHeight = header.offsetHeight;
     var heroHeight = hero.offsetHeight;
     var heroOffsetTop = hero.offsetTop + heroHeight - headerHeight;
 
     if (document.body.scrollTop > heroOffsetTop || document.documentElement.scrollTop > heroOffsetTop) {
-      nav.classList.add("cst-Nav-fixed");
+      nav.classList.add("cst-Navigation-fixed");
     } else {
-      nav.classList.remove("cst-Nav-fixed");
+      nav.classList.remove("cst-Navigation-fixed");
     }
   });
 })();
@@ -327,7 +327,7 @@ function scrollToLink() {
 
         if (isCaseStudy) {
           var navHeight = document.querySelector('.cst-Nav').offsetHeight;
-          scrollTo(linkElOffsetTop - headerHeight - navHeight);
+          scrollTo(linkElOffsetTop - headerHeight - navHeight - 20);
         } else {
           scrollTo(linkElOffsetTop - headerHeight);
         }

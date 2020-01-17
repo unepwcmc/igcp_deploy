@@ -64,6 +64,10 @@ h2.lyt-Primary_Title {
     margin-bottom: #{$grid-gap * 2};
   }
 
+  .lyt-Primary-single & {
+    margin-top: 25px;
+  }
+
   @include break-min($sm) {
     .home & {
       margin-top: 0;
@@ -86,23 +90,27 @@ h2.lyt-Primary_Title {
 }
 
 .lyt-Entry_Items {
-  margin: $grid-gap -#{$grid-gap} -#{$grid-gap} 0;
+  margin: $grid-gap 0 -#{$grid-gap};
   display: flex;
   flex-wrap: wrap;
 
   @include break-min($sm) {
     margin-top: 0;
   }
+  @include break-min($sm) {
+    margin-right: -#{$grid-gap};
+  }
 }
 
 .lyt-Entry_Item {
-  display: flex;
-  flex: 0 0 calc(((1 / 2) * 100%) - #{$grid-gap});
   list-style: none;
-  margin-right: $grid-gap;
   margin-bottom: $grid-gap;
+  width: 100%;
+  // flex: 0 0 calc(((1 / 2) * 100%) - #{$grid-gap});
 
-  @include break-min($md) {
+  @include break-min($xs) {
+    display: flex;
+    margin-right: $grid-gap;
     flex: 0 0 calc(((1 / 3) * 100%) - #{$grid-gap});
   }
 }

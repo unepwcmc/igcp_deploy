@@ -3,6 +3,7 @@
     National Parks Map Block
     Created by UNEP-WCMC
     With Block Lab for Gutenberg - https://getblocklab.com/
+    Uses styles from Park Info Component in SCSS directory
   */
 
   /* Variables */
