@@ -2,15 +2,7 @@
 @import "../../inc/scss/utilities/mixins";
 
 .blk-TextImage {
-  margin-bottom: #{$grid-gap * 2};
-
-  @include break-min($sm) {
-    margin-bottom: 80px;
-  }
-
-  &:last-child {
-    margin-bottom: 0;
-  }
+  @include spacer_small;
 }
 
 .blk-TextImage_Columns {

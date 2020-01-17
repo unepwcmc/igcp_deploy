@@ -14,7 +14,7 @@ function remove_customizer_settings() {
   global $wp_customize;
 
   $wp_customize->remove_panel( 'themes' ); // Theme change settings
-  $wp_customize->remove_section( 'title_tagline' ); // Site Identity
+  // $wp_customize->remove_section( 'title_tagline' ); // Site Identity
   $wp_customize->remove_panel( 'nav_menus' ); // Menus
   $wp_customize->remove_section( 'widgets' ); // Widgets
   $wp_customize->remove_section( 'static_front_page' ); // Homepage Settings

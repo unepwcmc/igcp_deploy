@@ -74,8 +74,12 @@
                   <?php endif; ?>
                   <div class="hd-Tools_Item hd-Tools_Item-menuToggle">
                     <button class="hd-Tools_NavToggle" aria-controls="navigation" aria-expanded="false" data-drawer-toggle="menu">
-                      <svg aria-hidden="true" data-prefix="far" data-icon="bars" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="hd-Tools_NavToggleIcon">
-                        <path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"/>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 23">
+                        <g data-name="Group 3" fill="none" stroke="#606060" stroke-width="3">
+                          <path data-name="Line 103" d="M0 1.5h30"/>
+                          <path data-name="Line 104" d="M0 11.5h30"/>
+                          <path data-name="Line 105" d="M0 21.5h30"/>
+                        </g>
                       </svg>
                     </button>
                   </div>
