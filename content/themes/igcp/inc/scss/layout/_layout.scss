@@ -47,10 +47,10 @@
 }
 
 h2.lyt-Primary_Title {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 500;
   margin-bottom: 0;
-  
+
   @include break-min($sm) {
     text-align: center;
   }

@@ -25,11 +25,11 @@
 				the_title( sprintf( '<h2 class="ent-Excerpt_Title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
 				?>
 				<p class="ent-Excerpt_Details"><?php echo 'Posted on ' . get_the_date( get_option('date_format') ); ?></p>
-				<div class="ent-Excerpt_Content">
-					<?php
-					the_excerpt();
-					?>
-				</div>
+				<?php if (get_the_excerpt() != ''): ?>
+					<p class="ent-Excerpt_Content"><?php
+						the_excerpt();
+					?></p>
+				<?php endif; ?>
 				<a class="ent-Excerpt_Link" href="<?php the_permalink(); ?>">Read more</a>
 			</div>
 		</div><!-- .entry-content -->

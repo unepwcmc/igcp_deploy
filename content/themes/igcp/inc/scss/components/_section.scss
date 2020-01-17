@@ -33,15 +33,6 @@
     margin-top: 0;
   }
 
-
-  // .wgt-Widget .wp-block-mkl-section-block {
-  //   margin: 0;
-  //
-  //   &.color-background {
-  //     @include spacer_body_small;
-  //   }
-  // }
-
   .wp-block-mkl-section-block-inner {
     @include inner;
   }

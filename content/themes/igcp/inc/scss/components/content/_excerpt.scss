@@ -7,17 +7,7 @@
   }
 }
 
-.ent-Excerpt_Header {
-  // margin-bottom: 20px;
-}
-
 .ent-Excerpt_Body {
-  font-size: 14px;
-
-  strong {
-    font-size: 18px;
-  }
-
   .lyt-Primary-restrained & {
     @include restrain_width;
     max-width: #{$restrained-width + $grid-gap + 200px};
@@ -63,10 +53,13 @@
 }
 
 h2.ent-Excerpt_Title {
-  font-weight: 500;
-  font-size: 20px;
+  font-size: 22px;
   line-height: 26px;
-  margin-bottom: $grid-gap;
+  margin-bottom: 5px;
+
+  @include break-min($sm) {
+    margin-bottom: $grid-gap;
+  }
 
   a {
     text-decoration: none;
@@ -74,9 +67,9 @@ h2.ent-Excerpt_Title {
 }
 
 p.ent-Excerpt_Details {
-  font-size: 12px;
+  font-size: 14px;
   text-align: center;
-  margin-bottom: $grid-gap;
+  margin-bottom: #{$grid-gap / 2};
 
   .ent-Excerpt-search & {
     text-align: left;
@@ -85,13 +78,14 @@ p.ent-Excerpt_Details {
 }
 
 .ent-Excerpt_Content {
-  font-size: 14px;
+  margin-top: $grid-gap;
+  margin-bottom: $grid-gap;
   line-height: 1.5;
 }
 
 a.ent-Excerpt_Link {
   display: block;
-  margin-top: $grid-gap;
+  margin-top: #{$grid-gap / 2};
 }
 
 a.ent-Excerpt_FauxLink {
