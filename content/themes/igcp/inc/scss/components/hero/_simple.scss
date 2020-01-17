@@ -1,7 +1,12 @@
 .smp-Hero {
   position: relative;
-  margin-left: $grid-gap;
-  margin-right: $grid-gap;
+  margin-left: #{$grid-gap / 2};
+  margin-right: #{$grid-gap / 2};
+
+  @include break-min($sm) {
+    margin-left: $grid-gap;
+    margin-right: $grid-gap;
+  }
 }
 
 .smp-Hero_Inner {

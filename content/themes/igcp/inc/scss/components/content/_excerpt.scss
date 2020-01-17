@@ -1,6 +1,10 @@
 .ent-Excerpt {
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: #{$grid-gap * 3};
+
+  @include break-min($sm) {
+    margin-bottom: 55px;
+  }
 }
 
 .ent-Excerpt_Header {
@@ -21,22 +25,36 @@
 }
 
 .ent-Excerpt_Columns {
-  display: flex;
+  @include break-min($sm) {
+    display: flex;
+  }
 }
 
 .ent-Excerpt_Column {
   &:first-child {
-    flex: 0 0 200px;
-    margin-right: $grid-gap;
+    @include break-min($sm) {
+      flex: 0 0 150px;
+      margin-right: $grid-gap;
+    }
+    @include break-min($lg) {
+      flex: 0 0 200px;
+    }
   }
   &:last-child {
-    flex: 1 1 auto;
+    @include break-min($sm) {
+      flex: 1 1 auto;
+    }
   }
 }
 
 .ent-Excerpt_Thumbnail {
   position: relative;
   padding-bottom: 100%;
+  display: none;
+
+  @include break-min($sm) {
+    display: block;
+  }
 
   img {
     @include absolute_fill;
@@ -48,11 +66,7 @@ h2.ent-Excerpt_Title {
   font-weight: 500;
   font-size: 20px;
   line-height: 26px;
-  margin-bottom: 25px;
-
-  .ent-Excerpt-search & {
-    margin-bottom: $grid-gap;
-  }
+  margin-bottom: $grid-gap;
 
   a {
     text-decoration: none;
@@ -61,8 +75,8 @@ h2.ent-Excerpt_Title {
 
 p.ent-Excerpt_Details {
   font-size: 12px;
-  margin-bottom: 20px;
   text-align: center;
+  margin-bottom: $grid-gap;
 
   .ent-Excerpt-search & {
     text-align: left;

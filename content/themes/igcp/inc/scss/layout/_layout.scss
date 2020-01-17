@@ -36,6 +36,26 @@
   }
 }
 
+.lyt-Primary_Header {
+  margin-top: #{$grid-gap * 2};
+  margin-bottom: #{$grid-gap * 2};
+
+  @include break-min($sm) {
+    margin-top: #{$grid-gap * 3};
+    margin-bottom: #{$grid-gap * 3};
+  }
+}
+
+h2.lyt-Primary_Title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 0;
+  
+  @include break-min($sm) {
+    text-align: center;
+  }
+}
+
 .lyt-Primary_Body {
   @include spacer_small;
 
@@ -53,13 +73,6 @@
       @include spacer_small;
     }
   }
-}
-
-h2.lyt-Primary_Title {
-  font-size: 20px;
-  text-align: center;
-  font-weight: 500;
-  margin-bottom: 50px;
 }
 
 .lyt-Sidebar {
