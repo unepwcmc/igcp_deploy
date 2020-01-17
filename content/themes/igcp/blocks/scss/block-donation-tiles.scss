@@ -1,27 +1,51 @@
 @import "../../inc/scss/utilities/variables";
 @import "../../inc/scss/utilities/mixins";
 
+.til-Donation {
+  @include ignore_restrained_width;
+}
+
 .til-Donation_Items {
-  display: flex;
-  margin-right: -#{$grid-gap};
+  margin-bottom: -#{$grid-gap};
+
+  @include break-min($xs) {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-right: -#{$grid-gap};
+  }
 }
 
 .til-Donation_Item {
-  flex: 0 0 calc(((3 / 12) * 100%) - #{$grid-gap});
-  margin-right: $grid-gap;
-  display: flex;
+  margin-bottom: $grid-gap;
+
+  @include break-min($xs) {
+    display: flex;
+    flex: 0 0 calc(((6 / 12) * 100%) - #{$grid-gap});
+
+    margin-right: $grid-gap;
+  }
+
+  @include break-min($sm) {
+    flex: 0 0 calc(((3 / 12) * 100%) - #{$grid-gap});
+  }
 }
 
 .til-Donation_Tile {
   display: flex;
   flex-direction: column;
   position: relative;
+  width: 100%;
 }
 
 .til-Donation_ImageWrap {
   position: relative;
-  padding-bottom: 75%;
   overflow: hidden;
+  padding-bottom: 30%;
+
+  @include break-min($xs) {
+    padding-bottom: 75%;
+  }
 }
 
 .til-Donation_Image {
@@ -44,10 +68,16 @@
 }
 
 h3.til-Donation_Heading {
-  font-size: 16px;
+  font-size: 20px;
+  line-height: 1;
   color: $color-dark-grey;
   font-weight: 500;
-  margin-bottom: $grid-gap;
+  margin-bottom: 0;
+
+  @include break-min($xs) {
+    font-size: 16px;
+    margin-bottom: $grid-gap;
+  }
 }
 
 a.til-Donation_FauxLink {

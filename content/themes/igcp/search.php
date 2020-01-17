@@ -47,7 +47,7 @@ get_header(); ?>
 						<form class="lyt-Search_Form" role="search" method="get" id="searchpageform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 							<label class="utl-ScreenReaderOnly" for="s">Search for:</label>
 
-							<input type="text" value="" name="s" id="s" class="lyt-Search_Input" placeholder="Search our store..." />
+							<input type="text" value="" name="s" id="s" class="lyt-Search_Input" placeholder="Search here" />
 
 							<input class="lyt-Search_Button" type="submit"></input>
 						</form>

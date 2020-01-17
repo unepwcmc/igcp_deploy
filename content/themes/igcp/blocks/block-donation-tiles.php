@@ -31,60 +31,62 @@
   $link_url_4 = block_field( 'link-url-4', false );
 ?>
 
-<div class="til-Donation_Tiles">
-  <div class="til-Donation_Items">
+<div class="til-Donation">
+  <div class="til-Donation_Tiles">
+    <div class="til-Donation_Items">
 
-    <div class="til-Donation_Item">
-      <div class="til-Donation_Tile">
-        <div class="til-Donation_ImageWrap">
-          <img class="til-Donation_Image" src="<?php echo $image_url_1; ?>" alt="<?php echo $heading_1; ?>">
+      <div class="til-Donation_Item">
+        <div class="til-Donation_Tile">
+          <div class="til-Donation_ImageWrap">
+            <img class="til-Donation_Image" src="<?php echo $image_url_1; ?>" alt="<?php echo $heading_1; ?>">
+          </div>
+          <div class="til-Donation_Content">
+            <h3 class="til-Donation_Heading"><?php echo $heading_1; ?></h3>
+            <p class="til-Donation_Text"><?php echo $text_1; ?></p>
+          </div>
+          <a href="<?php echo $link_url_1 ?>" class="til-Donation_FauxLink"></a>
         </div>
-        <div class="til-Donation_Content">
-          <h3 class="til-Donation_Heading"><?php echo $heading_1; ?></h3>
-          <p class="til-Donation_Text"><?php echo $text_1; ?></p>
-        </div>
-        <a href="<?php echo $link_url_1 ?>" class="til-Donation_FauxLink"></a>
       </div>
-    </div>
 
-    <div class="til-Donation_Item">
-      <div class="til-Donation_Tile">
-        <div class="til-Donation_ImageWrap">
-          <img class="til-Donation_Image" src="<?php echo $image_url_2; ?>" alt="<?php echo $heading_2; ?>">
+      <div class="til-Donation_Item">
+        <div class="til-Donation_Tile">
+          <div class="til-Donation_ImageWrap">
+            <img class="til-Donation_Image" src="<?php echo $image_url_2; ?>" alt="<?php echo $heading_2; ?>">
+          </div>
+          <div class="til-Donation_Content">
+            <h3 class="til-Donation_Heading"><?php echo $heading_2; ?></h3>
+            <p class="til-Donation_Text"><?php echo $text_2; ?></p>
+          </div>
+          <a href="<?php echo $link_url_2 ?>" class="til-Donation_FauxLink"></a>
         </div>
-        <div class="til-Donation_Content">
-          <h3 class="til-Donation_Heading"><?php echo $heading_2; ?></h3>
-          <p class="til-Donation_Text"><?php echo $text_2; ?></p>
-        </div>
-        <a href="<?php echo $link_url_2 ?>" class="til-Donation_FauxLink"></a>
       </div>
-    </div>
 
-    <div class="til-Donation_Item">
-      <div class="til-Donation_Tile">
-        <div class="til-Donation_ImageWrap">
-          <img class="til-Donation_Image" src="<?php echo $image_url_3; ?>" alt="<?php echo $heading_3; ?>">
+      <div class="til-Donation_Item">
+        <div class="til-Donation_Tile">
+          <div class="til-Donation_ImageWrap">
+            <img class="til-Donation_Image" src="<?php echo $image_url_3; ?>" alt="<?php echo $heading_3; ?>">
+          </div>
+          <div class="til-Donation_Content">
+            <h3 class="til-Donation_Heading"><?php echo $heading_3; ?></h3>
+            <p class="til-Donation_Text"><?php echo $text_3; ?></p>
+          </div>
+          <a href="<?php echo $link_url_3 ?>" class="til-Donation_FauxLink"></a>
         </div>
-        <div class="til-Donation_Content">
-          <h3 class="til-Donation_Heading"><?php echo $heading_3; ?></h3>
-          <p class="til-Donation_Text"><?php echo $text_3; ?></p>
-        </div>
-        <a href="<?php echo $link_url_3 ?>" class="til-Donation_FauxLink"></a>
       </div>
-    </div>
 
-    <div class="til-Donation_Item">
-      <div class="til-Donation_Tile">
-        <div class="til-Donation_ImageWrap">
-          <img class="til-Donation_Image" src="<?php echo $image_url_4; ?>" alt="<?php echo $heading_4; ?>">
+      <div class="til-Donation_Item">
+        <div class="til-Donation_Tile">
+          <div class="til-Donation_ImageWrap">
+            <img class="til-Donation_Image" src="<?php echo $image_url_4; ?>" alt="<?php echo $heading_4; ?>">
+          </div>
+          <div class="til-Donation_Content">
+            <h3 class="til-Donation_Heading"><?php echo $heading_4; ?></h3>
+            <p class="til-Donation_Text"><?php echo $text_4; ?></p>
+          </div>
+          <a href="<?php echo $link_url_4 ?>" class="til-Donation_FauxLink"></a>
         </div>
-        <div class="til-Donation_Content">
-          <h3 class="til-Donation_Heading"><?php echo $heading_4; ?></h3>
-          <p class="til-Donation_Text"><?php echo $text_4; ?></p>
-        </div>
-        <a href="<?php echo $link_url_4 ?>" class="til-Donation_FauxLink"></a>
       </div>
-    </div>
 
+    </div>
   </div>
 </div>
