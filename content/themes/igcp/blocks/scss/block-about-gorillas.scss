@@ -8,8 +8,9 @@
 }
 
 h3.abt-Gorillas_Title {
-  font-size: 22px;
   @include restrain_width;
+  font-size: 22px;
+  margin-top: $grid-gap;
 }
 
 .abt-Gorillas_Text {
