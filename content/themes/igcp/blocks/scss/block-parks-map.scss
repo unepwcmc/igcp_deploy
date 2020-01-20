@@ -10,8 +10,10 @@ h3.blk-Map_Title {
 }
 
 .blk-Map_Columns {
-  @include break-min($sm) {
-    display: flex;
+  .lyt-Body & {
+    @include break-min($sm) {
+      display: flex;
+    }
   }
 }
 
@@ -39,14 +41,21 @@ h3.blk-Map_Title {
   font-size: 14px;
 }
 
-.blk-Map_Items {
+.blk-Map_Items,
+.editor-block-list__layout .blk-Map_Items {
+  @include no-margin-padding;
   counter-reset: items-counter;
 }
 
-.blk-Map_Item {
-  border-bottom: 1px solid $color-border;
+.blk-Map_Item,
+.editor-block-list__layout .blk-Map_Item {
+  @include no_bullets;
   position: relative;
   padding-left: 30px;
+
+  .lyt-Body & {
+    border-bottom: 1px solid $color-border;
+  }
 
   &::before {
     position: absolute;
