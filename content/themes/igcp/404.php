@@ -15,7 +15,6 @@ get_header(); ?>
 				<div class="ent-Entry">
 					<header class="ent-Entry_Header">
 						<h2 class="ent-Entry_Title"><?php _e( 'Oops! That page can&rsquo;t be found.' ); ?></h2>
-						<p class="ent-Entry_Details"></p>
 					</header>
 					<div class="ent-Entry_Body">
 						<div class="ent-Entry_Content">

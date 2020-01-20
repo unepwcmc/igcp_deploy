@@ -2,9 +2,21 @@
   position: relative;
 }
 
+.ent-Entry_Header {
+  .error-404 & {
+    @include section_header;
+  }
+}
+
 .ent-Entry_Body {
   strong {
     font-size: 20px;
+  }
+
+  .error-404 & {
+    max-width: $restrained-width;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .lyt-Primary-restrained & {

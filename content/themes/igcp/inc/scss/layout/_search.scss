@@ -1,0 +1,23 @@
+.lyt-Search_Form {
+  @include break-min($xs) {
+    display: flex;
+  }
+}
+
+.utl-ScreenReaderOnly {
+
+}
+
+.lyt-Search_Input {
+  @include break-min($xs) {
+    flex: 1;
+    border-right: 0;
+  }
+}
+
+.lyt-Search_Button[type="submit"] {
+  @include break-min($xs) {
+    flex: 0 0 120px;
+    margin: 0;
+  }
+}

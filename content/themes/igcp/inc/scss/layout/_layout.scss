@@ -64,6 +64,10 @@ h2.lyt-Primary_Title {
     margin-bottom: #{$grid-gap * 2};
   }
 
+  .error-404 & {
+    @include spacer;
+  }
+
   .lyt-Primary-single & {
     margin-top: 25px;
   }
