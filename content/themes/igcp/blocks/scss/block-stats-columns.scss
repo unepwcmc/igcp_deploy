@@ -29,18 +29,19 @@
   }
 
   @include break-min($xs) {
-    flex: 0 0 calc(((4 / 12) * 100%) - #{$grid-gap});
+    flex: 1 0 calc(((4 / 12) * 100%) - #{$grid-gap});
     margin-right: $grid-gap;
     margin-bottom: 0;
   }
 
   @include break-min($md) {
-    flex: 0 0 calc(((4 / 12) * 100%) - 60px);
+    flex: 1 0 calc(((4 / 12) * 100%) - 60px);
     margin-right: 60px;
   }
 }
 
-.blk-Stats_ImageWrap {
+.blk-Stats_ImageWrap,
+.editor-block-list__layout .blk-Stats_ImageWrap {
   position: relative;
   padding-bottom: calc((4 / 12) * 100%);
   margin-right: auto;
@@ -57,7 +58,8 @@
   }
 }
 
-.blk-Stats_Image {
+.blk-Stats_Image,
+.editor-block-list__layout .blk-Stats_Image {
   @include absolute_fill;
   @include object_fit_contain;
 }
