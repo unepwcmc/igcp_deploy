@@ -99,6 +99,8 @@
   border-right: 0;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
 }
 
 input[type="submit"].hd-Search_Button {
@@ -115,5 +117,6 @@ input[type="submit"].hd-Search_Button {
 
   &:hover {
     color: #fff !important;
+    background-color: darken($color-grey-text, 10%) !important;
   }
 }

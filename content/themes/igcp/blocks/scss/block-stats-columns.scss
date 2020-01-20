@@ -17,7 +17,7 @@
   }
 
   @include break-min($md) {
-    margin-right: -100px;
+    margin-right: -60px;
   }
 }
 
@@ -35,19 +35,25 @@
   }
 
   @include break-min($md) {
-    flex: 0 0 calc(((4 / 12) * 100%) - 100px);
-    margin-right: 100px;
+    flex: 0 0 calc(((4 / 12) * 100%) - 60px);
+    margin-right: 60px;
   }
 }
 
 .blk-Stats_ImageWrap {
   position: relative;
-  padding-bottom: calc(( 4 / 12) * 100%);
+  padding-bottom: calc((4 / 12) * 100%);
+  margin-right: auto;
   margin-bottom: $grid-gap;
+  margin-left: auto;
   display: none;
+  max-width: 150px;
 
   @include break-min($xs) {
     display: block;
+  }
+  @include break-min($sm) {
+    padding-bottom: calc((6 / 12) * 100%);
   }
 }
 

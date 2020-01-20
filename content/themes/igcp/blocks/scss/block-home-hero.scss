@@ -29,16 +29,22 @@
   position: relative;
 
   @include break-min($sm) {
-    flex: 1;
+    flex: 0 0 calc((2 / 5) * 100%);
     display: flex;
     order: 1;
+  }
+  @include break-min($md) {
+    flex: 1;
   }
 }
 
 .her-Home_Column-large {
   @include break-min($sm) {
-    flex: 2;
+    flex: 0 0 calc((3 / 5) * 100%);
     order: 2;
+  }
+  @include break-min($md) {
+    flex: 2;
   }
 }
 
@@ -51,7 +57,7 @@
   position: relative;
 
   @include break-min($sm) {
-    padding: $grid-gap;
+    padding: #{$grid-gap * 5} $grid-gap $grid-gap;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -61,16 +67,22 @@
 
 h2.her-Home_Title {
   color: #fff;;
-  margin: 0 auto 20px;
+  margin: 0 auto 10px;
 
   @include break-min($sm) {
     font-size: 32px;
+    line-height: 38px;
+    margin-left: 0;
   }
 }
 
 a.her-Home_Link {
   @include button_accent;
   align-self: flex-start;
+
+  @include break-min($sm) {
+    margin: 0;
+  }
 }
 
 .her-Home_ImageWrap {

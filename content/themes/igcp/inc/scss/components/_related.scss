@@ -1,14 +1,14 @@
 .art-Related {
-  margin-top: 40px;
+  margin-top: $grid-gap * 2;
 }
 
 .art-Related_Header {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: $grid-gap * 2;
 }
 
 .art-Related_Title {
-  margin-bottom: 0;
+  @include section_title;
 }
 
 .art-Related_Items {

@@ -31,9 +31,17 @@
   margin-left: auto;
 
   @include break-min($sm) {
+    max-width: calc((8 / 12) * 100%);
+  }
+
+  @include break-min($md) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  @include break-min($lg) {
+    max-width: calc((6 / 12) * 100%);
     padding-top: 50px;
     padding-bottom: 50px;
-    max-width: calc((6 / 12) * 100%);
   }
 }
 

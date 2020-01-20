@@ -115,8 +115,12 @@ h3.flt-Filters_Title {
   label {
     display: block;
     position: relative;
-    padding-left: 27.5px;
+    padding-left: 32.5px;
     font-size: 14px;
+
+    @include break-min($sm) {
+      padding-left: 27.5px;
+    }
 
     .drw-Drawer & {
       font-size: 18px;
@@ -129,6 +133,10 @@ h3.flt-Filters_Title {
     position: absolute;
     top: -2px;
     left: 2px;
+
+    @include break-min($sm) {
+      top: 0px;
+    }
 
     .drw-Drawer & {
       top: 1px;

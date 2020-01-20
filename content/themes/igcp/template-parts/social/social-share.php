@@ -2,9 +2,11 @@
   $page_url = get_site_url() . $_SERVER['REQUEST_URI'];
   $socials = array('email', 'facebook', 'twitter', 'linkedin', 'addthis');
   $social_share_urls = array(
+    'email' => 'mailto:',
     'facebook' => 'https://www.facebook.com/sharer/sharer.php?u=' . $page_url,
     'twitter' => 'http://twitter.com/share?text=' . get_the_title() . '&url=' . $page_url,
-    'linkedin' => 'https://www.linkedin.com/sharing/share-offsite/?url=' . $page_url
+    'linkedin' => 'https://www.linkedin.com/sharing/share-offsite/?url=' . $page_url,
+    'addthis' => '#'
   )
 ?>
 
