@@ -31,17 +31,17 @@ h3.blk-PictureLinks_Title {
 
 .blk-PictureLinks_Item {
   @include no_bullets;
-  flex: 0 0 calc(50% - #{$grid-gap});
+  flex: 1 0 calc(50% - #{$grid-gap});
   margin-right: #{$grid-gap};
   margin-bottom: #{$grid-gap * 3};
 
   @include break-min($xs) {
-    flex: 0 0 calc(25% - #{$grid-gap});
+    flex: 1 0 calc(25% - #{$grid-gap});
     margin-bottom: 0;
   }
 
   @include break-min($sm) {
-    flex: 0 0 calc(25% - 80px);
+    flex: 1 0 calc(25% - 80px);
     margin-right: 80px;
   }
 }
@@ -50,12 +50,14 @@ h3.blk-PictureLinks_Title {
   position: relative;
 }
 
-.blk-PictureLink_Body {
+.blk-PictureLink_Body,
+.editor-block-list__layout .blk-PictureLink_Body {
   position: relative;
   padding-bottom: 100%;
 }
 
-.blk-PictureLink_ImageWrap {
+.blk-PictureLink_ImageWrap,
+.editor-block-list__layout .blk-PictureLink_ImageWrap {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -66,7 +68,8 @@ h3.blk-PictureLinks_Title {
   overflow: hidden;
 }
 
-.blk-PictureLink_Image {
+.blk-PictureLink_Image,
+.editor-block-list__layout .blk-PictureLink_Image {
   @include absolute_fill;
   z-index: 1;
   object-fit: cover;
@@ -79,7 +82,8 @@ h3.blk-PictureLinks_Title {
   }
 }
 
-.blk-PictureLink_Mask {
+.blk-PictureLink_Mask,
+.editor-block-list__layout .blk-PictureLink_Mask {
   @include absolute_fill;
   z-index: 2;
   object-fit: cover;
