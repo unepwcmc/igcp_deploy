@@ -1,7 +1,8 @@
 @import "../../inc/scss/utilities/variables";
 @import "../../inc/scss/utilities/mixins";
 
-.her-Home {
+.her-Home,
+.editor-block-list__layout .her-Home {
   position: relative;
   background: $color-primary;
   margin-left: $grid-gap / 2;
@@ -13,19 +14,23 @@
   }
 }
 
-.her-Home_Overlay {
+.her-Home_Overlay,
+.editor-block-list__layout .her-Home_Overlay {
   @include absolute_fill;
   background-color: #000;
   z-index: 1;
 }
 
 .her-Home_Columns {
-  @include break-min($sm) {
-    display: flex;
+  .lyt-Body & {
+    @include break-min($sm) {
+      display: flex;
+    }
   }
 }
 
-.her-Home_Column {
+.her-Home_Column,
+.editor-block-list__layout .her-Home_Column {
   position: relative;
 
   @include break-min($sm) {
@@ -38,7 +43,8 @@
   }
 }
 
-.her-Home_Column-large {
+.her-Home_Column-large,
+.editor-block-list__layout .her-Home_Column-large {
   @include break-min($sm) {
     flex: 0 0 calc((3 / 5) * 100%);
     order: 2;
@@ -48,7 +54,8 @@
   }
 }
 
-.her-Home_Content {
+.her-Home_Content,
+.editor-block-list__layout .her-Home_Content {
   padding: $grid-gap / 2;
   width: 100%;
   color: #fff;
@@ -57,15 +64,20 @@
   position: relative;
 
   @include break-min($sm) {
-    padding: #{$grid-gap * 5} $grid-gap $grid-gap;
+    padding: $grid-gap;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     text-align: left;
+
+    .lyt-Body & {
+      padding-top: #{$grid-gap * 5};
+    }
   }
 }
 
-h2.her-Home_Title {
+h2.her-Home_Title,
+.editor-block-list__layout h2.her-Home_Title {
   color: #fff;;
   margin: 0 auto 10px;
 
@@ -76,7 +88,8 @@ h2.her-Home_Title {
   }
 }
 
-a.her-Home_Link {
+a.her-Home_Link,
+.editor-block-list__layout a.her-Home_Link {
   @include button_accent;
   align-self: flex-start;
 
@@ -85,13 +98,15 @@ a.her-Home_Link {
   }
 }
 
-.her-Home_ImageWrap {
+.her-Home_ImageWrap,
+.editor-block-list__layout .her-Home_ImageWrap {
   position: relative;
   padding-bottom: 50%;
   width: 100%;
 }
 
-.her-Home_Image {
+.her-Home_Image,
+.editor-block-list__layout .her-Home_Image {
   @include absolute_fill;
   object-fit: cover;
   font-family: 'object-fit: cover;';
