@@ -8,19 +8,23 @@
   background: $color-primary;
 }
 
-.blk-CTA_BackgroundImage {
+.blk-CTA_BackgroundImage,
+.editor-block-list__layout .blk-CTA_BackgroundImage {
   @include absolute_fill;
   object-fit: cover;
   font-family: 'object-fit: cover;';
   z-index: 1;
 }
-.blk-CTA_Overlay {
+
+.blk-CTA_Overlay,
+.editor-block-list__layout .blk-CTA_Overlay {
   @include absolute_fill;
   background-color: #000000;
   z-index: 2;
 }
 
-.blk-CTA_Inner {
+.blk-CTA_Inner,
+.editor-block-list__layout .blk-CTA_Inner {
   @include inner;
   position: relative;
   z-index: 3;
@@ -47,7 +51,9 @@
   }
 
   @include break-min($sm) {
-    max-width: calc((6 / 12) * 100%);
+    .lyt-Body & {
+      max-width: calc((6 / 12) * 100%);
+    }
   }
 }
 
@@ -76,7 +82,8 @@ li.blk-CTA_Item {
   margin-right: $grid-gap;
 }
 
-a.blk-CTA_Link {
+a.blk-CTA_Link,
+.editor-block-list__layout a.blk-CTA_Link {
   @include button_ghost;
   @include button_wider;
 
