@@ -1,5 +1,4 @@
 .cst-Hero {
-  position: relative;
   margin-left: $grid-gap;
   margin-right: $grid-gap;
 }
@@ -55,4 +54,10 @@ p.cst-Hero_Text {
   object-fit: cover;
   font-family: 'object-fit: cover;';
   z-index: 1;
+}
+
+.cst-Hero_Nav {
+  &.cst-Hero_Nav-fixed {
+    margin-bottom: 55px;
+  }
 }

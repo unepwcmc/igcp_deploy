@@ -1,19 +1,9 @@
-.cst-Navigation {
-  &.cst-Navigation-fixed {
-    margin-bottom: 55px;
-  }
-}
-
-
 .cst-Nav {
   background-color: $color-primary-light;
-  max-width: calc(100% - #{$grid-gap / 2});
-  margin-left: $grid-gap;
-  margin-right: $grid-gap;
   transform: translateY(0);
   transition: transform 0s ease;
 
-  .cst-Navigation-fixed & {
+  .cst-Hero_Nav-fixed & {
     position: fixed;
     top: $headerHeightScrolled - 55px;
     left: 0;

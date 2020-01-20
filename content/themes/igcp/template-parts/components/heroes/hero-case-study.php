@@ -13,16 +13,16 @@
         <h2 class="cst-Hero_Title"><?php echo $title; ?></h2>
       </div>
     </div>
+    <img src="<?php echo $background_image_url; ?>" alt="<?php echo $title; ?>" class="cst-Hero_BackgroundImage">
+    <div class="cst-Hero_Overlay" style="opacity: <?php echo $opacity; ?>"></div>
   </div>
-  <img src="<?php echo $background_image_url; ?>" alt="<?php echo $title; ?>" class="cst-Hero_BackgroundImage">
-  <div class="cst-Hero_Overlay" style="opacity: <?php echo $opacity; ?>"></div>
-</div>
-<div class="cst-Navigation">
-  <nav class="cst-Nav">
-    <ul class="cst-Nav_Items">
-      <li class="cst-Nav_Item">
-        <a href="#" class="cst-Nav_Link">Top</a>
-      </li>
-    </ul>
-  </nav>
+  <div class="cst-Hero_Nav">
+    <nav class="cst-Nav">
+      <ul class="cst-Nav_Items">
+        <li class="cst-Nav_Item">
+          <a href="#" class="cst-Nav_Link">Top</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </div>

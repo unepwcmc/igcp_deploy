@@ -29,12 +29,17 @@ export function scrollToLink() {
       link.addEventListener("click", function(e) {
         const linkEl = document.getElementById(linkHref);
         const linkElOffsetTop = offset(linkEl);
+        const adminBar = document.body.classList.contains('admin-bar');
 
         e.preventDefault();
 
         if (isCaseStudy) {
           const navHeight = document.querySelector('.cst-Nav').offsetHeight;
-          scrollTo(linkElOffsetTop - headerHeight - navHeight - 20);
+          if (adminBar) {
+            scrollTo(linkElOffsetTop - headerHeight - navHeight - 20);
+          } else {
+            scrollTo(linkElOffsetTop - headerHeight - navHeight + 10);
+          }
         } else {
           scrollTo(linkElOffsetTop - headerHeight);
         }

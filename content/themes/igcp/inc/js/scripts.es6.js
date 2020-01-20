@@ -25,10 +25,12 @@ import searchbar from './modules/searchbar';
     const isCaseStudy = document.body.classList.contains("page-template-page-casestudy");
 
     if (isCaseStudy) {
-      window.addEventListener("scroll", caseStudyNavScroll);
       caseStudyNav();
+      caseStudyNavScroll();
+      window.addEventListener("scroll", caseStudyNavScroll);
     }
 
+    headerScroll();
     window.addEventListener("scroll", headerScroll);
     drawers();
     modal();
@@ -61,7 +63,7 @@ import searchbar from './modules/searchbar';
   const caseStudyNavScroll = debounceEvent(function() {
     const header = document.querySelector(".hd-Header");
     const hero = document.querySelector(".cst-Hero");
-    const nav = document.querySelector(".cst-Navigation");
+    const nav = document.querySelector(".cst-Hero_Nav");
 
     let headerHeight = header.offsetHeight;
     let heroHeight = hero.offsetHeight;
@@ -71,9 +73,9 @@ import searchbar from './modules/searchbar';
       document.body.scrollTop > heroOffsetTop ||
       document.documentElement.scrollTop > heroOffsetTop
     ) {
-      nav.classList.add("cst-Navigation-fixed");
+      nav.classList.add("cst-Hero_Nav-fixed");
     } else {
-      nav.classList.remove("cst-Navigation-fixed");
+      nav.classList.remove("cst-Hero_Nav-fixed");
     }
   });
 

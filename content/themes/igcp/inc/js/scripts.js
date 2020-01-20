@@ -241,10 +241,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     var isCaseStudy = document.body.classList.contains("page-template-page-casestudy");
 
     if (isCaseStudy) {
-      window.addEventListener("scroll", caseStudyNavScroll);
       (0, _caseStudyNav.default)();
+      caseStudyNavScroll();
+      window.addEventListener("scroll", caseStudyNavScroll);
     }
 
+    headerScroll();
     window.addEventListener("scroll", headerScroll);
     (0, _drawers.default)();
     (0, _modal.default)();
@@ -272,15 +274,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   var caseStudyNavScroll = debounceEvent(function () {
     var header = document.querySelector(".hd-Header");
     var hero = document.querySelector(".cst-Hero");
-    var nav = document.querySelector(".cst-Navigation");
+    var nav = document.querySelector(".cst-Hero_Nav");
     var headerHeight = header.offsetHeight;
     var heroHeight = hero.offsetHeight;
     var heroOffsetTop = hero.offsetTop + heroHeight - headerHeight;
 
     if (document.body.scrollTop > heroOffsetTop || document.documentElement.scrollTop > heroOffsetTop) {
-      nav.classList.add("cst-Navigation-fixed");
+      nav.classList.add("cst-Hero_Nav-fixed");
     } else {
-      nav.classList.remove("cst-Navigation-fixed");
+      nav.classList.remove("cst-Hero_Nav-fixed");
     }
   });
 })();
@@ -323,11 +325,17 @@ function scrollToLink() {
       link.addEventListener("click", function (e) {
         var linkEl = document.getElementById(linkHref);
         var linkElOffsetTop = offset(linkEl);
+        var adminBar = document.body.classList.contains('admin-bar');
         e.preventDefault();
 
         if (isCaseStudy) {
           var navHeight = document.querySelector('.cst-Nav').offsetHeight;
-          scrollTo(linkElOffsetTop - headerHeight - navHeight - 20);
+
+          if (adminBar) {
+            scrollTo(linkElOffsetTop - headerHeight - navHeight - 20);
+          } else {
+            scrollTo(linkElOffsetTop - headerHeight - navHeight + 10);
+          }
         } else {
           scrollTo(linkElOffsetTop - headerHeight);
         }
