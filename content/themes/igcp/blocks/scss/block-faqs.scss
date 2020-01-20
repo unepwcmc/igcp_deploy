@@ -35,7 +35,8 @@ ul.faq-FAQ_Items {
   cursor: pointer;
 }
 
-h3.faq-FAQ_Title {
+h3.faq-FAQ_Title,
+.editor-block-list__layout h3.faq-FAQ_Title {
   font-size: 22px;
   position: relative;
   padding-top: $grid-gap;

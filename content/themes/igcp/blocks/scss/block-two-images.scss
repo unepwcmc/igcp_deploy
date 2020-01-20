@@ -24,13 +24,15 @@
   }
 }
 
-.blk-TwoImages_ImageWrap {
+.blk-TwoImages_ImageWrap,
+.editor-block-list__layout .blk-TwoImages_ImageWrap {
   position: relative;
   padding-bottom: calc((10 / 14.25) * 100%);
 
 }
 
-.blk-TwoImages_Image {
+.blk-TwoImages_Image,
+.editor-block-list__layout .blk-TwoImages_Image {
   @include absolute_fill;
   @include object-fit-cover;
 }

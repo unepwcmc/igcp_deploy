@@ -6,17 +6,20 @@
   position: relative;
 }
 
-.blk-FullWidthImage_ImageWrap {
+.blk-FullWidthImage_ImageWrap,
+.editor-block-list__layout .blk-FullWidthImage_ImageWrap {
   position: relative;
   padding-bottom: calc((5 / 14) * 100%);
 }
 
-.blk-FullWidthImage_Image {
+.blk-FullWidthImage_Image,
+.editor-block-list__layout .blk-FullWidthImage_Image {
   @include absolute_fill;
   @include object-fit-cover;
 }
 
-.blk-FullWidthImage_Overlay {
+.blk-FullWidthImage_Overlay,
+.editor-block-list__layout .blk-FullWidthImage_Overlay {
   @include absolute_fill;
   z-index: 1;
   background-color: rgba(0,0,0,0.4);
