@@ -1,0 +1,63 @@
+@import "../../inc/scss/utilities/variables";
+@import "../../inc/scss/utilities/mixins";
+
+.editor-block-list__layout {
+
+  .blk-RelevantLinks_Header {
+    margin-bottom: 10px;
+  }
+
+  h5.blk-RelevantLinks_Title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 0;
+    line-height: 1;
+  }
+
+  ul.blk-RelevantLinks_Items {
+    @include no-margin-padding;
+  }
+
+  li.blk-RelevantLinks_Item {
+    @include no_bullets;
+    position: relative;
+    margin-bottom: $grid-gap;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .blk-RelevantLinks_ImageWrap {
+    position: relative;
+    padding-bottom: calc((12 / 29) * 100%);
+    margin-bottom: 5px;
+    overflow: hidden;
+  }
+
+  .blk-RelevantLinks_Image {
+    @include absolute_fill;
+    @include object-fit-cover;
+  }
+
+  h6.blk-RelevantLinks_Heading {
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: $color-dark-grey;
+  }
+
+  p.blk-RelevantLinks_Text {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1;
+    color: $color-dark-grey;
+  }
+
+  a.blk-RelevantLinks_FauxLink {
+    @include absolute_fill;
+    z-index: 2;
+  }
+}

@@ -24,7 +24,8 @@
 }
 
 .cst-Stats_Items,
-.rte-RichText .cst-Stats_Items {
+.rte-RichText .cst-Stats_Items,
+.editor-block-list__layout .rte-RichText .cst-Stats_Items {
   @include no_margin_padding;
   @include break-min($xs) {
     display: flex;
@@ -36,7 +37,9 @@
 }
 
 .cst-Stats_Item,
-.rte-RichText .cst-Stats_Item {
+.rte-RichText .cst-Stats_Item,
+.editor-block-list__layout .rte-RichText .cst-Stats_Item {
+  @include no_bullets;
   margin-bottom: #{$grid-gap * 2};
 
   @include break-min($xs) {
@@ -54,14 +57,17 @@
   }
 }
 
-h5.cst-Stats_Heading {
+h5.cst-Stats_Heading,
+.editor-block-list__layout h5.cst-Stats_Heading {
+  margin: 0 0 $grid-gap;
   font-size: 32px;
   line-height: 36px;
   font-weight: 300;
   max-width: 220px;
 }
 
-p.cst-Stats_Text {
+p.cst-Stats_Text,
+.editor-block-list__layout p.cst-Stats_Text {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 14px;
