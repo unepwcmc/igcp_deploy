@@ -12,12 +12,20 @@
 
   $flipped = block_field( 'flipped', false);
   $contain_image = block_field( 'contain-image', false);
-  $contain_image_html = $contain_image == true ? ' style="object-fit: contain; font-family: \'object-fit: contain;\';"' : '';
+  $contain_image_class = $contain_image == true ? ' blk-TextImage_Column-contain' : '';
 ?>
 
 <div class="blk-TextImage">
   <div class="blk-TextImage_Body">
     <div class="blk-TextImage_Columns<?php if($flipped) echo ' blk-TextImage_Columns-flipped' ?>">
+      <div class="blk-TextImage_Column<?php echo $contain_image_class; ?>">
+        <div class="blk-TextImage_ImageWrap blk-TextImage_ImageWrap-primary">
+          <img class="blk-TextImage_Image" src="<?php echo $image_url; ?>" alt="<?php echo $image_alt; ?>">
+        </div>
+        <div class="blk-TextImage_ImageWrap blk-TextImage_ImageWrap-secondary">
+          <img class="blk-TextImage_Image" src="<?php echo get_stylesheet_directory_uri() . '/inc/img/pattern-bg-bright.png'; ?>" alt="Background pattern">
+        </div>
+      </div>
       <div class="blk-TextImage_Column">
         <div class="blk-TextImage_Content">
           <?php if ( block_rows( 'content' ) ) : while ( block_rows( 'content' ) ) : block_row( 'content' );?>
@@ -32,14 +40,6 @@
 
           <?php endwhile;
             endif; reset_block_rows( 'content' ); ?>
-        </div>
-      </div>
-      <div class="blk-TextImage_Column">
-        <div class="blk-TextImage_ImageWrap blk-TextImage_ImageWrap-primary">
-          <img class="blk-TextImage_Image" src="<?php echo $image_url; ?>" alt="<?php echo $image_alt; ?>"<?php echo $contain_image_html; ?>>
-        </div>
-        <div class="blk-TextImage_ImageWrap blk-TextImage_ImageWrap-secondary">
-          <img class="blk-TextImage_Image" src="<?php echo get_stylesheet_directory_uri() . '/inc/img/pattern-bg-bright.png'; ?>" alt="Background pattern">
         </div>
       </div>
     </div>

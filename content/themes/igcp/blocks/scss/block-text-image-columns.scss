@@ -6,7 +6,9 @@
 }
 
 .blk-TextImage_Columns {
-  display: flex;
+  @include break-min($sm) {
+    display: flex;
+  }
 }
 
 .blk-TextImage_Column {
@@ -17,24 +19,26 @@
   }
 
   &:first-child {
-    @include break-min($sm) {
-      margin-right: $grid-gap;
-
-      .blk-TextImage_Columns-flipped & {
-        order: 2;
-        margin-right: 0;
-        margin-left: $grid-gap;
-      }
-    }
-  }
-
-  &:last-child {
     display: none;
 
     @include break-min($sm) {
       display: block;
       align-self: end;
+      order: 2;
+
       .blk-TextImage_Columns-flipped & {
+        margin-right: $grid-gap;
+        order: 1;
+      }
+    }
+  }
+
+  &:last-child {
+    @include break-min($sm) {
+      margin-right: $grid-gap;
+
+      .blk-TextImage_Columns-flipped & {
+        margin-right: 0;
         order: 1;
       }
     }
@@ -71,7 +75,7 @@ h4.blk-TextImage_Heading {
 }
 
 .blk-TextImage_ImageWrap-primary {
-  background-color: #fff; 
+  background-color: #fff;
   width: calc(100% + 10px);
   margin-bottom: 5%;
   z-index: 2;
@@ -84,6 +88,12 @@ h4.blk-TextImage_Heading {
     border-left: 10px solid #fff;
     margin-left: -10px;
   }
+
+  .blk-TextImage_Column-contain & {
+    @include no-margin-padding;
+    border: 0;
+    width: 100%;
+  }
 }
 
 .blk-TextImage_ImageWrap-secondary {
@@ -92,6 +102,10 @@ h4.blk-TextImage_Heading {
   bottom: 0;
   right: -7%;
   padding-bottom: 45%;
+
+  .blk-TextImage_Column-contain & {
+    display: none;
+  }
 
   .blk-TextImage_Columns-flipped & {
     right: auto;
@@ -103,4 +117,10 @@ h4.blk-TextImage_Heading {
   @include absolute_fill;
   object-fit: cover;
   font-family: 'object-fit: cover;';
+
+  .blk-TextImage_Column-contain & {
+    position: static;
+    object-fit: contain;
+    font-family: "object-fit: contain;";
+  }
 }
