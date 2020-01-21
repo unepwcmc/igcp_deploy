@@ -1,37 +1,33 @@
-@import "../../inc/scss/utilities/variables";
-@import "../../inc/scss/utilities/mixins";
-
-
-.blk-CTA {
+.cta-Block {
   width: 100%;
   position: relative;
   background: $color-primary;
 }
 
-.blk-CTA_BackgroundImage,
-.editor-block-list__layout .blk-CTA_BackgroundImage {
+.cta-Block_BackgroundImage,
+.editor-block-list__layout .cta-Block_BackgroundImage {
   @include absolute_fill;
   object-fit: cover;
   font-family: 'object-fit: cover;';
   z-index: 1;
 }
 
-.blk-CTA_Overlay,
-.editor-block-list__layout .blk-CTA_Overlay {
+.cta-Block_Overlay,
+.editor-block-list__layout .cta-Block_Overlay {
   @include absolute_fill;
   background-color: #000000;
   z-index: 2;
 }
 
-.blk-CTA_Inner,
-.editor-block-list__layout .blk-CTA_Inner {
+.cta-Block_Inner,
+.editor-block-list__layout .cta-Block_Inner {
   @include inner;
   position: relative;
   z-index: 3;
   display: flex;
 }
 
-.blk-CTA_Body {
+.cta-Block_Body {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -39,7 +35,7 @@
   width: 100%;
 }
 
-.blk-CTA_Content {
+.cta-Block_Content {
   padding-top: 80px;
   padding-bottom: 80px;
   text-align: center;
@@ -57,42 +53,63 @@
   }
 }
 
-h3.blk-CTA_Title {
+h3.cta-Block_Title {
   color: #fff;
   text-align: center;
   margin: 0 auto 20px;
 }
 
-.blk-CTA_Text {
+.cta-Block_Text {
   font-size: 14px;
   line-height: 1.5;
   margin-bottom: 50px;
 }
 
-ul.blk-CTA_Items {
+ul.cta-Block_Items {
   padding: 0;
   margin: 0;
   display: flex;
   justify-content: center;
   margin-right: -#{$grid-gap};
-}
 
-li.blk-CTA_Item {
-  @include no_bullets;
-  margin-right: $grid-gap;
-}
-
-a.blk-CTA_Link,
-.editor-block-list__layout a.blk-CTA_Link {
-  @include button_ghost;
-  @include button_wider;
-
-  &.blk-CTA_Link-accent {
-    @include button_accent;
+  .cta-Block-share & {
+    @include break-max($sm) {
+      margin-right: -5px;
+    }
   }
 }
 
-.blk-CTA_ImageStrip {
+li.cta-Block_Item {
+  @include no_bullets;
+  margin-right: $grid-gap;
+
+  .cta-Block-share & {
+    @include break-max($sm) {
+      flex: 1;
+      margin-right: 5px;
+    }
+  }
+}
+
+a.cta-Block_Link,
+.editor-block-list__layout a.cta-Block_Link {
+  @include button_ghost;
+  @include button_wider;
+
+  &.cta-Block_Link-accent {
+    @include button_accent;
+  }
+
+  .cta-Block-share & {
+    @include break-max($sm) {
+      width: 100%;
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+    }
+  }
+}
+
+.cta-Block_ImageStrip {
   padding-bottom: 20px;
   background-size: cover;
   background-repeat: no-repeat;

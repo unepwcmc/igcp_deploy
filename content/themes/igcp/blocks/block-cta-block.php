@@ -17,24 +17,24 @@
   $opacity = get_theme_mod( 'cta_block_overlay_opacity' );
 ?>
 
-<div class="blk-CTA">
-  <div class="blk-CTA_Inner">
-    <div class="blk-CTA_Body">
-      <div class="blk-CTA_Content">
-        <h3 class="blk-CTA_Title"><?php echo $title; ?></h3>
-        <p class="blk-CTA_Text"><?php echo $text; ?></p>
-        <ul class="blk-CTA_Items">
-          <li class="blk-CTA_Item">
-            <a href="<?php echo $link_url_1; ?>" class="blk-CTA_Link"><?php echo $link_text_1; ?></a>
+<div class="cta-Block">
+  <div class="cta-Block_Inner">
+    <div class="cta-Block_Body">
+      <div class="cta-Block_Content">
+        <h3 class="cta-Block_Title"><?php echo $title; ?></h3>
+        <p class="cta-Block_Text"><?php echo $text; ?></p>
+        <ul class="cta-Block_Items">
+          <li class="cta-Block_Item">
+            <a href="<?php echo $link_url_1; ?>" class="cta-Block_Link"><?php echo $link_text_1; ?></a>
           </li>
-          <li class="blk-CTA_Item">
-            <a href="<?php echo $link_url_2; ?>" class="blk-CTA_Link blk-CTA_Link-accent"><?php echo $link_text_2; ?></a>
+          <li class="cta-Block_Item">
+            <a href="<?php echo $link_url_2; ?>" class="cta-Block_Link cta-Block_Link-accent"><?php echo $link_text_2; ?></a>
           </li>
         </ul>
       </div>
     </div>
   </div>
-  <img src="<?php echo $background_image_url; ?>" alt="<?php echo $title; ?>" class="blk-CTA_BackgroundImage">
-  <div class="blk-CTA_Overlay" style="opacity: <?php echo $opacity; ?>"></div>
+  <img src="<?php echo $background_image_url; ?>" alt="<?php echo $title; ?>" class="cta-Block_BackgroundImage">
+  <div class="cta-Block_Overlay" style="opacity: <?php echo $opacity; ?>"></div>
 </div>
-<div class="blk-CTA_ImageStrip" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/inc/img/pattern-bar-colourful.png');"></div>
+<div class="cta-Block_ImageStrip" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/inc/img/pattern-bar-colourful.png');"></div>
