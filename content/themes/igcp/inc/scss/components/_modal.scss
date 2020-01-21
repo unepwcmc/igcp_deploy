@@ -40,8 +40,11 @@
 .mod-Modal_Body {
   width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  
+  @include break-min($sm) {
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .mod-Modal_Close {
