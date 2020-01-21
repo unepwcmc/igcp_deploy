@@ -11,5 +11,5 @@
   ( basename( $template ) === 'archive-families.php' ) ||
   ( basename( $template ) === 'taxonomy-park.php' )
 ) : ?>
-  <button class="flt-Filters_Toggle" data-drawer-toggle="filter">Filter</button>
+  <button class="flt-Filters_Toggle" data-drawer-toggle="filter">Filter <?php get_template_part( 'template-parts/icons/icon', 'filter' ); ?></button>
 <?php endif; ?>
