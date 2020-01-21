@@ -106,9 +106,16 @@ a.her-Home_Link,
 }
 
 .her-Home_Image,
-.editor-block-list__layout .her-Home_Image {
+.editor-block-list__layout .her-Home_Image,
+.her-Home_Video,
+.editor-block-list__layout .her-Home_Video {
   @include absolute_fill;
-  object-fit: cover;
+  object-fit: cover; 
   font-family: 'object-fit: cover;';
   z-index: 1;
+}
+
+.her-Home_Video,
+.editor-block-list__layout .her-Home_Video {
+  z-index: 2;
 }

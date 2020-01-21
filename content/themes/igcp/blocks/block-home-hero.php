@@ -15,6 +15,8 @@
   $image = block_field( 'image', false );
   $image_url = wp_get_attachment_image_src( $image, 'full-size' )[0];
 
+  $video_url = block_field( 'video-url', false );
+
   $content_background_color = block_field( 'content-background-color', false );
   $content_background_color_style = ' background-color: ' . $content_background_color . ';';
 
@@ -30,7 +32,14 @@
     <div class="her-Home_Columns">
       <div class="her-Home_Column her-Home_Column-large">
         <div class="her-Home_ImageWrap">
-          <img src="<?php echo $image_url; ?>" alt="<?php echo $title; ?>" class="her-Home_Image">
+          <?php if ($video_url != ''): ?>
+            <video class="her-Home_Video" autoplay muted loop>
+              <source src="<?php echo $video_url; ?>" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          <?php else : ?>
+            <img src="<?php echo $image_url; ?>" alt="<?php echo $title; ?>" class="her-Home_Image">
+          <?php endif; ?>
         </div>
       </div>
       <div class="her-Home_Column" style="<?php if ($content_background_color != '') echo $content_background_color_style; if ($content_background_image != '') echo $content_background_image_style; ?>">
