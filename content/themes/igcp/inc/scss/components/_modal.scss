@@ -88,11 +88,8 @@
   max-height: 100%;
   overflow-y: auto;
 
-  min-height: 100vh;
-
   @include break-min($sm) {
     max-width: calc((10 / 12) * 100%);
-    min-height: 0;
   }
 
   @include break-min($lg) {
