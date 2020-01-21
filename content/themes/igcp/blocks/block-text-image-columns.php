@@ -11,6 +11,8 @@
   $image_alt = get_post_meta($image, '_wp_attachment_image_alt', TRUE);
 
   $flipped = block_field( 'flipped', false);
+  $contain_image = block_field( 'contain-image', false);
+  $contain_image_html = $contain_image == true ? ' style="object-fit: contain; font-family: \'object-fit: contain;\';"' : '';
 ?>
 
 <div class="blk-TextImage">
@@ -34,7 +36,7 @@
       </div>
       <div class="blk-TextImage_Column">
         <div class="blk-TextImage_ImageWrap blk-TextImage_ImageWrap-primary">
-          <img class="blk-TextImage_Image" src="<?php echo $image_url; ?>" alt="<?php echo $image_alt; ?>">
+          <img class="blk-TextImage_Image" src="<?php echo $image_url; ?>" alt="<?php echo $image_alt; ?>"<?php echo $contain_image_html; ?>>
         </div>
         <div class="blk-TextImage_ImageWrap blk-TextImage_ImageWrap-secondary">
           <img class="blk-TextImage_Image" src="<?php echo get_stylesheet_directory_uri() . '/inc/img/pattern-bg-bright.png'; ?>" alt="Background pattern">
