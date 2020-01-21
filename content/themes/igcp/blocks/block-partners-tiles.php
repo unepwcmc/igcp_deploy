@@ -20,7 +20,7 @@
   <div class="blk-Partners">
     <div class="blk-Partners_Inner">
       <div class="blk-Partners_Header">
-        <h3 class="blk-Partners_Title">Partners</h3>
+        <h3 class="blk-Partners_Title">Coalition Members & Partners</h3>
       </div>
       <div class="blk-Partners_Body">
         <?php if ( $get_items->have_posts() ) : ?>
