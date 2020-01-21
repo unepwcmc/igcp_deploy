@@ -13,6 +13,10 @@
   pointer-events: none;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 
+  .admin-bar & {
+    z-index: 999999999;
+  }
+
   @include break-min($sm) {
     @include spacer_body;
   }
@@ -75,49 +79,98 @@
 }
 
 .mod-Modal_Content {
-  max-width: calc((7 / 12) * 100%);
   position: relative;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.95);
   border: 1px solid $color-secondary;
   padding: $grid-gap;
   width: 100%;
+
+  max-height: 100%;
+  overflow-y: auto;
+
+  min-height: 100vh;
+
+  @include break-min($sm) {
+    max-width: calc((10 / 12) * 100%);
+    min-height: 0;
+  }
+
+  @include break-min($lg) {
+    max-width: calc((7 / 12) * 100%);
+  }
 }
 
 h3.mod-Modal_Title {
-  font-size: 16px;
+  font-size: 32px;
   line-height: 1;
   margin-bottom: 5px;
+  padding-right: 20px;
 
   @include break-min($sm) {
     font-size: 36px;
+    padding-right: 0;
   }
 }
 
 p.mod-Modal_Subheading {
   color: $color-grey-text;
+
+  &[data-modal-email],
+  &[data-modal-location] {
+    display: none;
+
+    &.show {
+      display: block;
+    }
+  }
 }
 
+
 .mod-Modal_Columns {
-  display: flex;
+  @include break-min($sm) {
+    display: flex;
+  }
 }
 
 .mod-Modal_Column {
   &:first-child {
-    flex: 0 0 calc((3 / 12) * 100%);
-    margin-right: $grid-gap;
+    @include break-min($sm) {
+      flex: 0 0 calc((3 / 12) * 100%);
+      margin-right: $grid-gap;
+    }
   }
   &:last-child {
-    flex: 1 1 auto;
+    @include break-min($sm) {
+      flex: 1 1 auto;
+    }
   }
 }
 
 .mod-Modal_Thumbnail {
   position: relative;
-  padding-bottom: 100%;
+  padding-bottom: calc((35 / 59) * 100%);
   margin-bottom: $grid-gap;
+
+  @include break-min($sm) {
+    padding-bottom: 100%;
+  }
 
   img {
     @include absolute_fill;
     @include object-fit-cover;
   }
+}
+
+button.mod-Modal_Button {
+  appearance: none;
+  -webkit-appearance: none;
+  text-decoration: underline;
+  color: $color-grey-text;
+  background: none;
+  font-size: 16px;
+  border: 0;
+  font-weight: 500;
+  padding: 0;
+  margin-top: $grid-gap * 2;
+  margin-bottom: $grid-gap * 2;
 }

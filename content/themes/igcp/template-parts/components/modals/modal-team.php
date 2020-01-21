@@ -15,11 +15,12 @@
             <div class="mod-Modal_Thumbnail">
               <img src="#" alt="" data-modal-image>
             </div>
-            <p class="mod-Modal_Subheading"><strong>Location</strong><br/><span data-modal-location></span></p>
-            <p class="mod-Modal_Subheading" data-modal-email></p>
+            <p class="mod-Modal_Subheading" data-modal-location><strong>Location</strong><br/><span></span></p>
+            <p class="mod-Modal_Subheading" data-modal-email>Email: <span></span></p>
           </div>
           <div class="mod-Modal_Column">
             <div class="mod-Modal_Text" data-modal-bio></div>
+            <button class="mod-Modal_Button" data-modal-close>Close modal</button>
           </div>
         </div>
       </div>

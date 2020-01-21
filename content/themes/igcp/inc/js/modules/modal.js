@@ -23,14 +23,31 @@ export default function modal() {
         modalTriggers: [].slice.call(
           document.querySelectorAll("." + modalName + "-modal-trigger a")
         ),
-        closeButton: modal.querySelector("[data-modal-close]")
+        closeButtons: Array.prototype.slice.call(
+          modal.querySelectorAll("[data-modal-close]")
+        ),
+        modalName: modal.querySelector('[data-modal-name]'),
+        modalJobTitle: modal.querySelector('[data-modal-jobtitle]'),
+        modalBio: modal.querySelector('[data-modal-bio]'),
+        modalEmail: modal.querySelector('[data-modal-email]'),
+        modalEmailText: modal.querySelector('[data-modal-email] span'),
+        modalLocation: modal.querySelector('[data-modal-location]'),
+        modalLocationText: modal.querySelector('[data-modal-location] span'),
+        modalImage: modal.querySelector('[data-modal-image]')
       };
 
       modalEls.modalTriggers.forEach(function(modalTrigger) {
         modalTrigger.addEventListener("click", function(e) {
           e.preventDefault();
           modal.classList.add("mod-Modal-active");
-          els.body.classList.add("utl-DrawerActive");
+          // els.body.classList.add("utl-DrawerActive");
+
+          // When the modal is shown, we want a fixed body
+          console.log("Modal showing: ",`-${window.scrollY}px`);
+          document.body.style.top = `-${window.scrollY}px`;
+          document.body.style.position = 'fixed';
+          console.log("Modal shown: ",`-${window.scrollY}px`);
+
 
           const card = this.parentElement;
 
@@ -44,20 +61,44 @@ export default function modal() {
               image: card.querySelector('[data-member-image] img').getAttribute('src')
             }
 
-            modal.querySelector('[data-modal-name]').textContent = memberData.name
-            modal.querySelector('[data-modal-jobtitle]').textContent = memberData.jobtitle
-            modal.querySelector('[data-modal-bio]').innerHTML = memberData.bio
-            modal.querySelector('[data-modal-email]').textContent = memberData.email
-            modal.querySelector('[data-modal-location]').textContent = memberData.location
-            modal.querySelector('[data-modal-image]').setAttribute('src', memberData.image)
+            modalEls.modalName.textContent = memberData.name
+            modalEls.modalJobTitle.textContent = memberData.jobtitle
+            modalEls.modalBio.innerHTML = memberData.bio
+
+            if (memberData.email != '') {
+              modalEls.modalEmail.classList.add('show')
+              modalEls.modalEmailText.textContent = memberData.email
+            } else {
+              modalEls.modalEmail.classList.remove('show')
+              modalEls.modalEmailText.textContent = ''
+            }
+
+            if (memberData.location != '') {
+              modalEls.modalLocation.classList.add('show')
+              modalEls.modalLocationText.textContent = memberData.location
+            } else {
+              modalEls.modalLocation.classList.remove('show')
+              modalEls.modalLocationText.textContent = ''
+            }
+
+            modalEls.modalImage.setAttribute('src', memberData.image)
           }
         });
       });
 
-      modalEls.closeButton.addEventListener("click", function() {
-        modal.classList.remove("mod-Modal-active");
-        els.body.classList.remove("utl-DrawerActive");
-      });
+      modalEls.closeButtons.forEach(closeButton => {
+        closeButton.addEventListener("click", () => {
+          modal.classList.remove("mod-Modal-active");
+          // els.body.classList.remove("utl-DrawerActive");
+
+          // When the modal is hidden...
+          const scrollY = document.body.style.top;
+          document.body.style.position = '';
+          document.body.style.top = '';
+          window.scrollTo(0, parseInt(scrollY || '0') * -1);
+          console.log("Modal hidden: ", parseInt(scrollY || '0') * -1);
+        });
+      })
     });
 
     // els.modalClose.addEventListener("click", e => {

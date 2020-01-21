@@ -35,7 +35,7 @@ export default function drawers() {
         drawer.classList.remove("drw-Drawer-active");
         els.body.classList.remove("utl-DrawerActive");
       });
-      
+
       if (drawerName == 'filter') {
         drawer.querySelector('.drw-Drawer_Submit').addEventListener('click', e => {
           e.preventDefault();
