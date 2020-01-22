@@ -40,16 +40,12 @@
   overflow: hidden;
   transition: max-height 0.8s cubic-bezier(0, 1, 0, 1);
 
-  .admin-bar & {
-    top: 130px;
-  }
-
   @include break-min($xs) {
     width: 100%;
     max-width: 450px;
     left: auto;
+    right: 20px;
   }
-
   @include break-min($sm) {
     right: 55px;
   }
@@ -58,6 +54,14 @@
   }
   @include break-min($lg) {
     right: 182px;
+  }
+
+  .admin-bar & {
+    top: 130px;
+
+    @include break-min($sm) {
+      top: 110px;
+    }
   }
 
   &.hd-Search_Bar-active {

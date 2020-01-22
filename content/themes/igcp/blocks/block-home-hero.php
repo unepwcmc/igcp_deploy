@@ -32,13 +32,12 @@
     <div class="her-Home_Columns">
       <div class="her-Home_Column her-Home_Column-large">
         <div class="her-Home_ImageWrap">
+          <img src="<?php echo $image_url; ?>" alt="<?php echo $title; ?>" class="her-Home_Image">
           <?php if ($video_url != ''): ?>
             <video class="her-Home_Video" autoplay muted loop>
               <source src="<?php echo $video_url; ?>" type="video/mp4">
               Your browser does not support the video tag.
             </video>
-          <?php else : ?>
-            <img src="<?php echo $image_url; ?>" alt="<?php echo $title; ?>" class="her-Home_Image">
           <?php endif; ?>
         </div>
       </div>

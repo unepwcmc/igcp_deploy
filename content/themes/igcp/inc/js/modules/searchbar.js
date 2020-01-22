@@ -9,7 +9,9 @@ export default function searchbar() {
     els.searchBar.classList.toggle('hd-Search_Bar-active');
 
     if (els.searchBar.classList.contains('hd-Search_Bar-active')) {
-      els.searchBar.querySelector('.hd-Search_Input').focus();
+      setTimeout(() => {
+        els.searchBar.querySelector('.hd-Search_Input').focus();
+      }, 600);
     }
   })
 

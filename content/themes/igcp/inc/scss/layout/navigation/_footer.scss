@@ -21,6 +21,10 @@
 
       &:last-child {
         flex: 0 0 100px;
+
+        & > a {
+          display: none; 
+        }
       }
     }
   }
