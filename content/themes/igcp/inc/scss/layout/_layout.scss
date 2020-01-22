@@ -9,8 +9,16 @@
 .lyt-Container {
   overflow: hidden;
 
+  &.lyt-Container-hasSidebar {
+    margin-top: $grid-gap;
+  }
+
   @include break-min($sm) {
     display: flex;
+
+    &.lyt-Container-hasSidebar {
+      margin-top: 0;
+    }
   }
 }
 
@@ -79,9 +87,7 @@ h2.lyt-Primary_Title {
   }
 }
 
-.lyt-Sidebar {
-  padding-top: $grid-gap;
-
+.sbr-Sidebar {
   @include break-min($sm) {
     padding-top: 55px;
     padding-bottom: 55px;

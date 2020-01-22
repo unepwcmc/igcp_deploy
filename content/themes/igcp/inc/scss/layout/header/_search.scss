@@ -31,7 +31,7 @@
 
 .hd-Search_Bar {
   position: fixed;
-  top: 110px;
+  top: 85px;
   right: #{$grid-gap / 2};
   left: #{$grid-gap / 2};
   z-index: 10;
@@ -58,16 +58,10 @@
     right: -58px;
     left: auto;
   }
-  @include break-min($sm) {
-    // right: 55px;
-  }
+  
   @include break-min($md) {
     right: -36px;
   }
-  @include break-min($lg) {
-    // right: 182px;
-  }
-
 
   &.hd-Search_Bar-active {
     max-height: 300px;
