@@ -11,10 +11,18 @@
 
 .hd-Tools_Item {
   flex: 0 0 auto;
-  margin-left: 20px;
+  margin-left: 30px;
 
   &:first-child {
     margin-right: 0;
+  }
+
+  @include break-min($md) {
+    margin-left: 20px;
+
+    &:first-child {
+      margin-right: 0;
+    }
   }
 }
 
@@ -36,6 +44,7 @@ a.hd-Tools_Button {
 }
 
 .hd-Tools_NavToggle {
+  display: block;
   appearance: none;
   margin: 0;
   padding: 0;
@@ -44,6 +53,6 @@ a.hd-Tools_Button {
   height: 32px;
   outline: none;
   cursor: pointer;
-  color: $color-secondary;
+  color: $color-tools-icons;
   background: transparent;
 }

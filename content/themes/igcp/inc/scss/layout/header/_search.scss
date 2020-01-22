@@ -3,12 +3,14 @@
 }
 
 .hd-Search_Toggle {
+  display: block;
   appearance: none;
   background: none;
   border: 0;
   padding: 0;
   cursor: pointer;
   outline: none;
+  color: $color-tools-icons;
 
   svg {
     width: 32px;
@@ -29,7 +31,7 @@
 
 .hd-Search_Bar {
   position: fixed;
-  top: 90px;
+  top: 110px;
   right: #{$grid-gap / 2};
   left: #{$grid-gap / 2};
   z-index: 10;
@@ -40,29 +42,32 @@
   overflow: hidden;
   transition: max-height 0.8s cubic-bezier(0, 1, 0, 1);
 
-  @include break-min($xs) {
-    width: 100%;
-    max-width: 450px;
-    left: auto;
-    right: 20px;
-  }
-  @include break-min($sm) {
-    right: 55px;
-  }
-  @include break-min($md) {
-    right: 120px;
-  }
-  @include break-min($lg) {
-    right: 182px;
-  }
-
   .admin-bar & {
     top: 130px;
 
-    @include break-min($sm) {
-      top: 110px;
+    @include break-min($xs) {
+      top: calc(100% + 5px);
     }
   }
+
+  @include break-min($xs) {
+    position: absolute;
+    width: 100%;
+    min-width: 450px;
+    top: calc(100% + 5px);
+    right: -58px;
+    left: auto;
+  }
+  @include break-min($sm) {
+    // right: 55px;
+  }
+  @include break-min($md) {
+    right: -36px;
+  }
+  @include break-min($lg) {
+    // right: 182px;
+  }
+
 
   &.hd-Search_Bar-active {
     max-height: 300px;
@@ -73,8 +78,8 @@
 
 .hd-Search_Form {
   display: flex;
-  border: 8px solid $color-light-grey;
-  background: #fff;
+  border: 8px solid #D6D6D6;
+  background: #D6D6D6;
   border-radius: 3px;
   position: relative;
   margin-top: 15px;
@@ -85,14 +90,18 @@
     width: 30px;
     height: 30px;
     border: 15px solid transparent;
-    border-bottom: 15px solid $color-light-grey;
+    border-bottom: 15px solid #D6D6D6;
 
     position: absolute;
     top: -37px;
-    right: 50px;
+    right: 63px;
 
-    @include break-min($sm) {
-      right: 15px;
+    @include break-min($xs) {
+      right: 50px;
+    }
+
+    @include break-min($md) {
+      right: 23.5px;
     }
   }
 }
