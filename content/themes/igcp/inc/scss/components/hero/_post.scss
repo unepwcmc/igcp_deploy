@@ -1,4 +1,4 @@
-.pst-Hero {
+.her-Post {
   position: relative;
   margin-left: $grid-gap;
   margin-right: $grid-gap;
@@ -9,7 +9,7 @@
   }
 }
 
-.pst-Hero_BackgroundImage {
+.her-Post_BackgroundImage {
   @include absolute_fill;
   object-fit: cover;
   font-family: 'object-fit: cover;';

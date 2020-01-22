@@ -2,12 +2,7 @@
 @import "../../inc/scss/utilities/mixins";
 
 .blk-PictureLinks_Header {
-  text-align: center;
-  margin-bottom: #{$grid-gap * 4};
-
-  @include break-min($sm) {
-    margin-bottom: #{$grid-gap * 5};
-  }
+  @include section_header_large;
 }
 
 h3.blk-PictureLinks_Title {

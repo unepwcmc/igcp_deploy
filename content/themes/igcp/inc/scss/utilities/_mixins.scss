@@ -331,6 +331,15 @@
   }
 }
 
+@mixin section_header_large {
+  text-align: center;
+  margin-bottom: #{$grid-gap * 2};
+
+  @include break-min($sm) {
+    margin-bottom: #{$grid-gap * 5};
+  }
+}
+
 @mixin section_title {
   @include h3;
   margin: 0;

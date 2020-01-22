@@ -1,4 +1,4 @@
-.pge-Hero {
+.her-Page {
   position: relative;
   margin-left: #{$grid-gap / 2};
   margin-right: #{$grid-gap / 2};
@@ -10,7 +10,7 @@
   }
 }
 
-.pge-Hero_Inner {
+.her-Page_Inner {
   @include inner;
   position: relative;
   z-index: 3;
@@ -21,14 +21,18 @@
   }
 }
 
-.pge-Hero_Body {
+.her-Page_Body {
   @include spacer_body_small;
 }
 
-.pge-Hero_Content {
+.her-Page_Content {
   text-align: center;
   margin-right: auto;
   margin-left: auto;
+
+  *:last-child {
+    margin-bottom: 0;
+  }
 
   @include break-min($sm) {
     max-width: calc((8 / 12) * 100%);
@@ -45,7 +49,7 @@
   }
 }
 
-h2.pge-Hero_Title {
+h2.her-Page_Title {
   color: #fff;
 
   &:only-child {
@@ -53,15 +57,15 @@ h2.pge-Hero_Title {
   }
 }
 
-p.pge-Hero_Text {
+p.her-Page_Text {
   color: #fff;
 }
 
-.pge-Hero_Link {
+.her-Page_Link {
   @include button_accent;
 }
 
-.pge-Hero_Overlay {
+.her-Page_Overlay {
   display: none;
   @include absolute_fill;
   background-color: $color-secondary;
@@ -72,7 +76,7 @@ p.pge-Hero_Text {
   }
 }
 
-.pge-Hero_BackgroundImage {
+.her-Page_BackgroundImage {
   padding-bottom: 50%;
   position: relative;
 
