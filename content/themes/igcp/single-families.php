@@ -8,13 +8,7 @@
 	set_query_var('hero-title', get_the_title($current_post_ID));
 	set_query_var('hero-text', 'Gorilla Family');
 
-	// $text = block_field( 'text', false );
-	// $link_url = block_field( 'link-url', false );
-	// $link_text = block_field( 'link-text', false );
-	// $background_image = block_field( 'background-image', false );
-	// $background_image_url = wp_get_attachment_image_src( $background_image, 'full-size' )[0];
-	// $opacity = block_field( 'opacity', false );
-
+	set_query_var('hero-background-image', get_post_thumbnail_id(get_the_id()));
 	get_template_part( 'template-parts/components/heroes/hero', 'page' );
 ?>
 
