@@ -453,36 +453,42 @@ function pagination_bar() {
     $current_page = max(1, get_query_var('paged'));
 
 		echo '<div class="pag-Pagination_Bar">';
-
-			/* echo '<p class="pag-Pagination_Count">Page ' . $current_page . ' of ' . $total_pages . '</p>'; */
-
 			echo '<div class="pag-Pagination_Nav">';
 
-     /*
-     // structure of "format" depends on whether we're using pretty permalinks
-     if( get_option('permalink_structure') ) {
-	     $format = '&paged=%#%';
-     } else {
-       $format = 'page/%#%/';
-     }*/
+        global $template;
+        // structure of "format" depends on whether we're using pretty permalinks
+        basename( $template ) === 'search.php' ? $format = '&paged=%#%' : $format = 'page/%#%/';
 
-		    echo paginate_links(array(
-		      'base' => get_pagenum_link(1) . '%_%',
-		      'format' => 'page/%#%/',
-		      'current' => $current_page,
-		      'total' => $total_pages,
+  		  echo paginate_links(array(
+          'base' => get_pagenum_link(1) . '%_%',
+          'format' => $format,
+          'current' => $current_page,
+          'total' => $total_pages,
           'prev_next' => True,
           'prev_text' => __('<div class="pag-Pagination_Number">&laquo;</div>'),
           'next_text' => __('<div class="pag-Pagination_Number">&raquo;</div>'),
           'before_page_number' => '<div class="pag-Pagination_Number">',
           'after_page_number' => '</div>'
-		    ));
+  	    ));
 
 			echo '</div>';
-
 		echo '</div>';
   }
 }
+
+/*-------------------------------------------------------------------------------------------------
+  Filter search results
+------------------------------------------------------------------------------------------------- */
+function searchfilter($query) {
+
+  if ($query->is_search && !is_admin() ) {
+    $query->set('post_type',array('post','page','families','library_file',''));
+  }
+
+  return $query;
+}
+
+add_filter('pre_get_posts','searchfilter');
 
 /*-------------------------------------------------------------------------------------------------
 IMPORT CUSTOMIZER SETTINGS

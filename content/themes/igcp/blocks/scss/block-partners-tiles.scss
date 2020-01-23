@@ -11,11 +11,17 @@
 }
 
 .blk-Partners_Header {
-  @include section_header_small;
+  @include section_header;
 }
 
 .blk-Partners_Title {
   @include section_title;
+}
+
+.blk-Partners_Body {
+  max-width: 870px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .blk-Partners_Items {
@@ -27,20 +33,12 @@
 }
 
 .blk-Partners_Item {
-  flex: 0 0 calc(((6 / 12) * 100%) - #{$grid-gap});
+  flex: 0 0 calc(((4 / 12) * 100%) - #{$grid-gap});
   margin-bottom: $grid-gap;
   list-style: none;
   background-color: #fff;
   margin-right: $grid-gap;
   border: 1px solid $color-border;
-
-  @include break-min($xs) {
-    flex: 0 0 calc(((4 / 12) * 100%) - #{$grid-gap});
-  }
-
-  @include break-min(1024px) {
-    flex: 0 0 calc(((2 / 12) * 100%) - #{$grid-gap});
-  }
 }
 
 .blk-Partner {
@@ -62,4 +60,33 @@
 a.blk-Partner_FauxLink {
   @include absolute_fill;
   z-index: 2;
+}
+
+.blk-Partners_Footer {
+  text-align: center;
+  margin-top: $grid-gap * 2;
+}
+
+a.blk-Partners_Link {
+  text-decoration: none;
+
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: currentColor;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease, visibility .5s ease;
+  }
+
+  &:hover::before {
+    opacity: 1;
+    visibility: visible;
+  }
 }

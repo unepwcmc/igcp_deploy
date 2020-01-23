@@ -10,7 +10,14 @@
   $get_items_query = array(
   	'post_type' => 'partner',
   	'order' => 'ASC',
-    'posts_per_page' => -1
+    'posts_per_page' => -1,
+    'tax_query' => array(
+      array(
+        'taxonomy' => 'partner_type',
+        'field' => 'name',
+        'terms' => 'Coalition Member'
+      )
+    )
   );
 
   $get_items = new WP_Query($get_items_query);
@@ -22,8 +29,8 @@
       <div class="blk-Partners_Header">
         <h3 class="blk-Partners_Title">Coalition Members & Partners</h3>
       </div>
-      <div class="blk-Partners_Body">
-        <?php if ( $get_items->have_posts() ) : ?>
+      <?php if ( $get_items->have_posts() ) : ?>
+        <div class="blk-Partners_Body">
           <ul class="blk-Partners_Items">
             <?php while ( $get_items->have_posts() ) : $get_items->the_post(); ?>
 
@@ -36,13 +43,18 @@
 
             <?php endwhile; ?>
           </ul>
-        <?php else :
+        </div>
+        <div class="blk-Partners_Footer">
+          <a class="blk-Partners_Link" href="/about-us/partners">Learn More</a>
+        </div>
+      <?php else : ?>
+        <div class="blk-Partners_Body">
           echo '<p class="">Nothing found.</p>';
-        endif;
+        </div>
+      <?php endif;
         // Reset things, for good measure
         $get_items = null;
         wp_reset_postdata();
-        ?>
-      </div>
+      ?>
     </div>
   </div>
