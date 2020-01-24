@@ -67,6 +67,9 @@
         margin-left: auto;
         margin-right: auto;
       }
+      @include break-min($lg) {
+        @include ignore-restrained-width;
+      }
     }
 
   }
