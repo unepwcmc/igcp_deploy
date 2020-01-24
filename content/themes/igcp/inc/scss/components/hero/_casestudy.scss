@@ -4,7 +4,6 @@
 }
 
 .cst-Hero_Inner {
-  @include inner;
   position: relative;
   z-index: 3;
   padding-bottom: calc((5 / 14) * 100%);

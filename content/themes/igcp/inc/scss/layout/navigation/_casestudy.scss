@@ -31,7 +31,7 @@
   @include no_margin_padding;
   // justify-content: center;
   padding: 10px $grid-gap;
-  overflow-x: scroll;
+  overflow-x: auto;
   width: 100%;
   white-space: nowrap;
   text-align: center;
