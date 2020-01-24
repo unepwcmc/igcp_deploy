@@ -35,7 +35,6 @@ import searchbar from './modules/searchbar';
     searchbar();
     smoothScrollPolyfill();
     scrollToLink();
-    objectFitImages();
   }
 
   const headerScroll = debounceEvent(function() {

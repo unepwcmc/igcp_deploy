@@ -289,7 +289,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     (0, _searchbar.default)();
     (0, _smoothscrollPolyfill.default)();
     (0, _utilities.scrollToLink)();
-    objectFitImages();
   }
 
   var headerScroll = debounceEvent(function () {
