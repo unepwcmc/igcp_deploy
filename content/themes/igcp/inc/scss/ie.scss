@@ -4,5 +4,32 @@
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .lyt-Body {
 
+    // Header
+
+    .hd-Header_Inner,
+    .hd-Header_Body,
+    .hd-Header_Items {
+      height: 100%;
+    }
+
+    // Icon
+    .ico-Logo {
+      height: 100px;
+      transition: width .3s ease transform .3s ease;
+
+      .utl-HeaderScrolled & {
+        height: 60px;
+        transform: scale(1.25) translateY(7px);
+      }
+    }
+
+    .ico-Logo_Text {
+      .utl-HeaderScrolled & {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+
   }
 }

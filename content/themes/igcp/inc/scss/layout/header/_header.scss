@@ -42,9 +42,6 @@
   }
 }
 
-.hd-Header_Body {
-}
-
 .hd-Header_Items {
   display: flex;
 }
@@ -57,7 +54,7 @@
   width: 100px;
   flex: 0 0 100px;
   margin-right: #{$grid-gap * 2};
-  transition: width .3s ease;
+  transition: flex-basis .3s ease, width .3s ease;
 
   .utl-HeaderScrolled & {
     width: 60px;
@@ -86,8 +83,15 @@
 
 .hd-Header_Logo {
   display: block;
+  transition: transform .3s ease;
+  transform: translateY(0);
+  will-change: transform;
 
   img {
     max-width: 150px;
+  }
+
+  .utl-HeaderScrolled & {
+    transform: translateY(7px);
   }
 }

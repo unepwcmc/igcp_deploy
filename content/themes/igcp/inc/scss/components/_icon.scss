@@ -1,8 +1,10 @@
 .ico-Logo {
-  transition: transform .3s ease;
+  max-height: 100px;
+  transition: max-height .3s ease;
+  will-change: max-height;
 
   .utl-HeaderScrolled & {
-    transform: scale(1.25) translateY(7px);
+    max-height: 60px;
   }
 }
 
