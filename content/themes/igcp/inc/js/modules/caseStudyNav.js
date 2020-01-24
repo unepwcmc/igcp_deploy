@@ -12,7 +12,7 @@ export default function caseStudyNav() {
     const listItem = document.createElement('li');
     listItem.classList.add('cst-Nav_Item');
     const listItemLink = document.createElement('a');
-    listItem.append(listItemLink)
+    listItem.appendChild(listItemLink)
 
     listItemLink.textContent = heading.textContent
     listItemLink.classList.add('cst-Nav_Link');

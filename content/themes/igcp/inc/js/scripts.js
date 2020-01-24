@@ -16,7 +16,7 @@ function caseStudyNav() {
     var listItem = document.createElement('li');
     listItem.classList.add('cst-Nav_Item');
     var listItemLink = document.createElement('a');
-    listItem.append(listItemLink);
+    listItem.appendChild(listItemLink);
     listItemLink.textContent = heading.textContent;
     listItemLink.classList.add('cst-Nav_Link');
     listItemLink.setAttribute('href', "#".concat(heading.id));
