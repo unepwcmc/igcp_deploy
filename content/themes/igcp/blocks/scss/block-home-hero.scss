@@ -124,8 +124,7 @@ a.her-Home_Link,
 .her-Home_Video,
 .editor-block-list__layout .her-Home_Video {
   @include absolute_fill;
-  object-fit: cover;
-  font-family: 'object-fit: cover;';
+  @include object_fit_cover;
   z-index: 1;
 }
 

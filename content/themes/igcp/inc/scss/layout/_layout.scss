@@ -22,7 +22,6 @@
   @include inner;
   @include break-min($sm) {
     display: flex;
-    justify-content: space-between;
   }
 }
 
@@ -88,6 +87,7 @@ h2.lyt-Primary_Title {
   @include break-min($sm) {
     width: calc(((3 / 12) * 100%) - #{$grid-gap / 2});
     flex: 0 0 calc(((3 / 12) * 100%) - #{$grid-gap / 2});
+    margin-right: $grid-gap;
     padding-top: 55px;
     padding-bottom: 55px;
   }

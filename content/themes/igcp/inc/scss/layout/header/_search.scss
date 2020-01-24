@@ -14,11 +14,13 @@
 
   svg {
     width: 32px;
+    height: 32px;
     transition: opacity .3s ease;
 
     @include break-min($md) {
       opacity: 0.5;
       width: 20px;
+      height: 20px;
     }
   }
 

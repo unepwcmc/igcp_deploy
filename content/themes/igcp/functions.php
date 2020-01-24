@@ -185,6 +185,7 @@ function custom_load_js(){
     // wp_enqueue_script('flickity', 'https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js');
 
     wp_enqueue_script('custom-scripts', get_stylesheet_directory_uri() . '/inc/js/scripts.js', array('jquery'));
+    wp_enqueue_script('object-fit-polyfill', get_stylesheet_directory_uri() . '/inc/js/utilities/object-fit-polyfill.js');
 	}
 }
 

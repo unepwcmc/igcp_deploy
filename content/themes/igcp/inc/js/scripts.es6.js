@@ -1,5 +1,3 @@
-import objectFitImages from 'object-fit-images';
-
 import './vendor';
 
 import { offset, scrollTo, scrollToLink} from './utilities';

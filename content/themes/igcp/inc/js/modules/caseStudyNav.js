@@ -18,6 +18,6 @@ export default function caseStudyNav() {
     listItemLink.classList.add('cst-Nav_Link');
     listItemLink.setAttribute('href', `#${heading.id}`)
 
-    els.navlist.append(listItem)
+    els.navlist.appendChild(listItem)
   })
 }
