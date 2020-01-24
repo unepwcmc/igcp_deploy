@@ -128,6 +128,13 @@ a.her-Home_Link,
   z-index: 1;
 }
 
+.her-Home object-fit,
+.editor-block-list__layout .her-Home object-fit {
+  @include break-min($sm) {
+    visibility: visible !important;
+  }
+}
+
 .her-Home_Video,
 .editor-block-list__layout .her-Home_Video {
   display: none;
