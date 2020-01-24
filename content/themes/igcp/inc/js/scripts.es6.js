@@ -1,3 +1,6 @@
+import objectFitImages from 'object-fit-images';
+import objectFitVideos from 'object-fit-videos';
+
 import './vendor';
 
 import { offset, scrollTo, scrollToLink} from './utilities';
@@ -35,6 +38,8 @@ import searchbar from './modules/searchbar';
     searchbar();
     smoothScrollPolyfill();
     scrollToLink();
+    objectFitImages();
+    objectFitVideos();
   }
 
   const headerScroll = debounceEvent(function() {
