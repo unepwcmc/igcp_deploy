@@ -30,6 +30,36 @@
       }
     }
 
+    // Layout
+
+    .lyt-Primary {
+      @include break-min($sm) {
+        .lyt-Container-hasSidebar & {
+          width: 74.35%;
+          flex: 0 0 74.35%;
+        }
+      }
+    }
+
+    // Blocks
+
+    // Top Level Landing Page Intro
+
+    .blk-Intro_Column {
+      @include break-min($sm) {
+        width: 49.35%;
+        flex: 0 0 49.35%;
+      }
+    }
+
+    // Text Image Columns
+
+    .blk-TextImage_Column {
+      @include break-min($sm) {
+        width: 49.35%;
+        flex: 0 0 49.35%;
+      }
+    }
 
   }
 }
