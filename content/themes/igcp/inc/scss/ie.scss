@@ -68,7 +68,8 @@
         margin-right: auto;
       }
       @include break-min($lg) {
-        @include ignore-restrained-width;
+        margin-left: calc((-100vw / 2 + #{$restrained-width / 2}) + #{$gutter});
+        margin-right: calc((-100vw / 2 + #{$restrained-width / 2}) + #{$gutter});
       }
     }
 
