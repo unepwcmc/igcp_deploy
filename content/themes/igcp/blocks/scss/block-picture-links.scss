@@ -27,19 +27,19 @@ h3.blk-PictureLinks_Title {
 .blk-PictureLinks_Item {
   @include no_bullets;
   width: calc(50% - #{$grid-gap});
-  flex: 1 0 calc(50% - #{$grid-gap});
+  flex: 1 1 calc(50% - #{$grid-gap});
   margin-right: #{$grid-gap};
   margin-bottom: #{$grid-gap * 3};
 
   @include break-min($xs) {
     width: calc(25% - #{$grid-gap});
-    flex: 1 0 calc(25% - #{$grid-gap});
+    flex: 1 1 calc(25% - #{$grid-gap});
     margin-bottom: 0;
   }
 
   @include break-min(1024px) {
     width: calc(25% - 80px);
-    flex: 1 0 calc(25% - 80px);
+    flex: 1 1 calc(25% - 80px);
     margin-right: 80px;
   }
 }

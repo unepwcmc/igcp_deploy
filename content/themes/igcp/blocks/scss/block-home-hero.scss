@@ -54,7 +54,7 @@
   }
   @include break-min($md) {
     width: calc((8 / 12) * 100%);
-    flex: 2 0 auto;
+    flex: 2 1 auto;
   }
 }
 

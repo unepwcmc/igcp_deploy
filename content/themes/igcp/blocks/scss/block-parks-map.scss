@@ -21,12 +21,12 @@ h3.blk-Map_Title {
   @include break-min($sm) {
     &.blk-Map_Column-image {
       width: calc(((7 / 12) * 100%) - #{$grid-gap / 2});
-      flex: 0 0 calc(((7 / 12) * 100%) - #{$grid-gap / 2});
+      flex: 1 1 calc(((7 / 12) * 100%) - #{$grid-gap / 2});
       margin-right: $grid-gap;
     }
     &.blk-Map_Column-text {
       width: calc(((5 / 12) * 100%) - #{$grid-gap / 2});
-      flex: 0 0 calc(((5 / 12) * 100%) - #{$grid-gap / 2});
+      flex: 1 1 calc(((5 / 12) * 100%) - #{$grid-gap / 2});
     }
   }
 }
