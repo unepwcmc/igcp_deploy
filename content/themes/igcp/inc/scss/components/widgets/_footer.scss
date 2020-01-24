@@ -17,7 +17,7 @@
 
     @include break-min($md) {
       margin-top: 0;
-      order: 4;
+      order: 0;
     }
   }
 
@@ -27,7 +27,7 @@
 
     @include break-min($md) {
       padding-bottom: $grid-gap;
-      order: 3;
+      order: 0;
       border-bottom: 0;
       padding-bottom: 0;
     }

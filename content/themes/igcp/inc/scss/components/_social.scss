@@ -41,6 +41,8 @@ p.soc-Social_Heading {
     fill: $color-grey-text;
     transition: opacity 0.3s ease;
     opacity: .4;
+    width: 25px;
+    height: 25px;
 
     &:hover {
       opacity: 1;
@@ -66,6 +68,8 @@ p.soc-Social_Heading {
 
     svg {
       opacity: 1;
+      width: 40px;
+      height: 40px;
 
       &:hover {
         opacity: .8;
