@@ -61,5 +61,13 @@
       }
     }
 
+    // Case Study Stats
+    .cst-Stats {
+      @include break-min($md) {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
   }
 }
