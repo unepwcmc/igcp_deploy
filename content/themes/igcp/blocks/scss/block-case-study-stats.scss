@@ -4,8 +4,8 @@
 .cst-Stats {
   position: relative;
   width: 100%;
-  margin-top: #{$grid-gap * 3};
-  margin-bottom: #{$grid-gap * 3};
+  margin: #{$grid-gap * 3} auto;
+
   @include break-min($lg) {
     @include ignore-restrained-width;
     width: calc(100vw - #{$gutter * 2});
