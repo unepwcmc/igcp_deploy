@@ -82,7 +82,7 @@ p.her-Page_Text {
 
   img {
     @include absolute_fill;
-    @include object-fit-cover;
+    @include object_fit_cover;
     z-index: 1;
   }
 

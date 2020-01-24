@@ -23,15 +23,18 @@
 .ent-Excerpt_Column {
   &:first-child {
     @include break-min($sm) {
+      width: 150px;
       flex: 0 0 150px;
       margin-right: $grid-gap;
     }
     @include break-min($lg) {
+      width: 200px;
       flex: 0 0 200px;
     }
   }
   &:last-child {
     @include break-min($sm) {
+      width: auto;
       flex: 1 1 auto;
     }
   }

@@ -30,6 +30,7 @@
 
   @include break-min($sm) {
     display: flex;
+    width: calc(((3 / 12) * 100%) - #{$grid-gap});
     flex: 0 0 calc(((3 / 12) * 100%) - #{$grid-gap});
     margin-right: $grid-gap;
     margin-bottom: 0;

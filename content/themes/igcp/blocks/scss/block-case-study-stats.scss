@@ -43,6 +43,7 @@
   margin-bottom: #{$grid-gap * 2};
 
   @include break-min($xs) {
+    width: calc(50% - #{$grid-gap});
     flex: 0 0 calc(50% - #{$grid-gap});
     margin-right: $grid-gap;
     margin-bottom: 0;

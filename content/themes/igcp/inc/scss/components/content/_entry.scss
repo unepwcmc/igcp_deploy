@@ -36,6 +36,7 @@
 
 .ent-Entry_Column {
   &:first-child {
+    width: 200px;
     flex: 0 0 200px;
   }
   &:last-child {

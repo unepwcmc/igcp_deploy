@@ -21,12 +21,14 @@
 
   @include break-min($xs) {
     display: flex;
+    width: calc(((6 / 12) * 100%) - #{$grid-gap});
     flex: 0 0 calc(((6 / 12) * 100%) - #{$grid-gap});
 
     margin-right: $grid-gap;
   }
 
   @include break-min($sm) {
+    width: calc(((3 / 12) * 100%) - #{$grid-gap});
     flex: 0 0 calc(((3 / 12) * 100%) - #{$grid-gap});
   }
 }
@@ -64,7 +66,7 @@
   padding: $grid-gap;
   color: $color-dark-grey;
   background-color: $color-light-grey;
-  flex: 1;
+  flex: 1 1 auto;
 }
 
 h3.til-Donation_Heading {

@@ -75,11 +75,11 @@ h3.ft-Widget_Title {
     max-width: 150px;
 
     img {
-        opacity: 0.5;
+      opacity: 0.5;
     }
 
     @include break-min($md) {
-        display: block;
+      display: block;
     }
   }
 

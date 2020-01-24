@@ -11,12 +11,12 @@ h3.frm-Contact_Title,
     flex-wrap: wrap;
     justify-content: space-between;
     position: relative;
-    // max-width: calc((10 / 12) * 100%);
     margin: 0 auto;
   }
 
   label.frm-Contact_Label {
     display: block;
+    width: 100%;
     flex: 0 0 100%;
     margin-bottom: 12.5px;
 
@@ -25,7 +25,8 @@ h3.frm-Contact_Title,
       margin-bottom: 12.5px;
 
       @include break-min($md) {
-        flex: 0 0 calc(50% - 6.25px);
+        width: calc(50% - 6.15px);
+        flex: 0 0 calc(50% - 6.15px);
       }
     }
   }

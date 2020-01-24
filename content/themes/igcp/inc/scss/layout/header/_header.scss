@@ -50,15 +50,17 @@
 }
 
 .hd-Header_Item {
-  flex: 1;
+  flex: 1 1 auto;
 }
 
 .hd-Header_Item-logo {
+  width: 100px;
   flex: 0 0 100px;
   margin-right: #{$grid-gap * 2};
-  transition: flex-basis .3s ease;
+  transition: width .3s ease;
 
   .utl-HeaderScrolled & {
+    width: 60px;
     flex-basis: 60px;
   }
 }

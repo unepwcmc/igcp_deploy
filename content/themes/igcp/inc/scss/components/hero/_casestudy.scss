@@ -51,8 +51,7 @@ p.cst-Hero_Text {
 
 .cst-Hero_BackgroundImage {
   @include absolute_fill;
-  object-fit: cover;
-  font-family: 'object-fit: cover;';
+  @include object_fit_cover;
   z-index: 1;
 }
 

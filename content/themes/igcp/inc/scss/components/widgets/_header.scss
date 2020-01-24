@@ -16,44 +16,6 @@
   }
 }
 
-.hd-Widget-text-5 {
-  text-align: center;
-
-  p a {
-    text-transform: uppercase;
-    font-weight: 600;
-    text-decoration: none;
-    color: #fff;
-    transition: color 0.3s ease;
-
-    &:hover {
-      color: $color-secondary;
-    }
-  }
-
-  .home & {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(20px);
-    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.6s ease;
-  }
-
-  .home.utl-TitleScrolled & {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-    transition-delay: 0.1s;
-  }
-
-  p {
-    margin-bottom: 0;
-  }
-}
-
-.hd-Widget-custom_html-4 {
-  text-align: right;
-}
-
 .hd-Widget_Button {
   @include button-secondary;
   font-size: 14px;

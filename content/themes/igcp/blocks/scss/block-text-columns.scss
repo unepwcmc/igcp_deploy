@@ -30,6 +30,7 @@ h3.blk-TextColumns_Header {
 
   @include break-min($xs) {
     margin-right: #{$grid-gap};
+    width: calc(50% - #{$grid-gap});
     flex: 0 0 calc(50% - #{$grid-gap});
   }
 }

@@ -17,9 +17,11 @@
 .sec-Info_Column {
   @include break-min($sm) {
     &:first-child {
+      width: calc((8 / 12) * 100%);
       flex: 0 0 calc((8 / 12) * 100%);
     }
     &:last-child {
+      width: calc((4 / 12) * 100%);
       flex: 0 0 calc((4 / 12) * 100%);
       display: flex;
       flex-direction: column;
@@ -38,7 +40,7 @@
 }
 
 .sec-Info_Content {
-  flex: 1;
+  flex: 1 1 auto;
   background-color: $color-light-grey;
   padding: $grid-gap;
   line-height: 1.5;

@@ -40,7 +40,7 @@
 .mod-Modal_Body {
   width: 100%;
   display: flex;
-  
+
   @include break-min($sm) {
     justify-content: center;
     align-items: center;
@@ -135,13 +135,15 @@ p.mod-Modal_Subheading {
 .mod-Modal_Column {
   &:first-child {
     @include break-min($sm) {
+      width: calc((3 / 12) * 100%);
       flex: 0 0 calc((3 / 12) * 100%);
       margin-right: $grid-gap;
     }
   }
   &:last-child {
     @include break-min($sm) {
-      flex: 1 1 auto;
+      width: calc((9 / 12) * 100%);
+      flex: 0 0 calc((9 / 12) * 100%);
     }
   }
 }

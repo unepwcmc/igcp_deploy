@@ -10,13 +10,14 @@
 
 .lyt-Search_Input {
   @include break-min($xs) {
-    flex: 1;
+    flex: 1 1 auto;
     border-right: 0;
   }
 }
 
 .lyt-Search_Button[type="submit"] {
   @include break-min($xs) {
+    width: 120px;
     flex: 0 0 120px;
     margin: 0;
   }

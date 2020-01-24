@@ -54,14 +54,14 @@
 }
 
 .crd-Card_Body {
-  flex: 1;
+  flex: 1 1 auto;
   display: flex;
 }
 
 .crd-Card_Content {
   position: relative;
   padding: #{$grid-gap / 2} #{$grid-gap / 2} #{$grid-gap};
-  flex: 1;
+  flex: 1 1 auto;
 
   .crd-Card-blog & {
     padding-bottom: #{$grid-gap * 3};

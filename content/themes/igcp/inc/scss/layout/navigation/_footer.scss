@@ -11,6 +11,7 @@
   }
 
   > li {
+    width: calc(((6 / 12) * 100%) - #{$grid-gap});
     flex: 0 0 calc(((6 / 12) * 100%) - #{$grid-gap});
     margin-bottom: $grid-gap;
 
@@ -21,11 +22,13 @@
     }
 
     @include break-min($sm) {
+      width: auto;
       flex: 1 1 auto;
       margin-bottom: 0;
 
       &:last-child {
         flex: 0 0 100px;
+        width: 100px;
       }
     }
   }

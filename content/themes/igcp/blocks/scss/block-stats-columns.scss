@@ -29,12 +29,14 @@
   }
 
   @include break-min($xs) {
+    width: calc(((4 / 12) * 100%) - #{$grid-gap});
     flex: 1 0 calc(((4 / 12) * 100%) - #{$grid-gap});
     margin-right: $grid-gap;
     margin-bottom: 0;
   }
 
   @include break-min($md) {
+    width: calc(((4 / 12) * 100%) - 60px);
     flex: 1 0 calc(((4 / 12) * 100%) - 60px);
     margin-right: 60px;
   }

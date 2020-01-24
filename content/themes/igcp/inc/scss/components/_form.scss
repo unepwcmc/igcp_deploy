@@ -22,6 +22,7 @@
   margin-bottom: 10px;
 
   @include break-min($md) {
+    width: calc(50% - 5px);
     flex: 0 0 calc(50% - 5px);
   }
 }
