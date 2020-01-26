@@ -7,12 +7,9 @@
 
   &.lyt-Container-hasSidebar {
     margin-top: $grid-gap;
-  }
 
-  @include break-min($sm) {
-    display: flex;
-
-    &.lyt-Container-hasSidebar {
+    @include break-min($sm) {
+      display: flex;
       margin-top: 0;
     }
   }
@@ -20,18 +17,19 @@
 
 .lyt-Container_Inner {
   @include inner;
-  @include break-min($sm) {
-    display: flex;
+
+  .lyt-Container-hasSidebar & {
+    @include break-min($sm) {
+      display: flex;
+    }
   }
 }
 
 .lyt-Primary {
   @include break-min($sm) {
-    flex: 1 1 auto;
-
     .lyt-Container-hasSidebar & {
       width: calc(((9 / 12) * 100%) - #{$grid-gap / 2});
-      flex: 0 0 calc(((9 / 12) * 100%) - #{$grid-gap / 2});
+      flex: 1 1 calc(((9 / 12) * 100%) - #{$grid-gap / 2});
     }
   }
 }
@@ -86,7 +84,7 @@ h2.lyt-Primary_Title {
 .lyt-Sidebar {
   @include break-min($sm) {
     width: calc(((3 / 12) * 100%) - #{$grid-gap / 2});
-    flex: 0 0 calc(((3 / 12) * 100%) - #{$grid-gap / 2});
+    flex: 1 1 calc(((3 / 12) * 100%) - #{$grid-gap / 2});
     margin-right: $grid-gap;
     padding-top: 55px;
     padding-bottom: 55px;
@@ -115,7 +113,7 @@ h2.lyt-Primary_Title {
     display: flex;
     margin-right: $grid-gap;
     width: calc(((1 / 3) * 100%) - #{$grid-gap});
-    flex: 0 0 calc(((1 / 3) * 100%) - #{$grid-gap});
+    flex: 1 1 calc(((1 / 3) * 100%) - #{$grid-gap});
   }
 }
 
