@@ -130,7 +130,9 @@ a.her-Home_Link,
 
 .her-Home object-fit,
 .editor-block-list__layout .her-Home object-fit {
+  display: none;
   @include break-min($sm) {
+    display: block;
     visibility: visible !important;
   }
 }
