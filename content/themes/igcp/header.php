@@ -74,7 +74,7 @@
                     </div>
                   <?php endif; ?>
                   <div class="hd-Tools_Item hd-Tools_Item-menuToggle">
-                    <button class="hd-Tools_NavToggle" aria-controls="navigation" aria-expanded="false" data-drawer-toggle="menu">
+                    <button class="hd-Tools_NavToggle" aria-controls="navigation" aria-expanded="false" data-drawer-toggle="menu" aria-label="Menu Toggle">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 23">
                         <g data-name="Group 3" fill="none" stroke="#606060" stroke-width="3">
                           <path data-name="Line 103" d="M0 1.5h30"/>
