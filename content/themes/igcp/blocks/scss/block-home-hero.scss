@@ -21,11 +21,10 @@
   z-index: 1;
 }
 
-.her-Home_Columns {
-  .lyt-Body & {
-    @include break-min($sm) {
-      display: flex;
-    }
+.her-Home_Columns,
+.editor-block-list__layout .her-Home_Columns {
+  @include break-min($sm) {
+    display: flex;
   }
 }
 

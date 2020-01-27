@@ -13,9 +13,15 @@
   opacity: 0;
   visibility: hidden;
   transition: opacity .3s ease, visibility .3s ease;
+  pointer-events: none;
 
   .utl-DrawerActive & {
     opacity: 1;
     visibility: visible;
+    pointer-events: all;
+  }
+
+  @include break-min($md) {
+    display: none;
   }
 }

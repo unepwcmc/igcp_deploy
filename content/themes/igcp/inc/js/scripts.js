@@ -109,6 +109,45 @@ function drawers() {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.default = filterInputs;
+
+function filterInputs() {
+  var els = {
+    checkboxes: Array.prototype.slice.call(document.querySelectorAll('.flt-Filters input[type="checkbox"]')),
+    radios: Array.prototype.slice.call(document.querySelectorAll('.flt-Filters input[type="radio"]'))
+  };
+  els.checkboxes.forEach(function (checkbox) {
+    var label = checkbox.parentElement;
+    var catItem = label.parentElement;
+    checkbox.style.display = 'none';
+    label.classList.add('flt-Filters_Checkbox');
+    catItem.insertBefore(checkbox, catItem.childNodes[0]);
+    label.addEventListener('click', function (e) {
+      var checkbox = e.target.previousElementSibling;
+      checkbox.checked = !checkbox.checked;
+    });
+  });
+  els.radios.forEach(function (radio) {
+    var label = radio.parentElement;
+    var catItem = label.parentElement;
+    radio.style.display = 'none';
+    label.classList.add('flt-Filters_Radio');
+    catItem.insertBefore(radio, catItem.childNodes[0]);
+    label.addEventListener('click', function (e) {
+      els.radios.forEach(function (radio) {
+        radio.checked = false;
+      });
+      e.target.previousElementSibling.checked = true;
+    });
+  });
+}
+
+},{}],4:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 exports.default = modal;
 
 function modal() {
@@ -205,7 +244,7 @@ function modal() {
   // });
 }
 
-},{}],4:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -235,7 +274,7 @@ function searchbar() {
   });
 }
 
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 "use strict";
 
 var _objectFitImages = _interopRequireDefault(require("object-fit-images"));
@@ -251,6 +290,8 @@ var _smoothscrollPolyfill = _interopRequireDefault(require("./utilities/smoothsc
 var _caseStudyNav = _interopRequireDefault(require("./modules/caseStudyNav"));
 
 var _drawers = _interopRequireDefault(require("./modules/drawers"));
+
+var _filterInputs = _interopRequireDefault(require("./modules/filterInputs"));
 
 var _modal = _interopRequireDefault(require("./modules/modal"));
 
@@ -289,6 +330,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     headerScroll();
     window.addEventListener("scroll", headerScroll);
     (0, _drawers.default)();
+    (0, _filterInputs.default)();
     (0, _modal.default)();
     (0, _searchbar.default)();
     (0, _smoothscrollPolyfill.default)();
@@ -328,7 +370,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   });
 })();
 
-},{"./modules/caseStudyNav":1,"./modules/drawers":2,"./modules/modal":3,"./modules/searchbar":4,"./utilities":6,"./utilities/smoothscroll-polyfill":7,"./vendor":9,"object-fit-images":11,"object-fit-videos":12}],6:[function(require,module,exports){
+},{"./modules/caseStudyNav":1,"./modules/drawers":2,"./modules/filterInputs":3,"./modules/modal":4,"./modules/searchbar":5,"./utilities":7,"./utilities/smoothscroll-polyfill":8,"./vendor":10,"object-fit-images":12,"object-fit-videos":13}],7:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -390,7 +432,7 @@ function scrollToLink() {
   });
 }
 
-},{}],7:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 'use strict'; // polyfill
 
 Object.defineProperty(exports, "__esModule", {
@@ -733,7 +775,7 @@ function smoothScrollPolyfill() {
 
 smoothScrollPolyfill();
 
-},{}],8:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 "use strict";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -1077,14 +1119,14 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
   }]);
 });
 
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 "use strict";
 
 require("./in-view.min.js");
 
 require("./modernizr-custom.3.6.0.js");
 
-},{"./in-view.min.js":8,"./modernizr-custom.3.6.0.js":10}],10:[function(require,module,exports){
+},{"./in-view.min.js":9,"./modernizr-custom.3.6.0.js":11}],11:[function(require,module,exports){
 "use strict";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -1424,7 +1466,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
   e.Modernizr = Modernizr;
 }(window, document);
 
-},{}],11:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 /*! npm.im/object-fit-images 3.2.4 */
 'use strict';
 
@@ -1657,7 +1699,7 @@ hijackAttributes();
 
 module.exports = fix;
 
-},{}],12:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 /**
  * Object Fit Videos
  * Polyfill for object-fit and object-position CSS properties on video elements
@@ -1925,4 +1967,4 @@ var objectFitVideos = function (videos) {
 if (typeof module !== 'undefined' && typeof module.exports !== 'undefined')
   module.exports = objectFitVideos;
 
-},{}]},{},[5]);
+},{}]},{},[6]);

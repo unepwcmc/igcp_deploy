@@ -8,7 +8,7 @@
   .lyt-Sidebar & {
     display: none;
 
-    @include break-min($sm) {
+    @include break-min($md) {
       display: block;
     }
   }
@@ -55,7 +55,7 @@ h3.flt-Filters_Title {
   align-items: center;
   margin: 0;
 
-  @include break-min($sm) {
+  @include break-min($md) {
     display: none;
   }
 
@@ -119,12 +119,8 @@ h3.flt-Filters_Title {
   label {
     display: block;
     position: relative;
-    padding-left: 32.5px;
+    padding-left: 22px;
     font-size: 14px;
-
-    @include break-min($sm) {
-      padding-left: 27.5px;
-    }
 
     .drw-Drawer & {
       font-size: 18px;
@@ -133,17 +129,115 @@ h3.flt-Filters_Title {
 
   input[type="checkbox"],
   input[type="radio"] {
-    display: inline-block;
-    position: absolute;
-    top: -2px;
-    left: 2px;
+    // display: inline-block;
+    // position: absolute;
+    // top: -2px;
+    // left: 2px;
+    //
+    // @include break-min($md) {
+    //   top: 0px;
+    // }
+    //
+    // .drw-Drawer & {
+    //   top: 1px;
+    // }
+  }
 
-    @include break-min($sm) {
-      top: 0px;
+  .flt-Filters_Checkbox {
+    cursor: pointer;
+    
+    &::before {
+      content: '';
+      display: block;
+      width: 15px;
+      height: 15px;
+      border: 1px solid $color-secondary;
+
+      position: absolute;
+      top: 4px;
+      left: 0;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: 9px;
+      height: 9px;
+      background-color: $color-secondary;
+
+      position: absolute;
+      top: 7px;
+      left: 3px;
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility .3s ease, opacity .3s ease;
     }
 
     .drw-Drawer & {
-      top: 1px;
+      &::before {
+        top: 6px;
+      }
+
+      &::after {
+        top: 9px;
+      }
+    }
+
+  }
+
+  input[type="checkbox"]:checked + .flt-Filters_Checkbox {
+    &::after {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .flt-Filters_Radio {
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 15px;
+      height: 15px;
+      border: 1px solid $color-secondary;
+      border-radius: 50%;
+
+      position: absolute;
+      top: 4px;
+      left: 0;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: 9px;
+      height: 9px;
+      background-color: $color-secondary;
+      border-radius: 50%;
+
+      position: absolute;
+      top: 7px;
+      left: 3px;
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility .3s ease, opacity .3s ease;
+    }
+
+    .drw-Drawer & {
+      &::before {
+        top: 6px;
+        width: 14px;
+        height: 14px;
+      }
+    }
+
+  }
+
+  input[type="radio"]:checked + .flt-Filters_Radio {
+    &::after {
+      opacity: 1;
+      visibility: visible;
     }
   }
 

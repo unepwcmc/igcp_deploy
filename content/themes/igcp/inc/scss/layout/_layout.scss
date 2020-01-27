@@ -8,7 +8,7 @@
   &.lyt-Container-hasSidebar {
     margin-top: $grid-gap;
 
-    @include break-min($sm) {
+    @include break-min($md) {
       display: flex;
       margin-top: 0;
     }
@@ -19,14 +19,14 @@
   @include inner;
 
   .lyt-Container-hasSidebar & {
-    @include break-min($sm) {
+    @include break-min($md) {
       display: flex;
     }
   }
 }
 
 .lyt-Primary {
-  @include break-min($sm) {
+  @include break-min($md) {
     .lyt-Container-hasSidebar & {
       width: calc(((9 / 12) * 100%) - #{$grid-gap / 2});
       flex: 1 1 calc(((9 / 12) * 100%) - #{$grid-gap / 2});
@@ -38,7 +38,7 @@
   margin-top: #{$grid-gap * 2};
   margin-bottom: #{$grid-gap * 2};
 
-  @include break-min($sm) {
+  @include break-min($md) {
     margin-top: #{$grid-gap * 3};
     margin-bottom: #{$grid-gap * 3};
   }
@@ -49,7 +49,7 @@ h2.lyt-Primary_Title {
   font-weight: 500;
   margin-bottom: 0;
 
-  @include break-min($sm) {
+  @include break-min($md) {
     text-align: center;
   }
 }
@@ -70,7 +70,7 @@ h2.lyt-Primary_Title {
     margin-top: 25px;
   }
 
-  @include break-min($sm) {
+  @include break-min($md) {
     .home & {
       margin-top: 0;
       margin-bottom: 0;
@@ -82,7 +82,7 @@ h2.lyt-Primary_Title {
 }
 
 .lyt-Sidebar {
-  @include break-min($sm) {
+  @include break-min($md) {
     width: calc(((3 / 12) * 100%) - #{$grid-gap / 2});
     flex: 1 1 calc(((3 / 12) * 100%) - #{$grid-gap / 2});
     margin-right: $grid-gap;
@@ -92,14 +92,12 @@ h2.lyt-Primary_Title {
 }
 
 .lyt-Entry_Items {
-  margin: $grid-gap 0 -#{$grid-gap};
+  margin: $grid-gap -#{$grid-gap} -#{$grid-gap} 0;
   display: flex;
   flex-wrap: wrap;
 
-  @include break-min($sm) {
+  @include break-min($md) {
     margin-top: 0;
-  }
-  @include break-min($sm) {
     margin-right: -#{$grid-gap};
   }
 }
@@ -113,7 +111,7 @@ h2.lyt-Primary_Title {
     display: flex;
     margin-right: $grid-gap;
     width: calc(((1 / 3) * 100%) - #{$grid-gap});
-    flex: 1 1 calc(((1 / 3) * 100%) - #{$grid-gap});
+    flex: 0 0 calc(((1 / 3) * 100%) - #{$grid-gap});
   }
 }
 

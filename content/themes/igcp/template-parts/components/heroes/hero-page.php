@@ -6,7 +6,7 @@
   $link_text = get_query_var('hero-link-text') != '' ? get_query_var('hero-link-text') : get_theme_mod( 'default_hero_button_text' );
   $background_image = get_query_var('hero-background-image');
   $background_image_url = $background_image != '' ? wp_get_attachment_image_src( $background_image, 'full-size' )[0] : get_theme_mod( 'default_hero_image' );
-  $opacity = '0.4';
+  $opacity = get_query_var('hero-opacity') != '' ? get_query_var('hero-opacity') : '0.4';
 ?>
 
 <div class="her-Page">

@@ -8,6 +8,7 @@ import smoothScrollPolyfill from './utilities/smoothscroll-polyfill';
 
 import caseStudyNav from './modules/caseStudyNav';
 import drawers from './modules/drawers';
+import filterInputs from './modules/filterInputs';
 import modal from './modules/modal';
 import searchbar from './modules/searchbar';
 
@@ -34,6 +35,7 @@ import searchbar from './modules/searchbar';
     headerScroll();
     window.addEventListener("scroll", headerScroll);
     drawers();
+    filterInputs();
     modal();
     searchbar();
     smoothScrollPolyfill();
