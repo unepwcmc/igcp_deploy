@@ -13,25 +13,25 @@
   $link_1_title = block_field( 'link-1-title', false );
   $link_1_url = block_field( 'link-1-url', false );
   $link_1_image = block_field( 'link-1-image', false );
-  $link_1_image_url = $link_1_image != '' ? wp_get_attachment_image_src( $link_1_image, 'full-size' )[0] : get_stylesheet_directory_uri() . '/inc/img/square-placeholder.jpg';
+  $link_1_image_url = $link_1_image != '' ? wp_get_attachment_image_src( $link_1_image, 'medium' )[0] : get_stylesheet_directory_uri() . '/inc/img/square-placeholder.jpg';
 
   // Link 2
   $link_2_title = block_field( 'link-2-title', false );
   $link_2_url = block_field( 'link-2-url', false );
   $link_2_image = block_field( 'link-2-image', false );
-  $link_2_image_url = $link_2_image != '' ? wp_get_attachment_image_src( $link_2_image, 'full-size' )[0] : get_stylesheet_directory_uri() . '/inc/img/square-placeholder.jpg';
+  $link_2_image_url = $link_2_image != '' ? wp_get_attachment_image_src( $link_2_image, 'medium' )[0] : get_stylesheet_directory_uri() . '/inc/img/square-placeholder.jpg';
 
   // Link 3
   $link_3_title = block_field( 'link-3-title', false );
   $link_3_url = block_field( 'link-3-url', false );
   $link_3_image = block_field( 'link-3-image', false );
-  $link_3_image_url = $link_3_image != '' ? wp_get_attachment_image_src( $link_3_image, 'full-size' )[0] : get_stylesheet_directory_uri() . '/inc/img/square-placeholder.jpg';
+  $link_3_image_url = $link_3_image != '' ? wp_get_attachment_image_src( $link_3_image, 'medium' )[0] : get_stylesheet_directory_uri() . '/inc/img/square-placeholder.jpg';
 
   // Link 4
   $link_4_title = block_field( 'link-4-title', false );
   $link_4_url = block_field( 'link-4-url', false );
   $link_4_image = block_field( 'link-4-image', false );
-  $link_4_image_url = $link_4_image != '' ? wp_get_attachment_image_src( $link_4_image, 'full-size' )[0] : get_stylesheet_directory_uri() . '/inc/img/square-placeholder.jpg';
+  $link_4_image_url = $link_4_image != '' ? wp_get_attachment_image_src( $link_4_image, 'medium' )[0] : get_stylesheet_directory_uri() . '/inc/img/square-placeholder.jpg';
 ?>
 
 <div class="blk-PictureLinks">
