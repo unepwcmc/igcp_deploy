@@ -17,7 +17,7 @@
       $social_url = $social_share_urls[$social];
       if ($social_url != '') : ?>
         <li class="soc-Social_Icon">
-          <a href="<?php echo $social_url; ?>" target="_blank" rel="noreferrer noopener">
+          <a href="<?php echo $social_url; ?>" target="_blank" rel="noreferrer noopener" name="<?php echo $social; ?>">
             <?php get_template_part( 'template-parts/icons/icon', $social . '-share'); ?>
           </a>
         </li>

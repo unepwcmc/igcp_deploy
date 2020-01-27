@@ -37,7 +37,7 @@
             <div class="hd-Header_Item hd-Header_Item-logo">
               <!-- Site Name & Logo  -->
               <h1 class="hd-Header_Title"><?php wp_title( '|', true, 'right' ); ?><?php bloginfo( 'name' ); ?></h1>
-              <a class="hd-Header_Logo" href="/" title="<?php echo get_bloginfo('name'); ?>">
+              <a class="hd-Header_Logo" href="/" title="<?php echo get_bloginfo('name'); ?>" name="<?php wp_title( '|', true, 'right' ); ?><?php bloginfo( 'name' ); ?>">
                 <?php get_template_part( 'template-parts/global/logo' ); ?>
               </a>
             </div>
@@ -52,7 +52,7 @@
                 <div class="hd-Tools_Items">
                   <div class="hd-Tools_Item hd-Tools_Item-search">
                     <div class="hd-Search">
-                      <button class="hd-Search_Toggle" data-searchbar-toggle>
+                      <button class="hd-Search_Toggle" name="Search Button" data-searchbar-toggle>
                         <?php get_template_part( 'template-parts/icons/icon', 'search' ); ?>
                       </button>
                       <div class="hd-Search_Bar" data-searchbar>
