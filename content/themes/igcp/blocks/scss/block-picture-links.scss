@@ -128,4 +128,5 @@ h4.blk-PictureLink_Title {
 a.blk-PictureLink_FauxLink {
   @include absolute_fill;
   z-index: 3;
+  font-size: 0;
 }

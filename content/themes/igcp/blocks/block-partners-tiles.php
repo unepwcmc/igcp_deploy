@@ -37,7 +37,7 @@
               <li class="blk-Partners_Item">
                 <div class="blk-Partner">
                   <?php the_post_thumbnail( 'full-size' ); ?>
-                  <a href="<?php echo get_field('url'); ?>" class="blk-Partner_FauxLink" target="_blank" rel="noreferrer noopener" name="<?php echo get_the_title(); ?>"></a>
+                  <a href="<?php echo get_field('url'); ?>" class="blk-Partner_FauxLink" target="_blank" rel="noreferrer noopener"><?php echo get_the_title(); ?></a>
                 </div>
               </li>
 
