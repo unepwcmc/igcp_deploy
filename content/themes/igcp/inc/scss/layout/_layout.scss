@@ -92,13 +92,16 @@ h2.lyt-Primary_Title {
 }
 
 .lyt-Entry_Items {
-  margin: $grid-gap -#{$grid-gap} -#{$grid-gap} 0;
+  margin: $grid-gap 0 -#{$grid-gap};
   display: flex;
   flex-wrap: wrap;
 
+  @include break-min($sm) {
+    margin-right: -#{$grid-gap};
+  }
+
   @include break-min($md) {
     margin-top: 0;
-    margin-right: -#{$grid-gap};
   }
 }
 
