@@ -83,14 +83,14 @@ add_action('customize_register', 'contact_details_customizer_settings');
 -------------------------------------------------------------------------------*/
 
 function blog_posts_customizer_settings($wp_customize) {
-  // Add Contact Details Section
+  // Add Blog Posts Section
   $wp_customize->add_section('blog_posts', array(
   'title' => 'Blog Posts',
   'description' => 'Settings affecting blog posts',
   'priority' => 110,
   ));
 
-  // Add Address Setting & Control
+  // Add Boilerplate Setting & Control
   $wp_customize->add_setting('blog_posts_boilerplate');
   $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'blog_posts_boilerplate',
   array(
@@ -113,6 +113,7 @@ function social_media_customizer_settings($wp_customize) {
   'description' => 'Enter the URL to your account on each social media site',
   'priority' => 120,
   ));
+
   // add a setting for the site Facebook URL
   $wp_customize->add_setting('facebook_url');
   // Add a control to input the Facebook URL
@@ -122,6 +123,7 @@ function social_media_customizer_settings($wp_customize) {
   'section' => 'social_icons',
   'settings' => 'facebook_url',
   ) ) );
+
   // add a setting for the site Twitter URL
   $wp_customize->add_setting('twitter_url');
   // Add a control to input the Twitter URL
@@ -131,6 +133,7 @@ function social_media_customizer_settings($wp_customize) {
   'section' => 'social_icons',
   'settings' => 'twitter_url',
   ) ) );
+
   // add a setting for the site Instagram URL
   $wp_customize->add_setting('instagram_url');
   // Add a control to input the Instagram URL
@@ -140,6 +143,7 @@ function social_media_customizer_settings($wp_customize) {
   'section' => 'social_icons',
   'settings' => 'instagram_url',
   ) ) );
+
   // add a setting for the site LinkedIn URL
   $wp_customize->add_setting('linkedin_url');
   // Add a control to input the LinkedIn URL
@@ -149,6 +153,7 @@ function social_media_customizer_settings($wp_customize) {
   'section' => 'social_icons',
   'settings' => 'linkedin_url',
   ) ) );
+
   // add a setting for the site YouTube URL
   $wp_customize->add_setting('youtube_url');
   // Add a control to input the YouTube URL
@@ -283,7 +288,7 @@ add_action('customize_register', 'default_hero_customizer_settings');
 -------------------------------------------------------------------------------*/
 
 function cta_block_customizer_settings($wp_customize) {
-  // Add Default Hero Section
+  // Add CTA Section
   $wp_customize->add_section('cta_block', array(
   'title' => 'CTA Block Settings',
   'description' => 'Settings for the CTA block',
