@@ -3,7 +3,7 @@ BASE
 --------------------------------------------------------------*/
 
 body {
-  font-size: 16px;
+  font-size: $font-base-size;
   line-height: 1.6;
   background-color: #fff;
   color: $color-body-font;
@@ -90,7 +90,7 @@ FORMS
 --------------------------------------------------------------*/
 
 label {
-  font-size: 16px;
+  font-size: inherit;
 }
 
 fieldset {
@@ -100,7 +100,7 @@ fieldset {
 input,
 textarea {
   font-family: $font-body;
-  font-size: 16px;
+  font-size: inherit;
   font-weight: 600;
 
   color: $color-secondary;
@@ -110,7 +110,7 @@ textarea {
   outline: none;
 
   display: block;
-  padding: .6em;
+  padding: 12.5px 10px;
   width: 100%;
 
   transition: color 0.3s ease;
@@ -146,14 +146,14 @@ select {
   border: 1px solid $color-secondary;
   max-width: 100%;
   font-family: $font-body;
-  font-size: 14px;
-  padding: 0.6em;
+  font-size: inherit;
+  padding: 12.5px 10px;
   border-radius: 0;
   background-color: #fff;
-  background-image: url("../img/icon-select.svg");
+  background-image: url("../img/icon-angle-down-grey.svg");
   background-repeat: no-repeat, repeat;
   background-position: right 0.7em top 50%, 0 0;
-  background-size: 0.75em auto, 100%;
+  background-size: auto 10px, 100%;
 }
 
 input[type="date"] {

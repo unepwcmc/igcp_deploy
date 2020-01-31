@@ -5,7 +5,6 @@
 
 .cst-Hero_Inner {
   position: relative;
-  z-index: 3;
   padding-bottom: calc((5 / 14) * 100%);
 }
 
@@ -15,19 +14,28 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 3;
 }
 
 .cst-Hero_Content {
   text-align: center;
-  max-width: calc((6 / 12) * 100%);
-  margin-right: auto;
-  margin-left: auto;
   padding-top: 50px;
   padding-bottom: 50px;
+  
+  @include break-min($md) {
+    max-width: calc((6 / 12) * 100%);
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 h2.cst-Hero_Title {
   color: #fff;
+  font-size: 46px;
+
+  @include break-min($xlg) {
+    @include h1;
+  }
 
   &:only-child {
     margin-bottom: 0;

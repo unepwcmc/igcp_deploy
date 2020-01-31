@@ -29,11 +29,11 @@ add_action( 'customize_register', 'remove_customizer_settings', 11 );
 
 function contact_details_customizer_settings($wp_customize) {
   // Add Contact Details Section
-  $wp_customize->add_section('contact_details', array(
+  $wp_customize->add_section( 'contact_details', array (
   'title' => 'Contact Details',
   'description' => 'Address and Contact Details',
-  'priority' => 170,
-  ));
+  'priority' => 170
+  ) );
 
   // Add Heading Setting & Control
   $wp_customize->add_setting('contact_details_heading');
@@ -42,7 +42,7 @@ function contact_details_customizer_settings($wp_customize) {
   'label' => 'Heading',
   'type' => 'text',
   'section' => 'contact_details',
-  'settings' => 'contact_details_heading',
+  'settings' => 'contact_details_heading'
   ) ) );
 
   // Add Address Setting & Control
@@ -52,7 +52,7 @@ function contact_details_customizer_settings($wp_customize) {
   'label' => 'Address',
   'type' => 'textarea',
   'section' => 'contact_details',
-  'settings' => 'contact_details_address',
+  'settings' => 'contact_details_address'
   ) ) );
 
   // Add Phone Number Setting & Control
@@ -62,7 +62,7 @@ function contact_details_customizer_settings($wp_customize) {
   'label' => 'Phone Number',
   'type' => 'text',
   'section' => 'contact_details',
-  'settings' => 'contact_details_phone',
+  'settings' => 'contact_details_phone'
   ) ) );
 
   // Add Email Address Setting & Control
@@ -72,7 +72,7 @@ function contact_details_customizer_settings($wp_customize) {
   'label' => 'Email Address',
   'type' => 'text',
   'section' => 'contact_details',
-  'settings' => 'contact_details_email',
+  'settings' => 'contact_details_email'
   ) ) );
 
 }
@@ -84,11 +84,11 @@ add_action('customize_register', 'contact_details_customizer_settings');
 
 function blog_posts_customizer_settings($wp_customize) {
   // Add Blog Posts Section
-  $wp_customize->add_section('blog_posts', array(
+  $wp_customize->add_section( 'blog_posts', array (
   'title' => 'Blog Posts',
   'description' => 'Settings affecting blog posts',
-  'priority' => 110,
-  ));
+  'priority' => 110
+  ) );
 
   // Add Boilerplate Setting & Control
   $wp_customize->add_setting('blog_posts_boilerplate');
@@ -97,7 +97,7 @@ function blog_posts_customizer_settings($wp_customize) {
   'label' => 'Text',
   'type' => 'textarea',
   'section' => 'blog_posts',
-  'settings' => 'blog_posts_boilerplate',
+  'settings' => 'blog_posts_boilerplate'
   ) ) );
 }
 add_action('customize_register', 'blog_posts_customizer_settings');
@@ -108,11 +108,11 @@ add_action('customize_register', 'blog_posts_customizer_settings');
 
 function social_media_customizer_settings($wp_customize) {
   // Add Social Icons Section
-  $wp_customize->add_section('social_icons', array(
+  $wp_customize->add_section( 'social_icons', array (
   'title' => 'Social URLs',
   'description' => 'Enter the URL to your account on each social media site',
-  'priority' => 120,
-  ));
+  'priority' => 120
+  ) );
 
   // add a setting for the site Facebook URL
   $wp_customize->add_setting('facebook_url');
@@ -121,7 +121,7 @@ function social_media_customizer_settings($wp_customize) {
   array(
   'label' => 'Facebook',
   'section' => 'social_icons',
-  'settings' => 'facebook_url',
+  'settings' => 'facebook_url'
   ) ) );
 
   // add a setting for the site Twitter URL
@@ -131,7 +131,7 @@ function social_media_customizer_settings($wp_customize) {
   array(
   'label' => 'Twitter',
   'section' => 'social_icons',
-  'settings' => 'twitter_url',
+  'settings' => 'twitter_url'
   ) ) );
 
   // add a setting for the site Instagram URL
@@ -141,7 +141,7 @@ function social_media_customizer_settings($wp_customize) {
   array(
   'label' => 'Instagram',
   'section' => 'social_icons',
-  'settings' => 'instagram_url',
+  'settings' => 'instagram_url'
   ) ) );
 
   // add a setting for the site LinkedIn URL
@@ -151,7 +151,7 @@ function social_media_customizer_settings($wp_customize) {
   array(
   'label' => 'LinkedIn',
   'section' => 'social_icons',
-  'settings' => 'linkedin_url',
+  'settings' => 'linkedin_url'
   ) ) );
 
   // add a setting for the site YouTube URL
@@ -161,7 +161,7 @@ function social_media_customizer_settings($wp_customize) {
   array(
   'label' => 'YouTube',
   'section' => 'social_icons',
-  'settings' => 'youtube_url',
+  'settings' => 'youtube_url'
   ) ) );
 }
 add_action('customize_register', 'social_media_customizer_settings');
@@ -172,11 +172,11 @@ add_action('customize_register', 'social_media_customizer_settings');
 
 function header_button_customizer_settings($wp_customize) {
   // Add Header Button Section
-  $wp_customize->add_section('header_button', array(
+  $wp_customize->add_section( 'header_button', array (
   'title' => 'Header Button',
   'description' => 'Settings for the CTA button in the header',
-  'priority' => 100,
-  ));
+  'priority' => 100
+  ) );
 
   // add a setting to enable the button
   $wp_customize->add_setting('enable_header_button');
@@ -185,7 +185,7 @@ function header_button_customizer_settings($wp_customize) {
   'label'     => 'Enable Header Button',
   'section'   => 'header_button',
   'settings'  => 'enable_header_button',
-  'type'      => 'checkbox',
+  'type'      => 'checkbox'
   ) ) );
 
   // add a setting for the button URL
@@ -195,7 +195,7 @@ function header_button_customizer_settings($wp_customize) {
   array(
   'label' => 'Button URL',
   'section' => 'header_button',
-  'settings' => 'header_button_url',
+  'settings' => 'header_button_url'
   ) ) );
 
   // add a setting for the button text
@@ -205,7 +205,7 @@ function header_button_customizer_settings($wp_customize) {
   array(
   'label' => 'Button Text',
   'section' => 'header_button',
-  'settings' => 'header_button_text',
+  'settings' => 'header_button_text'
   ) ) );
 
   // add a setting to make the button link open in a new tab
@@ -215,7 +215,7 @@ function header_button_customizer_settings($wp_customize) {
   'label'     => 'External Link',
   'section'   => 'header_button',
   'settings'  => 'header_button_external_link',
-  'type'      => 'checkbox',
+  'type'      => 'checkbox'
   ) ) );
 
 }
@@ -227,32 +227,44 @@ add_action('customize_register', 'header_button_customizer_settings');
 
 function default_hero_customizer_settings($wp_customize) {
   // Add Default Hero Section
-  $wp_customize->add_section('default_hero', array(
+  $wp_customize->add_section( 'default_hero', array (
   'title' => 'Default Hero Settings',
   'description' => 'Settings for the CTA button in the header',
-  'priority' => 100,
-  ));
+  'priority' => 100
+  ) );
 
   // Default background image
   $wp_customize->add_setting('default_hero_image');
   $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'default_hero_image', array(
     'label' => 'Default Background Image',
     'section' => 'default_hero',
-    'settings' => 'default_hero_image',
-  )));
+    'settings' => 'default_hero_image'
+  ) ) );
 
+  // Default Hero overlay opacity
+
+  // add a setting for the default overlay opacity
+  $wp_customize->add_setting('default_hero_overlay_opacity');
+  // Add a control to input the default overlay opacity
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'default_hero_overlay_opacity',
+  array(
+    'label' => 'Default Overlay Opacity',
+    'section' => 'default_hero',
+    'description' => 'From 0 to 1 in 0.1 increments (e.g., 0.4)',
+    'settings' => 'default_hero_overlay_opacity'
+  ) ) );
 
   // Default text
 
-  // add a setting for the button text
+  // add a setting for the default text
   $wp_customize->add_setting('default_hero_text');
-  // Add a control to input the button text
+  // Add a control to input the default text
   $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'default_hero_text',
   array(
   'label' => 'Default Text',
   'type' => 'textarea',
   'section' => 'default_hero',
-  'settings' => 'default_hero_text',
+  'settings' => 'default_hero_text'
   ) ) );
 
   // Default button text
@@ -265,7 +277,7 @@ function default_hero_customizer_settings($wp_customize) {
   'label' => 'Button Link',
   'type' => 'dropdown-pages',
   'section' => 'default_hero',
-  'settings' => 'default_hero_button_link',
+  'settings' => 'default_hero_button_link'
   ) ) );
 
   // Default button url
@@ -277,7 +289,33 @@ function default_hero_customizer_settings($wp_customize) {
   array(
   'label' => 'Button Text',
   'section' => 'default_hero',
-  'settings' => 'default_hero_button_text',
+  'settings' => 'default_hero_button_text'
+  ) ) );
+
+  // Default button text
+
+  // add a setting for the button link
+  $wp_customize->add_setting('default_hero_button_link_2');
+  // Add a control to input the button link
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'default_hero_button_link_2',
+  array(
+  'label' => 'Button Link 2',
+  'type' => 'dropdown-pages',
+  'description' => 'Button hidden unless this is set',
+  'section' => 'default_hero',
+  'settings' => 'default_hero_button_link_2'
+  ) ) );
+
+  // Default button url
+
+  // add a setting for the button text
+  $wp_customize->add_setting('default_hero_button_text_2');
+  // Add a control to input the button text
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'default_hero_button_text_2',
+  array(
+  'label' => 'Button Text 2',
+  'section' => 'default_hero',
+  'settings' => 'default_hero_button_text_2'
   ) ) );
 
 }
@@ -289,19 +327,19 @@ add_action('customize_register', 'default_hero_customizer_settings');
 
 function cta_block_customizer_settings($wp_customize) {
   // Add CTA Section
-  $wp_customize->add_section('cta_block', array(
+  $wp_customize->add_section( 'cta_block', array (
   'title' => 'CTA Block Settings',
   'description' => 'Settings for the CTA block',
-  'priority' => 100,
-  ));
+  'priority' => 100
+  ) );
 
   // Default background image
   $wp_customize->add_setting('cta_block_background_image');
   $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'cta_block_background_image', array(
     'label' => 'Background Image',
     'section' => 'cta_block',
-    'settings' => 'cta_block_background_image',
-  )));
+    'settings' => 'cta_block_background_image'
+  ) ) );
 
 
   // Title
@@ -313,7 +351,7 @@ function cta_block_customizer_settings($wp_customize) {
   array(
   'label' => 'Title',
   'section' => 'cta_block',
-  'settings' => 'cta_block_title',
+  'settings' => 'cta_block_title'
   ) ) );
 
   // Text
@@ -326,7 +364,7 @@ function cta_block_customizer_settings($wp_customize) {
   'label' => 'Text',
   'type' => 'textarea',
   'section' => 'cta_block',
-  'settings' => 'cta_block_text',
+  'settings' => 'cta_block_text'
   ) ) );
 
   // Button 1 link
@@ -339,7 +377,7 @@ function cta_block_customizer_settings($wp_customize) {
   'label' => 'Button 1 Link',
   'type' => 'dropdown-pages',
   'section' => 'cta_block',
-  'settings' => 'cta_block_button_1_link',
+  'settings' => 'cta_block_button_1_link'
   ) ) );
 
   // Button 1 text
@@ -351,7 +389,7 @@ function cta_block_customizer_settings($wp_customize) {
   array(
   'label' => 'Button 1 Text',
   'section' => 'cta_block',
-  'settings' => 'cta_block_button_1_text',
+  'settings' => 'cta_block_button_1_text'
   ) ) );
 
   // Button 2 link
@@ -364,7 +402,7 @@ function cta_block_customizer_settings($wp_customize) {
   'label' => 'Button 2 Link',
   'type' => 'dropdown-pages',
   'section' => 'cta_block',
-  'settings' => 'cta_block_button_2_link',
+  'settings' => 'cta_block_button_2_link'
   ) ) );
 
   // Button 2 text
@@ -376,7 +414,7 @@ function cta_block_customizer_settings($wp_customize) {
   array(
   'label' => 'Button 2 Text',
   'section' => 'cta_block',
-  'settings' => 'cta_block_button_2_text',
+  'settings' => 'cta_block_button_2_text'
   ) ) );
 
   // Overlay opacity
@@ -388,7 +426,7 @@ function cta_block_customizer_settings($wp_customize) {
   array(
   'label' => 'Overlay Opacity (e.g., 0.4)',
   'section' => 'cta_block',
-  'settings' => 'cta_block_overlay_opacity',
+  'settings' => 'cta_block_overlay_opacity'
   ) ) );
 
 }

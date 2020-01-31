@@ -15,11 +15,13 @@
 
 <article id="post-<?php the_ID(); ?>" class="crd-Card crd-Card-family">
 	<header class="crd-Card_Header">
-    <?php
-      if ( ! empty( $park_name != '' ) ) {
-          echo '<span class="crd-Card_Badge">' . $park_name . '</span>';
-      }
-    ?>
+    <div class="crd-Card_Badge">
+      <?php
+        if ( ! empty( $park_name != '' ) ) {
+          echo '<span class="crd-Card_BadgeText">' . $park_name . '</span>';
+        }
+      ?>
+    </div>
     <div class="crd-Card_Image">
       <img src="<?php echo $thumbnail_url; ?>" alt="<?php the_title(); ?>" />
     </div>

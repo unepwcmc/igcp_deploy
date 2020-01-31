@@ -97,7 +97,7 @@ h3.blk-PictureLinks_Title {
 h4.blk-PictureLink_Title {
   margin-top: #{$grid-gap * 2};
   margin-bottom: 0;
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
   display: inline-block;
   position: relative;
@@ -125,7 +125,8 @@ h4.blk-PictureLink_Title {
   }
 }
 
-a.blk-PictureLink_FauxLink {
+a.blk-PictureLink_FauxLink,
+.editor-block-list__layout a.blk-PictureLink_FauxLink {
   @include absolute_fill;
   z-index: 3;
   font-size: 0;

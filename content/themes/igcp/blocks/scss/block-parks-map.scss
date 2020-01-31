@@ -18,15 +18,17 @@ h3.blk-Map_Title {
 }
 
 .blk-Map_Column {
-  @include break-min($sm) {
-    &.blk-Map_Column-image {
-      width: calc(((7 / 12) * 100%) - #{$grid-gap / 2});
-      flex: 1 1 calc(((7 / 12) * 100%) - #{$grid-gap / 2});
-      margin-right: $grid-gap;
-    }
-    &.blk-Map_Column-text {
-      width: calc(((5 / 12) * 100%) - #{$grid-gap / 2});
-      flex: 1 1 calc(((5 / 12) * 100%) - #{$grid-gap / 2});
+  .lyt-Body & {
+    @include break-min($sm) {
+      &.blk-Map_Column-image {
+        width: calc(((7 / 12) * 100%) - #{$grid-gap / 2});
+        flex: 1 1 calc(((7 / 12) * 100%) - #{$grid-gap / 2});
+        margin-right: $grid-gap;
+      }
+      &.blk-Map_Column-text {
+        width: calc(((5 / 12) * 100%) - #{$grid-gap / 2});
+        flex: 1 1 calc(((5 / 12) * 100%) - #{$grid-gap / 2});
+      }
     }
   }
 }

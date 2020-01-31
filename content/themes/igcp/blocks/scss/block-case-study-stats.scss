@@ -51,6 +51,7 @@
 
   @include break-min($lg) {
     margin-bottom: #{$grid-gap * 2};
+    width: auto;
   }
 
   &:last-child {

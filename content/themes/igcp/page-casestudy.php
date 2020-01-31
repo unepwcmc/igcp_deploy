@@ -16,9 +16,10 @@ get_header(); ?>
 			the_post();
 
 			/* Variables */
-			$hero_title = get_field( "hero_title" ) != '' ? get_field( "hero_title" ) : get_the_title();
+			$hero_title = get_field( 'hero_title' ) != '' ? get_field( 'hero_title' ) : get_the_title();
 			set_query_var('hero-title', $hero_title);
 			set_query_var('hero-background-image', get_post_thumbnail_id(get_the_id()));
+			set_query_var('hero-opacity', get_field( 'opacity' ));
 
 			get_template_part( 'template-parts/components/heroes/hero', 'case-study' );
 

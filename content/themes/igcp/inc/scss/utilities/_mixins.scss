@@ -272,6 +272,7 @@
   @include button;
   color: #fff !important;
   background-color: $color-primary !important;
+  border-color: $color-primary !important;
 
   &:hover {
     color: $color-primary !important;
@@ -284,8 +285,10 @@
   @include button;
   color: #fff !important;
   background-color: $color-primary-light !important;
+  border-color: $color-primary-light !important;
 
   &:hover {
+    color: #fff !important;
     border-color: $color-primary !important;
     background-color: $color-primary !important;
   }
@@ -293,7 +296,6 @@
 
 @mixin button_secondary {
   @include button;
-
   color: $color-primary !important;
   border-color: $color-primary !important;
   background-color: transparent !important;
@@ -301,6 +303,7 @@
   &:hover {
     color: #fff !important;
     background-color: $color-primary !important;
+    border-color: $color-primary !important;
   }
 }
 
@@ -312,6 +315,7 @@
 
   &:hover {
     color: $color-primary !important;
+    border-color: #fff !important;
     background-color: #fff !important;
   }
 }
@@ -324,6 +328,7 @@
   background-color: $color-accent !important;
 
   &:hover {
+    color: $color-secondary !important;
     border-color: darken($color-accent, 20%) !important;
     background-color: darken($color-accent, 20%) !important;
   }

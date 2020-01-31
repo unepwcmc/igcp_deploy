@@ -8,7 +8,9 @@
      <button class="drw-Drawer_Close" aria-label="Close" data-drawer-menu-close>
        <?php get_template_part( 'template-parts/icons/icon', 'close' ); ?>
      </button>
-     <a class="drw-Drawer_Button" href="#">Support Us</a>
+     <?php if (get_theme_mod( 'enable_header_button' )): ?>
+       <a href="<?php echo get_theme_mod( 'header_button_url' ); ?>" class="drw-Drawer_Button" <?php if (get_theme_mod( 'header_button_external_link' )) echo 'target="_blank"' ?>><?php echo get_theme_mod( 'header_button_text' ); ?></a>
+     <?php endif; ?>
    </div>
    <div class="drw-Drawer_Body">
      <nav class="drw-Drawer_Nav">

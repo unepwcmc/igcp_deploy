@@ -21,7 +21,7 @@
 
 .cta-Block_Inner,
 .editor-block-list__layout .cta-Block_Inner {
-  @include inner;
+  @include inner_padding;
   position: relative;
   z-index: 3;
   display: flex;
@@ -46,8 +46,11 @@
     margin-bottom: 0;
   }
 
-  @include break-min($sm) {
-    .lyt-Body & {
+  .lyt-Body & {
+    @include break-min($xs) {
+      max-width: calc((8 / 12) * 100%);
+    }
+    @include break-min($md) {
       max-width: calc((6 / 12) * 100%);
     }
   }
@@ -66,8 +69,7 @@ h3.cta-Block_Title {
 }
 
 ul.cta-Block_Items {
-  padding: 0;
-  margin: 0;
+  @include no-margin-padding;
   display: flex;
   justify-content: center;
   margin-right: -#{$grid-gap};
@@ -82,9 +84,16 @@ ul.cta-Block_Items {
 li.cta-Block_Item {
   @include no_bullets;
   margin-right: $grid-gap;
+  width: calc((6 / 12) * 100%);
+  flex: 0 1 calc((6 / 12) * 100%);
 
+  @include break-min($sm) {
+    width: calc((2 / 6) * 100%);
+    flex: 0 1 calc((2 / 6) * 100%);
+  }
   .cta-Block-share & {
     @include break-max($sm) {
+      width: auto;
       flex: 1 1 auto;
       margin-right: 5px;
     }
@@ -94,7 +103,8 @@ li.cta-Block_Item {
 a.cta-Block_Link,
 .editor-block-list__layout a.cta-Block_Link {
   @include button_ghost;
-  @include button_wider;
+  width: 100%;
+  margin: 0 !important;
 
   &.cta-Block_Link-accent {
     @include button_accent;

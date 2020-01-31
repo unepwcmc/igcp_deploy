@@ -11,7 +11,7 @@
 }
 
 .her-Page_Inner {
-  @include inner;
+  @include inner_padding;
   position: relative;
   z-index: 3;
   background-color: rgba(0,0,0,0.3);
@@ -34,16 +34,16 @@
     margin-bottom: 0;
   }
 
-  @include break-min($sm) {
+  @include break-min($xs) {
     max-width: calc((8 / 12) * 100%);
   }
 
   @include break-min($md) {
+    max-width: calc((6 / 12) * 100%);
     padding-top: 25px;
     padding-bottom: 25px;
   }
   @include break-min($lg) {
-    max-width: calc((6 / 12) * 100%);
     padding-top: 50px;
     padding-bottom: 50px;
   }
@@ -61,9 +61,41 @@ p.her-Page_Text {
   color: #fff;
 }
 
-.her-Page_Link {
-  @include button_accent;
+ul.her-Page_Items {
+  @include no-margin-padding;
+  display: flex;
+  justify-content: center;
+  margin-right: -#{$grid-gap};
 }
+
+li.her-Page_Item {
+  @include no_bullets;
+  margin-right: $grid-gap;
+  width: calc((6 / 12) * 100%);
+  flex: 0 1 calc((6 / 12) * 100%);
+
+  @include break-min($sm) {
+    width: calc((2 / 6) * 100%);
+    flex: 0 1 calc((2 / 6) * 100%);
+  }
+}
+
+a.her-Page_Link {
+  @include button_accent;
+  width: 100%;
+  margin: 0 !important;
+
+  &.her-Page_Link-secondary {
+    @include button_primary;
+
+    &:hover {
+      color: #fff !important;
+      border-color: $color-primary-light !important;
+      background-color: $color-primary-light !important;
+    }
+  }
+}
+
 
 .her-Page_Overlay {
   display: none;

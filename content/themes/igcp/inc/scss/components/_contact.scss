@@ -5,8 +5,11 @@ h3.frm-Contact_Title,
 }
 
 .frm-Contact_Form {
-  @include break-min($md) {
-    @include restrain_width;
+  @include break-min($xs) {
+    max-width: $restrained-width;
+    margin-right: auto;
+    margin-left: auto;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -18,13 +21,11 @@ h3.frm-Contact_Title,
     display: block;
     width: 100%;
     flex: 0 0 100%;
-    margin-bottom: 12.5px;
+    margin-bottom: 20px;
+    line-height: 1;
 
     &.frm-Contact_Label-small {
-      display: block;
-      margin-bottom: 12.5px;
-
-      @include break-min($md) {
+      @include break-min($xs) {
         width: calc(50% - 6.15px);
         flex: 0 0 calc(50% - 6.15px);
       }
@@ -34,7 +35,7 @@ h3.frm-Contact_Title,
   .frm-Contact_Input,
   .frm-Contact_Select,
   .frm-Contact_Textarea {
-    margin-top: 5px;
+    margin-top: 10px;
   }
 
   span.wpcf7-not-valid-tip {
@@ -53,10 +54,7 @@ h3.frm-Contact_Title,
   .wpcf7-submit {
     margin: 0 !important;
     align-self: flex-start;
-
-    @include break-min($xs) {
-      width: auto;
-    }
+    width: auto;
 
     @include break-min($sm) {
       width: calc((1 / 4) * 100%);
@@ -67,7 +65,7 @@ h3.frm-Contact_Title,
     max-width: 100%;
     margin: 0;
 
-    @include break-min($md) {
+    @include break-min($xs) {
       max-width: calc(100% - 150px);
       position: absolute;
       bottom: -30px;
