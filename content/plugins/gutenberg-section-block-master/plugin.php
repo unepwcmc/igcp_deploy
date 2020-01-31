@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: Gutenberg Section Block
- * Plugin URI: https://github.com/marcusig/gutenberg-section-block/
+ * Plugin URI: https://wordpress.com/
  * Description: Section block — is a Gutenberg plugin created via create-guten-block.
- * Author: marcusig, mklacroix
- * Author URI: https://mklacroix.com/
- * Version: 1.1.3
+ * Author: Wordpress
+ * Author URI: https://wordpress.com/
+ * Version: 1.0.0
  * License: GPL2+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  *
