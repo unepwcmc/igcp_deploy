@@ -1,4 +1,5 @@
-.cta-Block {
+.cta-Block,
+.editor-block-list__layout .cta-Block {
   width: 100%;
   position: relative;
   background: $color-primary;
@@ -27,7 +28,8 @@
   display: flex;
 }
 
-.cta-Block_Body {
+.cta-Block_Body,
+.editor-block-list__layout .cta-Block_Body {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -35,7 +37,8 @@
   width: 100%;
 }
 
-.cta-Block_Content {
+.cta-Block_Content,
+.editor-block-list__layout .cta-Block_Content {
   padding-top: 80px;
   padding-bottom: 80px;
   text-align: center;
@@ -56,19 +59,22 @@
   }
 }
 
-h3.cta-Block_Title {
+h3.cta-Block_Title,
+.editor-block-list__layout h3.cta-Block_Title {
   color: #fff;
   text-align: center;
   margin: 0 auto 20px;
 }
 
-.cta-Block_Text {
+.cta-Block_Text,
+.editor-block-list__layout .cta-Block_Text {
   font-size: 14px;
   line-height: 1.5;
   margin-bottom: 50px;
 }
 
-ul.cta-Block_Items {
+ul.cta-Block_Items,
+.editor-block-list__layout ul.cta-Block_Items {
   @include no-margin-padding;
   display: flex;
   justify-content: center;
@@ -81,7 +87,8 @@ ul.cta-Block_Items {
   }
 }
 
-li.cta-Block_Item {
+li.cta-Block_Item,
+.editor-block-list__layout li.cta-Block_Item {
   @include no_bullets;
   margin-right: $grid-gap;
   width: calc((6 / 12) * 100%);
@@ -119,7 +126,8 @@ a.cta-Block_Link,
   }
 }
 
-.cta-Block_ImageStrip {
+.cta-Block_ImageStrip,
+.editor-block-list__layout .cta-Block_ImageStrip {
   padding-bottom: 20px;
   background-size: cover;
   background-repeat: no-repeat;
