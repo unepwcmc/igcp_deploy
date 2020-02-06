@@ -89,6 +89,7 @@ a.her-Page_Link {
 
   &.her-Page_Link-secondary {
     @include button_primary;
+    display: block;
 
     &:hover {
       color: #fff !important;
