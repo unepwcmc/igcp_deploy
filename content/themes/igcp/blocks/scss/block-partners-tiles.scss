@@ -24,8 +24,8 @@ h3.blk-Partners_Title {
   margin-right: auto;
 }
 
-.blk-Partners_Items,
-.editor-block-list__layout .blk-Partners_Items {
+ul.blk-Partners_Items,
+.editor-block-list__layout ul.blk-Partners_Items {
   @include no_margin_padding;
   display: flex;
   flex-wrap: wrap;
@@ -33,8 +33,8 @@ h3.blk-Partners_Title {
   margin-bottom: -#{$grid-gap};
 }
 
-.blk-Partners_Item,
-.editor-block-list__layout .blk-Partners_Item {
+li.blk-Partners_Item,
+.editor-block-list__layout li.blk-Partners_Item {
   width: calc(((4 / 12) * 100%) - #{$grid-gap});
   flex: 0 0 calc(((4 / 12) * 100%) - #{$grid-gap});
   margin-bottom: $grid-gap;
