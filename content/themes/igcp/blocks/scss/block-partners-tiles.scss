@@ -14,7 +14,7 @@
   @include section_header;
 }
 
-.blk-Partners_Title {
+h3.blk-Partners_Title {
   @include section_title;
 }
 
@@ -24,7 +24,8 @@
   margin-right: auto;
 }
 
-.blk-Partners_Items {
+.blk-Partners_Items,
+.editor-block-list__layout .blk-Partners_Items {
   @include no_margin_padding;
   display: flex;
   flex-wrap: wrap;
@@ -32,7 +33,8 @@
   margin-bottom: -#{$grid-gap};
 }
 
-.blk-Partners_Item {
+.blk-Partners_Item,
+.editor-block-list__layout .blk-Partners_Item {
   width: calc(((4 / 12) * 100%) - #{$grid-gap});
   flex: 0 0 calc(((4 / 12) * 100%) - #{$grid-gap});
   margin-bottom: $grid-gap;
@@ -42,7 +44,8 @@
   border: 1px solid $color-border;
 }
 
-.blk-Partner {
+.blk-Partner,
+.editor-block-list__layout .blk-Partner {
   position: relative;
   padding-bottom: calc((5 / 12) * 100%);
 
@@ -58,7 +61,8 @@
   }
 }
 
-a.blk-Partner_FauxLink {
+a.blk-Partner_FauxLink,
+.editor-block-list__layout a.blk-Partner_FauxLink {
   @include absolute_fill;
   z-index: 2;
   font-size: 0;
@@ -69,7 +73,8 @@ a.blk-Partner_FauxLink {
   margin-top: $grid-gap * 2;
 }
 
-a.blk-Partners_Link {
+a.blk-Partners_Link,
+.editor-block-list__layout a.blk-Partners_Link {
   text-decoration: none;
 
   position: relative;
