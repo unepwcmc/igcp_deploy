@@ -83,7 +83,8 @@ li.her-Page_Item {
 a.her-Page_Link {
   @include button_accent;
   width: 100%;
-  margin: 0 !important;
+  margin: 0 auto !important;
+  max-width: 150px;
 
   &.her-Page_Link-secondary {
     @include button_primary;

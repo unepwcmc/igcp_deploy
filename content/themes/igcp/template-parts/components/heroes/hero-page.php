@@ -46,16 +46,16 @@
         <?php endif; ?>
         <?php if ($link_url != '' || $link_url_2 != ''): ?>
           <ul class="her-Page_Items">
-            <li class="her-Page_Item">
-              <?php if ($link_url != ''): ?>
+            <?php if ($link_url != ''): ?>
+              <li class="her-Page_Item">
                 <a href="<?php echo $link_url; ?>" class="her-Page_Link her-Page_Link-secondary"><?php echo $link_text; ?></a>
-              <?php endif; ?>
-            </li>
-            <li class="her-Page_Item">
-              <?php if ($link_url_2 != ''): ?>
+              </li>
+            <?php endif; ?>
+            <?php if ($link_url_2 != ''): ?>
+              <li class="her-Page_Item">
                 <a href="<?php echo $link_url_2; ?>" class="her-Page_Link"><?php echo $link_text_2; ?></a>
+              </li>
               <?php endif; ?>
-            </li>
           </ul>
         <?php endif; ?>
       </div>
