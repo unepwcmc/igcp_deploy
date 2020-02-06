@@ -83,7 +83,7 @@ li.her-Page_Item {
 a.her-Page_Link {
   @include button_accent;
   width: 100%;
-  margin: 0 auto !important;
+  margin: 0 !important;
   max-width: 150px;
 
   &.her-Page_Link-secondary {
@@ -94,6 +94,18 @@ a.her-Page_Link {
       border-color: $color-primary-light !important;
       background-color: $color-primary-light !important;
     }
+  }
+
+  li.her-Page_Item:first-child & {
+    margin-left: auto !important;
+  }
+
+  li.her-Page_Item:last-child & {
+    margin-right: auto !important;
+  }
+
+  li.her-Page_Item:only-child &{
+    margin: 0 !important;
   }
 }
 
