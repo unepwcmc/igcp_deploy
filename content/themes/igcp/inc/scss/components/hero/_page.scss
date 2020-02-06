@@ -107,7 +107,8 @@ a.her-Page_Link {
   }
 
   li.her-Page_Item:only-child &{
-    margin: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 }
 
