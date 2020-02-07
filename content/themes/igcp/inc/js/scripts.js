@@ -187,10 +187,10 @@ function modal() {
         modal.classList.add("mod-Modal-active"); // els.body.classList.add("utl-DrawerActive");
         // When the modal is shown, we want a fixed body
 
-        console.log("Modal showing: ", "-".concat(window.scrollY, "px"));
         document.body.style.top = "-".concat(window.scrollY, "px");
+        document.body.style.right = '0px';
+        document.body.style.left = '0px';
         document.body.style.position = 'fixed';
-        console.log("Modal shown: ", "-".concat(window.scrollY, "px"));
         var card = this.parentElement;
 
         if (modalName == 'team') {
@@ -234,6 +234,8 @@ function modal() {
         var scrollY = document.body.style.top;
         document.body.style.position = '';
         document.body.style.top = '';
+        document.body.style.right = '';
+        document.body.style.left = '';
         window.scrollTo(0, parseInt(scrollY || '0') * -1);
         console.log("Modal hidden: ", parseInt(scrollY || '0') * -1);
       });

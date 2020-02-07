@@ -43,10 +43,10 @@ export default function modal() {
           // els.body.classList.add("utl-DrawerActive");
 
           // When the modal is shown, we want a fixed body
-          console.log("Modal showing: ",`-${window.scrollY}px`);
           document.body.style.top = `-${window.scrollY}px`;
+          document.body.style.right = '0px';
+          document.body.style.left = '0px';
           document.body.style.position = 'fixed';
-          console.log("Modal shown: ",`-${window.scrollY}px`);
 
 
           const card = this.parentElement;
@@ -95,6 +95,8 @@ export default function modal() {
           const scrollY = document.body.style.top;
           document.body.style.position = '';
           document.body.style.top = '';
+          document.body.style.right = '';
+          document.body.style.left = '';
           window.scrollTo(0, parseInt(scrollY || '0') * -1);
           console.log("Modal hidden: ", parseInt(scrollY || '0') * -1);
         });

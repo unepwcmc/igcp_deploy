@@ -115,6 +115,14 @@ h3.mod-Modal_Title {
 p.mod-Modal_Subheading {
   color: $color-grey-text;
 
+  &[data-modal-email] {
+    margin-bottom: 0;
+
+    span {
+      word-break: break-all;
+    }
+  }
+
   &[data-modal-email],
   &[data-modal-location] {
     display: none;
@@ -134,16 +142,19 @@ p.mod-Modal_Subheading {
 
 .mod-Modal_Column {
   &:first-child {
+    margin-bottom: 10px;
+
     @include break-min($sm) {
-      width: calc((3 / 12) * 100%);
-      flex: 0 0 calc((3 / 12) * 100%);
+      width: calc((4 / 12) * 100%);
+      flex: 1 1 calc((4 / 12) * 100%);
       margin-right: $grid-gap;
+      margin-bottom: 0;
     }
   }
   &:last-child {
     @include break-min($sm) {
-      width: calc((9 / 12) * 100%);
-      flex: 0 0 calc((9 / 12) * 100%);
+      width: calc((8 / 12) * 100%);
+      flex: 1 1 calc((8 / 12) * 100%);
     }
   }
 }
@@ -163,16 +174,6 @@ p.mod-Modal_Subheading {
   }
 }
 
-button.mod-Modal_Button {
-  appearance: none;
-  -webkit-appearance: none;
-  text-decoration: underline;
-  color: $color-grey-text;
-  background: none;
-  font-size: 16px;
-  border: 0;
-  font-weight: 500;
-  padding: 0;
-  margin-top: $grid-gap * 2;
-  margin-bottom: $grid-gap * 2;
+p.mod-Modal_Text {
+  margin-bottom: 0;
 }

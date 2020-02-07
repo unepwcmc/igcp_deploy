@@ -16,11 +16,10 @@
               <img src="#" alt="" data-modal-image>
             </div>
             <p class="mod-Modal_Subheading" data-modal-location><strong>Location</strong><br/><span></span></p>
-            <p class="mod-Modal_Subheading" data-modal-email>Email: <span></span></p>
+            <p class="mod-Modal_Subheading" data-modal-email>Email: <br/><span></span></p>
           </div>
           <div class="mod-Modal_Column">
-            <div class="mod-Modal_Text" data-modal-bio></div>
-            <button class="mod-Modal_Button" data-modal-close>Close modal</button>
+            <p class="mod-Modal_Text" data-modal-bio></p>
           </div>
         </div>
       </div>
