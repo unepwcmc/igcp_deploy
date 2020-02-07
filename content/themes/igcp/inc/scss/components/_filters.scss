@@ -127,47 +127,33 @@ h3.flt-Filters_Title {
     }
   }
 
-  input[type="checkbox"],
-  input[type="radio"] {
-    // display: inline-block;
-    // position: absolute;
-    // top: -2px;
-    // left: 2px;
-    //
-    // @include break-min($md) {
-    //   top: 0px;
-    // }
-    //
-    // .drw-Drawer & {
-    //   top: 1px;
-    // }
-  }
-
   .flt-Filters_Checkbox {
     cursor: pointer;
-    
+
     &::before {
       content: '';
       display: block;
-      width: 15px;
-      height: 15px;
+      width: 16px;
+      height: 16px;
       border: 1px solid $color-secondary;
 
       position: absolute;
-      top: 4px;
+      top: 3px;
       left: 0;
     }
 
     &::after {
       content: '';
       display: block;
-      width: 9px;
+      width: 12px;
       height: 9px;
-      background-color: $color-secondary;
+      background-image: url('../img/icon-tick-green.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
 
       position: absolute;
-      top: 7px;
-      left: 3px;
+      top: 6px;
+      left: 2px;
       visibility: hidden;
       opacity: 0;
       transition: visibility .3s ease, opacity .3s ease;
