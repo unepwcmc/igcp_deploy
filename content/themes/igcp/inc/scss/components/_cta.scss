@@ -97,6 +97,21 @@ li.cta-Block_Item,
   @include break-min($sm) {
     width: calc((2 / 6) * 100%);
     flex: 0 1 calc((2 / 6) * 100%);
+
+    max-width: 150px;
+
+    &:first-child {
+      margin-left: auto !important;
+    }
+
+    &:last-child {
+      margin-right: auto !important;
+    }
+
+    &:only-child {
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
   }
   .cta-Block-share & {
     @include break-max($sm) {
@@ -110,11 +125,13 @@ li.cta-Block_Item,
 a.cta-Block_Link,
 .editor-block-list__layout a.cta-Block_Link {
   @include button_ghost;
+  display: block;
   width: 100%;
   margin: 0 !important;
 
   &.cta-Block_Link-accent {
     @include button_accent;
+    display: block;
   }
 
   .cta-Block-share & {
