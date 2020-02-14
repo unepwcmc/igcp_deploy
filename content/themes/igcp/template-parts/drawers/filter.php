@@ -13,7 +13,7 @@
     	<?php get_template_part( 'template-parts/filters/filters', 'library'); ?>
     </div>
     <div class="drw-Drawer_Footer">
-      <button class="drw-Drawer_Submit">Show results</button>
+      <button class="drw-Drawer_Submit">Filter</button>
     </div>
   </div>
 </div>
