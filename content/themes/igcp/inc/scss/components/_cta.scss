@@ -3,6 +3,7 @@
   width: 100%;
   position: relative;
   background: $color-primary;
+  overflow: hidden;
 }
 
 .cta-Block_BackgroundImage,
@@ -78,10 +79,7 @@ ul.cta-Block_Items,
   @include no-margin-padding;
   display: flex;
   justify-content: center;
-
-  @include break-min($sm) {
-    margin-right: -#{$grid-gap};
-  }
+  margin-right: -#{$grid-gap};
 
   .cta-Block-share & {
     @include break-max($sm) {
@@ -98,8 +96,8 @@ li.cta-Block_Item,
   flex: 0 1 calc(((6 / 12) * 100%) - #{$grid-gap * 2});
 
   @include break-min($sm) {
-    width: calc(((2 / 6) * 100%) - #{$grid-gap});
-    flex: 0 1 calc(((2 / 6) * 100%) - #{$grid-gap});
+    width: calc((2 / 6) * 100%);
+    flex: 0 1 calc((2 / 6) * 100%);
 
     max-width: 150px;
 
