@@ -1,0 +1,74 @@
+.sts-Family {
+  margin-top: $grid-gap * 4;
+  margin-bottom: $grid-gap * 4;
+}
+
+ul.sts-Family_Items {
+  @include no-margin-padding;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: -#{$grid-gap * 3};
+}
+
+li.sts-Family_Item {
+  display: flex;
+  flex: 1 1 50%;
+  margin-bottom: $grid-gap * 3;
+}
+
+.sts-Family_Icon {
+  width: 40px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  @include break-min($xxs) {
+    width: 65px;
+    margin-right: $grid-gap * 2;
+  }
+
+  svg {
+    max-width: 100%;
+
+    .sts-Family_Item-adult-females & {
+      max-width: 77%;
+    }
+
+    .sts-Family_Item-blackbacks & {
+      max-width: 85%;
+    }
+
+    .sts-Family_Item-sub-adult-females & {
+      max-width: 70%;
+    }
+
+    .sts-Family_Item-juveniles & {
+      max-width: 70%;
+    }
+
+    .sts-Family_Item-infants & {
+      max-width: 54%;
+    }
+  }
+}
+
+p.sts-Family_Text {
+  margin-bottom: 0;
+  line-height: 1;
+  color: $color-grey-text;
+  font-size: 14px;
+
+  @include break-min($xxs) {
+    font-size: 16px;
+  }
+}
+
+p.sts-Family_Text-large {
+  font-size: 24px;
+  margin-bottom: 5px;
+
+  @include break-min($xxs) {
+    font-size: 28px;
+  }
+}

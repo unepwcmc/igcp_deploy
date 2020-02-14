@@ -1,20 +1,16 @@
 @import "../../inc/scss/utilities/variables";
 @import "../../inc/scss/utilities/mixins";
 
-.abt-Gorillas_Infographic {
+.abt-Gorillas {
   @include restrain_width;
-  margin-top: #{$grid-gap * 4};
-  margin-bottom: #{$grid-gap * 4};
 }
 
 h3.abt-Gorillas_Title {
-  @include restrain_width;
   font-size: 22px;
   margin-top: $grid-gap;
 }
 
 .abt-Gorillas_Text {
-  @include restrain_width;
 }
 
 .abt-Gorillas_Images {
@@ -22,16 +18,27 @@ h3.abt-Gorillas_Title {
 }
 
 .abt-Gorillas_Images-flex {
-  display: flex;
+  @include ignore_restrained_width;
+
+  @include break-min($xs) {
+    display: flex;
+  }
 }
 
 .abt-Gorillas_Image {
   .abt-Gorillas_Images-flex & {
-    width: calc(((6 / 12) * 100%) - 2.5px);
-    flex: 0 0 calc(((6 / 12) * 100%) - 2.5px);
-
     &:first-child {
-      margin-right: 5px;
+      margin-bottom: $grid-gap;
+    }
+
+    @include break-min($xs) {
+      width: calc(((6 / 12) * 100%) - 2.5px);
+      flex: 0 0 calc(((6 / 12) * 100%) - 2.5px);
+
+      &:first-child {
+        margin-right: 5px;
+        margin-bottom: 0;
+      }
     }
   }
 }
@@ -53,7 +60,6 @@ h3.abt-Gorillas_Title {
 
 .abt-Gorillas_Quote {
   @include spacer;
-  @include restrain_width;
 }
 
 p.abt-Gorillas_QuoteText {
