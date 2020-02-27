@@ -148,6 +148,55 @@ function filterInputs() {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.default = filterList;
+
+function filterList() {
+  var els = {
+    filters: Array.prototype.slice.call(document.querySelectorAll('.lyt-Sidebar .searchandfilter input[type="checkbox"]:checked')),
+    clearButton: document.querySelector('.lyt-Sidebar .flt-Filters_Button')
+  };
+
+  if (els.filters.length > 0) {
+    var clearLink = els.clearButton.getAttribute('href');
+    var clearText = els.clearButton.innerHTML;
+    var filtersListDiv = document.createElement('div');
+    filtersListDiv.classList.add('arc-FiltersList');
+    var ul = document.createElement('ul');
+    ul.classList.add('arc-FiltersList_Items');
+    els.filters.forEach(function (filter) {
+      var li = document.createElement('li');
+      li.classList.add('arc-FiltersList_Item');
+      var span = document.createElement('span');
+      span.classList.add('arc-FiltersList_Filter');
+      var str = filter.nextSibling.innerHTML.trim();
+      span.innerHTML = str;
+      li.appendChild(span);
+      ul.appendChild(li);
+    });
+    var li = document.createElement('li');
+    li.classList.add('arc-FiltersList_Item', 'arc-FiltersList_Item-clear');
+    var a = document.createElement('a');
+    a.setAttribute('href', clearLink);
+    a.classList.add('arc-FiltersList_Link');
+    a.innerHTML = clearText;
+    li.appendChild(a);
+    ul.appendChild(li);
+    var filtersListTitle = document.createElement('p');
+    filtersListTitle.innerHTML = 'Currently Filtered By:';
+    filtersListTitle.classList.add('arc-FiltersList_Title');
+    filtersListDiv.appendChild(filtersListTitle);
+    filtersListDiv.appendChild(ul);
+    var filtersToggle = document.querySelector('.flt-Filters_Toggle');
+    filtersToggle.parentNode.insertBefore(filtersListDiv, filtersToggle.nextSibling);
+  }
+}
+
+},{}],5:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 exports.default = modal;
 
 function modal() {
@@ -246,7 +295,7 @@ function modal() {
   // });
 }
 
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -276,7 +325,7 @@ function searchbar() {
   });
 }
 
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 "use strict";
 
 var _objectFitImages = _interopRequireDefault(require("object-fit-images"));
@@ -294,6 +343,8 @@ var _caseStudyNav = _interopRequireDefault(require("./modules/caseStudyNav"));
 var _drawers = _interopRequireDefault(require("./modules/drawers"));
 
 var _filterInputs = _interopRequireDefault(require("./modules/filterInputs"));
+
+var _filterList = _interopRequireDefault(require("./modules/filterList"));
 
 var _modal = _interopRequireDefault(require("./modules/modal"));
 
@@ -322,6 +373,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     document.body.classList.add("loaded");
     var isHomePage = document.body.classList.contains("home");
     var isCaseStudy = document.body.classList.contains("page-template-page-casestudy");
+    var isArchive = document.body.classList.contains("archive");
 
     if (isCaseStudy) {
       (0, _caseStudyNav.default)();
@@ -329,10 +381,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
       window.addEventListener("scroll", caseStudyNavScroll);
     }
 
+    if (isArchive) {
+      (0, _filterInputs.default)();
+      (0, _filterList.default)();
+    }
+
     headerScroll();
     window.addEventListener("scroll", headerScroll);
     (0, _drawers.default)();
-    (0, _filterInputs.default)();
     (0, _modal.default)();
     (0, _searchbar.default)();
     (0, _smoothscrollPolyfill.default)();
@@ -372,7 +428,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   });
 })();
 
-},{"./modules/caseStudyNav":1,"./modules/drawers":2,"./modules/filterInputs":3,"./modules/modal":4,"./modules/searchbar":5,"./utilities":7,"./utilities/smoothscroll-polyfill":8,"./vendor":10,"object-fit-images":12,"object-fit-videos":13}],7:[function(require,module,exports){
+},{"./modules/caseStudyNav":1,"./modules/drawers":2,"./modules/filterInputs":3,"./modules/filterList":4,"./modules/modal":5,"./modules/searchbar":6,"./utilities":8,"./utilities/smoothscroll-polyfill":9,"./vendor":11,"object-fit-images":13,"object-fit-videos":14}],8:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -434,7 +490,7 @@ function scrollToLink() {
   });
 }
 
-},{}],8:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 'use strict'; // polyfill
 
 Object.defineProperty(exports, "__esModule", {
@@ -777,7 +833,7 @@ function smoothScrollPolyfill() {
 
 smoothScrollPolyfill();
 
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 "use strict";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -1121,14 +1177,14 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
   }]);
 });
 
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 "use strict";
 
 require("./in-view.min.js");
 
 require("./modernizr-custom.3.6.0.js");
 
-},{"./in-view.min.js":9,"./modernizr-custom.3.6.0.js":11}],11:[function(require,module,exports){
+},{"./in-view.min.js":10,"./modernizr-custom.3.6.0.js":12}],12:[function(require,module,exports){
 "use strict";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -1468,7 +1524,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
   e.Modernizr = Modernizr;
 }(window, document);
 
-},{}],12:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 /*! npm.im/object-fit-images 3.2.4 */
 'use strict';
 
@@ -1701,7 +1757,7 @@ hijackAttributes();
 
 module.exports = fix;
 
-},{}],13:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 /**
  * Object Fit Videos
  * Polyfill for object-fit and object-position CSS properties on video elements
@@ -1969,4 +2025,4 @@ var objectFitVideos = function (videos) {
 if (typeof module !== 'undefined' && typeof module.exports !== 'undefined')
   module.exports = objectFitVideos;
 
-},{}]},{},[6]);
+},{}]},{},[7]);

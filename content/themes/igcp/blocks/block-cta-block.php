@@ -9,9 +9,9 @@
 
   $title = get_theme_mod( 'cta_block_title' );
   $text = get_theme_mod( 'cta_block_text' );
-  $link_url_1 = get_theme_mod( 'cta_block_button_1_link' );
+  $link_url_1 = get_page_link( get_theme_mod( 'cta_block_button_1_link' ) );
   $link_text_1 = get_theme_mod( 'cta_block_button_1_text' );
-  $link_url_2 = get_theme_mod( 'cta_block_button_2_link' );
+  $link_url_2 = get_page_link( get_theme_mod( 'cta_block_button_2_link' ) );
   $link_text_2 = get_theme_mod( 'cta_block_button_2_text' );
   $background_image_url = get_theme_mod( 'cta_block_background_image' );
   $opacity = get_theme_mod( 'cta_block_overlay_opacity' );

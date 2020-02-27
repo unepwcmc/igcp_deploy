@@ -9,6 +9,7 @@ import smoothScrollPolyfill from './utilities/smoothscroll-polyfill';
 import caseStudyNav from './modules/caseStudyNav';
 import drawers from './modules/drawers';
 import filterInputs from './modules/filterInputs';
+import filterList from './modules/filterList';
 import modal from './modules/modal';
 import searchbar from './modules/searchbar';
 
@@ -25,6 +26,7 @@ import searchbar from './modules/searchbar';
     document.body.classList.add("loaded");
     const isHomePage = document.body.classList.contains("home");
     const isCaseStudy = document.body.classList.contains("page-template-page-casestudy");
+    const isArchive = document.body.classList.contains("archive");
 
     if (isCaseStudy) {
       caseStudyNav();
@@ -32,10 +34,14 @@ import searchbar from './modules/searchbar';
       window.addEventListener("scroll", caseStudyNavScroll);
     }
 
+    if (isArchive) {
+      filterInputs();
+      filterList();
+    }
+
     headerScroll();
     window.addEventListener("scroll", headerScroll);
     drawers();
-    filterInputs();
     modal();
     searchbar();
     smoothScrollPolyfill();

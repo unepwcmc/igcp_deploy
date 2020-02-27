@@ -307,6 +307,18 @@
   }
 }
 
+@mixin button_filter {
+  @include button;
+  color: $color-secondary !important;
+  border-color: $color-filter !important;
+  background-color: $color-filter !important;
+
+  &:hover {
+    border-color: $color-secondary !important;
+    background-color: transparent !important;
+  }
+}
+
 @mixin button_ghost {
   @include button;
   color: #fff !important;

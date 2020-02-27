@@ -16,6 +16,7 @@
 	// Page Hero
 	set_query_var('hero-title', get_the_title( get_option('page_for_posts', true) ));
 	get_template_part( 'template-parts/components/heroes/hero', 'page' );
+	// outputFilterParams();
 ?>
 
 <div class="lyt-Container lyt-Container-hasSidebar">
