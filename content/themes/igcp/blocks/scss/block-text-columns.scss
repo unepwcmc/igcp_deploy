@@ -48,4 +48,24 @@ a.blk-TextColumns_Link {
   color: $color-grey-text;
   font-size: 14px;
   text-decoration: none;
+
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: currentColor;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease, visibility .5s ease;
+  }
+
+  &:hover::before {
+    opacity: 1;
+    visibility: visible;
+  }
 }

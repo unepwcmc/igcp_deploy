@@ -43,6 +43,11 @@ h3.flt-Filters_Title {
   margin-top: 5px;
   margin-bottom: 0;
 
+  &.flt-Filters_Button-clear {
+    background-color: transparent !important;
+    border-color: $color-secondary !important;
+  }
+
   .drw-Drawer & {
     margin-bottom: 5px;
   }

@@ -115,6 +115,12 @@ h3.mod-Modal_Title {
 p.mod-Modal_Subheading {
   color: $color-grey-text;
 
+  &[data-modal-jobtitle] {
+    @include break-min($sm) {
+      margin-bottom: 10px;
+    }
+  }
+
   &[data-modal-email] {
     margin-bottom: 0;
 
@@ -165,6 +171,7 @@ p.mod-Modal_Subheading {
   margin-bottom: $grid-gap;
 
   @include break-min($sm) {
+    margin-top: 5px;
     padding-bottom: 100%;
   }
 

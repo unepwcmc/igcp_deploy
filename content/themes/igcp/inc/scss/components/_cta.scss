@@ -36,6 +36,12 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+
+  .lyt-Body & {
+    @include break-min($sm) {
+      min-height: 400px;
+    }
+  }
 }
 
 .cta-Block_Content,
@@ -64,14 +70,14 @@ h3.cta-Block_Title,
 .editor-block-list__layout h3.cta-Block_Title {
   color: #fff;
   text-align: center;
-  margin: 0 auto 20px;
+  margin: 0 auto 25px;
 }
 
-.cta-Block_Text,
+p.cta-Block_Text,
 .editor-block-list__layout .cta-Block_Text {
   font-size: 14px;
   line-height: 1.5;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 ul.cta-Block_Items,

@@ -16,7 +16,7 @@
     <h3 class="flt-Filters_Title">Filters</h3>
     <?php echo do_shortcode('[searchandfilter fields="park" types="checkbox" headings="Parks" empty_search_url="/families/" operators="OR" submit_label="Filter" ]'); ?>
     <?php if ( basename( $template ) !== 'archive-families.php' ) : ?>
-      <a class="flt-Filters_Button" href="/families/">Clear Filters</a>
+      <a class="flt-Filters_Button flt-Filters_Button-clear" href="/families/">Clear Filters</a>
     <?php endif; ?>
   </div>
 <?php endif; ?>

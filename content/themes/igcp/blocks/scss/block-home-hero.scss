@@ -74,7 +74,7 @@
     text-align: left;
 
     .lyt-Body & {
-      padding-top: #{$grid-gap * 5};
+      min-height: 500px;
     }
   }
 }
@@ -103,8 +103,13 @@ h2.her-Home_Title,
 a.her-Home_Link,
 .editor-block-list__layout a.her-Home_Link {
   @include button_accent;
+  border-color: #fff !important;
   align-self: flex-start;
   margin: 0;
+
+  &:hover {
+    border-color: #fff !important;
+  }
 
   @include break-min($sm) {
     margin: 0;

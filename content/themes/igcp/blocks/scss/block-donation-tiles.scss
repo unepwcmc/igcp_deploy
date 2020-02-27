@@ -3,6 +3,7 @@
 
 .til-Donation {
   @include ignore_restrained_width;
+  margin-bottom: #{$grid-gap * 4};
 }
 
 .til-Donation_Items {

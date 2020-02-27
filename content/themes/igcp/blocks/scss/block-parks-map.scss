@@ -71,10 +71,11 @@ h3.blk-Map_Title {
     content: counter(items-counter);
     width: 20px;
     height: 20px;
-    background-color: $color-accent;
+    background-color: $color-accent-dark;
     border-radius: 50%;
     text-align: center;
     font-size: 12px;
+    font-weight: 700;
     line-height: 20px;
   }
 
