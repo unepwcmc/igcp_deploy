@@ -1,5 +1,5 @@
 .cst-Nav {
-  background-color: $color-primary-light;
+  background-color: $color-mid-grey;
   transform: translateY(0);
   transition: transform 0s ease;
 
@@ -59,10 +59,10 @@ a.cst-Nav_Link {
   padding: 5px 10px;
   text-decoration: none;
   border-radius: 5px;
-  background-color: $color-primary;
+  background-color: $color-dark-grey;
   transition: background-color .3s ease;
 
   &:hover {
-    background-color: $color-primary-dark;
+    background-color: lighten($color-dark-grey, 20%);
   }
 }

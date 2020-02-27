@@ -9,9 +9,11 @@
 
   $title = get_theme_mod( 'cta_block_title' );
   $text = get_theme_mod( 'cta_block_text' );
-  $link_url_1 = get_page_link( get_theme_mod( 'cta_block_button_1_link' ) );
+  $link_url_1 = get_theme_mod( 'cta_block_button_1_link' );
+  $link_url_1_external = get_theme_mod( 'cta_block_button_1_link_external' );
   $link_text_1 = get_theme_mod( 'cta_block_button_1_text' );
-  $link_url_2 = get_page_link( get_theme_mod( 'cta_block_button_2_link' ) );
+  $link_url_2 = get_theme_mod( 'cta_block_button_2_link' );
+  $link_url_2_external = get_theme_mod( 'cta_block_button_2_link_external' );
   $link_text_2 = get_theme_mod( 'cta_block_button_2_text' );
   $background_image_url = get_theme_mod( 'cta_block_background_image' );
   $opacity = get_theme_mod( 'cta_block_overlay_opacity' );
@@ -25,10 +27,10 @@
         <p class="cta-Block_Text"><?php echo $text; ?></p>
         <ul class="cta-Block_Items">
           <li class="cta-Block_Item">
-            <a href="<?php echo $link_url_1; ?>" class="cta-Block_Link"><?php echo $link_text_1; ?></a>
+            <a href="<?php echo $link_url_1; ?>" class="cta-Block_Link<?php if ($link_url_1_external) echo ' cta-Block_Link-external'; ?>" <?php if ($link_url_1_external) echo 'target="_blank"'; ?>><?php echo $link_text_1; ?></a>
           </li>
           <li class="cta-Block_Item">
-            <a href="<?php echo $link_url_2; ?>" class="cta-Block_Link cta-Block_Link-accent"><?php echo $link_text_2; ?></a>
+            <a href="<?php echo $link_url_2; ?>" class="cta-Block_Link cta-Block_Link-accent<?php if ($link_url_2_external) echo ' cta-Block_Link-external'; ?>" <?php if ($link_url_2_external) echo 'target="_blank"'; ?>><?php echo $link_text_2; ?><?php if ($link_url_2_external) get_template_part( 'template-parts/icons/icon', 'external' ); ?></a>
           </li>
         </ul>
       </div>

@@ -9,7 +9,8 @@ exports.default = caseStudyNav;
 function caseStudyNav() {
   var els = {
     navlist: document.querySelector('.cst-Nav_Items'),
-    headings: Array.prototype.slice.call(document.querySelectorAll("h4[id]"))
+    headings: Array.prototype.slice.call(document.querySelectorAll("h4[id]")),
+    top: document.querySelector('.ent-Entry_Body')
   };
   els.headings.forEach(function (heading) {
     var title = heading.textContent;
@@ -22,6 +23,7 @@ function caseStudyNav() {
     listItemLink.setAttribute('href', "#".concat(heading.id));
     els.navlist.appendChild(listItem);
   });
+  els.top.id = 'top';
 }
 
 },{}],2:[function(require,module,exports){

@@ -61,17 +61,19 @@
 
 h5.cst-Stats_Heading,
 .editor-block-list__layout h5.cst-Stats_Heading {
+  max-width: 220px;
   margin: 0 0 $grid-gap;
   font-size: 32px;
   line-height: 36px;
   font-weight: 300;
-  max-width: 220px;
+  color: $color-grey-text;
 }
 
 p.cst-Stats_Text,
 .editor-block-list__layout p.cst-Stats_Text {
+  max-width: 220px;
   margin-top: 0;
   margin-bottom: 0;
   font-size: 14px;
-  max-width: 220px;
+  color: $color-grey-text;
 }

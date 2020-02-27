@@ -375,9 +375,20 @@ function cta_block_customizer_settings($wp_customize) {
   $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'cta_block_button_1_link',
   array(
   'label' => 'Button 1 Link',
-  'type' => 'dropdown-pages',
   'section' => 'cta_block',
   'settings' => 'cta_block_button_1_link'
+  ) ) );
+
+  // Button 1 external link?
+
+  // add a setting to set the button as external
+  $wp_customize->add_setting('cta_block_button_1_link_external');
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'cta_block_button_1_link_external',
+  array(
+  'label'     => 'External link?',
+  'section'   => 'cta_block',
+  'settings'  => 'cta_block_button_1_link_external',
+  'type'      => 'checkbox'
   ) ) );
 
   // Button 1 text
@@ -400,9 +411,20 @@ function cta_block_customizer_settings($wp_customize) {
   $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'cta_block_button_2_link',
   array(
   'label' => 'Button 2 Link',
-  'type' => 'dropdown-pages',
   'section' => 'cta_block',
   'settings' => 'cta_block_button_2_link'
+  ) ) );
+
+  // Button 2 external link?
+
+  // add a setting to set the button as external
+  $wp_customize->add_setting('cta_block_button_2_link_external');
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'cta_block_button_2_link_external',
+  array(
+  'label'     => 'External link?',
+  'section'   => 'cta_block',
+  'settings'  => 'cta_block_button_2_link_external',
+  'type'      => 'checkbox'
   ) ) );
 
   // Button 2 text

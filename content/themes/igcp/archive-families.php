@@ -43,6 +43,13 @@
 	</div>
 </div>
 
-<?php echo do_shortcode('[content_block slug=archive-page]'); ?>
+<div class="lyt-Sharebar">
+	<div class="lyt-Sharebar_Inner">
+		<?php get_template_part( 'template-parts/social/social', 'share' ); ?>
+	</div>
+</div>
+<?php
+	echo do_shortcode('[content_block slug=archive-page]');
+?>
 
 <?php get_footer();

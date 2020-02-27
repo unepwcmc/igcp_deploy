@@ -8,7 +8,7 @@
 get_header(); ?>
 
 <?php
-	set_query_var('hero-title', 'Search');
+	set_query_var('hero-title', 'Search results');
 	get_template_part('template-parts/components/heroes/hero', 'simple');
 ?>
 
@@ -42,15 +42,17 @@ get_header(); ?>
 
 				else :
 					?>
-					<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.' ); ?></p>
-					<div class="lyt-Search">
-						<form class="lyt-Search_Form" role="search" method="get" id="searchpageform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-							<label class="utl-ScreenReaderOnly" for="s">Search for:</label>
+					<div class="lyt-Primary_Body">
+						<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.' ); ?></p>
+						<div class="lyt-Search">
+							<form class="lyt-Search_Form" role="search" method="get" id="searchpageform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+								<label class="utl-ScreenReaderOnly" for="s">Search for:</label>
 
-							<input type="text" value="" name="s" id="s" class="lyt-Search_Input" placeholder="Search here" />
+								<input type="text" value="" name="s" id="s" class="lyt-Search_Input" placeholder="Search here" />
 
-							<input class="lyt-Search_Button" type="submit"></input>
-						</form>
+								<input class="lyt-Search_Button" type="submit"></input>
+							</form>
+						</div>
 					</div>
 
 				<?php endif; ?>

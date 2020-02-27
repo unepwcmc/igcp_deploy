@@ -3,7 +3,8 @@ export default function caseStudyNav() {
     navlist: document.querySelector('.cst-Nav_Items'),
     headings: Array.prototype.slice.call(
       document.querySelectorAll("h4[id]")
-    )
+    ),
+    top: document.querySelector('.ent-Entry_Body')
   }
 
   els.headings.forEach(heading => {
@@ -20,4 +21,6 @@ export default function caseStudyNav() {
 
     els.navlist.appendChild(listItem)
   })
+
+  els.top.id = 'top'
 }

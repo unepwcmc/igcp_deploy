@@ -121,7 +121,6 @@
 
 @mixin heading {
   font-family: $font-heading;
-  letter-spacing: 0.5px;
   color: $color-headings;
   margin-bottom: $grid-gap;
 }
@@ -172,7 +171,6 @@
 }
 
 @mixin paragraph {
-  letter-spacing: 0.5px;
   color: inherit;
   margin-bottom: 15px;
 }
@@ -310,8 +308,8 @@
 @mixin button_filter {
   @include button;
   color: $color-secondary !important;
-  border-color: $color-filter !important;
-  background-color: $color-filter !important;
+  border-color: $color-mid-grey !important;
+  background-color: $color-mid-grey !important;
 
   &:hover {
     border-color: $color-secondary !important;

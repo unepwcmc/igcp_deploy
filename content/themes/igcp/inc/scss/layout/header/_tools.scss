@@ -28,6 +28,17 @@
 
 a.hd-Tools_Button {
   @include button_primary_light;
+
+  &.hd-Tools_Button-external {
+    display: flex;
+    justify-content: center;
+
+    svg {
+      width: 14px;
+      margin-left: 5px;
+      fill: #fff;
+    }
+  }
 }
 
 .hd-Tools_Item-cta {

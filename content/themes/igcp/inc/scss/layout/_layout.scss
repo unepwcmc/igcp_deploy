@@ -137,3 +137,11 @@ h2.lyt-Primary_Title {
   padding-bottom: $grid-gap;
   background-color: $color-primary-dark;
 }
+
+.lyt-Sharebar {
+  margin-bottom: $grid-gap * 2;
+}
+
+.lyt-Sharebar_Inner {
+  @include inner;
+}

@@ -20,7 +20,7 @@
     <nav class="cst-Nav">
       <ul class="cst-Nav_Items">
         <li class="cst-Nav_Item">
-          <a href="#" class="cst-Nav_Link">Top</a>
+          <a href="#top" class="cst-Nav_Link">Top</a>
         </li>
       </ul>
     </nav>

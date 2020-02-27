@@ -141,6 +141,20 @@ a.cta-Block_Link,
     display: block;
   }
 
+  &.cta-Block_Link-external {
+    display: flex;
+    justify-content: center;
+
+    svg {
+      width: 14px;
+      margin-left: 5px;
+    }
+    // background-image: url('../img/icon-external.svg');
+    // background-size: 16px;
+    // background-position: 85% 50%;
+    // background-repeat: no-repeat;
+  }
+
   .cta-Block-share & {
     @include break-max($sm) {
       width: 100%;

@@ -68,9 +68,12 @@
                       </div>
                     </div>
                   </div>
-                  <?php if (get_theme_mod( 'enable_header_button' )): ?>
+                  <?php
+                    if (get_theme_mod( 'enable_header_button' )):
+                      $external_header_link = get_theme_mod( 'header_button_external_link' );
+                  ?>
                     <div class="hd-Tools_Item hd-Tools_Item-cta">
-                      <a href="<?php echo get_theme_mod( 'header_button_url' ); ?>" class="hd-Tools_Button" <?php if (get_theme_mod( 'header_button_external_link' )) echo 'target="_blank"' ?>><?php echo get_theme_mod( 'header_button_text' ); ?></a>
+                      <a href="<?php echo get_theme_mod( 'header_button_url' ); ?>" class="hd-Tools_Button<?php if ($external_header_link) echo ' hd-Tools_Button-external'; ?>" <?php if ($external_header_link) echo 'target="_blank"' ?>><?php echo get_theme_mod( 'header_button_text' ); ?><?php if ($external_header_link) get_template_part( 'template-parts/icons/icon', 'external' ); ?></a>
                     </div>
                   <?php endif; ?>
                   <div class="hd-Tools_Item hd-Tools_Item-menuToggle">
