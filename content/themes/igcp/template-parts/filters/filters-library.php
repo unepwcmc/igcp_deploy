@@ -12,6 +12,7 @@
   ( basename( $template ) === 'archive-library_file.php' ) ||
   ( basename( $template ) === 'taxonomy-filetype.php' ) ||
   ( basename( $template ) === 'taxonomy-file_tag.php' ) ||
+  ( basename( $template ) === 'taxonomy-file_year.php' ) ||
   ( basename( $template ) === 'taxonomy-file_country.php' )
 ) : ?>
   <div class="flt-Filters">
