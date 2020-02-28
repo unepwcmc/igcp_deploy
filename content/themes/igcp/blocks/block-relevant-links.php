@@ -40,7 +40,7 @@
               <?php endif;?>
 
               <?php if ( block_sub_value( 'url' ) ) : ?>
-                <a class="blk-RelevantLinks_FauxLink" href="<?php echo block_sub_value( 'url' ); ?>"></a>
+                <a class="blk-RelevantLinks_FauxLink" href="<?php echo block_sub_value( 'url' ); ?>" title="<?php echo block_sub_value( 'heading' ); ?>"></a>
               <?php endif;?>
 
             </li>

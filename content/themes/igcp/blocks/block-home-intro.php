@@ -24,7 +24,7 @@
         <div class="blk-HomeIntro_Content">
           <p class="blk-HomeIntro_LeadText"><?php echo $lead_text; ?></p>
           <p class="blk-HomeIntro_Text"><?php echo $text; ?></p>
-          <a class="blk-HomeIntro_Link" href="<?php echo $link_url; ?>"><?php echo $link_text; ?></a>
+          <a class="blk-HomeIntro_Link" href="<?php echo $link_url; ?>" title="<?php echo $link_text; ?>"><?php echo $link_text; ?></a>
         </div>
       </div>
       <div class="blk-HomeIntro_Column">

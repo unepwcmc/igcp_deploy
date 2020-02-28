@@ -356,7 +356,7 @@ function wpb_postsbycategory($atts = [], $content = null, $tag = '') {
 	if ( $the_query->have_posts() ) {
 	  while ( $the_query->have_posts() ) {
 	    $the_query->the_post();
-	    $string .= '<li><a href="' . get_the_permalink() .'" rel="bookmark">' . get_the_title() .'</a></li>';
+	    $string .= '<li><a href="' . get_the_permalink() .'" rel="bookmark" title="' . get_the_title() . '">' . get_the_title() .'</a></li>';
 	  }
 	} else {
 	  // no posts found

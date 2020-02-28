@@ -19,6 +19,7 @@ function caseStudyNav() {
     var listItemLink = document.createElement('a');
     listItem.appendChild(listItemLink);
     listItemLink.textContent = heading.textContent;
+    listItemLink.setAttribute('title', "Scroll to ".concat(heading.textContent));
     listItemLink.classList.add('cst-Nav_Link');
     listItemLink.setAttribute('href', "#".concat(heading.id));
     els.navlist.appendChild(listItem);
@@ -181,6 +182,7 @@ function filterList() {
     a.setAttribute('href', clearLink);
     a.classList.add('arc-FiltersList_Link');
     a.innerHTML = clearText;
+    a.setAttribute('title', clearText);
     li.appendChild(a);
     ul.appendChild(li);
     var filtersListTitle = document.createElement('p');
@@ -356,14 +358,7 @@ var _searchbar = _interopRequireDefault(require("./modules/searchbar"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
-
-function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
-
+// ScrollSpy for Case Study Nav
 (function () {
   window.addEventListener("DOMContentLoaded", function () {
     Init();
@@ -385,7 +380,7 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
     document.body.classList.add("loaded");
     var isHomePage = document.body.classList.contains("home");
     var isCaseStudy = document.body.classList.contains("page-template-page-casestudy");
-    var isArchive = document.body.classList.contains("archive");
+    var isArchive = document.body.classList.contains("archive") || document.body.classList.contains("blog");
 
     if (isCaseStudy) {
       (0, _caseStudyNav.default)();
@@ -444,38 +439,6 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
     } else {
       nav.classList.remove("cst-Hero_Nav-fixed");
     }
-  });
-  var caseStudyScrollSpy = debounceEvent(function () {
-    var headings = document.querySelectorAll("h4[id]");
-    var navLinks = document.querySelectorAll(".cst-Hero_Nav a");
-
-    var makeActive = function makeActive(link) {
-      return navLinks[link].classList.add("active");
-    };
-
-    var removeActive = function removeActive(link) {
-      return navLinks[link].classList.remove("active");
-    };
-
-    var removeAllActive = function removeAllActive() {
-      return _toConsumableArray(Array(headings.length).keys()).forEach(function (link) {
-        return removeActive(link);
-      });
-    };
-
-    var headingMargin = 0;
-    var currentActive = 0;
-    window.addEventListener("scroll", function () {
-      var current = headings.length - _toConsumableArray(headings).reverse().findIndex(function (heading) {
-        return window.scrollY >= heading.offsetTop - headingMargin;
-      }) - 1;
-
-      if (current !== currentActive) {
-        removeAllActive();
-        currentActive = current;
-        makeActive(current);
-      }
-    });
   });
 })();
 

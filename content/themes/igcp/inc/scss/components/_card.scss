@@ -58,12 +58,8 @@
   padding: #{$grid-gap / 2} #{$grid-gap / 2} #{$grid-gap};
   flex: 1 1 auto;
 
-  .crd-Card-blog & {
-    padding-bottom: #{$grid-gap * 3};
-  }
-
   .crd-Card-file & {
-    padding-bottom: #{$grid-gap * 4};
+    padding-bottom: #{$grid-gap * 3};
   }
 
   .crd-Card-family & {
@@ -87,9 +83,7 @@ h3.crd-Card_Title {
 }
 
 p.crd-Card_Link {
-  position: absolute;
-  bottom: 38px;
-  left: #{$grid-gap / 2};
+  margin-top: $grid-gap;
   margin-bottom: 0;
   color: $color-grey-text;
   font-size: 14px;
@@ -124,7 +118,7 @@ p.crd-Card_Members {
   svg {
     margin-left: auto;
     opacity: .5;
-    height: 30px;
+    height: 35px;
   }
 }
 

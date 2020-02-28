@@ -31,7 +31,7 @@
             <p class="blk-Intro_Text"><?php echo $text; ?></p>
           <?php endif; ?>
           <?php if ($link_url != ''): ?>
-            <a class="blk-Intro_Link" href="<?php echo $link_url; ?>"><?php echo $link_text; ?></a>
+            <a class="blk-Intro_Link" href="<?php echo $link_url; ?>" title="<?php echo $link_text; ?>"><?php echo $link_text; ?></a>
           <?php endif; ?>
         </div>
       </div>

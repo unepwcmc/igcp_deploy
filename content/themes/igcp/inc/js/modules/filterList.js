@@ -31,6 +31,7 @@ export default function filterList() {
     a.setAttribute('href', clearLink)
     a.classList.add('arc-FiltersList_Link')
     a.innerHTML = clearText
+    a.setAttribute('title', clearText)
     li.appendChild(a);
     ul.appendChild(li);
 

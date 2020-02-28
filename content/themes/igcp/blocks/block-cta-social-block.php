@@ -33,7 +33,7 @@
             $social_url = $social_share_urls[$social];
             if ($social_url != '') : ?>
               <li class="cta-Block_Item">
-                <a class="cta-Block_Link" href="<?php echo $social_url; ?>" target="_blank" rel="noreferrer noopener"><?php echo $social; ?></a>
+                <a class="cta-Block_Link" href="<?php echo $social_url; ?>" target="_blank" rel="noreferrer noopener" title="Share on <?php echo $social; ?>"><?php echo $social; ?></a>
               </li>
             <?php endif; ?>
           <?php endforeach; ?>

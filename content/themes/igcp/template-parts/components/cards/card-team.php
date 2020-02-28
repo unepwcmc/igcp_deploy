@@ -26,5 +26,5 @@
       <p class="crd-Card_Location" data-member-location><?php echo $location_name; ?></p>
 		</div>
 	</div>
-  <a href="#" class="crd-Card_FauxLink"></a>
+  <a href="#" class="crd-Card_FauxLink" title="Learn more about <?php the_title(); ?>"></a>
 </article><!-- #post-## -->

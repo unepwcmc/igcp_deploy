@@ -37,7 +37,7 @@
               <li class="blk-Partners_Item">
                 <div class="blk-Partner">
                   <?php the_post_thumbnail( 'full-size' ); ?>
-                  <a href="<?php echo get_field('url'); ?>" class="blk-Partner_FauxLink" target="_blank" rel="noreferrer noopener"><?php echo get_the_title(); ?></a>
+                  <a href="<?php echo get_field('url'); ?>" class="blk-Partner_FauxLink" target="_blank" rel="noreferrer noopener" title="<?php echo get_the_title(); ?>"><?php echo get_the_title(); ?></a>
                 </div>
               </li>
 
@@ -45,7 +45,7 @@
           </ul>
         </div>
         <div class="blk-Partners_Footer">
-          <a class="blk-Partners_Link" href="/about-us/partners">Learn More</a>
+          <a class="blk-Partners_Link" href="/about-us/partners" title="Learn More">Learn More</a>
         </div>
       <?php else : ?>
         <div class="blk-Partners_Body">

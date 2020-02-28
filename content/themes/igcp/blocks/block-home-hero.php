@@ -47,7 +47,7 @@
           <div class="her-Home_Text">
             <?php echo $text; ?>
           </div>
-          <a href="<?php echo $link_url; ?>" class="her-Home_Link"><?php echo $link_text; ?></a>
+          <a href="<?php echo $link_url; ?>" class="her-Home_Link" title="<?php echo $link_text; ?>"><?php echo $link_text; ?></a>
         </div>
         <div class="her-Home_Overlay" style="opacity: <?php echo $opacity; ?>"></div>
       </div>

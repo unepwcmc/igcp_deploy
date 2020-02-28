@@ -41,25 +41,25 @@
       <li class="blk-TextColumns_Column">
         <h4 class="blk-TextColumns_Heading"><?php echo $heading_1; ?></h4>
         <p class="blk-TextColumns_Text"><?php echo $text_1; ?></p>
-        <a href="<?php echo $link_url_1; ?>" class="blk-TextColumns_Link"><?php echo $link_text_1; ?></a>
+        <a href="<?php echo $link_url_1; ?>" class="blk-TextColumns_Link" title="Visit the <?php echo $heading_1; ?> page"><?php echo $link_text_1; ?></a>
       </li>
 
       <li class="blk-TextColumns_Column">
         <h4 class="blk-TextColumns_Heading"><?php echo $heading_2; ?></h4>
         <p class="blk-TextColumns_Text"><?php echo $text_2; ?></p>
-        <a href="<?php echo $link_url_2; ?>" class="blk-TextColumns_Link"><?php echo $link_text_2; ?></a>
+        <a href="<?php echo $link_url_2; ?>" class="blk-TextColumns_Link" title="Visit the <?php echo $heading_2; ?> page"><?php echo $link_text_2; ?></a>
       </li>
 
       <li class="blk-TextColumns_Column">
         <h4 class="blk-TextColumns_Heading"><?php echo $heading_3; ?></h4>
         <p class="blk-TextColumns_Text"><?php echo $text_3; ?></p>
-        <a href="<?php echo $link_url_3; ?>" class="blk-TextColumns_Link"><?php echo $link_text_3; ?></a>
+        <a href="<?php echo $link_url_3; ?>" class="blk-TextColumns_Link" title="Visit the <?php echo $heading_3; ?> page"><?php echo $link_text_3; ?></a>
       </li>
 
       <li class="blk-TextColumns_Column">
         <h4 class="blk-TextColumns_Heading"><?php echo $heading_4; ?></h4>
         <p class="blk-TextColumns_Text"><?php echo $text_4; ?></p>
-        <a href="<?php echo $link_url_4; ?>" class="blk-TextColumns_Link"><?php echo $link_text_4; ?></a>
+        <a href="<?php echo $link_url_4; ?>" class="blk-TextColumns_Link" title="Visit the <?php echo $heading_4; ?> page"><?php echo $link_text_4; ?></a>
       </li>
 
     </ul>

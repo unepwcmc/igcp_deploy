@@ -34,5 +34,5 @@
       <?php endif; ?>
 		</div>
 	</div>
-  <a class="crd-Card_FauxLink" href="<?php the_permalink(); ?>"></a>
+  <a class="crd-Card_FauxLink" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"></a>
 </article><!-- #post-## -->

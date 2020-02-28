@@ -43,7 +43,7 @@
 
       <li class="blk-PictureLinks_Item">
         <div class="blk-PictureLink">
-          <a class="blk-PictureLink_FauxLink" href="<?php echo $link_1_url; ?>"><?php echo $link_1_title; ?></a>
+          <a class="blk-PictureLink_FauxLink" href="<?php echo $link_1_url; ?>" title="<?php echo $link_1_title; ?>"><?php echo $link_1_title; ?></a>
           <div class="blk-PictureLink_Body">
             <div class="blk-PictureLink_ImageWrap">
               <img class="blk-PictureLink_Image" src="<?php echo $link_1_image_url; ?>" alt="<?php echo $link_1_title; ?>">
@@ -58,7 +58,7 @@
 
       <li class="blk-PictureLinks_Item">
         <div class="blk-PictureLink">
-          <a class="blk-PictureLink_FauxLink" href="<?php echo $link_2_url; ?>"><?php echo $link_2_title; ?></a>
+          <a class="blk-PictureLink_FauxLink" href="<?php echo $link_2_url; ?>" title="<?php echo $link_2_title; ?>"><?php echo $link_2_title; ?></a>
           <div class="blk-PictureLink_Body">
             <div class="blk-PictureLink_ImageWrap">
               <img class="blk-PictureLink_Image" src="<?php echo $link_2_image_url; ?>" alt="<?php echo $link_2_title; ?>">
@@ -73,7 +73,7 @@
 
       <li class="blk-PictureLinks_Item">
         <div class="blk-PictureLink">
-          <a class="blk-PictureLink_FauxLink" href="<?php echo $link_3_url; ?>"><?php echo $link_3_title; ?></a>
+          <a class="blk-PictureLink_FauxLink" href="<?php echo $link_3_url; ?>" title="<?php echo $link_3_title; ?>"><?php echo $link_3_title; ?></a>
           <div class="blk-PictureLink_Body">
             <div class="blk-PictureLink_ImageWrap">
               <img class="blk-PictureLink_Image" src="<?php echo $link_3_image_url; ?>" alt="<?php echo $link_3_title; ?>">
@@ -88,7 +88,7 @@
 
       <li class="blk-PictureLinks_Item">
         <div class="blk-PictureLink">
-          <a class="blk-PictureLink_FauxLink" href="<?php echo $link_4_url; ?>"><?php echo $link_4_title; ?></a>
+          <a class="blk-PictureLink_FauxLink" href="<?php echo $link_4_url; ?>" title="<?php echo $link_4_title; ?>"><?php echo $link_4_title; ?></a>
           <div class="blk-PictureLink_Body">
             <div class="blk-PictureLink_ImageWrap">
               <img class="blk-PictureLink_Image" src="<?php echo $link_4_image_url; ?>" alt="<?php echo $link_4_title; ?>">

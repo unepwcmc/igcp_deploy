@@ -53,12 +53,12 @@
             <ul class="her-Page_Items">
               <?php if ($link_url != ''): ?>
                 <li class="her-Page_Item">
-                  <a href="<?php echo $link_url; ?>" class="her-Page_Link her-Page_Link-secondary"><?php echo $link_text; ?></a>
+                  <a href="<?php echo $link_url; ?>" class="her-Page_Link her-Page_Link-secondary" title="<?php echo $link_text; ?>"><?php echo $link_text; ?></a>
                 </li>
               <?php endif; ?>
               <?php if ($link_url_2 != ''): ?>
                 <li class="her-Page_Item">
-                  <a href="<?php echo $link_url_2; ?>" class="her-Page_Link"><?php echo $link_text_2; ?></a>
+                  <a href="<?php echo $link_url_2; ?>" class="her-Page_Link" title="<?php echo $link_text_2; ?>"><?php echo $link_text_2; ?></a>
                 </li>
               <?php endif; ?>
             </ul>

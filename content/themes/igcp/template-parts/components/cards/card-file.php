@@ -22,5 +22,5 @@
       <div class="crd-Card_Icon"><?php get_template_part( 'template-parts/icons/icon',  $filetype_data[0]->slug ); ?></div>
 		</div>
 	</div>
-  <a href="<?php echo get_field( 'file' ); ?>" class="crd-Card_FauxLink"></a>
+  <a href="<?php echo get_field( 'file' ); ?>" class="crd-Card_FauxLink" title="<?php the_title(); ?>"></a>
 </article><!-- #post-## -->

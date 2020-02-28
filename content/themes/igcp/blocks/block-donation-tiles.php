@@ -44,7 +44,7 @@
             <h3 class="til-Donation_Heading"><?php echo $heading_1; ?></h3>
             <p class="til-Donation_Text"><?php echo $text_1; ?></p>
           </div>
-          <a href="<?php echo $link_url_1 ?>" class="til-Donation_FauxLink"></a>
+          <a href="<?php echo $link_url_1 ?>" class="til-Donation_FauxLink" title="<?php echo $heading_1; ?>"></a>
         </div>
       </div>
 
@@ -57,7 +57,7 @@
             <h3 class="til-Donation_Heading"><?php echo $heading_2; ?></h3>
             <p class="til-Donation_Text"><?php echo $text_2; ?></p>
           </div>
-          <a href="<?php echo $link_url_2 ?>" class="til-Donation_FauxLink"></a>
+          <a href="<?php echo $link_url_2 ?>" class="til-Donation_FauxLink" title="<?php echo $heading_2; ?>"></a>
         </div>
       </div>
 
@@ -70,7 +70,7 @@
             <h3 class="til-Donation_Heading"><?php echo $heading_3; ?></h3>
             <p class="til-Donation_Text"><?php echo $text_3; ?></p>
           </div>
-          <a href="<?php echo $link_url_3 ?>" class="til-Donation_FauxLink"></a>
+          <a href="<?php echo $link_url_3 ?>" class="til-Donation_FauxLink" title="<?php echo $heading_3; ?>"></a>
         </div>
       </div>
 
@@ -83,7 +83,7 @@
             <h3 class="til-Donation_Heading"><?php echo $heading_4; ?></h3>
             <p class="til-Donation_Text"><?php echo $text_4; ?></p>
           </div>
-          <a href="<?php echo $link_url_4 ?>" class="til-Donation_FauxLink"></a>
+          <a href="<?php echo $link_url_4 ?>" class="til-Donation_FauxLink" title="<?php echo $heading_4; ?>"></a>
         </div>
       </div>
 

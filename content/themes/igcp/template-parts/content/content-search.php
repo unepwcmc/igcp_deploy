@@ -30,7 +30,7 @@
 						the_excerpt();
 					?></p>
 				<?php endif; ?>
-				<a class="ent-Excerpt_Link" href="<?php the_permalink(); ?>">Read more</a>
+				<a class="ent-Excerpt_Link" href="<?php the_permalink(); ?>" title="Read more">Read more</a>
 			</div>
 		</div><!-- .entry-content -->
 	</div>

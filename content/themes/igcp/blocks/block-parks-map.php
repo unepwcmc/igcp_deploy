@@ -35,7 +35,7 @@
             <?php foreach ($park_terms as $park_term) : ?>
 
                 <li class="blk-Map_Item">
-                  <a href="/park/<?php echo $park_term->slug; ?>/" class="blk-Map_Link">
+                  <a href="/park/<?php echo $park_term->slug; ?>/" class="blk-Map_Link" title="<?php echo $park_term->name; ?>">
                     <?php echo $park_term->name; ?>
                     <?php get_template_part( 'template-parts/icons/icon', 'angle-right' );?>
                   </a>
@@ -43,7 +43,7 @@
 
             <?php endforeach; ?>
             <li class="blk-Map_Item">
-              <a href="/families" class="blk-Map_Link">
+              <a href="/families" class="blk-Map_Link" title="See all gorilla families">
                 See all gorilla families
                 <?php get_template_part( 'template-parts/icons/icon', 'angle-right' );?>
               </a>

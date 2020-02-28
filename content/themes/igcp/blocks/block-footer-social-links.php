@@ -14,8 +14,8 @@
     $social_url = get_theme_mod( $social . '_url', false );
     if ($social_url != '') : ?>
       <li class="soc-Social_Icon">
-        <a href="<?php echo $social_url; ?>" target="_blank" rel="noreferrer noopener">
-          <span class="utl-ScreenReaderOnly"><?php echo $social; ?></span>
+        <a href="<?php echo $social_url; ?>" target="_blank" rel="noreferrer noopener" title="Visit our <?php echo ucfirst($social); ?> page">
+          <span class="utl-ScreenReaderOnly">Visit our <?php echo ucfirst($social); ?> page</span>
           <?php get_template_part( 'template-parts/icons/icon', 'footer-' . $social ); ?>
         </a>
       </li>

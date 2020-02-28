@@ -28,7 +28,7 @@ import searchbar from './modules/searchbar';
     document.body.classList.add("loaded");
     const isHomePage = document.body.classList.contains("home");
     const isCaseStudy = document.body.classList.contains("page-template-page-casestudy");
-    const isArchive = document.body.classList.contains("archive");
+    const isArchive = document.body.classList.contains("archive") || document.body.classList.contains("blog");
 
     if (isCaseStudy) {
       caseStudyNav();

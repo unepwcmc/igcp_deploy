@@ -16,6 +16,7 @@ export default function caseStudyNav() {
     listItem.appendChild(listItemLink)
 
     listItemLink.textContent = heading.textContent
+    listItemLink.setAttribute('title', `Scroll to ${heading.textContent}`)
     listItemLink.classList.add('cst-Nav_Link');
     listItemLink.setAttribute('href', `#${heading.id}`)
 

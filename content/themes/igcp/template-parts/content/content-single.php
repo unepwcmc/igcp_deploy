@@ -44,7 +44,7 @@ $category = get_the_category();
 
 		<?php if ( '' !== get_the_post_thumbnail() && ! is_single() ) : ?>
 			<div class="ent-Entry_Thumbnail">
-				<a href="<?php the_permalink(); ?>">
+				<a href="<?php the_permalink(); ?>" title="<?php echo get_the_title(); ?>">
 					<?php the_post_thumbnail( 'thumbnail' ); ?>
 				</a>
 			</div><!-- .post-thumbnail -->
