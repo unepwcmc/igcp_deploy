@@ -1,5 +1,7 @@
 import objectFitImages from 'object-fit-images';
 import objectFitVideos from 'object-fit-videos';
+// ScrollSpy for Case Study Nav
+import Gumshoe from 'gumshoejs';
 
 import './vendor';
 
@@ -31,6 +33,13 @@ import searchbar from './modules/searchbar';
     if (isCaseStudy) {
       caseStudyNav();
       caseStudyNavScroll();
+      const header = document.querySelector('.hd-Header');
+      const cstHeroNav = document.querySelector('.cst-Hero_Nav');
+      var spy = new Gumshoe('.cst-Nav_Items .cst-Nav_Link', {
+      	offset: function () {
+      		return header.getBoundingClientRect().height + cstHeroNav.getBoundingClientRect().height + 50;
+      	}
+      });
       window.addEventListener("scroll", caseStudyNavScroll);
     }
 
@@ -72,7 +81,7 @@ import searchbar from './modules/searchbar';
   // For navigation under hero on Case Study pages
   const caseStudyNavScroll = debounceEvent(function() {
     const header = document.querySelector(".hd-Header");
-    const hero = document.querySelector(".cst-Hero");
+    const hero = document.querySelector(".her-Page");
     const nav = document.querySelector(".cst-Hero_Nav");
 
     let headerHeight = header.offsetHeight;
@@ -88,5 +97,4 @@ import searchbar from './modules/searchbar';
       nav.classList.remove("cst-Hero_Nav-fixed");
     }
   });
-
 })();

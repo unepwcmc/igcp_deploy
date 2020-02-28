@@ -83,6 +83,10 @@ h3.til-Donation_Heading {
   }
 }
 
+p.til-Donation_Text {
+  margin-top: 10px !important;
+}
+
 a.til-Donation_FauxLink {
   @include absolute_fill;
   z-index: 2;

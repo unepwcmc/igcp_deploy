@@ -334,6 +334,8 @@ var _objectFitImages = _interopRequireDefault(require("object-fit-images"));
 
 var _objectFitVideos = _interopRequireDefault(require("object-fit-videos"));
 
+var _gumshoejs = _interopRequireDefault(require("gumshoejs"));
+
 require("./vendor");
 
 var _utilities = require("./utilities");
@@ -353,6 +355,14 @@ var _modal = _interopRequireDefault(require("./modules/modal"));
 var _searchbar = _interopRequireDefault(require("./modules/searchbar"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
 
 (function () {
   window.addEventListener("DOMContentLoaded", function () {
@@ -380,6 +390,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     if (isCaseStudy) {
       (0, _caseStudyNav.default)();
       caseStudyNavScroll();
+      var header = document.querySelector('.hd-Header');
+      var cstHeroNav = document.querySelector('.cst-Hero_Nav');
+      var spy = new _gumshoejs.default('.cst-Nav_Items .cst-Nav_Link', {
+        offset: function offset() {
+          return header.getBoundingClientRect().height + cstHeroNav.getBoundingClientRect().height + 50;
+        }
+      });
       window.addEventListener("scroll", caseStudyNavScroll);
     }
 
@@ -416,7 +433,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
   var caseStudyNavScroll = debounceEvent(function () {
     var header = document.querySelector(".hd-Header");
-    var hero = document.querySelector(".cst-Hero");
+    var hero = document.querySelector(".her-Page");
     var nav = document.querySelector(".cst-Hero_Nav");
     var headerHeight = header.offsetHeight;
     var heroHeight = hero.offsetHeight;
@@ -428,9 +445,41 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
       nav.classList.remove("cst-Hero_Nav-fixed");
     }
   });
+  var caseStudyScrollSpy = debounceEvent(function () {
+    var headings = document.querySelectorAll("h4[id]");
+    var navLinks = document.querySelectorAll(".cst-Hero_Nav a");
+
+    var makeActive = function makeActive(link) {
+      return navLinks[link].classList.add("active");
+    };
+
+    var removeActive = function removeActive(link) {
+      return navLinks[link].classList.remove("active");
+    };
+
+    var removeAllActive = function removeAllActive() {
+      return _toConsumableArray(Array(headings.length).keys()).forEach(function (link) {
+        return removeActive(link);
+      });
+    };
+
+    var headingMargin = 0;
+    var currentActive = 0;
+    window.addEventListener("scroll", function () {
+      var current = headings.length - _toConsumableArray(headings).reverse().findIndex(function (heading) {
+        return window.scrollY >= heading.offsetTop - headingMargin;
+      }) - 1;
+
+      if (current !== currentActive) {
+        removeAllActive();
+        currentActive = current;
+        makeActive(current);
+      }
+    });
+  });
 })();
 
-},{"./modules/caseStudyNav":1,"./modules/drawers":2,"./modules/filterInputs":3,"./modules/filterList":4,"./modules/modal":5,"./modules/searchbar":6,"./utilities":8,"./utilities/smoothscroll-polyfill":9,"./vendor":11,"object-fit-images":13,"object-fit-videos":14}],8:[function(require,module,exports){
+},{"./modules/caseStudyNav":1,"./modules/drawers":2,"./modules/filterInputs":3,"./modules/filterList":4,"./modules/modal":5,"./modules/searchbar":6,"./utilities":8,"./utilities/smoothscroll-polyfill":9,"./vendor":11,"gumshoejs":13,"object-fit-images":14,"object-fit-videos":15}],8:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1527,6 +1576,11 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 }(window, document);
 
 },{}],13:[function(require,module,exports){
+(function (global){
+/*! gumshoejs v5.1.2 | (c) 2019 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/gumshoe */
+!(function(e,t){"function"==typeof define&&define.amd?define([],(function(){return t(e)})):"object"==typeof exports?module.exports=t(e):e.Gumshoe=t(e)})("undefined"!=typeof global?global:"undefined"!=typeof window?window:this,(function(e){"use strict";var t={navClass:"active",contentClass:"active",nested:!1,nestedClass:"active",offset:0,reflow:!1,events:!0},n=function(e,t,n){if(n.settings.events){var o=new CustomEvent(e,{bubbles:!0,cancelable:!0,detail:n});t.dispatchEvent(o)}},o=function(e){var t=0;if(e.offsetParent)for(;e;)t+=e.offsetTop,e=e.offsetParent;return t>=0?t:0},s=function(e){e&&e.sort((function(e,t){return o(e.content)<o(t.content)?-1:1}))},c=function(t,n,o){var s=t.getBoundingClientRect(),c=(function(e){return"function"==typeof e.offset?parseFloat(e.offset()):parseFloat(e.offset)})(n);return o?parseInt(s.bottom,10)<(e.innerHeight||document.documentElement.clientHeight):parseInt(s.top,10)<=c},i=function(){return e.innerHeight+e.pageYOffset>=Math.max(document.body.scrollHeight,document.documentElement.scrollHeight,document.body.offsetHeight,document.documentElement.offsetHeight,document.body.clientHeight,document.documentElement.clientHeight)},r=function(e,t){var n=e[e.length-1];if(function(e,t){return!(!i()||!c(e.content,t,!0))}(n,t))return n;for(var o=e.length-1;o>=0;o--)if(c(e[o].content,t))return e[o]},a=function(e,t){if(t.nested&&e.parentNode){var n=e.parentNode.closest("li");n&&(n.classList.remove(t.nestedClass),a(n,t))}},l=function(e,t){if(e){var o=e.nav.closest("li");o&&(o.classList.remove(t.navClass),e.content.classList.remove(t.contentClass),a(o,t),n("gumshoeDeactivate",o,{link:e.nav,content:e.content,settings:t}))}},u=function(e,t){if(t.nested){var n=e.parentNode.closest("li");n&&(n.classList.add(t.nestedClass),u(n,t))}};return function(o,c){var i,a,f,d,v,m={};m.setup=function(){i=document.querySelectorAll(o),a=[],Array.prototype.forEach.call(i,(function(e){var t=document.getElementById(decodeURIComponent(e.hash.substr(1)));t&&a.push({nav:e,content:t})})),s(a)},m.detect=function(){var e=r(a,v);e?f&&e.content===f.content||(l(f,v),(function(e,t){if(e){var o=e.nav.closest("li");o&&(o.classList.add(t.navClass),e.content.classList.add(t.contentClass),u(o,t),n("gumshoeActivate",o,{link:e.nav,content:e.content,settings:t}))}})(e,v),f=e):f&&(l(f,v),f=null)};var p=function(t){d&&e.cancelAnimationFrame(d),d=e.requestAnimationFrame(m.detect)},h=function(t){d&&e.cancelAnimationFrame(d),d=e.requestAnimationFrame((function(){s(a),m.detect()}))};m.destroy=function(){f&&l(f,v),e.removeEventListener("scroll",p,!1),v.reflow&&e.removeEventListener("resize",h,!1),a=null,i=null,f=null,d=null,v=null};return v=(function(){var e={};return Array.prototype.forEach.call(arguments,(function(t){for(var n in t){if(!t.hasOwnProperty(n))return;e[n]=t[n]}})),e})(t,c||{}),m.setup(),m.detect(),e.addEventListener("scroll",p,!1),v.reflow&&e.addEventListener("resize",h,!1),m}}));
+}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+},{}],14:[function(require,module,exports){
 /*! npm.im/object-fit-images 3.2.4 */
 'use strict';
 
@@ -1759,7 +1813,7 @@ hijackAttributes();
 
 module.exports = fix;
 
-},{}],14:[function(require,module,exports){
+},{}],15:[function(require,module,exports){
 /**
  * Object Fit Videos
  * Polyfill for object-fit and object-position CSS properties on video elements

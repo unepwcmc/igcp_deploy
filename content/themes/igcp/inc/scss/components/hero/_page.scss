@@ -3,6 +3,7 @@
   margin-left: #{$grid-gap / 2};
   margin-right: #{$grid-gap / 2};
   background-image: url('../img/pattern-bg-green.png');
+  background-size: 100%;
 
   @include break-min($sm) {
     margin-left: $grid-gap;
@@ -23,6 +24,16 @@
 
 .her-Page_Body {
   @include spacer_body_small;
+  display: flex;
+  align-items: center;
+
+  .lyt-Body & {
+    min-height: 200px;
+
+    @include break-min($sm) {
+      min-height: 500px;
+    }
+  }
 }
 
 .her-Page_Content {

@@ -6,6 +6,8 @@
     ? get_query_var( 'hero-text' )
     : get_theme_mod( 'default_hero_text' );
 
+  $hide_text = get_query_var( 'hide-text' );
+
   if (get_query_var( 'hero-link-url' ) != '') {
     $link_url = get_query_var( 'hero-link-url' );
   } else {
@@ -26,6 +28,8 @@
 
   $link_text_2 = get_query_var( 'hero-link-text-2' ) != '' ? get_query_var( 'hero-link-text-2' ) : get_theme_mod( 'default_hero_button_text_2' );
 
+  $hide_buttons = get_query_var( 'hide-buttons' );
+
   $background_image = get_query_var( 'hero-background-image' );
   $background_image_url = $background_image != '' ? wp_get_attachment_image_src( $background_image, 'full-size' )[0] : get_theme_mod( 'default_hero_image' );
   $opacity = get_query_var( 'hero-opacity' ) != '' ? get_query_var( 'hero-opacity' ) : get_theme_mod( 'default_hero_overlay_opacity' );
@@ -41,22 +45,24 @@
         <?php if ($title != ''): ?>
           <h2 class="her-Page_Title"><?php echo $title; ?></h2>
         <?php endif; ?>
-        <?php if ($text != ''): ?>
+        <?php if ($text != '' && !$hide_text): ?>
           <p class="her-Page_Text"><?php echo $text; ?></p>
         <?php endif; ?>
-        <?php if ($link_url != '' || $link_url_2 != ''): ?>
-          <ul class="her-Page_Items">
-            <?php if ($link_url != ''): ?>
-              <li class="her-Page_Item">
-                <a href="<?php echo $link_url; ?>" class="her-Page_Link her-Page_Link-secondary"><?php echo $link_text; ?></a>
-              </li>
-            <?php endif; ?>
-            <?php if ($link_url_2 != ''): ?>
-              <li class="her-Page_Item">
-                <a href="<?php echo $link_url_2; ?>" class="her-Page_Link"><?php echo $link_text_2; ?></a>
-              </li>
+        <?php if (!$hide_buttons): ?>
+          <?php if ($link_url != '' || $link_url_2 != ''): ?>
+            <ul class="her-Page_Items">
+              <?php if ($link_url != ''): ?>
+                <li class="her-Page_Item">
+                  <a href="<?php echo $link_url; ?>" class="her-Page_Link her-Page_Link-secondary"><?php echo $link_text; ?></a>
+                </li>
               <?php endif; ?>
-          </ul>
+              <?php if ($link_url_2 != ''): ?>
+                <li class="her-Page_Item">
+                  <a href="<?php echo $link_url_2; ?>" class="her-Page_Link"><?php echo $link_text_2; ?></a>
+                </li>
+              <?php endif; ?>
+            </ul>
+          <?php endif; ?>
         <?php endif; ?>
       </div>
     </div>

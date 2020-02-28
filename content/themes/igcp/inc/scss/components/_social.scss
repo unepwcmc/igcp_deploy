@@ -2,51 +2,45 @@
   margin-top: $grid-gap;
   border-top: 1px solid $color-border;
   padding-top: $grid-gap;
-  display: flex;
-  justify-content: space-between;
+
+  @include break-min($sm) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 p.soc-Social_Heading {
   margin: 0 $grid-gap 0 0;
-  font-size: 14px;
+  font-size: 16px;
   color: $color-grey-text;
+  display: none;
+
+  @include break-min($sm) {
+    display: block;
+  }
 }
 
 .soc-Social_Icons,
 .rte-RichText .soc-Social_Icons {
   @include no_margin_padding;
   display: flex;
+  justify-content: center;
 
-  .ft-Widgets_Item-widget_custom_post_widget & {
-    justify-content: center;
-
-    @include break-min($sm) {
-      justify-content: flex-start;
-    }
+  @include break-min($sm) {
+    justify-content: flex-start;
   }
 }
 
 .soc-Social_Icon,
 .rte-RichText .soc-Social_Icon {
   @include no_bullets;
-  width: 25px;
-  margin-right: #{$grid-gap};
+  margin-right: #{$grid-gap * 2};
   margin-bottom: 0;
+  width: 50px;
 
-  a {
-    display: block;
-  }
-
-  svg {
-    fill: $color-grey-text;
-    transition: opacity 0.3s ease;
-    opacity: .4;
-    width: 25px;
-    height: 25px;
-
-    &:hover {
-      opacity: 1;
-    }
+  @include break-min($sm) {
+    width: 35px;
+    margin-right: #{$grid-gap};
   }
 
   &:last-child {
@@ -74,6 +68,27 @@ p.soc-Social_Heading {
       &:hover {
         opacity: .8;
       }
+    }
+  }
+
+  a {
+    display: block;
+  }
+
+  svg {
+    fill: $color-grey-text;
+    transition: opacity 0.3s ease;
+    opacity: .4;
+    width: 50px;
+    height: 50px;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    @include break-min($sm) {
+      width: 35px;
+      height: 35px;
     }
   }
 }

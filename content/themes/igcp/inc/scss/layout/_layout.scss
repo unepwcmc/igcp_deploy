@@ -96,7 +96,7 @@ h2.lyt-Primary_Title {
   display: flex;
   flex-wrap: wrap;
 
-  @include break-min($sm) {
+  @include break-min($xs) {
     margin-right: -#{$grid-gap};
   }
 
@@ -139,7 +139,11 @@ h2.lyt-Primary_Title {
 }
 
 .lyt-Sharebar {
-  margin-bottom: $grid-gap * 2;
+  margin-bottom: $grid-gap;
+  
+  @include break-min($sm) {
+    margin-bottom: $grid-gap * 2;
+  }
 }
 
 .lyt-Sharebar_Inner {

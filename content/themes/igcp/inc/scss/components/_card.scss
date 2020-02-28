@@ -65,10 +65,14 @@
   .crd-Card-file & {
     padding-bottom: #{$grid-gap * 4};
   }
+
+  .crd-Card-family & {
+    padding-bottom: #{$grid-gap * 4};
+  }
 }
 
 p.crd-Card_Details {
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1;
   margin-bottom: 5px;
   color: $color-grey-text;
@@ -76,16 +80,15 @@ p.crd-Card_Details {
 
 h3.crd-Card_Title {
   color: currentColor;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 500;
   line-height: 1.2;
-  // margin-bottom: #{$grid-gap / 2};
   margin-bottom: 0;
 }
 
 p.crd-Card_Link {
   position: absolute;
-  bottom: #{$grid-gap / 2};
+  bottom: 38px;
   left: #{$grid-gap / 2};
   margin-bottom: 0;
   color: $color-grey-text;
@@ -99,8 +102,12 @@ p.crd-Card_Members {
   font-weight: 500;
   font-size: 14px;
   line-height: 1;
-  margin-top: 10px;
-  margin-bottom: 0;
+  // margin-top: 10px;
+  // margin-bottom: 0;
+
+  position: absolute;
+  top: 40px;
+  left: 10px;
 
   svg {
     width: 14px;

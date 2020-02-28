@@ -27,6 +27,11 @@
         margin-left: auto;
       }
     }
+    &.pattern-bg {
+      .section-bg.bg__repeated {
+        background-size: 450px;
+      }
+    }
   }
 
   .wgt-Widgets_Item:first-child .wp-block-mkl-section-block:first-child {

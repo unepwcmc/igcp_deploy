@@ -37,12 +37,13 @@
   right: #{$grid-gap / 2};
   left: #{$grid-gap / 2};
   z-index: 10;
-  max-height: 0;
+  opacity: 0;
+  visiblity: hidden;
   max-width: 100%;
 
   pointer-events: none;
   overflow: hidden;
-  transition: max-height 0.8s cubic-bezier(0, 1, 0, 1);
+  transition: opacity 0.5s ease, visiblity 0.5s ease;
 
   .admin-bar & {
     top: 130px;
@@ -66,9 +67,10 @@
   }
 
   &.hd-Search_Bar-active {
-    max-height: 300px;
+    opacity: 1;
+    visibility: visible;
     pointer-events: all;
-    transition: max-height 1.3s ease-in-out;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
   }
 }
 

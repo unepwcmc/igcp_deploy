@@ -18,14 +18,8 @@
 	<div class="crd-Card_Body">
 		<div class="crd-Card_Content">
       <h3 class="crd-Card_Title"><?php the_title(); ?></h3>
-      <div class="crd-Card_Columns">
-        <div class="crd-Card_Column">
-          <p class="crd-Card_Link">View</p>
-        </div>
-        <div class="crd-Card_Column">
-          <div class="crd-Card_Icon"><?php get_template_part( 'template-parts/icons/icon',  $filetype_data[0]->slug ); ?></div>
-        </div>
-      </div>
+      <p class="crd-Card_Link">View</p>
+      <div class="crd-Card_Icon"><?php get_template_part( 'template-parts/icons/icon',  $filetype_data[0]->slug ); ?></div>
 		</div>
 	</div>
   <a href="<?php echo get_field( 'file' ); ?>" class="crd-Card_FauxLink"></a>

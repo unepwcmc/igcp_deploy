@@ -1,7 +1,20 @@
+.cst-Hero_Nav {
+  &.cst-Hero_Nav-fixed {
+    padding-bottom: 55px;
+  }
+}
+
 .cst-Nav {
   background-color: $color-mid-grey;
   transform: translateY(0);
   transition: transform 0s ease;
+  margin-left: #{$grid-gap / 2};
+  margin-right: #{$grid-gap / 2};
+
+  @include break-min($sm) {
+    margin-left: $grid-gap;
+    margin-right: $grid-gap;
+  }
 
   .cst-Hero_Nav-fixed & {
     position: fixed;
@@ -55,14 +68,15 @@
 
 a.cst-Nav_Link {
   display: block;
-  color: #fff;
+  color: $color-dark-grey;
   padding: 5px 10px;
   text-decoration: none;
   border-radius: 5px;
-  background-color: $color-dark-grey;
-  transition: background-color .3s ease;
+  transition: background-color .3s ease, color .3s ease;
 
+  .cst-Nav_Item.active &,
   &:hover {
-    background-color: lighten($color-dark-grey, 20%);
+    color: #fff;
+    background-color: $color-dark-grey;
   }
 }

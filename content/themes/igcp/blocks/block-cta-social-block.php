@@ -14,11 +14,11 @@
   $opacity = block_field( 'opacity', false );
 
   $page_url = get_site_url() . $_SERVER['REQUEST_URI'];
-  $socials = array('Facebook', 'Twitter', 'More');
+  $socials = array('Facebook', 'Twitter', 'LinkedIn');
   $social_share_urls = array(
     'Facebook' => 'https://www.facebook.com/sharer/sharer.php?u=' . $page_url,
     'Twitter' => 'http://twitter.com/share?text=' . get_the_title() . '&url=' . $page_url,
-    'More' => '#'
+    'LinkedIn' => 'https://www.linkedin.com/sharing/share-offsite/?url=' . $page_url
   )
 ?>
 
