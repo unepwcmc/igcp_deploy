@@ -11,12 +11,12 @@
 
 ?>
 
-<section class="no-results not-found">
-	<header class="page-header">
-		<h1 class="page-title"><?php _e( 'Nothing Found', 'igcp' ); ?></h1>
-	</header><!-- .page-header -->
+<section class="ent-Entry no-results not-found">
+	<header class="ent-Entry_Header">
+		<h1 class="ent-Entry_Title"><?php _e( 'Nothing Found', 'igcp' ); ?></h1>
+	</header><!-- .ent-Entry_Header -->
 
-	<div class="page-content">
+	<div class="ent-Entry_Content">
 		<?php
 		if ( is_home() && current_user_can( 'publish_posts' ) ) :
 
@@ -49,5 +49,5 @@
 
 		endif;
 		?>
-	</div><!-- .page-content -->
+	</div><!-- .ent-Entry_Content -->
 </section><!-- .no-results -->

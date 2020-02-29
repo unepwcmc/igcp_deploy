@@ -140,7 +140,7 @@ h2.lyt-Primary_Title {
 
 .lyt-Sharebar {
   margin-bottom: $grid-gap;
-  
+
   @include break-min($sm) {
     margin-bottom: $grid-gap * 2;
   }

@@ -19,7 +19,7 @@ get_header(); ?>
 				<?php if ( have_posts() ) : ?>
 					<h2 class="lyt-Primary_Title"><?php printf( __( 'Showing ' . $wp_query->post_count . ' of ' . $wp_query->found_posts . ' results for "%s"' ), '<span>' . get_search_query() . '</span>' ); ?></h2>
 					<?php else : ?>
-						<h2 class="lyt-Primary_Title"><?php _e( 'Nothing Found' ); ?></h2>
+						<h2 class="lyt-Primary_Title"><?php _e( 'No results found for ' . '<span>' . get_search_query() . '</span>' ); ?></h2>
 					<?php endif; ?>
 				</header>
 
@@ -43,8 +43,8 @@ get_header(); ?>
 				else :
 					?>
 					<div class="lyt-Primary_Body">
-						<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.' ); ?></p>
 						<div class="lyt-Search">
+							<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.' ); ?></p>
 							<form class="lyt-Search_Form" role="search" method="get" id="searchpageform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 								<label class="utl-ScreenReaderOnly" for="s">Search for:</label>
 

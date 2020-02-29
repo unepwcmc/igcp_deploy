@@ -1,11 +1,15 @@
+.lyt-Search {
+  @include break-min($xs) {
+    max-width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
 .lyt-Search_Form {
   @include break-min($xs) {
     display: flex;
   }
-}
-
-.utl-ScreenReaderOnly {
-
 }
 
 .lyt-Search_Input {
