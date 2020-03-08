@@ -74,35 +74,42 @@ p.her-Page_Text {
 
 ul.her-Page_Items {
   @include no-margin-padding;
-  display: flex;
-  justify-content: center;
-  margin-right: -#{$grid-gap};
+
+  &.her-Page_Items-flex {
+    display: flex;
+    justify-content: center;
+    margin-right: -#{$grid-gap};
+  }
 }
 
 li.her-Page_Item {
   @include no_bullets;
-  margin-right: $grid-gap;
-  width: calc((6 / 12) * 100%);
-  flex: 0 1 calc((6 / 12) * 100%);
 
-  @include break-min($sm) {
-    width: calc((2 / 6) * 100%);
-    flex: 0 1 calc((2 / 6) * 100%);
-    max-width: 150px;
+  .her-Page_Items-flex & {
+    margin-right: $grid-gap;
+    width: calc((6 / 12) * 100%);
+    flex: 0 1 calc((6 / 12) * 100%);
 
-    &:first-child {
-      margin-left: auto !important;
-    }
+    @include break-min($sm) {
+      width: calc((2 / 6) * 100%);
+      flex: 0 1 calc((2 / 6) * 100%);
+      max-width: 150px;
 
-    &:last-child {
-      margin-right: auto !important;
-    }
+      &:first-child {
+        margin-left: auto !important;
+      }
 
-    &:only-child {
-      margin-left: auto !important;
-      margin-right: auto !important;
+      &:last-child {
+        margin-right: auto !important;
+      }
+
+      &:only-child {
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
     }
   }
+
 }
 
 a.her-Page_Link {

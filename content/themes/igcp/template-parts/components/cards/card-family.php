@@ -2,7 +2,39 @@
   $park_data = get_the_terms(get_the_ID(), 'park');
   $park_name = $park_data[0]->name;
 
-  $members = get_field( "number_of_members" );
+  $gorillas = get_field('number_of_gorillas');
+  $gorilla_types = array(
+    array(
+      'name' => 'Silverbacks',
+      'count' => $gorillas['silverbacks'] != '' ? $gorillas['silverbacks'] : '00'
+    ),
+    array(
+      'name' => 'Adult females',
+      'count' => $gorillas['adult_females'] != '' ? $gorillas['adult_females'] : '00'
+    ),
+    array(
+      'name' => 'Blackbacks',
+      'count' => $gorillas['blackbacks'] != '' ? $gorillas['blackbacks'] : '00'
+    ),
+    array(
+      'name' => 'Sub-adult females',
+      'count' => $gorillas['sub-adult_females'] != '' ? $gorillas['sub-adult_females'] : '00'
+    ),
+    array(
+      'name' => 'Juveniles',
+      'count' => $gorillas['juveniles'] != '' ? $gorillas['juveniles'] : '00'
+    ),
+    array(
+      'name' => 'Infants',
+      'count' => $gorillas['infants'] != '' ? $gorillas['infants'] : '00'
+    )
+  );
+
+  $members = 0;
+
+  forEach($gorilla_types as $gorilla_type) {
+    $members += $gorilla_type['count'];
+  }
 
   $thumbnail_override = get_field( 'small_image' );
 
