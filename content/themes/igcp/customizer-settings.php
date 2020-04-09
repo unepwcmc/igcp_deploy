@@ -36,7 +36,10 @@ function contact_details_customizer_settings($wp_customize) {
   ) );
 
   // Add Heading Setting & Control
-  $wp_customize->add_setting('contact_details_heading');
+  $wp_customize->add_setting('contact_details_heading',
+    array(
+      'sanitize_callback' => 'wp_kses_post' //keeps only HTML tags that are allowed in post content
+    ) );
   $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'contact_details_heading',
   array(
   'label' => 'Heading',
@@ -46,7 +49,10 @@ function contact_details_customizer_settings($wp_customize) {
   ) ) );
 
   // Add Address Setting & Control
-  $wp_customize->add_setting('contact_details_address');
+  $wp_customize->add_setting('contact_details_address',
+    array(
+      'sanitize_callback' => 'wp_kses_post' //keeps only HTML tags that are allowed in post content
+    ) );
   $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'contact_details_address',
   array(
   'label' => 'Address',
@@ -56,7 +62,10 @@ function contact_details_customizer_settings($wp_customize) {
   ) ) );
 
   // Add Phone Number Setting & Control
-  $wp_customize->add_setting('contact_details_phone');
+  $wp_customize->add_setting('contact_details_phone',
+    array(
+      'sanitize_callback' => 'wp_kses_post' //keeps only HTML tags that are allowed in post content
+    ) );
   $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'contact_details_phone',
   array(
   'label' => 'Phone Number',
@@ -66,7 +75,10 @@ function contact_details_customizer_settings($wp_customize) {
   ) ) );
 
   // Add Email Address Setting & Control
-  $wp_customize->add_setting('contact_details_email');
+  $wp_customize->add_setting('contact_details_email',
+    array(
+      'sanitize_callback' => 'wp_kses_post' //keeps only HTML tags that are allowed in post content
+    ) );
   $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'contact_details_email',
   array(
   'label' => 'Email Address',
@@ -91,10 +103,13 @@ function blog_posts_customizer_settings($wp_customize) {
   ) );
 
   // Add Boilerplate Setting & Control
-  $wp_customize->add_setting('blog_posts_boilerplate');
+  $wp_customize->add_setting('blog_posts_boilerplate',
+    array(
+      'sanitize_callback' => 'wp_kses_post' //keeps only HTML tags that are allowed in post content
+    ) );
   $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'blog_posts_boilerplate',
   array(
-  'label' => 'Text',
+  'label' => 'Blog Post Boilerplate',
   'type' => 'textarea',
   'section' => 'blog_posts',
   'settings' => 'blog_posts_boilerplate'
@@ -115,7 +130,10 @@ function social_media_customizer_settings($wp_customize) {
   ) );
 
   // add a setting for the site Facebook URL
-  $wp_customize->add_setting('facebook_url');
+  $wp_customize->add_setting('facebook_url',
+    array(
+      'sanitize_callback' => 'esc_url_raw' //cleans URL from all invalid characters
+    ) );
   // Add a control to input the Facebook URL
   $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'facebook_url',
   array(
@@ -125,7 +143,10 @@ function social_media_customizer_settings($wp_customize) {
   ) ) );
 
   // add a setting for the site Twitter URL
-  $wp_customize->add_setting('twitter_url');
+  $wp_customize->add_setting('twitter_url',
+    array(
+      'sanitize_callback' => 'esc_url_raw' //cleans URL from all invalid characters
+    ) );
   // Add a control to input the Twitter URL
   $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'twitter_url',
   array(
@@ -135,7 +156,10 @@ function social_media_customizer_settings($wp_customize) {
   ) ) );
 
   // add a setting for the site Instagram URL
-  $wp_customize->add_setting('instagram_url');
+  $wp_customize->add_setting('instagram_url',
+    array(
+      'sanitize_callback' => 'esc_url_raw' //cleans URL from all invalid characters
+    ) );
   // Add a control to input the Instagram URL
   $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'instagram_url',
   array(
@@ -145,7 +169,10 @@ function social_media_customizer_settings($wp_customize) {
   ) ) );
 
   // add a setting for the site LinkedIn URL
-  $wp_customize->add_setting('linkedin_url');
+  $wp_customize->add_setting('linkedin_url',
+    array(
+      'sanitize_callback' => 'esc_url_raw' //cleans URL from all invalid characters
+    ) );
   // Add a control to input the LinkedIn URL
   $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'linkedin_url',
   array(
@@ -155,7 +182,10 @@ function social_media_customizer_settings($wp_customize) {
   ) ) );
 
   // add a setting for the site YouTube URL
-  $wp_customize->add_setting('youtube_url');
+  $wp_customize->add_setting('youtube_url',
+    array(
+      'sanitize_callback' => 'esc_url_raw' //cleans URL from all invalid characters
+    ) );
   // Add a control to input the YouTube URL
   $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'youtube_url',
   array(

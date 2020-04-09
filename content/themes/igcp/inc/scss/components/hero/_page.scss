@@ -85,6 +85,23 @@ ul.her-Page_Items {
 li.her-Page_Item {
   @include no_bullets;
 
+  @include break-min($sm) {
+    max-width: 150px;
+
+    &:first-child {
+      margin-left: auto !important;
+    }
+
+    &:last-child {
+      margin-right: auto !important;
+    }
+
+    &:only-child {
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+  }
+
   .her-Page_Items-flex & {
     margin-right: $grid-gap;
     width: calc((6 / 12) * 100%);
@@ -93,20 +110,6 @@ li.her-Page_Item {
     @include break-min($sm) {
       width: calc((2 / 6) * 100%);
       flex: 0 1 calc((2 / 6) * 100%);
-      max-width: 150px;
-
-      &:first-child {
-        margin-left: auto !important;
-      }
-
-      &:last-child {
-        margin-right: auto !important;
-      }
-
-      &:only-child {
-        margin-left: auto !important;
-        margin-right: auto !important;
-      }
     }
   }
 
