@@ -8,10 +8,10 @@ import classnames from 'classnames'
 import ResizableBox from 're-resizable'
 
 const { __ } = wp.i18n; // Import __() from wp.i18n
-const { 
-	PanelBody, 
+const {
+	PanelBody,
 	RangeControl,
-	Button, 
+	Button,
 	ResponsiveWrapper,
 	ToggleControl,
 	SelectControl,
@@ -24,7 +24,7 @@ const {
 	InnerBlocks,
 	PanelColorSettings,
 	MediaUpload,
-} = wp.editor;
+} = wp.blockEditor;
 
 export default ( props ) => {
 	console.log('EDIT DEPRECATED', props);
@@ -55,47 +55,6 @@ export default ( props ) => {
 	return (
 		<Fragment>
 			<InspectorControls>
-				<PanelBody
-					title={ __( 'Spacing' ) }
-					initialOpen={ false }
-				>
-					<ToggleControl
-						label={ __( 'Enable spacing' ) }
-						checked={ !! attributes.enableSpacing }
-						onChange={ ( nextEnableSpacing ) => {
-							setAttributes( {
-								enableSpacing: nextEnableSpacing,
-							} );
-						} }
-					/>
-
-					{ !! enableSpacing && <RangeControl
-							label={ __( 'Spacing top' ) }
-							value={ attributes.spacingTop }
-							onChange={ ( nextSpacing ) => {
-								setAttributes( {
-									spacingTop: nextSpacing,
-								} );
-							} }
-							min={ 0 }
-							max={ 200 }
-							step={ 10 }
-						/>
-					}
-					{ !! enableSpacing && <RangeControl
-							label={ __( 'Spacing bottom' ) }
-							value={ attributes.spacingBottom }
-							onChange={ ( nextSpacing ) => {
-								setAttributes( {
-									spacingBottom: nextSpacing,
-								} );
-							} }
-							min={ 0 }
-							max={ 200 }
-							step={ 10 }
-						/>
-					}
-				</PanelBody>
 				<PanelBody
 					title={ __( 'Background image' ) }
 					initialOpen={ false }
@@ -131,7 +90,7 @@ export default ( props ) => {
 										<img src={ bgImage.image.url } alt={ __( 'BG Image' ) } />
 									</ResponsiveWrapper>
 								</Button>
-								<Button onClick={ open } isDefault isLarge>
+								<Button onClick={ open } isLarge>
 									{ __( 'Replace image' ) }
 								</Button>
 								<Button onClick={ onRemoveBgImage } isLink isDestructive>
@@ -223,7 +182,7 @@ export default ( props ) => {
 									}
 								)
 							}
-						}						
+						}
 					]}
 				/>
 			</InspectorControls>
@@ -237,7 +196,7 @@ export default ( props ) => {
 						{ label: 'footer', value: 'footer' },
 						{ label: 'div', value: 'div' },
 					] }
-					onChange={ ( tagName ) => { setAttributes( { tagName } ) } }				
+					onChange={ ( tagName ) => { setAttributes( { tagName } ) } }
 				/>
 			</InspectorAdvancedControls>
 			<section
@@ -248,7 +207,7 @@ export default ( props ) => {
 				} }
 			>
 				{ !! bgImage && <div
-					className={ classnames( 
+					className={ classnames(
 						'section-bg', {
 							'bg__repeated': bgOptions.repeat,
 							'bg__stretched': bgOptions.stretch || bgOptions.fixed,

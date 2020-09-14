@@ -9,11 +9,11 @@ import classnames from 'classnames'
 const {
 	InnerBlocks,
 	getColorClassName,
-} = wp.editor;
+} = wp.blockEditor;
 
 export default ( pp ) => {
 	const { attributes, className } = pp;
-	const { 
+	const {
 		backgroundColor,
 		customTextColor,
 		customBackgroundColor,
@@ -40,7 +40,7 @@ export default ( pp ) => {
 	return (
 		<section className={ classes ? classes : undefined } style={ styles }>
 			{ !! bgImage && <div
-				className={ classnames( 
+				className={ classnames(
 					'section-bg', {
 						'bg__repeated': bgOptions.repeat,
 						'bg__stretched': bgOptions.stretch || bgOptions.fixed,
