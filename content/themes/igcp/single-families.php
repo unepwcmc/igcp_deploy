@@ -31,7 +31,6 @@
 				<?php echo do_shortcode('[content_block slug=about-gorillas]'); ?>
 				<?php get_template_part( 'template-parts/components/park', 'info' ); ?>
 				<?php get_template_part( 'template-parts/components/related', 'families' ); ?>
-				<?php get_template_part( 'template-parts/social/social', 'share' ); ?>
 			</div>
 		</section>
 	</div>

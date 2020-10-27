@@ -74,6 +74,10 @@ h4.blk-TextImage_Heading {
 
 .blk-TextImage_ImageWrap {
   position: relative;
+
+  .blk-TextImage.constrained & {
+    text-align: center;
+  }
 }
 
 .blk-TextImage_ImageWrap-primary {
@@ -124,5 +128,9 @@ h4.blk-TextImage_Heading {
     position: static;
     object-fit: contain;
     font-family: "object-fit: contain;";
+  }
+
+  .blk-TextImage.constrained & {
+    max-width: 350px;
   }
 }

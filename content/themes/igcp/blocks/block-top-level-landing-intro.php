@@ -45,9 +45,4 @@
       </div>
     </div>
   </div>
-  <?php if ($show_social): ?>
-    <div class="blk-Intro_Footer">
-      <?php get_template_part( 'template-parts/social/social', 'share' ); ?>
-    </div>
-  <?php endif; ?>
 </div>

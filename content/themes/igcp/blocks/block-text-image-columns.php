@@ -15,7 +15,7 @@
   $contain_image_class = $contain_image == true ? ' blk-TextImage_Column-contain' : '';
 ?>
 
-<div class="blk-TextImage">
+<div class="blk-TextImage<?php if (block_value( 'className' )) echo ' ' . block_value( 'className' ); ?>">
   <div class="blk-TextImage_Body">
     <div class="blk-TextImage_Columns<?php if($flipped) echo ' blk-TextImage_Columns-flipped' ?>">
       <div class="blk-TextImage_Column<?php echo $contain_image_class; ?>">

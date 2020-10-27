@@ -42,7 +42,6 @@ get_header(); ?>
 					else :
 							get_template_part( 'template-parts/content/content', 'none' );
 					endif;
-					get_template_part( 'template-parts/social/social', 'share' );
 				?>
 			</div>
 		</section>

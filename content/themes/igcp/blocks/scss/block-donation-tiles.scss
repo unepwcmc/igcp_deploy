@@ -55,12 +55,6 @@
   @include absolute_fill;
   object-fit: cover;
   font-family: 'object-fit: cover;';
-  transition: transform .5s ease;
-  will-change: transform;
-
-  .til-Donation_Item:hover & {
-    transform: scale(1.025);
-  }
 }
 
 .til-Donation_Content {
