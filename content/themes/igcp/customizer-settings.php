@@ -35,6 +35,30 @@ function remove_customizer_settings() {
 add_action( 'customize_register', 'remove_customizer_settings', 11 );
 
 /*-------------------------------------------------------------------------------
+	Partners Block
+-------------------------------------------------------------------------------*/
+
+function partners_block_customizer_settings($wp_customize) {
+  // Add Partners Block Section
+  $wp_customize->add_section( 'partners_block', array (
+  'title' => 'Partners Block',
+  'description' => 'Partners Block Settings',
+  'priority' => 170
+  ) );
+
+      // Partners Block Title
+      $wp_customize->add_setting('partners_block_title');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'partners_block_title',
+      array(
+        'label' => 'Title',
+        'section' => 'partners_block',
+        'settings' => 'partners_block_title'
+      ) ) );
+}
+
+add_action('customize_register', 'partners_block_customizer_settings');
+
+/*-------------------------------------------------------------------------------
 	Contact Details
 -------------------------------------------------------------------------------*/
 

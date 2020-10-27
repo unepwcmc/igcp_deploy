@@ -26,9 +26,11 @@
 
   <div class="blk-Partners">
     <div class="blk-Partners_Inner">
-      <div class="blk-Partners_Header">
-        <h3 class="blk-Partners_Title">Coalition Members & Partners</h3>
-      </div>
+      <?php if (get_theme_mod( 'partners_block_title' ) != ''): ?>
+        <div class="blk-Partners_Header">
+          <h3 class="blk-Partners_Title"><?php echo get_theme_mod( 'partners_block_title' ); ?></h3>
+        </div>
+      <?php endif; ?>
       <?php if ( $get_items->have_posts() ) : ?>
         <div class="blk-Partners_Body">
           <ul class="blk-Partners_Items">
