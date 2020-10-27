@@ -33,12 +33,15 @@ h5.blk-RelevantLinks_Title {
 }
 
 ul.blk-RelevantLinks_Items {
+  @include no_bullets;
   margin: 0;
 }
 
-li.blk-RelevantLinks_Item {
+li.blk-RelevantLinks_Item,
+.rte-RichText li.blk-RelevantLinks_Item {
   position: relative;
   margin-bottom: $grid-gap;
+  list-style-type: none;
 
   &:last-child {
     margin-bottom: 0;

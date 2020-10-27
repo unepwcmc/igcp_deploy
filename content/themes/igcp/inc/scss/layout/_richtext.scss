@@ -42,11 +42,18 @@
 
   li {
     color: inherit;
-    list-style: disc outside none;
     margin-bottom: 10px;
 
     &:last-child {
       margin-bottom: 0;
     }
+  }
+
+  ol li {
+    list-style: decimal inside none;
+  }
+
+  ul li {
+    list-style: disc inside none;
   }
 }
