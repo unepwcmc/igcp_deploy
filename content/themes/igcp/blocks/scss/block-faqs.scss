@@ -6,7 +6,8 @@ ul.faq-FAQ_Items {
   @include restrain_width;
 }
 
-.faq-FAQ_Item {
+li.faq-FAQ_Item,
+.rte-RichText li.faq-FAQ_Item {
   @include no_margin_padding;
   list-style: none;
 }
@@ -14,21 +15,6 @@ ul.faq-FAQ_Items {
 .faq-FAQ_Block {
   padding-top: #{$grid-gap / 2};
   padding-bottom: #{$grid-gap / 2};
-}
-
-.faq-FAQ_Inner {
-  // @include inner;
-  // max-width: 1360px;
-  // width: 100%;
-  // margin-right: auto;
-  // margin-left: auto;
-  // padding-right: $grid-gap ;
-  // padding-left: $grid-gap ;
-  //
-  // @media screen and (min-width: 600px) {
-  //   padding-right: $grid-gap;
-  //   padding-left: $grid-gap;
-  // }
 }
 
 .faq-FAQ_Question {

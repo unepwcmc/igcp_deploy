@@ -13,8 +13,14 @@
 
 	get_header();
 
-	// Page Hero
-	set_query_var('hero-title', get_the_title( get_option('page_for_posts', true) ));
+	// Page Hero Settings
+	set_query_var( 'hero-title', get_theme_mod( 'updates_page_hero_title' ) != ''
+		? get_theme_mod( 'updates_page_hero_title' )
+		: get_the_archive_title() );
+
+	set_query_var( 'hero-background-image', get_theme_mod( 'updates_page_hero_image') );
+	set_query_var( 'hero-opacity', get_theme_mod( 'updates_page_hero_overlay_opacity' ) );
+
 	get_template_part( 'template-parts/components/heroes/hero', 'page' );
 	// outputFilterParams();
 ?>

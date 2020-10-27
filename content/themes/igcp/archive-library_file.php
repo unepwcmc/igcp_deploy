@@ -9,10 +9,14 @@
 
 	get_header();
 
-	get_template_part( 'template-parts/components/modals/modal', 'team' );
+	// Page Hero Settings
+	set_query_var( 'hero-title', get_theme_mod( 'library_page_hero_title' ) != ''
+		? get_theme_mod( 'library_page_hero_title' )
+		: get_the_archive_title() );
 
-	// Page Hero
-	set_query_var('hero-title', 'Library');
+	set_query_var( 'hero-background-image', get_theme_mod( 'library_page_hero_image') );
+	set_query_var( 'hero-opacity', get_theme_mod( 'library_page_hero_overlay_opacity' ) );
+
 	get_template_part( 'template-parts/components/heroes/hero', 'page' );
 ?>
 

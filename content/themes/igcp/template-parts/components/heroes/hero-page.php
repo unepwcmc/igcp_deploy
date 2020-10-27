@@ -16,7 +16,9 @@
     : '';
   }
 
-  $link_text = get_query_var( 'hero-link-text' ) != '' ? get_query_var( 'hero-link-text' ) : get_theme_mod( 'default_hero_button_text' );
+  $link_text = get_query_var( 'hero-link-text' ) != ''
+    ? get_query_var( 'hero-link-text' )
+    : get_theme_mod( 'default_hero_button_text' );
 
   if (get_query_var( 'hero-link-url-2' ) != '') {
     $link_url_2 = get_query_var( 'hero-link-url-2' );
@@ -26,13 +28,19 @@
     : '';
   }
 
-  $link_text_2 = get_query_var( 'hero-link-text-2' ) != '' ? get_query_var( 'hero-link-text-2' ) : get_theme_mod( 'default_hero_button_text_2' );
+  $link_text_2 = get_query_var( 'hero-link-text-2' ) != ''
+    ? get_query_var( 'hero-link-text-2' )
+    : get_theme_mod( 'default_hero_button_text_2' );
 
   $hide_buttons = get_query_var( 'hide-buttons' );
 
-  $background_image = get_query_var( 'hero-background-image' );
-  $background_image_url = $background_image != '' ? wp_get_attachment_image_src( $background_image, 'full-size' )[0] : get_theme_mod( 'default_hero_image' );
-  $opacity = get_query_var( 'hero-opacity' ) != '' ? get_query_var( 'hero-opacity' ) : get_theme_mod( 'default_hero_overlay_opacity' );
+  $background_image_url = get_query_var( 'hero-background-image' ) != ''
+    ? get_query_var( 'hero-background-image' )
+    : get_theme_mod( 'default_hero_image' );
+
+  $opacity = get_query_var( 'hero-opacity' ) != ''
+    ? get_query_var( 'hero-opacity' )
+    : get_theme_mod( 'default_hero_overlay_opacity' );
 ?>
 
 <div class="her-Page">

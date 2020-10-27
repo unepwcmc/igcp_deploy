@@ -19,6 +19,17 @@ function remove_customizer_settings() {
   $wp_customize->remove_section( 'widgets' ); // Widgets
   $wp_customize->remove_section( 'static_front_page' ); // Homepage Settings
   $wp_customize->remove_section( 'custom_css' ); // Additional CSS
+
+  $wp_customize->add_panel( 'heroes',
+   array(
+      'title' => __( 'Hero Settings' ),
+      'description' => esc_html__( 'Adjust your Hero settings.' ),
+      'priority' => 100, // Not typically needed. Default is 160
+      'capability' => 'edit_theme_options', // Not typically needed. Default is edit_theme_options
+      'theme_supports' => '', // Rarely needed
+      'active_callback' => '', // Rarely needed
+   )
+);
 }
 
 add_action( 'customize_register', 'remove_customizer_settings', 11 );
@@ -254,102 +265,278 @@ add_action('customize_register', 'header_button_customizer_settings');
 /*-------------------------------------------------------------------------------
   Default Hero Customiser Settings
 -------------------------------------------------------------------------------*/
+function hero_customizer_settings($wp_customize) {
 
-function default_hero_customizer_settings($wp_customize) {
-  // Add Default Hero Section
+  /*------------------------------
+  // Default Hero Settings
+  ------------------------------*/
+
   $wp_customize->add_section( 'default_hero', array (
   'title' => 'Default Hero Settings',
-  'description' => 'Settings for the CTA button in the header',
+  'panel' => 'heroes',
+  'description' => 'Default settings for page heroes',
   'priority' => 100
   ) );
 
-  // Default background image
-  $wp_customize->add_setting('default_hero_image');
-  $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'default_hero_image', array(
-    'label' => 'Default Background Image',
-    'section' => 'default_hero',
-    'settings' => 'default_hero_image'
-  ) ) );
+      // Default background image
+      $wp_customize->add_setting('default_hero_image');
+      $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'default_hero_image', array(
+        'label' => 'Default Background Image',
+        'section' => 'default_hero',
+        'settings' => 'default_hero_image'
+      ) ) );
 
-  // Default Hero overlay opacity
+      // Default Hero overlay opacity
+      $wp_customize->add_setting('default_hero_overlay_opacity');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'default_hero_overlay_opacity',
+      array(
+        'label' => 'Default Overlay Opacity',
+        'section' => 'default_hero',
+        'description' => 'From 0 to 1 in 0.1 increments (e.g., 0.4)',
+        'settings' => 'default_hero_overlay_opacity'
+      ) ) );
 
-  // add a setting for the default overlay opacity
-  $wp_customize->add_setting('default_hero_overlay_opacity');
-  // Add a control to input the default overlay opacity
-  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'default_hero_overlay_opacity',
-  array(
-    'label' => 'Default Overlay Opacity',
-    'section' => 'default_hero',
-    'description' => 'From 0 to 1 in 0.1 increments (e.g., 0.4)',
-    'settings' => 'default_hero_overlay_opacity'
-  ) ) );
+      // Default text
+      $wp_customize->add_setting('default_hero_text');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'default_hero_text',
+      array(
+      'label' => 'Default Text',
+      'type' => 'textarea',
+      'section' => 'default_hero',
+      'settings' => 'default_hero_text'
+      ) ) );
 
-  // Default text
+      // Default button text
+      $wp_customize->add_setting('default_hero_button_link');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'default_hero_button_link',
+      array(
+      'label' => 'Button Link',
+      'type' => 'dropdown-pages',
+      'section' => 'default_hero',
+      'settings' => 'default_hero_button_link'
+      ) ) );
 
-  // add a setting for the default text
-  $wp_customize->add_setting('default_hero_text');
-  // Add a control to input the default text
-  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'default_hero_text',
-  array(
-  'label' => 'Default Text',
-  'type' => 'textarea',
-  'section' => 'default_hero',
-  'settings' => 'default_hero_text'
-  ) ) );
+      // Default button url
+      $wp_customize->add_setting('default_hero_button_text');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'default_hero_button_text',
+      array(
+      'label' => 'Button Text',
+      'section' => 'default_hero',
+      'settings' => 'default_hero_button_text'
+      ) ) );
 
-  // Default button text
+      // Default button text
+      $wp_customize->add_setting('default_hero_button_link_2');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'default_hero_button_link_2',
+      array(
+      'label' => 'Button Link 2',
+      'type' => 'dropdown-pages',
+      'description' => 'Button hidden unless this is set',
+      'section' => 'default_hero',
+      'settings' => 'default_hero_button_link_2'
+      ) ) );
 
-  // add a setting for the button link
-  $wp_customize->add_setting('default_hero_button_link');
-  // Add a control to input the button link
-  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'default_hero_button_link',
-  array(
-  'label' => 'Button Link',
-  'type' => 'dropdown-pages',
-  'section' => 'default_hero',
-  'settings' => 'default_hero_button_link'
-  ) ) );
+      // Default button url
+      $wp_customize->add_setting('default_hero_button_text_2');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'default_hero_button_text_2',
+      array(
+      'label' => 'Button Text 2',
+      'section' => 'default_hero',
+      'settings' => 'default_hero_button_text_2'
+      ) ) );
 
-  // Default button url
+  /*------------------------------
+  # Library Page Hero Settings
+  ------------------------------*/
 
-  // add a setting for the button text
-  $wp_customize->add_setting('default_hero_button_text');
-  // Add a control to input the button text
-  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'default_hero_button_text',
-  array(
-  'label' => 'Button Text',
-  'section' => 'default_hero',
-  'settings' => 'default_hero_button_text'
-  ) ) );
+  $wp_customize->add_section( 'library_page_hero', array (
+  'title' => 'Library Page',
+  'panel' => 'heroes',
+  'description' => 'Settings for hero on Library archive page',
+  'priority' => 110
+  ) );
 
-  // Default button text
+      // Library Page Hero Background Image
+      $wp_customize->add_setting('library_page_hero_image');
+      $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'library_page_hero_image', array(
+        'label' => 'Background Image',
+        'section' => 'library_page_hero',
+        'settings' => 'library_page_hero_image'
+      ) ) );
 
-  // add a setting for the button link
-  $wp_customize->add_setting('default_hero_button_link_2');
-  // Add a control to input the button link
-  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'default_hero_button_link_2',
-  array(
-  'label' => 'Button Link 2',
-  'type' => 'dropdown-pages',
-  'description' => 'Button hidden unless this is set',
-  'section' => 'default_hero',
-  'settings' => 'default_hero_button_link_2'
-  ) ) );
+      // Library Page Hero Overlay Opacity
+      $wp_customize->add_setting('library_page_hero_overlay_opacity');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'library_page_hero_overlay_opacity',
+      array(
+        'label' => 'Overlay Opacity',
+        'section' => 'library_page_hero',
+        'description' => 'From 0 to 1 in 0.1 increments (e.g., 0.4)',
+        'settings' => 'library_page_hero_overlay_opacity'
+      ) ) );
 
-  // Default button url
+      // Library Page Hero Title
+      $wp_customize->add_setting('library_page_hero_title');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'library_page_hero_title',
+      array(
+      'label' => 'Title',
+      'section' => 'library_page_hero',
+      'settings' => 'library_page_hero_title'
+      ) ) );
 
-  // add a setting for the button text
-  $wp_customize->add_setting('default_hero_button_text_2');
-  // Add a control to input the button text
-  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'default_hero_button_text_2',
-  array(
-  'label' => 'Button Text 2',
-  'section' => 'default_hero',
-  'settings' => 'default_hero_button_text_2'
-  ) ) );
+  /*------------------------------
+  # Teams Page Hero Settings
+  ------------------------------*/
 
+  $wp_customize->add_section( 'teams_page_hero', array (
+  'title' => 'Teams Page',
+  'panel' => 'heroes',
+  'description' => 'Settings for hero on Teams archive page',
+  'priority' => 110
+  ) );
+
+      // Teams Page Hero Background Image
+      $wp_customize->add_setting('teams_page_hero_image');
+      $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'teams_page_hero_image', array(
+        'label' => 'Background Image',
+        'section' => 'teams_page_hero',
+        'settings' => 'teams_page_hero_image'
+      ) ) );
+
+      // Teams Page Hero Overlay Opacity
+      $wp_customize->add_setting('teams_page_hero_overlay_opacity');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'teams_page_hero_overlay_opacity',
+      array(
+        'label' => 'Overlay Opacity',
+        'section' => 'teams_page_hero',
+        'description' => 'From 0 to 1 in 0.1 increments (e.g., 0.4)',
+        'settings' => 'teams_page_hero_overlay_opacity'
+      ) ) );
+
+      // Teams Page Hero Title
+      $wp_customize->add_setting('teams_page_hero_title');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'teams_page_hero_title',
+      array(
+      'label' => 'Title',
+      'section' => 'teams_page_hero',
+      'settings' => 'teams_page_hero_title'
+      ) ) );
+
+  /*------------------------------
+  # Families Page Hero Settings
+  ------------------------------*/
+
+  $wp_customize->add_section( 'families_page_hero', array (
+  'title' => 'Families Page',
+  'panel' => 'heroes',
+  'description' => 'Settings for hero on Families archive page',
+  'priority' => 110
+  ) );
+
+      // Families Page Hero Background Image
+      $wp_customize->add_setting('families_page_hero_image');
+      $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'families_page_hero_image', array(
+        'label' => 'Background Image',
+        'section' => 'families_page_hero',
+        'settings' => 'families_page_hero_image'
+      ) ) );
+
+      // Families Page Hero Overlay Opacity
+      $wp_customize->add_setting('families_page_hero_overlay_opacity');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'families_page_hero_overlay_opacity',
+      array(
+        'label' => 'Overlay Opacity',
+        'section' => 'families_page_hero',
+        'description' => 'From 0 to 1 in 0.1 increments (e.g., 0.4)',
+        'settings' => 'families_page_hero_overlay_opacity'
+      ) ) );
+
+      // Families Page Hero Title
+      $wp_customize->add_setting('families_page_hero_title');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'families_page_hero_title',
+      array(
+      'label' => 'Title',
+      'section' => 'families_page_hero',
+      'settings' => 'families_page_hero_title'
+      ) ) );
+
+  /*------------------------------
+  # Updates Page Hero Settings
+  ------------------------------*/
+
+  $wp_customize->add_section( 'updates_page_hero', array (
+  'title' => 'Updates Page',
+  'panel' => 'heroes',
+  'description' => 'Settings for hero on Updates archive page',
+  'priority' => 110
+  ) );
+
+      // Updates Page Hero Background Image
+      $wp_customize->add_setting('updates_page_hero_image');
+      $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'updates_page_hero_image', array(
+        'label' => 'Background Image',
+        'section' => 'updates_page_hero',
+        'settings' => 'updates_page_hero_image'
+      ) ) );
+
+      // Updates Page Hero Overlay Opacity
+      $wp_customize->add_setting('updates_page_hero_overlay_opacity');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'updates_page_hero_overlay_opacity',
+      array(
+        'label' => 'Overlay Opacity',
+        'section' => 'updates_page_hero',
+        'description' => 'From 0 to 1 in 0.1 increments (e.g., 0.4)',
+        'settings' => 'updates_page_hero_overlay_opacity'
+      ) ) );
+
+      // Updates Page Hero Title
+      $wp_customize->add_setting('updates_page_hero_title');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'updates_page_hero_title',
+      array(
+      'label' => 'Title',
+      'section' => 'updates_page_hero',
+      'settings' => 'updates_page_hero_title'
+      ) ) );
+
+  /*------------------------------
+  # Search Results Hero Settings
+  ------------------------------*/
+
+  $wp_customize->add_section( 'search_results_page_hero', array (
+  'title' => 'Search Results Page',
+  'panel' => 'heroes',
+  'description' => 'Settings for hero on Search Results archive page',
+  'priority' => 110
+  ) );
+
+      // Search Results Page Hero Background Image
+      $wp_customize->add_setting('search_results_page_hero_image');
+      $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'search_results_page_hero_image', array(
+        'label' => 'Background Image',
+        'section' => 'search_results_page_hero',
+        'settings' => 'search_results_page_hero_image'
+      ) ) );
+
+      // Search Results Page Hero Overlay Opacity
+      $wp_customize->add_setting('search_results_page_hero_overlay_opacity');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'search_results_page_hero_overlay_opacity',
+      array(
+        'label' => 'Overlay Opacity',
+        'section' => 'search_results_page_hero',
+        'description' => 'From 0 to 1 in 0.1 increments (e.g., 0.4)',
+        'settings' => 'search_results_page_hero_overlay_opacity'
+      ) ) );
+
+      // Search Results Page Hero Title
+      $wp_customize->add_setting('search_results_page_hero_title');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'search_results_page_hero_title',
+      array(
+      'label' => 'Title',
+      'section' => 'search_results_page_hero',
+      'settings' => 'search_results_page_hero_title'
+      ) ) );
 }
-add_action('customize_register', 'default_hero_customizer_settings');
+
+add_action('customize_register', 'hero_customizer_settings');
 
 /*-------------------------------------------------------------------------------
   CTA Block Customiser Settings

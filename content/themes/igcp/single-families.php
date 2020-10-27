@@ -8,7 +8,7 @@
 	set_query_var('hero-title', get_the_title($current_post_ID));
 	set_query_var('hero-text', 'Gorilla Family');
 
-	set_query_var('hero-background-image', get_post_thumbnail_id(get_the_id()));
+	set_query_var('hero-background-image', wp_get_attachment_image_src( get_post_thumbnail_id(get_the_id()), 'full-size' )[0]);
 	get_template_part( 'template-parts/components/heroes/hero', 'page' );
 ?>
 
