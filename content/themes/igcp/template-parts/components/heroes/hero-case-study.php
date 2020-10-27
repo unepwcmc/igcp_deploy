@@ -2,7 +2,9 @@
   /* Variables */
   $title = get_query_var('hero-title');
   $background_image = get_query_var('hero-background-image');
-  $background_image_url = $background_image != '' ? wp_get_attachment_image_src( $background_image, 'full-size' )[0] : get_stylesheet_directory_uri() . '/inc/img/default-hero.png';
+  $background_image_url = get_query_var( 'hero-background-image' ) != ''
+    ? get_query_var( 'hero-background-image' )
+    : get_theme_mod( 'default_hero_image' );
   $opacity = get_query_var( 'hero-opacity' ) != '' ? get_query_var( 'hero-opacity' ) : get_theme_mod( 'default_hero_overlay_opacity' );
 ?>
 
