@@ -411,38 +411,38 @@ function hero_customizer_settings($wp_customize) {
   # Teams Page Hero Settings
   ------------------------------*/
 
-  $wp_customize->add_section( 'teams_page_hero', array (
-  'title' => 'Teams Page',
+  $wp_customize->add_section( 'team_page_hero', array (
+  'title' => 'Team Page',
   'panel' => 'heroes',
-  'description' => 'Settings for hero on Teams archive page',
+  'description' => 'Settings for hero on Team archive page',
   'priority' => 110
   ) );
 
-      // Teams Page Hero Background Image
-      $wp_customize->add_setting('teams_page_hero_image');
-      $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'teams_page_hero_image', array(
+      // Team Page Hero Background Image
+      $wp_customize->add_setting('team_page_hero_image');
+      $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'team_page_hero_image', array(
         'label' => 'Background Image',
-        'section' => 'teams_page_hero',
-        'settings' => 'teams_page_hero_image'
+        'section' => 'team_page_hero',
+        'settings' => 'team_page_hero_image'
       ) ) );
 
-      // Teams Page Hero Overlay Opacity
-      $wp_customize->add_setting('teams_page_hero_overlay_opacity');
-      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'teams_page_hero_overlay_opacity',
+      // Team Page Hero Overlay Opacity
+      $wp_customize->add_setting('team_page_hero_overlay_opacity');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'team_page_hero_overlay_opacity',
       array(
         'label' => 'Overlay Opacity',
-        'section' => 'teams_page_hero',
+        'section' => 'team_page_hero',
         'description' => 'From 0 to 1 in 0.1 increments (e.g., 0.4)',
-        'settings' => 'teams_page_hero_overlay_opacity'
+        'settings' => 'team_page_hero_overlay_opacity'
       ) ) );
 
-      // Teams Page Hero Title
-      $wp_customize->add_setting('teams_page_hero_title');
-      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'teams_page_hero_title',
+      // Team Page Hero Title
+      $wp_customize->add_setting('team_page_hero_title');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'team_page_hero_title',
       array(
       'label' => 'Title',
-      'section' => 'teams_page_hero',
-      'settings' => 'teams_page_hero_title'
+      'section' => 'team_page_hero',
+      'settings' => 'team_page_hero_title'
       ) ) );
 
   /*------------------------------
