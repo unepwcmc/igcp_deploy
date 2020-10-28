@@ -17,6 +17,14 @@
 	set_query_var( 'hero-background-image', get_theme_mod( 'library_page_hero_image') );
 	set_query_var( 'hero-opacity', get_theme_mod( 'library_page_hero_overlay_opacity' ) );
 
+	set_query_var('hero-text', get_theme_mod( 'library_page_hero_text' ));
+	set_query_var('hide-text', get_theme_mod( 'library_page_hero_hide_text' ));
+
+	// Archive pages only have one button
+	set_query_var('hero-link-url-2', get_theme_mod( 'library_page_hero_button_url' ));
+	set_query_var('hero-link-text-2', get_theme_mod( 'library_page_hero_button_text' ));
+	set_query_var('hide-buttons', get_theme_mod( 'library_page_hero_hide_button' ));
+
 	get_template_part( 'template-parts/components/heroes/hero', 'page' );
 ?>
 

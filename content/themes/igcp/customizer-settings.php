@@ -35,30 +35,6 @@ function remove_customizer_settings() {
 add_action( 'customize_register', 'remove_customizer_settings', 11 );
 
 /*-------------------------------------------------------------------------------
-	Partners Block
--------------------------------------------------------------------------------*/
-
-function partners_block_customizer_settings($wp_customize) {
-  // Add Partners Block Section
-  $wp_customize->add_section( 'partners_block', array (
-  'title' => 'Partners Block',
-  'description' => 'Partners Block Settings',
-  'priority' => 170
-  ) );
-
-      // Partners Block Title
-      $wp_customize->add_setting('partners_block_title');
-      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'partners_block_title',
-      array(
-        'label' => 'Title',
-        'section' => 'partners_block',
-        'settings' => 'partners_block_title'
-      ) ) );
-}
-
-add_action('customize_register', 'partners_block_customizer_settings');
-
-/*-------------------------------------------------------------------------------
 	Contact Details
 -------------------------------------------------------------------------------*/
 
@@ -305,7 +281,7 @@ function hero_customizer_settings($wp_customize) {
       // Default background image
       $wp_customize->add_setting('default_hero_image');
       $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'default_hero_image', array(
-        'label' => 'Default Background Image',
+        'label' => 'Background Image',
         'section' => 'default_hero',
         'settings' => 'default_hero_image'
       ) ) );
@@ -314,7 +290,7 @@ function hero_customizer_settings($wp_customize) {
       $wp_customize->add_setting('default_hero_overlay_opacity');
       $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'default_hero_overlay_opacity',
       array(
-        'label' => 'Default Overlay Opacity',
+        'label' => 'Overlay Opacity',
         'section' => 'default_hero',
         'description' => 'From 0 to 1 in 0.1 increments (e.g., 0.4)',
         'settings' => 'default_hero_overlay_opacity'
@@ -324,49 +300,136 @@ function hero_customizer_settings($wp_customize) {
       $wp_customize->add_setting('default_hero_text');
       $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'default_hero_text',
       array(
-      'label' => 'Default Text',
+      'label' => 'Text',
       'type' => 'textarea',
       'section' => 'default_hero',
       'settings' => 'default_hero_text'
       ) ) );
 
-      // Default button text
+      // Default button 1 text
       $wp_customize->add_setting('default_hero_button_link');
       $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'default_hero_button_link',
       array(
-      'label' => 'Button Link',
+      'label' => 'Button 1 Link',
       'type' => 'dropdown-pages',
       'section' => 'default_hero',
       'settings' => 'default_hero_button_link'
       ) ) );
 
-      // Default button url
+      // Default button 1 url
       $wp_customize->add_setting('default_hero_button_text');
       $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'default_hero_button_text',
       array(
-      'label' => 'Button Text',
+      'label' => 'Button 1 Text',
       'section' => 'default_hero',
       'settings' => 'default_hero_button_text'
       ) ) );
 
-      // Default button text
+      // Default button 2 text
       $wp_customize->add_setting('default_hero_button_link_2');
       $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'default_hero_button_link_2',
       array(
-      'label' => 'Button Link 2',
+      'label' => 'Button 2 Link',
       'type' => 'dropdown-pages',
       'description' => 'Button hidden unless this is set',
       'section' => 'default_hero',
       'settings' => 'default_hero_button_link_2'
       ) ) );
 
-      // Default button url
+      // Default button 2 url
       $wp_customize->add_setting('default_hero_button_text_2');
       $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'default_hero_button_text_2',
       array(
-      'label' => 'Button Text 2',
+      'label' => 'Button 2 Text',
       'section' => 'default_hero',
       'settings' => 'default_hero_button_text_2'
+      ) ) );
+
+  /*------------------------------
+  # Families Page Hero Settings
+  ------------------------------*/
+
+  $wp_customize->add_section( 'families_page_hero', array (
+  'title' => 'Families Page',
+  'panel' => 'heroes',
+  'description' => 'Settings for hero on Families archive page',
+  'priority' => 110
+  ) );
+
+      // Families Page Hero Background Image
+      $wp_customize->add_setting('families_page_hero_image');
+      $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'families_page_hero_image', array(
+        'label' => 'Background Image',
+        'section' => 'families_page_hero',
+        'settings' => 'families_page_hero_image'
+      ) ) );
+
+      // Families Page Hero Overlay Opacity
+      $wp_customize->add_setting('families_page_hero_overlay_opacity');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'families_page_hero_overlay_opacity',
+      array(
+        'label' => 'Overlay Opacity',
+        'section' => 'families_page_hero',
+        'description' => 'From 0 to 1 in 0.1 increments (e.g., 0.4)',
+        'settings' => 'families_page_hero_overlay_opacity'
+      ) ) );
+
+      // Families Page Hero Title
+      $wp_customize->add_setting('families_page_hero_title');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'families_page_hero_title',
+      array(
+      'label' => 'Title',
+      'section' => 'families_page_hero',
+      'settings' => 'families_page_hero_title'
+      ) ) );
+
+      // Families Page Hero Text
+      $wp_customize->add_setting('families_page_hero_text');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'families_page_hero_text',
+      array(
+      'label' => 'Text',
+      'type' => 'textarea',
+      'section' => 'families_page_hero',
+      'settings' => 'families_page_hero_text'
+      ) ) );
+
+      // Families Page Hero Hide Text Checkbox
+      $wp_customize->add_setting('families_page_hero_hide_text');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'families_page_hero_hide_text',
+      array(
+      'label'     => 'Hide Text?',
+      'section'   => 'families_page_hero',
+      'settings'  => 'families_page_hero_hide_text',
+      'type'      => 'checkbox'
+      ) ) );
+
+      // Families Page Hero Button text
+      $wp_customize->add_setting('families_page_hero_button_url');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'families_page_hero_button_url',
+      array(
+      'label' => 'Button Link',
+      'type' => 'dropdown-pages',
+      'section' => 'families_page_hero',
+      'settings' => 'families_page_hero_button_url'
+      ) ) );
+
+      // Families Page Hero Button url
+      $wp_customize->add_setting('families_page_hero_button_text');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'families_page_hero_button_text',
+      array(
+      'label' => 'Button Text',
+      'section' => 'families_page_hero',
+      'settings' => 'families_page_hero_button_text'
+      ) ) );
+
+      // Families Page Hero Hide Button Checkbox
+      $wp_customize->add_setting('families_page_hero_hide_button');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'families_page_hero_hide_button',
+      array(
+      'label'     => 'Hide Button?',
+      'section'   => 'families_page_hero',
+      'settings'  => 'families_page_hero_hide_button',
+      'type'      => 'checkbox'
       ) ) );
 
   /*------------------------------
@@ -407,6 +470,55 @@ function hero_customizer_settings($wp_customize) {
       'settings' => 'library_page_hero_title'
       ) ) );
 
+      // Library Page Hero Text
+      $wp_customize->add_setting('library_page_hero_text');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'library_page_hero_text',
+      array(
+      'label' => 'Text',
+      'type' => 'textarea',
+      'section' => 'library_page_hero',
+      'settings' => 'library_page_hero_text'
+      ) ) );
+
+      // Library Page Hero Hide Text Checkbox
+      $wp_customize->add_setting('library_page_hero_hide_text');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'library_page_hero_hide_text',
+      array(
+      'label'     => 'Hide Text?',
+      'section'   => 'library_page_hero',
+      'settings'  => 'library_page_hero_hide_text',
+      'type'      => 'checkbox'
+      ) ) );
+
+      // Library Page Hero Button text
+      $wp_customize->add_setting('library_page_hero_button_url');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'library_page_hero_button_url',
+      array(
+      'label' => 'Button Link',
+      'type' => 'dropdown-pages',
+      'section' => 'library_page_hero',
+      'settings' => 'library_page_hero_button_url'
+      ) ) );
+
+      // Library Page Hero Button url
+      $wp_customize->add_setting('library_page_hero_button_text');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'library_page_hero_button_text',
+      array(
+      'label' => 'Button Text',
+      'section' => 'library_page_hero',
+      'settings' => 'library_page_hero_button_text'
+      ) ) );
+
+      // Library Page Hero Hide Button Checkbox
+      $wp_customize->add_setting('library_page_hero_hide_button');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'library_page_hero_hide_button',
+      array(
+      'label'     => 'Hide Button?',
+      'section'   => 'library_page_hero',
+      'settings'  => 'library_page_hero_hide_button',
+      'type'      => 'checkbox'
+      ) ) );
+
   /*------------------------------
   # Teams Page Hero Settings
   ------------------------------*/
@@ -445,42 +557,53 @@ function hero_customizer_settings($wp_customize) {
       'settings' => 'team_page_hero_title'
       ) ) );
 
-  /*------------------------------
-  # Families Page Hero Settings
-  ------------------------------*/
-
-  $wp_customize->add_section( 'families_page_hero', array (
-  'title' => 'Families Page',
-  'panel' => 'heroes',
-  'description' => 'Settings for hero on Families archive page',
-  'priority' => 110
-  ) );
-
-      // Families Page Hero Background Image
-      $wp_customize->add_setting('families_page_hero_image');
-      $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'families_page_hero_image', array(
-        'label' => 'Background Image',
-        'section' => 'families_page_hero',
-        'settings' => 'families_page_hero_image'
+      // Team Page Hero Text
+      $wp_customize->add_setting('team_page_hero_text');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'team_page_hero_text',
+      array(
+      'label' => 'Text',
+      'type' => 'textarea',
+      'section' => 'team_page_hero',
+      'settings' => 'team_page_hero_text'
       ) ) );
 
-      // Families Page Hero Overlay Opacity
-      $wp_customize->add_setting('families_page_hero_overlay_opacity');
-      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'families_page_hero_overlay_opacity',
+      // Team Page Hero Hide Text Checkbox
+      $wp_customize->add_setting('team_page_hero_hide_text');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'team_page_hero_hide_text',
       array(
-        'label' => 'Overlay Opacity',
-        'section' => 'families_page_hero',
-        'description' => 'From 0 to 1 in 0.1 increments (e.g., 0.4)',
-        'settings' => 'families_page_hero_overlay_opacity'
+      'label'     => 'Hide Text?',
+      'section'   => 'team_page_hero',
+      'settings'  => 'team_page_hero_hide_text',
+      'type'      => 'checkbox'
       ) ) );
 
-      // Families Page Hero Title
-      $wp_customize->add_setting('families_page_hero_title');
-      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'families_page_hero_title',
+      // Team Page Hero Button text
+      $wp_customize->add_setting('team_page_hero_button_url');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'team_page_hero_button_url',
       array(
-      'label' => 'Title',
-      'section' => 'families_page_hero',
-      'settings' => 'families_page_hero_title'
+      'label' => 'Button Link',
+      'type' => 'dropdown-pages',
+      'section' => 'team_page_hero',
+      'settings' => 'team_page_hero_button_url'
+      ) ) );
+
+      // Team Page Hero Button url
+      $wp_customize->add_setting('team_page_hero_button_text');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'team_page_hero_button_text',
+      array(
+      'label' => 'Button Text',
+      'section' => 'team_page_hero',
+      'settings' => 'team_page_hero_button_text'
+      ) ) );
+
+      // Team Page Hero Hide Button Checkbox
+      $wp_customize->add_setting('team_page_hero_hide_button');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'team_page_hero_hide_button',
+      array(
+      'label'     => 'Hide Button?',
+      'section'   => 'team_page_hero',
+      'settings'  => 'team_page_hero_hide_button',
+      'type'      => 'checkbox'
       ) ) );
 
   /*------------------------------
@@ -519,6 +642,55 @@ function hero_customizer_settings($wp_customize) {
       'label' => 'Title',
       'section' => 'updates_page_hero',
       'settings' => 'updates_page_hero_title'
+      ) ) );
+
+      // Updates Page Hero Text
+      $wp_customize->add_setting('updates_page_hero_text');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'updates_page_hero_text',
+      array(
+      'label' => 'Text',
+      'type' => 'textarea',
+      'section' => 'updates_page_hero',
+      'settings' => 'updates_page_hero_text'
+      ) ) );
+
+      // Updates Page Hero Hide Text Checkbox
+      $wp_customize->add_setting('updates_page_hero_hide_text');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'updates_page_hero_hide_text',
+      array(
+      'label'     => 'Hide Text?',
+      'section'   => 'updates_page_hero',
+      'settings'  => 'updates_page_hero_hide_text',
+      'type'      => 'checkbox'
+      ) ) );
+
+      // Updates Page Hero Button text
+      $wp_customize->add_setting('updates_page_hero_button_url');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'updates_page_hero_button_url',
+      array(
+      'label' => 'Button Link',
+      'type' => 'dropdown-pages',
+      'section' => 'updates_page_hero',
+      'settings' => 'updates_page_hero_button_url'
+      ) ) );
+
+      // Updates Page Hero Button url
+      $wp_customize->add_setting('updates_page_hero_button_text');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'updates_page_hero_button_text',
+      array(
+      'label' => 'Button Text',
+      'section' => 'updates_page_hero',
+      'settings' => 'updates_page_hero_button_text'
+      ) ) );
+
+      // Updates Page Hero Hide Button Checkbox
+      $wp_customize->add_setting('updates_page_hero_hide_button');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'updates_page_hero_hide_button',
+      array(
+      'label'     => 'Hide Button?',
+      'section'   => 'updates_page_hero',
+      'settings'  => 'updates_page_hero_hide_button',
+      'type'      => 'checkbox'
       ) ) );
 
   /*------------------------------
@@ -694,3 +866,27 @@ function cta_block_customizer_settings($wp_customize) {
 
 }
 add_action('customize_register', 'cta_block_customizer_settings');
+
+/*-------------------------------------------------------------------------------
+	Partners Block
+-------------------------------------------------------------------------------*/
+
+function partners_block_customizer_settings($wp_customize) {
+  // Add Partners Block Section
+  $wp_customize->add_section( 'partners_block', array (
+  'title' => 'Partners Block',
+  'description' => 'Partners Block Settings',
+  'priority' => 170
+  ) );
+
+      // Partners Block Title
+      $wp_customize->add_setting('partners_block_title');
+      $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'partners_block_title',
+      array(
+        'label' => 'Title',
+        'section' => 'partners_block',
+        'settings' => 'partners_block_title'
+      ) ) );
+}
+
+add_action('customize_register', 'partners_block_customizer_settings');
