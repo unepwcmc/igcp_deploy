@@ -1,37 +1,6 @@
-// AddThis
+// Cookie Policy Bar
 
-.at-icon-wrapper.at-share-btn {
-  border-radius: 50% !important;
-  background-color: transparent !important;
-  border: 1px solid $color-grey-text !important;
-  text-align: center;
-  padding: 3px !important;
-  margin: 0 $grid-gap 0 0 !important;
-
-  .at-icon-wrapper {
-    width: 22px !important;
-    height: 22px !important;
-    line-height: 22px !important;
-  }
-
-  svg {
-    width: 22px !important;
-    height: 22px !important;
-    fill: $color-grey-text !important;
-    transition: fill .3s ease;
-  }
-
-  &:hover {
-    border-color: $color-secondary !important;
-
-    svg {
-      fill: $color-secondary !important;
-    }
-  }
-}
-
-.at-share-tbx-element .at-share-btn:focus,
-.at-share-tbx-element .at-share-btn:hover {
-  transform: none !important;
-  outline-offset: 0 !important;
+.editor-block-list__layout #cookie-notice #cn-close-notice,
+.lyt-Body #cookie-notice #cn-close-notice {
+  position: absolute;
 }
