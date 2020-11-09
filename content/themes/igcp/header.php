@@ -6,7 +6,11 @@
 <head>
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title><?php wp_title('|', true, 'right'); ?><?php echo get_bloginfo('name'); ?></title>
+  <?php if ( is_archive() ): ?>
+    <title><?php echo get_query_var( 'archive_title' ) . ' | ' . get_bloginfo('name'); ?></title>
+  <?php else : ?>
+    <title><?php wp_title('|', true, 'right'); ?><?php echo get_bloginfo('name'); ?></title>
+  <?php endif; ?>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
   <?php

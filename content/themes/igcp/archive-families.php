@@ -5,14 +5,18 @@
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  */
+ 
+ 	$archive_title = get_theme_mod( 'families_page_hero_title' ) != ''
+		? get_theme_mod( 'families_page_hero_title' )
+		: get_the_archive_title();
 
+	// Header settings
+	set_query_var( 'archive_title', $archive_title );
 
 	get_header();
 
 	// Page Hero Settings
-	set_query_var( 'hero-title', get_theme_mod( 'families_page_hero_title' ) != ''
-		? get_theme_mod( 'families_page_hero_title' )
-		: get_the_archive_title() );
+	set_query_var( 'hero-title', $archive_title );
 
 	set_query_var( 'hero-background-image', get_theme_mod( 'families_page_hero_image') );
 	set_query_var( 'hero-opacity', get_theme_mod( 'families_page_hero_overlay_opacity' ) );
