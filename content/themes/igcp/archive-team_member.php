@@ -61,6 +61,8 @@
 	</div>
 </div>
 
+<?php get_template_part( 'template-parts/components/modals/modal', 'team' ); ?>
+
 <?php echo do_shortcode('[content_block slug=archive-page]'); ?>
 
 <?php get_footer();

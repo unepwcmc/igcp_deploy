@@ -55,11 +55,11 @@
 
 .crd-Card_Content {
   position: relative;
-  padding: #{$grid-gap / 2} #{$grid-gap / 2} #{$grid-gap};
+  padding: #{$grid-gap / 2} #{$grid-gap / 2} #{$grid-gap * 3};
   flex: 1 1 auto;
 
-  .crd-Card-file & {
-    padding-bottom: #{$grid-gap * 3};
+  .crd-Card-team & {
+    padding-bottom: #{$grid-gap};
   }
 
   .crd-Card-family & {
@@ -80,15 +80,18 @@ h3.crd-Card_Title {
   font-weight: 500;
   line-height: 1.2;
   margin-bottom: 0;
+  word-break: break-all;
 }
 
 p.crd-Card_Link {
-  margin-top: $grid-gap;
-  margin-bottom: 0;
+  margin: 0;
   color: $color-grey-text;
   font-size: 14px;
   font-weight: 500;
   line-height: 1;
+  position: absolute;
+  bottom: 15px;
+  left: 7.5px;
 }
 
 p.crd-Card_Members {
@@ -96,8 +99,6 @@ p.crd-Card_Members {
   font-weight: 500;
   font-size: 14px;
   line-height: 1;
-  // margin-top: 10px;
-  // margin-bottom: 0;
 
   position: absolute;
   top: 40px;
