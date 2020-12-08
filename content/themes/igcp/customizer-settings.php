@@ -311,7 +311,6 @@ function hero_customizer_settings($wp_customize) {
       $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'default_hero_button_link',
       array(
       'label' => 'Button 1 Link',
-      'type' => 'dropdown-pages',
       'section' => 'default_hero',
       'settings' => 'default_hero_button_link'
       ) ) );
@@ -330,7 +329,6 @@ function hero_customizer_settings($wp_customize) {
       $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'default_hero_button_link_2',
       array(
       'label' => 'Button 2 Link',
-      'type' => 'dropdown-pages',
       'description' => 'Button hidden unless this is set',
       'section' => 'default_hero',
       'settings' => 'default_hero_button_link_2'
@@ -408,7 +406,6 @@ function hero_customizer_settings($wp_customize) {
       $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'families_page_hero_button_url',
       array(
       'label' => 'Button Link',
-      'type' => 'dropdown-pages',
       'section' => 'families_page_hero',
       'settings' => 'families_page_hero_button_url'
       ) ) );
@@ -495,7 +492,6 @@ function hero_customizer_settings($wp_customize) {
       $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'library_page_hero_button_url',
       array(
       'label' => 'Button Link',
-      'type' => 'dropdown-pages',
       'section' => 'library_page_hero',
       'settings' => 'library_page_hero_button_url'
       ) ) );
@@ -582,7 +578,6 @@ function hero_customizer_settings($wp_customize) {
       $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'team_page_hero_button_url',
       array(
       'label' => 'Button Link',
-      'type' => 'dropdown-pages',
       'section' => 'team_page_hero',
       'settings' => 'team_page_hero_button_url'
       ) ) );
@@ -669,7 +664,6 @@ function hero_customizer_settings($wp_customize) {
       $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'updates_page_hero_button_url',
       array(
       'label' => 'Button Link',
-      'type' => 'dropdown-pages',
       'section' => 'updates_page_hero',
       'settings' => 'updates_page_hero_button_url'
       ) ) );
