@@ -9,10 +9,10 @@ set :branch, 'production'
 set :stage, :production
 
 # The URL of the website in this environment.
-set :stage_url, 'igcp.production.wordpress-linode.linode.unep-wcmc.org'
+set :stage_url, 'igcp.new-production.wordpress-linode.linode.unep-wcmc.org'
 
 # The environment's server credentials
-server 'production.wordpress-linode.linode.unep-wcmc.org', user: 'wcmc', roles: %w(web app db)
+server 'new-production.wordpress-linode.linode.unep-wcmc.org', user: 'wcmc', roles: %w(web app db)
 
 # The deploy path to the website on this environment's server.
 set :deploy_to, "/home/#{fetch(:deploy_user)}/#{fetch(:application)}"
